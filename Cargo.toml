@@ -1,0 +1,9 @@
+[package]
+name = "tetron-appstore"
+version = "0.15.0"
+edition = "2024"
+rust-version = "1.95"
+description = "A store for terminal apps (TUIs and command line tools): browse, install, launch"
+license = "MIT"
+
+[dependencies]
