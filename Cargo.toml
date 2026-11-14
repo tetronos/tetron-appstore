@@ -8,10 +8,10 @@ license = "MIT"
 
 [dependencies]
 # The shared catalog (crates/tetron-catalog in tetron-wm until it moves here).
-tetron-catalog = { path = "../tetron-wm/crates/tetron-catalog" }
+tetron-catalog = { git = "https://github.com/tetronos/tetron-wm" }
 crossterm = "0.29"
 serde_json = "1"
 base64 = "0.22"
 
 [dev-dependencies]
-tetron-catalog = { path = "../tetron-wm/crates/tetron-catalog", features = ["builtin-only"] }
+tetron-catalog = { git = "https://github.com/tetronos/tetron-wm", features = ["builtin-only"] }

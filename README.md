@@ -2,7 +2,19 @@
 
 A store for terminal apps: browse, search, install and launch 1,300+ TUIs and command line tools from one catalog, in any terminal. Inside tetron-wm (https://github.com/tetronos/tetron-wm) it opens installs and apps in tetron-wm windows; on its own it runs them in place.
 
-Status: not started. The Store is being moved out of tetron-wm in three steps: a shared catalog library inside tetron-wm, then this standalone app running alongside tetron-wm's built-in Store, then the switch (tetron-wm runs this app, its built-in Store is removed) and the catalog sources move here.
+Status: early. It works on its own and inside tetron-wm, where it opens installs and apps in tetron-wm windows, follows the tetron-wm theme and shares its catalog. tetron-wm still has its own built-in Store; it will open this app instead, and the catalog sources will move here.
+
+## Install
+
+```sh
+cargo install --git https://github.com/tetronos/tetron-appstore
+```
+
+Prebuilt binaries and a .deb will follow.
+
+## Use
+
+Type to search; `from:trove`, `from:awesome` or `from:tetron` shows one list. Arrows move, Left/Right change category, Enter installs or launches, Alt+O or a right click opens the app menu (open or copy the project and releases links), F5 updates the catalog, Esc quits. `tetron-appstore --help` lists it all.
 
 ## Catalog
 
