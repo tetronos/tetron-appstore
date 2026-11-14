@@ -1,0 +1,30 @@
+# Package description for mkdeb (https://github.com/tetronos/tetron-packaging).
+# Built in release CI by the build-deb action. Paths are relative to this file.
+name = "tetron-appstore"
+description = "Store for terminal apps: browse, install and launch TUIs and CLIs"
+long_description = """
+Browse, search, install and launch 1,300+ terminal apps (TUIs and command
+line tools) from one catalog, in any terminal. Each app installs the best
+way for this system: its package manager first, else the upstream way
+(cargo, go, pipx, Homebrew), and its prebuilt binaries are a click away.
+Inside tetron-wm, installs and apps open in tetron-wm windows and the Store
+follows the tetron-wm theme."""
+section = "utils"
+license = "MIT"
+homepage = "https://github.com/tetronos/tetron-appstore"
+# curl downloads the newest catalog (Update list); installs use sh and the
+# system's package manager.
+depends = ["curl"]
+# Works on its own; inside tetron-wm it opens windows there.
+suggests = ["tetron-wm (>= {minor}), tetron-wm (<< {next_minor})", "w3m | lynx"]
+smoke = "tetron-appstore --version"
+
+[[files]]
+src = "binary"
+dst = "usr/bin/tetron-appstore"
+mode = "0755"
+
+[[files]]
+src = "../README.md"
+dst = "usr/share/doc/tetron-appstore/README.md"
+mode = "0644"

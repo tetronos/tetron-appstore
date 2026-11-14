@@ -7,10 +7,10 @@ Status: early. It works on its own and inside tetron-wm, where it opens installs
 ## Install
 
 ```sh
-cargo install --git https://github.com/tetronos/tetron-appstore
+curl -fsSL https://raw.githubusercontent.com/tetronos/tetron-appstore/main/install.sh | sh
 ```
 
-Prebuilt binaries and a .deb will follow.
+That puts the prebuilt binary for your system in `~/.local/bin`, checked against its SHA256. Debian and Ubuntu can install the `.deb` from the latest release (https://github.com/tetronos/tetron-appstore/releases/latest) instead. With Rust: `cargo install --git https://github.com/tetronos/tetron-appstore`.
 
 ## Use
 

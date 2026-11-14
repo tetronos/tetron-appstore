@@ -1,0 +1,140 @@
+name: Release
+
+# Builds tetron-appstore binaries for Linux and macOS (x86_64, aarch64) and a
+# .deb for Debian and Ubuntu, and attaches them to the GitHub Release, so
+# install.sh needs no Rust toolchain. Same shape as tetron-wm's release.yml.
+#
+# Three ways to cut a release, all converging on the same build job:
+#   * push to main          - releases when Cargo.toml's version has no tag yet
+#                             (a version bump is the release trigger).
+#   * push a tag v*         - the classic manual tag.
+#   * workflow_dispatch     - type a tag by hand from the Actions tab.
+
+on:
+  push:
+    tags: ["v*"]
+    branches: ["main"]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag to create (e.g. v0.15.1)"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  decide:
+    runs-on: ubuntu-latest
+    outputs:
+      release: ${{ steps.d.outputs.release }}
+      tag: ${{ steps.d.outputs.tag }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          fetch-tags: ${{ github.ref_type != 'tag' }}
+      - id: d
+        run: |
+          ver="$(grep -m1 '^version' Cargo.toml | sed -E 's/.*"(.*)".*/\1/')"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "tag=${{ github.event.inputs.tag }}" >>"$GITHUB_OUTPUT"
+            echo "release=true" >>"$GITHUB_OUTPUT"
+          elif [ "${{ startsWith(github.ref, 'refs/tags/') }}" = "true" ]; then
+            echo "tag=${{ github.ref_name }}" >>"$GITHUB_OUTPUT"
+            echo "release=true" >>"$GITHUB_OUTPUT"
+          elif git ls-remote --exit-code --tags origin "refs/tags/v$ver" >/dev/null; then
+            echo "release=false" >>"$GITHUB_OUTPUT"
+            echo "v$ver is already released; nothing to do."
+          else
+            echo "tag=v$ver" >>"$GITHUB_OUTPUT"
+            echo "release=true" >>"$GITHUB_OUTPUT"
+            echo "New version $ver: will cut v$ver."
+          fi
+
+      # Create the release once, before the build matrix fans out, so the
+      # platform jobs only attach to it and never race to create it.
+      - name: Create release up front
+        if: steps.d.outputs.release == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="${{ steps.d.outputs.tag }}"
+          gh release view "$tag" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1 || \
+            gh release create "$tag" --repo "$GITHUB_REPOSITORY" \
+              --target "$GITHUB_SHA" --title "$tag" \
+              --notes "See CHANGELOG.md for the release notes."
+
+  build:
+    needs: decide
+    if: needs.decide.outputs.release == 'true'
+    name: ${{ matrix.target }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          # Both macOS targets build on the Apple Silicon runner, which
+          # cross-compiles the Intel binary.
+          - { os: macos-latest, target: aarch64-apple-darwin }
+          - { os: macos-latest, target: x86_64-apple-darwin }
+          # Linux on 22.04 on purpose: glibc 2.35 keeps the binaries running on
+          # Debian 12 and Ubuntu 22.04 and later.
+          - { os: ubuntu-22.04, target: x86_64-unknown-linux-gnu, deb_arch: amd64 }
+          - { os: ubuntu-22.04-arm, target: aarch64-unknown-linux-gnu, deb_arch: arm64 }
+    steps:
+      - uses: actions/checkout@v4
+
+      # A tag and a Cargo.toml version that disagree would publish binaries
+      # that report another version than their release.
+      - name: Verify tag matches Cargo.toml version
+        run: |
+          want="${{ needs.decide.outputs.tag }}"; want="${want#v}"
+          have="$(grep -m1 '^version' Cargo.toml | sed -E 's/.*"(.*)".*/\1/')"
+          echo "release tag: $want | Cargo.toml: $have"
+          [ "$want" = "$have" ] || { echo "::error::Release tag v$want does not match Cargo.toml version $have"; exit 1; }
+
+      - name: Add Rust target
+        run: rustup target add ${{ matrix.target }}
+
+      - name: Build
+        run: cargo build --release --locked --target ${{ matrix.target }}
+
+      - name: Package
+        run: |
+          f=tetron-appstore-${{ matrix.target }}.tar.gz
+          tar -C target/${{ matrix.target }}/release -czf "$f" tetron-appstore
+          if command -v sha256sum >/dev/null; then sha256sum "$f" >"$f.sha256"; else shasum -a 256 "$f" >"$f.sha256"; fi
+
+      - name: Attach to release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ needs.decide.outputs.tag }}
+          files: |
+            tetron-appstore-${{ matrix.target }}.tar.gz
+            tetron-appstore-${{ matrix.target }}.tar.gz.sha256
+
+      # .deb for Debian and Ubuntu, built from the binary above by the shared
+      # build-deb action (pinned to a full commit SHA), which installs it in a
+      # clean debian:trixie container and fails before the upload if that test
+      # fails. Maintainer comes from the repository variable DEB_MAINTAINER.
+      - name: Build .deb
+        id: deb
+        if: matrix.deb_arch != ''
+        uses: tetronos/tetron-packaging@87d8405791a0e679af6deb720fe932410f38feb5
+        with:
+          binary: target/${{ matrix.target }}/release/tetron-appstore
+          deb-toml: packaging/deb.toml
+          version: ${{ needs.decide.outputs.tag }}
+          arch: ${{ matrix.deb_arch }}
+          maintainer: ${{ vars.DEB_MAINTAINER }}
+          smoke: tetron-appstore --version
+
+      - name: Attach .deb to release
+        if: matrix.deb_arch != ''
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ needs.decide.outputs.tag }}
+          files: |
+            ${{ steps.deb.outputs.deb }}
+            ${{ steps.deb.outputs.sha256 }}
