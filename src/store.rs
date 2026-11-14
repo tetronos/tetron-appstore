@@ -11,7 +11,6 @@ const SIDEBAR_W: i32 = 16;
 const LIST_W: i32 = 30;
 const CLI_BADGE: &str = "CLI";
 const UPDATE_BTN: &str = "[ Update list ]";
-const CHECK: char = '\u{2713}';
 
 /// What a click asks the program to do.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -175,7 +174,7 @@ impl Store {
             let bg = if sel { p.sel } else { p.bg };
             s.fill(list_x, y, LIST_W, 1, p.fg, bg);
             if catalog::is_installed(&app.bin) {
-                s.text(list_x, y, &CHECK.to_string(), p.success, bg);
+                s.text(list_x, y, &p.check, p.success, bg);
             }
             let badge = if app.cli { CLI_BADGE.len() as i32 + 1 } else { 0 };
             s.text(list_x + 2, y, truncate(&app.name, (LIST_W - 3 - badge).max(1) as usize), p.fg, bg);
@@ -221,7 +220,7 @@ impl Store {
         }
         s.text(dx + 1, homepage_row(h), truncate(&app.homepage, dw), p.dim, p.panel);
         if let Some(r) = catalog::recipe(&app.name).filter(|r| r.verified) {
-            s.text(dx + 1, h - 3, &format!("{CHECK} verified \u{00B7} {}", r.method), p.success, p.panel);
+            s.text(dx + 1, h - 3, &format!("{} verified \u{00B7} {}", p.check, r.method), p.success, p.panel);
         }
         let installed = catalog::is_installed(&app.bin);
         let action = if installed { "[ Enter: Launch ]  Alt+O: more" } else { "[ Enter: Install ]  Alt+O: more" };

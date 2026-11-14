@@ -8,7 +8,7 @@ use crate::screen::Rgb;
 use std::path::PathBuf;
 use std::time::SystemTime;
 
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Debug, PartialEq, Eq)]
 pub struct Palette {
     pub bg: Rgb,
     pub fg: Rgb,
@@ -17,6 +17,8 @@ pub struct Palette {
     pub accent: Rgb,
     pub panel: Rgb,
     pub success: Rgb,
+    /// The installed/verified mark (tetron-wm's icon style; the font may lack ✓).
+    pub check: String,
 }
 
 impl Default for Palette {
@@ -30,6 +32,7 @@ impl Default for Palette {
             accent: Some((120, 170, 255)),
             panel: None,
             success: Some((110, 200, 120)),
+            check: "\u{2713}".into(),
         }
     }
 }
@@ -65,6 +68,9 @@ pub fn parse(text: &str) -> Palette {
         if let Some(c) = hex(v.get(k)) {
             *slot = c;
         }
+    }
+    if let Some(c) = v.get("check").and_then(|c| c.as_str()).filter(|c| !c.is_empty() && c.chars().count() <= 2) {
+        p.check = c.to_string();
     }
     p
 }
@@ -108,6 +114,7 @@ mod tests {
         assert_eq!(p.bg, Some((0x10, 0x18, 0x20)));
         assert_eq!(p.accent, Some((0xff, 0xaa, 0x00)));
         assert_eq!(p.dim, Palette::default().dim);
+        assert_eq!(parse(r#"{"check":"+"}"#).check, "+");
         assert_eq!(parse("garbage"), Palette::default());
     }
 }
