@@ -1,9 +1,17 @@
 [package]
 name = "tetron-appstore"
 version = "0.15.0"
-edition = "2024"
+edition = "2021"
 rust-version = "1.95"
 description = "A store for terminal apps (TUIs and command line tools): browse, install, launch"
 license = "MIT"
 
 [dependencies]
+# The shared catalog (crates/tetron-catalog in tetron-wm until it moves here).
+tetron-catalog = { path = "../tetron-wm/crates/tetron-catalog" }
+crossterm = "0.29"
+serde_json = "1"
+base64 = "0.22"
+
+[dev-dependencies]
+tetron-catalog = { path = "../tetron-wm/crates/tetron-catalog", features = ["builtin-only"] }
