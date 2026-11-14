@@ -58,15 +58,23 @@ impl Store {
         self.reset_list();
     }
 
+    /// Apps of the category matching the search. A `from:NAME` word keeps
+    /// apps whose shown lists match NAME (WMCAT-010); the other words search
+    /// names and descriptions.
     pub fn filtered(&self) -> Vec<&'static CatalogApp> {
         let cat = &self.categories[self.cat_index];
         let q = self.query.to_lowercase();
+        let (from, words): (Vec<&str>, Vec<&str>) = q.split(' ').partition(|w| w.starts_with("from:"));
+        let from: Vec<&str> = from.iter().map(|w| &w[5..]).filter(|w| !w.is_empty()).collect();
+        let text = words.join(" ");
+        let text = text.trim();
         catalog::catalog()
             .iter()
             .filter(|c| {
                 catalog::runs_on_current_os(&c.name)
                     && (cat == "All" || &c.category == cat)
-                    && (q.is_empty() || c.name.to_lowercase().contains(&q) || c.description.to_lowercase().contains(&q))
+                    && (text.is_empty() || c.name.to_lowercase().contains(text) || c.description.to_lowercase().contains(text))
+                    && from.iter().all(|f| catalog::listed_by(c).iter().any(|l| l.to_lowercase().replace(' ', "").contains(f)))
             })
             .collect()
     }
@@ -199,7 +207,7 @@ impl Store {
         }
         let mut y = 6;
         for line in wrap(&app.description, dw) {
-            if y >= prebuilt_row(h) {
+            if y >= listed_row(h) {
                 break;
             }
             s.text(dx + 1, y, &line, p.fg, p.panel);
@@ -208,12 +216,16 @@ impl Store {
         if let Some(r) = catalog::recipe(&app.name).filter(|r| !r.tip.is_empty()) {
             y += 1;
             for line in wrap(&format!("Setup: {}", r.tip), dw) {
-                if y >= prebuilt_row(h) {
+                if y >= listed_row(h) {
                     break;
                 }
                 s.text(dx + 1, y, &line, p.accent, p.panel);
                 y += 1;
             }
+        }
+        let lists = catalog::listed_by(app);
+        if !lists.is_empty() {
+            s.text(dx + 1, listed_row(h), truncate(&format!("Listed by: {}", lists.join(", ")), dw), p.dim, p.panel);
         }
         if let Some(url) = catalog::releases_url(app) {
             s.text(dx + 1, prebuilt_row(h), truncate(&format!("Prebuilt: {url}"), dw), p.dim, p.panel);
@@ -310,6 +322,9 @@ fn update_btn_x(w: i32) -> i32 {
 pub fn details_x() -> i32 {
     SIDEBAR_W + 1 + LIST_W + 1
 }
+fn listed_row(h: i32) -> i32 {
+    h - 6
+}
 fn prebuilt_row(h: i32) -> i32 {
     h - 5
 }
@@ -388,5 +403,30 @@ mod tests {
         assert!(!st.right_click((2, 4), h), "the sidebar has no menu");
         st.click((2, 3), w, h);
         assert!(st.filtered().len() < Store::new().filtered().len(), "a category narrows the list");
+    }
+
+    /// WMCAT-010: the details name the lists, and from: narrows to one list,
+    /// combined with the other words.
+    #[test]
+    fn listed_by_line_and_from_filter() {
+        let mut st = Store::new();
+        let all = st.filtered().len();
+        for c in "from:trove".chars() {
+            st.type_char(c);
+        }
+        let trove = st.filtered();
+        assert!(!trove.is_empty() && trove.len() < all);
+        assert!(trove.iter().all(|a| catalog::listed_by(a).contains(&"Terminal Trove")));
+        let mut s = Screen::new(110, 30);
+        st.render(&mut s, &Palette::default());
+        assert!((0..30).any(|y| s.row(y).contains("Listed by: ") && s.row(y).contains("Terminal Trove")));
+        for c in " git".chars() {
+            st.type_char(c);
+        }
+        let both = st.filtered();
+        assert!(!both.is_empty() && both.len() < trove.len());
+        assert!(both.iter().all(|a| (a.name.to_lowercase() + &a.description.to_lowercase()).contains("git")));
+        st.set_query("from:tetron");
+        assert!(st.filtered().iter().all(|a| catalog::listed_by(a) == ["tetron"]));
     }
 }

@@ -21,7 +21,8 @@ const HELP: &str = "tetron-appstore: browse, install and launch terminal apps
 
 Usage: tetron-appstore [SEARCH]
 
-  Type to search, arrows move, Left/Right change category, Enter installs or
+  Type to search (from:NAME shows one list: from:trove, from:awesome,
+  from:tetron), arrows move, Left/Right change category, Enter installs or
   launches, Alt+O (or a right click) opens the app menu: open or copy the
   project and releases links. F5 or [ Update list ] downloads the newest
   catalog. Esc quits.
