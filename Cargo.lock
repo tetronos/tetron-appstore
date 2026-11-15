@@ -410,8 +410,7 @@ dependencies = [
 
 [[package]]
 name = "tetron-catalog"
-version = "0.15.8"
-source = "git+https://github.com/tetronos/tetron-wm#97d2a64945c0d08827237d5028a87aad3b4aaf27"
+version = "0.15.9"
 dependencies = [
  "dirs",
  "serde",

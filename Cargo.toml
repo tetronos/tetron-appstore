@@ -7,11 +7,17 @@ description = "A store for terminal apps (TUIs and command line tools): browse, 
 license = "MIT"
 
 [dependencies]
-# The shared catalog (crates/tetron-catalog in tetron-wm until it moves here).
-tetron-catalog = { git = "https://github.com/tetronos/tetron-wm" }
+# The shared catalog library, also used by tetron-wm (WMCAT-008).
+tetron-catalog = { path = "crates/tetron-catalog" }
 crossterm = "0.29"
 serde_json = "1"
 base64 = "0.22"
 
 [dev-dependencies]
-tetron-catalog = { git = "https://github.com/tetronos/tetron-wm", features = ["builtin-only"] }
+tetron-catalog = { path = "crates/tetron-catalog", features = ["builtin-only"] }
+
+[workspace]
+members = [".", "crates/tetron-catalog"]
+# `cargo test` and `cargo clippy` cover the catalog library too.
+default-members = [".", "crates/tetron-catalog"]
+

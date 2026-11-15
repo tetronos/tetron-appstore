@@ -4,6 +4,9 @@ All notable changes to tetron-appstore. The version follows the tetron core mino
 
 ## [Unreleased]
 
+### Changed
+- The catalog lives here now, moved from tetron-wm: the `tetron-catalog` library (`crates/tetron-catalog`, which tetron-wm uses from this repository), the built-in `assets/catalog.json`, the imported lists, our corrections (`lists/tetron.toml`) and the import, merge and recipe scripts. The published catalog keeps its format, so installed versions see no change. The weekly check covers Terminal Trove too.
+
 ## [0.15.0]
 
 ### Added

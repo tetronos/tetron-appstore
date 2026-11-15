@@ -20,6 +20,17 @@ Type to search; `from:trove`, `from:awesome` or `from:tetron` shows one list. Ar
 
 The catalog merges imported lists (awesome-tuis https://github.com/rothgar/awesome-tuis, Terminal Trove https://terminaltrove.com), our own list of corrections and additions, and a user list on your machine that updates never overwrite. Later sources win: awesome-tuis, then Terminal Trove, then ours, then yours.
 
+## Maintaining the catalog
+
+`assets/catalog.json` (compiled in, and published for Update list) is built by `scripts/merge_catalog.py` from:
+
+- `lists/awesome-tuis.json` (`scripts/import_awesome_tuis.py`, from the awesome-tuis README) and `lists/terminaltrove.json` (`scripts/import_terminaltrove.py`, from https://carcaradotdev.github.io/terminaltrove-stars/data.json), never edited by hand;
+- `lists/tetron.toml`, our corrections and additions, which win;
+- `lists/repology.json` (`scripts/match_repology.py`: distribution package names), `lists/releases.json` (`scripts/match_releases.py`: GitHub releases with binaries), and install recipes from `scripts/match_brew.py` and `scripts/match_lang_recipes.py`;
+- `assets/suite-apps.txt`, tetron-wm's install sizes, copied by `scripts/sync_suite_list.sh`.
+
+CI checks that `catalog.json` is current (`python3 scripts/merge_catalog.py --check`). A weekly workflow opens an issue when either imported list has new apps. The library in `crates/tetron-catalog` is shared with tetron-wm, which uses it from this repository.
+
 ## License
 
 MIT, see LICENSE.
