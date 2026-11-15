@@ -111,9 +111,9 @@ bin = "tetron-aimode"
 tier = "default"
 category = "AI"
 description = "Ask Gemini questions in a full screen terminal app, with optional Google Search grounding. Needs a free Gemini API key in GEMINI_API_KEY or ~/.config/aimode/key (https://aistudio.google.com/apikey)."
-homepage = "https://github.com/tetronos/tetron-wm/tree/main/scripts"
+homepage = "https://github.com/tetronos/tetron-aimode"
 [app.recipe]
-install = "mkdir -p ~/.local/bin && curl -fsSL https://raw.githubusercontent.com/tetronos/tetron-wm/main/scripts/tetron-aimode -o ~/.local/bin/tetron-aimode && chmod +x ~/.local/bin/tetron-aimode"
+install = "mkdir -p ~/.local/bin && curl -fsSL https://raw.githubusercontent.com/tetronos/tetron-aimode/main/tetron-aimode -o ~/.local/bin/tetron-aimode && chmod +x ~/.local/bin/tetron-aimode"
 method = "script"
 verified = true
 os = ["macos", "linux"]
