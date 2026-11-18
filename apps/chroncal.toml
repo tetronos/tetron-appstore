@@ -1,0 +1,14 @@
+id = "chroncal"
+name = "chroncal"
+bin = "chroncal"
+category = "Miscellaneous"
+description = "All in one calendar, tasks and journal manager in the terminal."
+homepage = "https://github.com/DouglasdeMoura/chroncal"
+
+[install.recipe]
+install = "go install github.com/douglasdemoura/chroncal/cmd/chroncal@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "cheatshh"
+name = "cheatshh"
+bin = "cheatshh"
+category = "Dashboards"
+description = "A fzf TUI for managing custom made command-line cheatsheet for Unix."
+homepage = "https://github.com/AnirudhG07/cheatshh"
+
+[install.recipe]
+install = "brew install AnirudhG07/AnirudhG07/cheatshh"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

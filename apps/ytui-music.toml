@@ -1,0 +1,15 @@
+id = "ytui-music"
+name = "ytui-music"
+bin = "ytui-music"
+category = "Multimedia"
+description = "Listen to music from youtube. Configurable, minimal, lightweight, private & beautiful music client."
+homepage = "https://github.com/sudipghimire533/ytui-music"
+
+[install.recipe]
+install = "git clone https://github.com/sudipghimire533/ytui-music && cd ytui-music && git submodule init && MPV_BUILD=mpv-build/ cargo build --all --release --features build_libmpv"
+method = "source"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,15 @@
+id = "g"
+name = "g"
+bin = "g"
+category = "Dashboards"
+description = "A feature-rich, customizable, and cross-platform ls alternative."
+homepage = "https://github.com/equationzhao/g"
+cli = true
+
+[install.recipe]
+install = "go install github.com/Equationzhao/g@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

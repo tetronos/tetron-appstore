@@ -1,0 +1,15 @@
+id = "bottom"
+name = "bottom"
+bin = "btm"
+category = "Dashboards"
+description = "A customizable graphical process/system monitor for the terminal."
+homepage = "https://github.com/ClementTsang/bottom"
+
+[install.recipe]
+install = "brew install bottom"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

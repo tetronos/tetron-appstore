@@ -1,0 +1,14 @@
+id = "amdtop"
+name = "amdtop"
+bin = "amdtop"
+category = "Dashboards"
+description = "A TUI system monitor specialized for AMD GPUs."
+homepage = "https://github.com/lhl/amdtop"
+
+[install.recipe]
+install = "cargo install --locked amdtop"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

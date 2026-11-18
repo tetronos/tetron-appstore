@@ -1,0 +1,15 @@
+id = "gomuks"
+name = "gomuks"
+bin = "gomuks"
+category = "Messaging"
+description = "Matrix client"
+homepage = "https://github.com/tulir/gomuks"
+
+[install.recipe]
+install = "go install go.mau.fi/gomuks@latest"
+method = "go"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

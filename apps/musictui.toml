@@ -1,0 +1,9 @@
+id = "musictui"
+name = "MusicTUI"
+bin = "musictui"
+category = "Multimedia"
+description = "Apple Music TUI and CLI for macOS, written in Swift, with multi-room AirPlay routing, library browsing with cover art, playlists, radio and a venue equalizer"
+homepage = "https://github.com/anthonymaley/MusicTUI"
+
+[source]
+lists = ["awesome-tuis"]

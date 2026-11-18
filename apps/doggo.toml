@@ -1,0 +1,15 @@
+id = "doggo"
+name = "doggo"
+bin = "doggo"
+category = "Development"
+description = "A command-line DNS client for humans."
+homepage = "https://github.com/mr-karan/doggo"
+cli = true
+
+[install.recipe]
+install = "brew install doggo"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

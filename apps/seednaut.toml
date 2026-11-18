@@ -1,0 +1,14 @@
+id = "seednaut"
+name = "seednaut"
+bin = "seednaut"
+category = "Productivity"
+description = "Inspect, verify and extract files from Seedvault backups."
+homepage = "https://github.com/Baltram/seednaut"
+
+[install.recipe]
+install = "cargo install --locked seednaut"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,10 @@
+id = "sprofile"
+name = "sprofile"
+bin = "sprofile"
+category = "Multimedia"
+description = "Blazingly fast TUI application for viewing your Spotify listening activity."
+homepage = "https://github.com/GoodBoyNeon/sprofile"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

@@ -1,0 +1,15 @@
+id = "soft-serve"
+name = "soft-serve"
+bin = "soft-serve"
+category = "Development"
+description = "A tasty, self-hostable Git server for the command lineicecream"
+homepage = "https://github.com/charmbracelet/soft-serve"
+
+[install.recipe]
+install = "brew install soft-serve"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

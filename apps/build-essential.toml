@@ -1,0 +1,10 @@
+id = "build-essential"
+name = "build-essential"
+check = "gcc"
+store = false
+
+[install.pkg]
+apt = "build-essential"
+dnf = "gcc"
+pacman = "base-devel"
+brew = ""

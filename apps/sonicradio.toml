@@ -1,0 +1,15 @@
+id = "sonicradio"
+name = "sonicradio"
+bin = "sonicradio"
+category = "Multimedia"
+description = "A stylish TUI radio player making use of Radio Browser API and Bubbletea."
+homepage = "https://github.com/dancnb/sonicradio"
+
+[install.recipe]
+install = "go install github.com/dancnb/sonicradio/cmd/sonicradio@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

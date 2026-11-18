@@ -1,0 +1,15 @@
+id = "tldrc"
+name = "tldrc"
+bin = "tldrc"
+category = "Miscellaneous"
+description = "A tldr client written in Rust."
+homepage = "https://github.com/tldr-pages/tlrc"
+cli = true
+
+[install.recipe]
+install = "cargo install --locked tlrc"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

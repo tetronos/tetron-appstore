@@ -1,0 +1,9 @@
+id = "squall"
+name = "squall"
+bin = "squall"
+category = "Development"
+description = "A TUI SQLite viewer and editor."
+homepage = "https://github.com/driscollis/squall"
+
+[source]
+lists = ["terminaltrove"]

@@ -1,0 +1,16 @@
+id = "instagram-cli"
+name = "instagram-cli"
+bin = "instagram-cli"
+category = "Messaging"
+description = "Use Instagram from your terminal, the end of brainrot is here"
+homepage = "https://github.com/supreme-gg-gg/instagram-cli"
+cli = true
+
+[install.recipe]
+install = "brew tap supreme-gg-gg/tap && brew install instagram-cli"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

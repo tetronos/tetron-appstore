@@ -1,0 +1,9 @@
+id = "putzen"
+name = "putzen"
+bin = "putzen"
+category = "Dashboards"
+description = "A safe cleaner for build and dependency artifacts with an interactive TUI."
+homepage = "https://github.com/sassman/putzen-rs"
+
+[source]
+lists = ["terminaltrove"]

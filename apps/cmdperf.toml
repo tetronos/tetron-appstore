@@ -1,0 +1,14 @@
+id = "cmdperf"
+name = "cmdperf"
+bin = "cmdperf"
+category = "Miscellaneous"
+description = "Benchmark and compare shell commands interactively."
+homepage = "https://github.com/miklosn/cmdperf"
+
+[install.recipe]
+install = "go install github.com/miklosn/cmdperf/cmd/cmdperf@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

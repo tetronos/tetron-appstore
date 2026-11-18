@@ -1,0 +1,9 @@
+id = "pkgtop"
+name = "pkgtop"
+bin = "pkgtop"
+category = "Dashboards"
+description = "An interactive linux package manager & resource monitor."
+homepage = "https://github.com/orhun/pkgtop"
+
+[source]
+lists = ["terminaltrove"]

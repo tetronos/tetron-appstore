@@ -1,0 +1,9 @@
+id = "critique"
+name = "critique"
+bin = "critique"
+category = "Development"
+description = "A terminal UI for reviewing git diffs."
+homepage = "https://github.com/remorses/critique"
+
+[source]
+lists = ["terminaltrove"]

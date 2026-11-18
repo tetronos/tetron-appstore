@@ -1,0 +1,14 @@
+id = "git-who"
+name = "git-who"
+bin = "git-who"
+category = "Development"
+description = "Git blame for file trees."
+homepage = "https://github.com/sinclairtarget/git-who"
+
+[install.recipe]
+install = "brew install git-who"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

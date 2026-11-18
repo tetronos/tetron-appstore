@@ -1,0 +1,9 @@
+id = "manly"
+name = "manly"
+bin = "manly"
+category = "Miscellaneous"
+description = "A TUI for viewing man pages in the terminal."
+homepage = "https://github.com/whoop-t/manly"
+
+[source]
+lists = ["terminaltrove"]

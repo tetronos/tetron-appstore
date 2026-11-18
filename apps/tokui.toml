@@ -1,0 +1,15 @@
+id = "tokui"
+name = "tokui"
+bin = "tokui"
+category = "Development"
+description = "An interactive TUI for visualizing code statistics from tokei."
+homepage = "https://github.com/zdyxry/tokui"
+
+[install.recipe]
+install = "go install github.com/zdyxry/tokui@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

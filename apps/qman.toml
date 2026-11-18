@@ -1,0 +1,14 @@
+id = "qman"
+name = "qman"
+bin = "qman"
+category = "Miscellaneous"
+description = "A full-featured man page viewer for our terminals."
+homepage = "https://github.com/plp13/qman"
+
+[install.recipe]
+install = "brew install qman"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

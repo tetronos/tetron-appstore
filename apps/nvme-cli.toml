@@ -1,0 +1,10 @@
+id = "nvme-cli"
+name = "nvme-cli"
+check = "nvme"
+store = false
+
+[install.pkg]
+apt = "nvme-cli"
+dnf = "nvme-cli"
+pacman = "nvme-cli"
+brew = ""

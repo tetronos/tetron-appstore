@@ -1,0 +1,14 @@
+id = "rogallo"
+name = "rogallo"
+bin = "rogallo"
+category = "Miscellaneous"
+description = "A terminal client for browsing the Gemini protocol."
+homepage = "https://github.com/davep/rogallo"
+
+[install.recipe]
+install = "pipx install rogallo"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

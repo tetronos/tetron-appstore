@@ -1,0 +1,14 @@
+id = "climp"
+name = "climp"
+bin = "climp"
+category = "Multimedia"
+description = "A minimal CLI media player."
+homepage = "https://github.com/olivier-w/climp"
+
+[install.recipe]
+install = "go install github.com/olivier-w/climp@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

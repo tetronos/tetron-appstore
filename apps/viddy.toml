@@ -1,0 +1,14 @@
+id = "viddy"
+name = "viddy"
+bin = "viddy"
+category = "Miscellaneous"
+description = "A modern watch command, time machine and pager."
+homepage = "https://github.com/sachaos/viddy"
+
+[install.recipe]
+install = "brew install viddy"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

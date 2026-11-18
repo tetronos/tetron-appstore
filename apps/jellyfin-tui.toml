@@ -1,0 +1,15 @@
+id = "jellyfin-tui"
+name = "jellyfin-tui"
+bin = "jellyfin-tui"
+category = "Multimedia"
+description = "Jellyfin client"
+homepage = "https://github.com/dhonus/jellyfin-tui"
+
+[install.recipe]
+install = "cargo install jellyfin-tui"
+method = "cargo"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

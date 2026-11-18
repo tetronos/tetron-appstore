@@ -1,0 +1,9 @@
+id = "tldr-pages"
+name = "tldr-pages"
+bin = "tldr-pages"
+category = "Miscellaneous"
+description = "Collaborative cheatsheets for console commands."
+homepage = "https://github.com/tldr-pages/tldr"
+
+[source]
+lists = ["terminaltrove"]

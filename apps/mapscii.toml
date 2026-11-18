@@ -1,0 +1,15 @@
+id = "mapscii"
+name = "mapscii"
+bin = "mapscii"
+category = "Miscellaneous"
+description = "Braille & ASCII world map renderer for your console"
+homepage = "https://github.com/rastapasta/mapscii"
+
+[install.recipe]
+install = "brew install mapscii"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

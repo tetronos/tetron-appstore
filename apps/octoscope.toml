@@ -1,0 +1,14 @@
+id = "octoscope"
+name = "octoscope"
+bin = "octoscope"
+category = "Miscellaneous"
+description = "A terminal dashboard for your GitHub account, or anyone else's public GitHub profile."
+homepage = "https://github.com/gfazioli/octoscope"
+
+[install.recipe]
+install = "go install github.com/gfazioli/octoscope@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

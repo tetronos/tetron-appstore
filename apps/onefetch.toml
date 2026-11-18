@@ -1,0 +1,15 @@
+id = "onefetch"
+name = "onefetch"
+bin = "onefetch"
+category = "Development"
+description = "A command-line Git information tool."
+homepage = "https://github.com/o2sh/onefetch"
+cli = true
+
+[install.recipe]
+install = "brew install onefetch"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

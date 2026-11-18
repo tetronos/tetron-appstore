@@ -1,0 +1,15 @@
+id = "numr"
+name = "numr"
+bin = "numr"
+category = "Productivity"
+description = "A natural language calculator with unit/currency conversions and vim-style keybindings"
+homepage = "https://github.com/nasedkinpv/numr"
+
+[install.recipe]
+install = "brew tap nasedkinpv/tap && brew install numr"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

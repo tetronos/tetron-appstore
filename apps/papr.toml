@@ -1,0 +1,9 @@
+id = "papr"
+name = "papr"
+bin = "papr"
+category = "Miscellaneous"
+description = "A fast, terminal-based workspace built for academic research."
+homepage = "https://github.com/AfrozSaqlain/Papr"
+
+[source]
+lists = ["terminaltrove"]

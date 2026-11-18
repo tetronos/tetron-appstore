@@ -1,0 +1,15 @@
+id = "mitmproxy"
+name = "mitmproxy"
+bin = "mitmproxy"
+category = "Development"
+description = "A free and open source interactive HTTPS proxy"
+homepage = "https://www.mitmproxy.org"
+
+[install.recipe]
+install = "brew install mitmproxy"
+method = "brew"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

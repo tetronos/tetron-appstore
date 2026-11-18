@@ -1,0 +1,14 @@
+id = "pumas"
+name = "pumas"
+bin = "pumas"
+category = "Dashboards"
+description = "Power Usage Monitor for Apple Silicon."
+homepage = "https://github.com/graelo/pumas"
+
+[install.recipe]
+install = "cargo install --locked pumas"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,10 @@
+id = "sox"
+name = "sox"
+check = "sox"
+store = false
+
+[install.pkg]
+apt = "sox"
+dnf = "sox"
+pacman = "sox"
+brew = "sox"

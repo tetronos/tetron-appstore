@@ -1,0 +1,14 @@
+id = "lstr"
+name = "lstr"
+bin = "lstr"
+category = "Dashboards"
+description = "A fast, minimalist directory tree viewer."
+homepage = "https://github.com/bgreenwell/lstr"
+
+[install.recipe]
+install = "brew install lstr"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,14 @@
+id = "pikpaktui"
+name = "pikpaktui"
+bin = "pikpaktui"
+category = "File Managers"
+description = "A TUI and CLI client for PikPak cloud storage."
+homepage = "https://github.com/Bengerthelorf/pikpaktui"
+
+[install.recipe]
+install = "cargo install --locked pikpaktui"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

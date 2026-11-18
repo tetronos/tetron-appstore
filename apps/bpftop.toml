@@ -1,0 +1,14 @@
+id = "bpftop"
+name = "bpftop"
+bin = "bpftop"
+category = "Dashboards"
+description = "Dynamic real-time view of running eBPF programs."
+homepage = "https://github.com/jfernandez/bpftop"
+
+[install.recipe]
+install = "brew install bpftop"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

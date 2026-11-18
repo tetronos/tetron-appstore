@@ -1,0 +1,14 @@
+id = "knife"
+name = "knife"
+bin = "knife"
+category = "Development"
+description = "A reverse engineering CLI and TUI for PE, ELF and Mach-O binaries."
+homepage = "https://github.com/bl4ckr0ss3/knife"
+
+[install.recipe]
+install = "brew install knife"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

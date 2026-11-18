@@ -1,0 +1,14 @@
+id = "oyo"
+name = "oyo"
+bin = "oyo"
+category = "Development"
+description = "A step-through diff viewer."
+homepage = "https://github.com/ahkohd/oyo"
+
+[install.recipe]
+install = "cargo install --locked oyo"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

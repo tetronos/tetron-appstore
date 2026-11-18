@@ -1,0 +1,16 @@
+id = "gomphotherium"
+name = "Gomphotherium"
+bin = "gomphotherium"
+category = "Messaging"
+description = "A command line Mastodon client."
+homepage = "https://github.com/mrusme/gomphotherium"
+cli = true
+
+[install.recipe]
+install = "go install github.com/mrusme/gomphotherium@latest"
+method = "go"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

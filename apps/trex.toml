@@ -1,0 +1,14 @@
+id = "trex"
+name = "trex"
+bin = "trex"
+category = "Development"
+description = "A terminal app for RegEx visualization, 🦖 roar!"
+homepage = "https://github.com/samyakbardiya/trex"
+
+[install.recipe]
+install = "go install github.com/samyakbardiya/trex@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

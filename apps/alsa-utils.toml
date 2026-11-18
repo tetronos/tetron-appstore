@@ -1,0 +1,10 @@
+id = "alsa-utils"
+name = "alsa-utils"
+check = "alsamixer"
+store = false
+
+[install.pkg]
+apt = "alsa-utils"
+dnf = "alsa-utils"
+pacman = "alsa-utils"
+brew = ""

@@ -1,0 +1,14 @@
+id = "grut"
+name = "grut"
+bin = "grut"
+category = "AI"
+description = "A terminal file explorer with deep Git integration."
+homepage = "https://github.com/jongio/grut"
+
+[install.recipe]
+install = "go install github.com/jongio/grut@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

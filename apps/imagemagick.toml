@@ -1,0 +1,10 @@
+id = "imagemagick"
+name = "imagemagick"
+check = "magick|convert"
+store = false
+
+[install.pkg]
+apt = "imagemagick"
+dnf = "ImageMagick"
+pacman = "imagemagick"
+brew = "imagemagick"

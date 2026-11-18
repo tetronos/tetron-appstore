@@ -1,0 +1,16 @@
+id = "gif-for-cli"
+name = "gif-for-cli"
+bin = "gif-for-cli"
+category = "Miscellaneous"
+description = "Convert a gif into ASCII"
+homepage = "https://github.com/google/gif-for-cli"
+cli = true
+
+[install.recipe]
+install = "pipx install gif-for-cli"
+method = "pipx"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,9 @@
+id = "repgrep"
+name = "repgrep"
+bin = "repgrep"
+category = "Development"
+description = "An interactive replacer for ripgrep."
+homepage = "https://github.com/acheronfail/repgrep"
+
+[source]
+lists = ["terminaltrove"]

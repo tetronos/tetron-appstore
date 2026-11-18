@@ -1,0 +1,14 @@
+id = "tofuref"
+name = "tofuref"
+bin = "tofuref"
+category = "Development"
+description = "A TUI for the OpenTofu provider registry."
+homepage = "https://github.com/djetelina/tofuref"
+
+[install.recipe]
+install = "pipx install tofuref"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

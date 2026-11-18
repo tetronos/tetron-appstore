@@ -1,0 +1,15 @@
+id = "superhighway84"
+name = "Superhighway84"
+bin = "superhighway84"
+category = "Messaging"
+description = "USENET-inspired decentralized internet discussion system"
+homepage = "https://github.com/mrusme/superhighway84"
+
+[install.recipe]
+install = "git clone git@github.com:mrusme/superhighway84.git && cd superhighway84 && go build ."
+method = "source"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

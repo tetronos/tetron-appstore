@@ -1,0 +1,15 @@
+id = "qrypad"
+name = "qrypad"
+bin = "qrypad"
+category = "Development"
+description = "A terminal SQL client for Postgres, MySQL and SQLite."
+homepage = "https://github.com/wheelibin/qrypad"
+
+[install.recipe]
+install = "go install github.com/wheelibin/qrypad@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

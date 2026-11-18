@@ -1,0 +1,9 @@
+id = "taskdog"
+name = "taskdog"
+bin = "taskdog"
+category = "Miscellaneous"
+description = "A terminal task manager with intelligent schedule optimization."
+homepage = "https://github.com/Kohei-Wada/taskdog"
+
+[source]
+lists = ["terminaltrove"]

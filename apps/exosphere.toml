@@ -1,0 +1,9 @@
+id = "exosphere"
+name = "exosphere"
+bin = "exosphere"
+category = "Dashboards"
+description = "A CLI / TUI for aggregated patch reporting & system status monitoring via SSH."
+homepage = "https://github.com/mrdaemon/exosphere"
+
+[source]
+lists = ["terminaltrove"]

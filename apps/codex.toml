@@ -1,0 +1,22 @@
+id = "codex"
+name = "Codex"
+bin = "codex"
+category = "AI"
+description = "Lightweight agentic coding assistant that runs in your terminal, powered by OpenAI models."
+homepage = "https://github.com/openai/codex"
+requires_cwd = true
+
+[agent]
+label = "Codex"
+
+[agent.mcp]
+args = ["-c", "mcp_servers.tetron-wm.command=\"{{MCP_BIN}}\"", "-c", "mcp_servers.tetron-wm.args=[\"mcp\"]"]
+
+[install.recipe]
+install = "npm install -g @openai/codex"
+method = "npm"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

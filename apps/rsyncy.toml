@@ -1,0 +1,15 @@
+id = "rsyncy"
+name = "rsyncy"
+bin = "rsyncy"
+category = "Miscellaneous"
+description = "A status/progress bar for rsync."
+homepage = "https://github.com/laktak/rsyncy"
+cli = true
+
+[install.recipe]
+install = "brew install rsyncy"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

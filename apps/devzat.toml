@@ -1,0 +1,15 @@
+id = "devzat"
+name = "Devzat"
+bin = "devzat"
+category = "Messaging"
+description = "Chat over SSH, written in Golang with self-hosting ability."
+homepage = "https://github.com/quackduck/devzat"
+
+[install.recipe]
+install = "go install github.com/quackduck/devzat@latest"
+method = "go"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

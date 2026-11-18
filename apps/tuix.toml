@@ -1,0 +1,15 @@
+id = "tuix"
+name = "tuix"
+bin = "tuix"
+category = "Messaging"
+description = "TUI for managing screens"
+homepage = "https://github.com/pythops/tuix"
+
+[install.recipe]
+install = "git clone https://github.com/pythops/tuix && cd tuix && cargo install --path ."
+method = "source"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

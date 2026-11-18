@@ -1,0 +1,14 @@
+id = "intentrace"
+name = "intentrace"
+bin = "intentrace"
+category = "Development"
+description = "A better strace(1) for everyone."
+homepage = "https://github.com/sectordistrict/intentrace"
+
+[install.recipe]
+install = "cargo install --locked intentrace"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

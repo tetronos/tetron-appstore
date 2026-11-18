@@ -1,0 +1,15 @@
+id = "elinks"
+name = "elinks"
+bin = "elinks"
+category = "Web"
+description = "ELinks (HTTP/FTP/..) brower with mujs javascript support."
+homepage = "https://github.com/rkd77/elinks"
+
+[install.recipe]
+install = "meson setup builddir && cd builddir && meson compile && meson install"
+method = "source"
+os = ["linux", "macos"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

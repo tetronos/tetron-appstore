@@ -1,0 +1,14 @@
+id = "renux"
+name = "renux"
+bin = "renux"
+category = "Dashboards"
+description = "A terminal-based bulk file renamer with a TUI."
+homepage = "https://github.com/andrianllmm/renux"
+
+[install.recipe]
+install = "pipx install renux"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

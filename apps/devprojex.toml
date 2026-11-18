@@ -1,0 +1,9 @@
+id = "devprojex"
+name = "DevProjex"
+bin = "devprojex"
+category = "Development"
+description = "A cross-platform TUI for exploring project trees, selecting files, previewing AI-ready context, and exporting structured codebase snapshots."
+homepage = "https://github.com/Avazbek22/DevProjex"
+
+[source]
+lists = ["awesome-tuis"]

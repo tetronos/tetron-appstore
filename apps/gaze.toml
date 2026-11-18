@@ -1,0 +1,15 @@
+id = "gaze"
+name = "gaze"
+bin = "gaze"
+category = "Dashboards"
+description = "Executes commands for you."
+homepage = "https://github.com/wtetsu/gaze"
+cli = true
+
+[install.recipe]
+install = "brew install gaze"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

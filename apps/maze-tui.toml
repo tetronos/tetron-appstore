@@ -1,0 +1,15 @@
+id = "maze-tui"
+name = "Maze TUI"
+bin = "run_tui"
+category = "Games"
+description = "Build mazes and solve them with various algorithms."
+homepage = "https://github.com/agl-alexglopez/maze-tui"
+
+[install.recipe]
+install = "git clone https://github.com/agl-alexglopez/maze-tui.git && cd maze-tui/maze_tui && cargo build --release --bin run_tui"
+method = "source"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

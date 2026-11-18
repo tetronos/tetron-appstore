@@ -1,0 +1,15 @@
+id = "csvlens"
+name = "csvlens"
+bin = "csvlens"
+category = "Miscellaneous"
+description = "TUI CSV file viewer. It is like less but made for CSV."
+homepage = "https://github.com/YS-L/csvlens"
+
+[install.recipe]
+install = "brew install csvlens"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

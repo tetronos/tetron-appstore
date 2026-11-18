@@ -1,0 +1,15 @@
+id = "wg-commander"
+name = "WG Commander"
+bin = "wg-cmd"
+category = "Miscellaneous"
+description = "A TUI for a simple WireGuard VPN setup: peer management, QR codes, setup wizard."
+homepage = "https://github.com/andrianbdn/wg-cmd"
+
+[install.recipe]
+install = "curl -SL https://github.com/andrianbdn/wg-cmd/releases/download/v0.1.7/wg-cmd-0.1.7-linux-amd64 -o /usr/local/bin/wg-cmd && chmod +x /usr/local/bin/wg-cmd"
+method = "binary"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

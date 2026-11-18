@@ -1,0 +1,14 @@
+id = "ggh"
+name = "ggh"
+bin = "ggh"
+category = "Development"
+description = "Recall your SSH sessions."
+homepage = "https://github.com/byawitz/ggh"
+
+[install.recipe]
+install = "brew install ggh"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

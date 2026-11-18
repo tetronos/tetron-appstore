@@ -1,0 +1,20 @@
+id = "dvtm"
+name = "dvtm"
+bin = "dvtm"
+category = "Productivity"
+description = "A terminal multiplexer with dwm like window management"
+homepage = "https://github.com/martanne/dvtm"
+
+[install.pkg]
+apt = "dvtm"
+dnf = "dvtm"
+pacman = "dvtm"
+
+[install.recipe]
+install = "make && sudo make install"
+method = "source"
+os = ["linux", "macos"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

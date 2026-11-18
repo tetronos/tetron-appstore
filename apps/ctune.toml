@@ -1,0 +1,15 @@
+id = "ctune"
+name = "ctune"
+bin = "ctune"
+category = "Multimedia"
+description = "ncurses based internet radio player for Linux."
+homepage = "https://github.com/An7ar35/ctune"
+
+[install.recipe]
+install = "git clone https://github.com/An7ar35/ctune.git && cd ctune && cmake . -DCMAKE_BUILD_TYPE=Release && cmake --build . && sudo cmake --install ."
+method = "source"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

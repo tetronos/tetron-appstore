@@ -1,0 +1,15 @@
+id = "s-tui"
+name = "s-tui"
+bin = "s-tui"
+category = "Dashboards"
+description = "CPU stress and monitoring utility"
+homepage = "https://github.com/amanusk/s-tui"
+
+[install.recipe]
+install = "pipx install s-tui"
+method = "pipx"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

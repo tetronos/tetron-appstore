@@ -1,0 +1,15 @@
+id = "dockmate"
+name = "DockMate"
+bin = "dockmate"
+category = "Docker/LXC/K8s"
+description = "A lightweight TUI manager for Docker and Podman"
+homepage = "https://github.com/shubh-io/dockmate"
+
+[install.recipe]
+install = "brew install shubh-io/tap/dockmate"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

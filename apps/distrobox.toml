@@ -1,0 +1,10 @@
+id = "distrobox"
+name = "distrobox"
+check = "distrobox"
+store = false
+
+[install.pkg]
+apt = "distrobox"
+dnf = "distrobox"
+pacman = "distrobox"
+brew = ""

@@ -1,0 +1,15 @@
+id = "textual-paint"
+name = "textual-paint"
+bin = "textual-paint"
+category = "Multimedia"
+description = "MS Paint in your terminal"
+homepage = "https://github.com/1j01/textual-paint"
+
+[install.recipe]
+install = "pipx install textual-paint"
+method = "pipx"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

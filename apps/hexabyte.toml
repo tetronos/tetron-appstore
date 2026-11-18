@@ -1,0 +1,14 @@
+id = "hexabyte"
+name = "hexabyte"
+bin = "hexabyte"
+category = "Miscellaneous"
+description = "A modern, modular, and robust TUI hex editor."
+homepage = "https://github.com/thetacom/hexabyte"
+
+[install.recipe]
+install = "pipx install hexabyte"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "rmpc"
+name = "rmpc"
+bin = "rmpc"
+category = "Multimedia"
+description = "A configurable MPD client inspired by ncmpcpp and ranger with album art support via various graphics protocols."
+homepage = "https://mierak.github.io/rmpc/"
+
+[install.recipe]
+install = "brew install rmpc"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

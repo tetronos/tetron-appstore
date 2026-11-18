@@ -1,0 +1,14 @@
+id = "byobu"
+name = "byobu"
+bin = "byobu"
+category = "Miscellaneous"
+description = "Text-based window manager and terminal multiplexer"
+homepage = "https://github.com/dustinkirkland/byobu"
+
+[install.recipe]
+install = "brew install byobu"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

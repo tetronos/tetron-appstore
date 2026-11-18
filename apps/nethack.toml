@@ -1,0 +1,15 @@
+id = "nethack"
+name = "NetHack"
+bin = "nethack"
+category = "Games"
+description = "Dungeon exploration game"
+homepage = "https://github.com/NetHack/NetHack"
+
+[install.recipe]
+install = "brew install nethack"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

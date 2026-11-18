@@ -1,0 +1,14 @@
+id = "mult"
+name = "mult"
+bin = "mult"
+category = "Development"
+description = "Run a command multiple times and glance at the outputs."
+homepage = "https://github.com/dhth/mult"
+
+[install.recipe]
+install = "go install github.com/dhth/mult@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

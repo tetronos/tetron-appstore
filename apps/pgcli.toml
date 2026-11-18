@@ -1,0 +1,15 @@
+id = "pgcli"
+name = "pgcli"
+bin = "pgcli"
+category = "Development"
+description = "Postgres CLI with auto-completion and syntax highlighting."
+homepage = "https://github.com/dbcli/pgcli"
+
+[install.recipe]
+install = "brew install pgcli"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

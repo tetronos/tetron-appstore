@@ -1,0 +1,14 @@
+id = "comchan"
+name = "comchan"
+bin = "comchan"
+category = "Dashboards"
+description = "A blazingly fast, minimal, and beginner-friendly serial monitor."
+homepage = "https://github.com/Vaishnav-Sabari-Girish/ComChan"
+
+[install.recipe]
+install = "cargo install --locked comchan"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

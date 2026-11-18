@@ -1,0 +1,15 @@
+id = "termrex"
+name = "termrex"
+bin = "termrex"
+category = "Games"
+description = "A terminal-based endless runner game inspired by the Chrome Dino offline game."
+homepage = "https://github.com/SATYADAHAL/termrex"
+
+[install.recipe]
+install = "git clone https://github.com/SATYADAHAL/termrex.git && cd termrex && make -j release && ./build/termrex"
+method = "source"
+os = ["linux", "macos"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

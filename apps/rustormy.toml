@@ -1,0 +1,14 @@
+id = "rustormy"
+name = "rustormy"
+bin = "rustormy"
+category = "Miscellaneous"
+description = "Minimal neofetch-like weather CLI."
+homepage = "https://github.com/Tairesh/rustormy"
+
+[install.recipe]
+install = "cargo install --locked rustormy"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

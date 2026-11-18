@@ -1,0 +1,15 @@
+id = "htui"
+name = "htui"
+bin = "htui"
+category = "Dashboards"
+description = "Heroku Terminal User Interface"
+homepage = "https://github.com/PierreKieffer/htui"
+
+[install.recipe]
+install = "curl -sSL https://raw.githubusercontent.com/PierreKieffer/htui/master/install/install_htui64_osx.sh | bash"
+method = "script"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

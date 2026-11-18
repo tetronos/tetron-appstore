@@ -1,0 +1,15 @@
+id = "eget"
+name = "eget"
+bin = "eget"
+category = "Miscellaneous"
+description = "Easily install prebuilt binaries from GitHub."
+homepage = "https://github.com/zyedidia/eget"
+cli = true
+
+[install.recipe]
+install = "brew install eget"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

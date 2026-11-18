@@ -1,0 +1,14 @@
+id = "sidecar"
+name = "sidecar"
+bin = "sidecar"
+category = "AI"
+description = "A TUI dashboard for AI coding agents."
+homepage = "https://github.com/marcus/sidecar"
+
+[install.recipe]
+install = "go install github.com/marcus/sidecar/cmd/sidecar@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

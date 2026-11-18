@@ -1,0 +1,14 @@
+id = "fm"
+name = "fm"
+bin = "fm"
+category = "File Managers"
+description = "A minimalistic file manager for the terminal."
+homepage = "https://github.com/mistakenelf/fm"
+
+[install.recipe]
+install = "go install github.com/mistakenelf/fm@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

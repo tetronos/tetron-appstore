@@ -1,0 +1,21 @@
+id = "curl"
+name = "curl"
+bin = "curl"
+category = "Development"
+description = "A command line tool and library for transferring data."
+homepage = "https://github.com/curl/curl"
+cli = true
+
+[install.pkg]
+apt = "curl"
+dnf = "curl"
+pacman = "curl"
+brew = ""
+
+[install.recipe]
+install = "brew install curl"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

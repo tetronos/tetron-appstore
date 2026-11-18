@@ -1,0 +1,15 @@
+id = "yozefu"
+name = "Yozefu"
+bin = "yozefu"
+category = "Dashboards"
+description = "A TUI for exploring data of a kafka cluster."
+homepage = "https://github.com/MAIF/yozefu"
+
+[install.recipe]
+install = "brew install yozefu"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

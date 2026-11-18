@@ -1,0 +1,14 @@
+id = "jiq"
+name = "jiq"
+bin = "jiq"
+category = "Development"
+description = "Interactive JSON query tool with real-time output and AI assistance."
+homepage = "https://github.com/bellicose100xp/jiq"
+
+[install.recipe]
+install = "cargo install --locked jiq"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

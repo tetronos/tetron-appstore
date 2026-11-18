@@ -1,0 +1,16 @@
+id = "mpvc"
+name = "mpvc"
+bin = "mpvc"
+category = "Multimedia"
+description = "A mpc-like control interface for mpv"
+homepage = "https://github.com/gmt4/mpvc"
+cli = true
+
+[install.recipe]
+install = "curl -fsSLO https://github.com/lwilletts/mpvc/raw/master/extras/mpvc-installer && SHELL=/bin/sh BINDIR=$HOME/bin sh ./mpvc-installer fetch-user"
+method = "script"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

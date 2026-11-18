@@ -1,0 +1,15 @@
+id = "netscanner"
+name = "netscanner"
+bin = "netscanner"
+category = "Dashboards"
+description = "Network scanner"
+homepage = "https://github.com/Chleba/netscanner"
+
+[install.recipe]
+install = "brew install netscanner"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

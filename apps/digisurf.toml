@@ -1,0 +1,15 @@
+id = "digisurf"
+name = "DigiSurf"
+bin = "digisurf"
+category = "Miscellaneous"
+description = "A TUI signal waveform viewer"
+homepage = "https://github.com/SeanMcLoughlin/digisurf"
+
+[install.recipe]
+install = "cargo install digisurf"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

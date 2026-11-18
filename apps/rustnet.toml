@@ -1,0 +1,15 @@
+id = "rustnet"
+name = "rustnet"
+bin = "rustnet"
+category = "Dashboards"
+description = "A cross-platform network monitoring tool with deep packet inspection"
+homepage = "https://github.com/domcyrus/rustnet"
+
+[install.recipe]
+install = "brew install rustnet"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

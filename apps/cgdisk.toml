@@ -1,0 +1,15 @@
+id = "cgdisk"
+name = "cgdisk"
+bin = "cgdisk"
+category = "Miscellaneous"
+description = "TUI partition editor for manipulating GUID partition tables, and modeled after cfdisk"
+homepage = "https://www.rodsbooks.com/gdisk/cgdisk-walkthrough.html"
+
+[install.recipe]
+install = "brew install gptfdisk"
+method = "brew"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

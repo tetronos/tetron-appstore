@@ -1,0 +1,15 @@
+id = "manga-tui"
+name = "manga-tui"
+bin = "manga-tui"
+category = "Multimedia"
+description = "Terminal-based manga reader and downloader with image rendering support"
+homepage = "https://github.com/josueBarretogit/manga-tui"
+
+[install.recipe]
+install = "cargo install manga-tui --locked"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

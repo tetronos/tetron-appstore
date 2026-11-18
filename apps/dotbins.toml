@@ -1,0 +1,14 @@
+id = "dotbins"
+name = "dotbins"
+bin = "dotbins"
+category = "Miscellaneous"
+description = "Keep updated binaries in your dotfiles."
+homepage = "https://github.com/basnijholt/dotbins"
+
+[install.recipe]
+install = "pipx install dotbins"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

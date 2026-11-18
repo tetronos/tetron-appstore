@@ -1,0 +1,15 @@
+id = "oh-my-pi"
+name = "oh-my-pi"
+bin = "omp"
+category = "AI"
+description = "A coding agent with the IDE wired in (the omp CLI): 40+ model providers, dozens of built-in tools, and LSP/DAP integration for read/edit/run workflows in the terminal."
+homepage = "https://omp.sh"
+
+[install.recipe]
+install = "brew install can1357/tap/omp"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["tetron"]

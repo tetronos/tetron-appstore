@@ -1,0 +1,15 @@
+id = "scc"
+name = "scc"
+bin = "scc"
+category = "Miscellaneous"
+description = "A very fast accurate code counter with complexity calculations."
+homepage = "https://github.com/boyter/scc"
+cli = true
+
+[install.recipe]
+install = "brew install scc"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

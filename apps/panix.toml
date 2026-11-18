@@ -1,0 +1,14 @@
+id = "panix"
+name = "panix"
+bin = "panix"
+category = "Development"
+description = "A universal NixOS deployment tool."
+homepage = "https://github.com/mihakrumpestar/panix"
+
+[install.recipe]
+install = "go install github.com/mihakrumpestar/panix/cmd/panix@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

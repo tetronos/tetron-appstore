@@ -1,0 +1,9 @@
+id = "glab-tui"
+name = "glab-tui"
+bin = "glab-tui"
+category = "Development"
+description = "A TUI to manage GitLab and GitHub projects."
+homepage = "https://github.com/rcieri/glab-tui"
+
+[source]
+lists = ["terminaltrove"]

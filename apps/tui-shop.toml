@@ -1,0 +1,15 @@
+id = "tui-shop"
+name = "tui-shop"
+bin = "tui-shop"
+category = "Miscellaneous"
+description = "Something between a CLI and a GUI way of downloading TUIs/CLIs"
+homepage = "https://github.com/Gcat101/tui-shop"
+
+[install.recipe]
+install = "git clone https://github.com/Gcat101/tui-shop.git && cd tui-shop && chmod +x ./install.sh && sudo ./install.sh"
+method = "script"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

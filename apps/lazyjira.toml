@@ -1,0 +1,14 @@
+id = "lazyjira"
+name = "lazyjira"
+bin = "lazyjira"
+category = "Miscellaneous"
+description = "A TUI for Jira, like lazygit but for Jira."
+homepage = "https://github.com/textfuel/lazyjira"
+
+[install.recipe]
+install = "go install github.com/textfuel/lazyjira/v2/cmd/lazyjira@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

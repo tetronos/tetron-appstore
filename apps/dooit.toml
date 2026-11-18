@@ -1,0 +1,14 @@
+id = "dooit"
+name = "dooit"
+bin = "dooit"
+category = "Miscellaneous"
+description = "A TUI todo manager for the terminal"
+homepage = "https://github.com/dooit-org/dooit"
+
+[install.recipe]
+install = "brew install dooit"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

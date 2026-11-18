@@ -1,0 +1,15 @@
+id = "jc"
+name = "jc"
+bin = "jc"
+category = "Development"
+description = "A tool convert CLI output, files & strings to JSON/YAML."
+homepage = "https://github.com/kellyjonbrazil/jc"
+cli = true
+
+[install.recipe]
+install = "brew install jc"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

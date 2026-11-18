@@ -1,0 +1,15 @@
+id = "maki"
+name = "maki"
+bin = "maki"
+category = "Editors"
+description = "A simple tabbed text editor with file navigation and an emphasis on preserving battery life"
+homepage = "https://sr.ht/~bscit/maki/"
+
+[install.recipe]
+install = "git clone https://git.sr.ht/~bscit/maki && cd maki && dotnet build && ./maki/bin/Debug/net8.0/maki"
+method = "source"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

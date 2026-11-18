@@ -1,0 +1,14 @@
+id = "yatto"
+name = "yatto"
+bin = "yatto"
+category = "Miscellaneous"
+description = "Interactive Git-based todo-list for the command line."
+homepage = "https://github.com/handlebargh/yatto"
+
+[install.recipe]
+install = "go install github.com/handlebargh/yatto@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

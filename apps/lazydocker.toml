@@ -1,0 +1,15 @@
+id = "lazydocker"
+name = "lazydocker"
+bin = "lazydocker"
+category = "Docker/LXC/K8s"
+description = "The lazier way to manage everything docker"
+homepage = "https://github.com/jesseduffield/lazydocker"
+
+[install.recipe]
+install = "brew install lazydocker"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

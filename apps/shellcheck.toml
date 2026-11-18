@@ -1,0 +1,21 @@
+id = "shellcheck"
+name = "shellcheck"
+bin = "shellcheck"
+category = "Miscellaneous"
+description = "A static analysis tool for shell scripts."
+homepage = "https://github.com/koalaman/shellcheck"
+cli = true
+
+[install.pkg]
+apt = "shellcheck"
+dnf = "ShellCheck"
+pacman = "shellcheck"
+brew = "shellcheck"
+
+[install.recipe]
+install = "brew install shellcheck"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

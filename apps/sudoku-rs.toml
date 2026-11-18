@@ -1,0 +1,15 @@
+id = "sudoku-rs"
+name = "sudoku-rs"
+bin = "sudoku-rs"
+category = "Games"
+description = "Sudoku built with tui-rs"
+homepage = "https://github.com/MitchelPaulin/sudoku-rs"
+
+[install.recipe]
+install = "sudo snap install sudoku-rs"
+method = "binary"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

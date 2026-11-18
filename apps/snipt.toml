@@ -1,0 +1,14 @@
+id = "snipt"
+name = "snipt"
+bin = "snipt"
+category = "Miscellaneous"
+description = "A powerful text snippet expansion tool."
+homepage = "https://github.com/snipt/snipt"
+
+[install.recipe]
+install = "cargo install --locked snipt"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "octosql"
+name = "octosql"
+bin = "octosql"
+category = "Development"
+description = "A CLI tool which lets you query a plethora of databases."
+homepage = "https://github.com/cube2222/octosql"
+cli = true
+
+[install.recipe]
+install = "brew install octosql"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

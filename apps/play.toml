@@ -1,0 +1,15 @@
+id = "play"
+name = "play"
+bin = "play"
+category = "Development"
+description = "A TUI playground to experiment with your favorite programs, such as grep, sed, awk, jq and yq"
+homepage = "https://github.com/paololazzari/play"
+
+[install.recipe]
+install = "go install github.com/paololazzari/play@latest"
+method = "go"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

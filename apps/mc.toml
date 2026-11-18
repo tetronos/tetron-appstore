@@ -1,0 +1,21 @@
+id = "mc"
+name = "mc"
+bin = "mc"
+category = "File Managers"
+description = "GNU Midnight Commander. A free cross-platform orthodox file manager."
+homepage = "https://github.com/MidnightCommander/mc"
+
+[install.pkg]
+apt = "mc"
+dnf = "mc"
+pacman = "mc"
+brew = "midnight-commander"
+
+[install.recipe]
+install = "brew install midnight-commander"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

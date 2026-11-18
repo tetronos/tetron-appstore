@@ -1,0 +1,15 @@
+id = "kibi"
+name = "kibi"
+bin = "kibi"
+category = "Editors"
+description = "A text editor in less than 1024 lines of code, written in Rust."
+homepage = "https://github.com/ilai-deutel/kibi"
+cli = true
+
+[install.recipe]
+install = "brew install kibi"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

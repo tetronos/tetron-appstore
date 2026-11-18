@@ -1,0 +1,16 @@
+id = "oha"
+name = "oha"
+bin = "oha"
+category = "Miscellaneous"
+description = "HTTP load generator"
+homepage = "https://github.com/hatoo/oha"
+cli = true
+
+[install.recipe]
+install = "brew install oha"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

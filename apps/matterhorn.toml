@@ -1,0 +1,15 @@
+id = "matterhorn"
+name = "matterhorn"
+bin = "matterhorn"
+category = "Messaging"
+description = "A Mattermost terminal client."
+homepage = "https://github.com/matterhorn-chat/matterhorn"
+
+[install.recipe]
+install = "curl -L https://github.com/matterhorn-chat/matterhorn/releases/download/90000.1.1/matterhorn-90000.1.1-Darwin-arm64.tar.bz2 -o matterhorn.tar.bz2 && tar -xjf matterhorn.tar.bz2 && sudo mv matterhorn-90000.1.1-Darwin-arm64/matterhorn /usr/local/bin/matterhorn"
+method = "binary"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

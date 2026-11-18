@@ -1,0 +1,15 @@
+id = "physics-tui"
+name = "physics-TUI"
+bin = "physics-tui"
+category = "Miscellaneous"
+description = "Physics TUI application for undergraduate study"
+homepage = "https://github.com/ClaudioRMalvino/physics_TUI"
+
+[install.recipe]
+install = "pip install git+https://github.com/ClaudioRMalvino/physics_TUI.git"
+method = "pip"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

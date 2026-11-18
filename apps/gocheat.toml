@@ -1,0 +1,15 @@
+id = "gocheat"
+name = "gocheat"
+bin = "gocheat"
+category = "Productivity"
+description = "A beautiful TUI cheatsheet for keybindings,hotkeys,gestures and aliases"
+homepage = "https://github.com/Achno/gocheat"
+
+[install.recipe]
+install = "brew install gocheat"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

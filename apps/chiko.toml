@@ -1,0 +1,15 @@
+id = "chiko"
+name = "chiko"
+bin = "chiko"
+category = "Development"
+description = "The Ultimate Beauty TUI gRPC Client"
+homepage = "https://github.com/felangga/chiko"
+
+[install.recipe]
+install = "brew install chiko"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

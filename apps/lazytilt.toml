@@ -1,0 +1,14 @@
+id = "lazytilt"
+name = "lazytilt"
+bin = "lazytilt"
+category = "Docker/LXC/K8s"
+description = "A TUI for Tilt.dev, manage your Tilt local dev environment without leaving the terminal."
+homepage = "https://github.com/tdi/lazytilt"
+
+[install.recipe]
+install = "go install github.com/tdi/lazytilt@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

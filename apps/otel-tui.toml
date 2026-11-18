@@ -1,0 +1,15 @@
+id = "otel-tui"
+name = "otel-tui"
+bin = "otel-tui"
+category = "Dashboards"
+description = "A terminal OpenTelemetry viewer"
+homepage = "https://github.com/ymtdzzz/otel-tui"
+
+[install.recipe]
+install = "brew install ymtdzzz/tap/otel-tui"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

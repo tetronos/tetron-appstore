@@ -1,0 +1,20 @@
+id = "lazygit"
+name = "lazygit"
+bin = "lazygit"
+category = "Development"
+description = "Simple terminal UI for git commands"
+homepage = "https://github.com/jesseduffield/lazygit"
+
+[install.release]
+repo = "jesseduffield/lazygit"
+amd64 = "lazygit_*_linux_x86_64.tar.gz"
+arm64 = "lazygit_*_linux_arm64.tar.gz"
+
+[install.recipe]
+install = "brew install lazygit"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

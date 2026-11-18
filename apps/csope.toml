@@ -1,0 +1,15 @@
+id = "csope"
+name = "csope"
+bin = "csope"
+category = "Development"
+description = "C source code browser based on cscope"
+homepage = "https://github.com/agvxov/csope"
+
+[install.recipe]
+install = "make"
+method = "source"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

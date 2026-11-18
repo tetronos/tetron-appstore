@@ -1,0 +1,14 @@
+id = "hishtory"
+name = "hishtory"
+bin = "hishtory"
+category = "Miscellaneous"
+description = "Your shell history: synced, queryable, and in context."
+homepage = "https://github.com/ddworken/hishtory"
+
+[install.recipe]
+install = "brew install hishtory"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

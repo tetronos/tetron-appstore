@@ -1,0 +1,10 @@
+id = "blueutil"
+name = "blueutil"
+check = "blueutil"
+store = false
+
+[install.pkg]
+apt = ""
+dnf = ""
+pacman = ""
+brew = "blueutil"

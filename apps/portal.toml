@@ -1,0 +1,14 @@
+id = "portal"
+name = "portal"
+bin = "portal"
+category = "Miscellaneous"
+description = "A quick and easy command-line file transfer utility."
+homepage = "https://github.com/SpatiumPortae/portal"
+
+[install.recipe]
+install = "brew install portal"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

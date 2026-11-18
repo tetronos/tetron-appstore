@@ -1,0 +1,14 @@
+id = "ssh-para"
+name = "ssh-para"
+bin = "ssh-para"
+category = "Development"
+description = "Parallel SSH jobs manager interactive CLI."
+homepage = "https://github.com/joknarf/ssh-para"
+
+[install.recipe]
+install = "pipx install ssh-para"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

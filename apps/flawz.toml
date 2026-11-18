@@ -1,0 +1,15 @@
+id = "flawz"
+name = "flawz"
+bin = "flawz"
+category = "Miscellaneous"
+description = "A Terminal UI for browsing security vulnerabilities (CVEs)"
+homepage = "https://github.com/orhun/flawz"
+
+[install.recipe]
+install = "brew install flawz"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

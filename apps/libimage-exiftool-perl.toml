@@ -1,0 +1,10 @@
+id = "libimage-exiftool-perl"
+name = "libimage-exiftool-perl"
+check = "exiftool"
+store = false
+
+[install.pkg]
+apt = "libimage-exiftool-perl"
+dnf = "perl-Image-ExifTool"
+pacman = "perl-image-exiftool"
+brew = "exiftool"

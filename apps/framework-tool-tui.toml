@@ -1,0 +1,15 @@
+id = "framework-tool-tui"
+name = "framework-tool-tui"
+bin = "framework-tool-tui"
+category = "Dashboards"
+description = "TUI for controlling and monitoring Framework Computers hardware built in Rust"
+homepage = "https://github.com/grouzen/framework-tool-tui"
+
+[install.recipe]
+install = "brew install framework-tool-tui"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

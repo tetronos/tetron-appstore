@@ -1,0 +1,14 @@
+id = "netop"
+name = "netop"
+bin = "netop"
+category = "Dashboards"
+description = "A network topology visualizer."
+homepage = "https://github.com/ZingerLittleBee/netop"
+
+[install.recipe]
+install = "cargo install --locked netop"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

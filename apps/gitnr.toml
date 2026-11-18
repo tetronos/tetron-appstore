@@ -1,0 +1,14 @@
+id = "gitnr"
+name = "gitnr"
+bin = "gitnr"
+category = "Development"
+description = "A CLI / TUI to generate .gitignore files using templates."
+homepage = "https://github.com/reemus-dev/gitnr"
+
+[install.recipe]
+install = "brew install gitnr"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

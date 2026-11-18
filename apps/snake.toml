@@ -1,0 +1,15 @@
+id = "snake"
+name = "snake"
+bin = "snake"
+category = "Games"
+description = ":video_game: A super minimal TUI snake game written in pure BASH v5.1+"
+homepage = "https://github.com/wick3dr0se/snake"
+
+[install.recipe]
+install = "bash <(curl -s https://raw.githubusercontent.com/wick3dr0se/snake/main/snake)"
+method = "script"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

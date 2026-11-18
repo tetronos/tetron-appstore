@@ -1,0 +1,9 @@
+id = "absotui"
+name = "Absotui"
+bin = "absotui"
+category = "Multimedia"
+description = "A TUI Audiobookshelf client for Linux and macOS, written in Rust"
+homepage = "https://github.com/pdwaldrop/absotui"
+
+[source]
+lists = ["awesome-tuis"]

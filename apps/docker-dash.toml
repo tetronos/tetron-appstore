@@ -1,0 +1,15 @@
+id = "docker-dash"
+name = "docker-dash"
+bin = "docker-dash"
+category = "Docker/LXC/K8s"
+description = "A full TUI managemnet tool for Docker"
+homepage = "https://github.com/GustavoCaso/docker-dash"
+
+[install.recipe]
+install = "go install github.com/GustavoCaso/docker-dash/cmd/docker-dash@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

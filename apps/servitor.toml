@@ -1,0 +1,9 @@
+id = "servitor"
+name = "servitor"
+bin = "servitor"
+category = "Messaging"
+description = "A fediverse client with a terminal interface"
+homepage = "https://github.com/BentonEdmondson/servitor"
+
+[source]
+lists = ["terminaltrove"]

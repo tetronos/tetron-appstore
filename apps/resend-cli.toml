@@ -1,0 +1,10 @@
+id = "resend-cli"
+name = "resend-cli"
+bin = "resend-cli"
+category = "Messaging"
+description = "The official CLI for Resend."
+homepage = "https://github.com/resend/resend-cli"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

@@ -1,0 +1,15 @@
+id = "podman-tui"
+name = "Podman-tui"
+bin = "podman-tui"
+category = "Docker/LXC/K8s"
+description = "TUI for Podman containers"
+homepage = "https://github.com/containers/podman-tui"
+
+[install.recipe]
+install = "brew install podman-tui"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,15 @@
+id = "gdu"
+name = "gdu"
+bin = "gdu"
+category = "Miscellaneous"
+description = "Fast disk usage analyzer with console interface written in Go"
+homepage = "https://github.com/dundee/gdu"
+
+[install.recipe]
+install = "brew install gdu"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

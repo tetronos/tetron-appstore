@@ -1,0 +1,15 @@
+id = "kanha"
+name = "kanha"
+bin = "kanha"
+category = "Web"
+description = "A web-app pentesting suite in Rust."
+homepage = "https://github.com/pwnwriter/kanha"
+cli = true
+
+[install.recipe]
+install = "cargo install --locked kanha"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

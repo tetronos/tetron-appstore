@@ -1,0 +1,15 @@
+id = "line"
+name = "line"
+bin = "line"
+category = "Multimedia"
+description = "Tiny command-line midi sequencer and language for live coding"
+homepage = "https://github.com/pd3v/line"
+
+[install.recipe]
+install = "curl -L https://pd3v.github.io/downloads/line_v0.8.2_mac_M_series.zip -o line.zip && unzip line.zip && ./line"
+method = "binary"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

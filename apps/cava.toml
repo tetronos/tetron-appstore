@@ -1,0 +1,18 @@
+id = "cava"
+name = "cava"
+bin = "cava"
+category = "Miscellaneous"
+description = "Cross-platform Audio Visualizer"
+homepage = "https://github.com/karlstav/cava"
+
+[install.pkg]
+apt = "cava"
+
+[install.recipe]
+install = "brew install cava"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

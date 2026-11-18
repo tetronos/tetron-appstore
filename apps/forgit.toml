@@ -1,0 +1,14 @@
+id = "forgit"
+name = "forgit"
+bin = "forgit"
+category = "Development"
+description = "A utility tool powered by fzf for using Git interactively."
+homepage = "https://github.com/wfxr/forgit"
+
+[install.recipe]
+install = "brew install forgit"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

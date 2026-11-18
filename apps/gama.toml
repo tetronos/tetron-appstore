@@ -1,0 +1,14 @@
+id = "gama"
+name = "gama"
+bin = "gama"
+category = "Development"
+description = "Manage your GitHub Actions from the terminal."
+homepage = "https://github.com/termkit/gama"
+
+[install.recipe]
+install = "brew install gama"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

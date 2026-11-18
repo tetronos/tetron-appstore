@@ -1,0 +1,15 @@
+id = "edit"
+name = "Edit"
+bin = "edit"
+category = "Editors"
+description = "A simple text editor. Pays homage to the classic MS-DOS Editor."
+homepage = "https://github.com/microsoft/edit"
+
+[install.recipe]
+install = "brew install msedit"
+method = "brew"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

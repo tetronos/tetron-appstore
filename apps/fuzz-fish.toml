@@ -1,0 +1,14 @@
+id = "fuzz-fish"
+name = "fuzz.fish"
+bin = "fuzz.fish"
+category = "Productivity"
+description = "A fuzzy finder for the Fish shell with preview panes for command history, files, git branches, worktrees, and commits"
+homepage = "https://github.com/jedipunkz/fuzz.fish"
+
+[install.recipe]
+install = "go install github.com/jedipunkz/fuzz.fish/cmd/fuzz@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

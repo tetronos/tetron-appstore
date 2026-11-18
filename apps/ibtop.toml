@@ -1,0 +1,14 @@
+id = "ibtop"
+name = "ibtop"
+bin = "ibtop"
+category = "Dashboards"
+description = "Real-time terminal monitor for InfiniBand networks."
+homepage = "https://github.com/JannikSt/ibtop"
+
+[install.recipe]
+install = "cargo install --locked ibtop"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

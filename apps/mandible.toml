@@ -1,0 +1,14 @@
+id = "mandible"
+name = "mandible"
+bin = "mandible"
+category = "Miscellaneous"
+description = "A TUI manual for every installed command-line tool you have."
+homepage = "https://github.com/AS-FOSS/mandible"
+
+[install.recipe]
+install = "cargo install --locked mandible"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

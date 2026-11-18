@@ -1,0 +1,16 @@
+id = "freeze"
+name = "freeze"
+bin = "freeze"
+category = "Development"
+description = "Generate images of code and terminal output."
+homepage = "https://github.com/charmbracelet/freeze"
+cli = true
+
+[install.recipe]
+install = "brew install charmbracelet/tap/freeze"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["tetron"]

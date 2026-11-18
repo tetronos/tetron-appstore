@@ -1,0 +1,14 @@
+id = "ad"
+name = "ad"
+bin = "ad"
+category = "Editors"
+description = "An adaptable text editor."
+homepage = "https://github.com/sminez/ad"
+
+[install.recipe]
+install = "brew install ad"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

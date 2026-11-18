@@ -1,0 +1,15 @@
+id = "lsd"
+name = "lsd"
+bin = "lsd"
+category = "Dashboards"
+description = "lsdeluxe, the next gen ls command in Rust."
+homepage = "https://github.com/lsd-rs/lsd"
+cli = true
+
+[install.recipe]
+install = "brew install lsd"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

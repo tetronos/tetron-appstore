@@ -1,0 +1,15 @@
+id = "jaq"
+name = "jaq"
+bin = "jaq"
+category = "Development"
+description = "A jq clone focused on correctness, speed, and simplicity"
+homepage = "https://github.com/01mf02/jaq"
+cli = true
+
+[install.recipe]
+install = "brew install jaq"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

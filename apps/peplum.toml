@@ -1,0 +1,14 @@
+id = "peplum"
+name = "peplum"
+bin = "peplum"
+category = "Miscellaneous"
+description = "The TUI PEP lookup manager for your terminal."
+homepage = "https://github.com/davep/peplum"
+
+[install.recipe]
+install = "pipx install peplum"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,21 @@
+id = "htop"
+name = "htop"
+bin = "htop"
+category = "Dashboards"
+description = "Interactive text-mode process viewer for Unix systems. It aims to be a better 'top'"
+homepage = "https://github.com/htop-dev/htop"
+
+[install.pkg]
+apt = "htop"
+dnf = "htop"
+pacman = "htop"
+brew = "htop"
+
+[install.recipe]
+install = "brew install htop"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

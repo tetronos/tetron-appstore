@@ -1,0 +1,14 @@
+id = "cronboard"
+name = "cronboard"
+bin = "cronboard"
+category = "Development"
+description = "A terminal tool for managing cron jobs locally and on servers."
+homepage = "https://github.com/antoniorodr/cronboard"
+
+[install.recipe]
+install = "brew install cronboard"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

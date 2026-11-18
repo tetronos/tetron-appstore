@@ -1,0 +1,14 @@
+id = "hstr"
+name = "hstr"
+bin = "hstr"
+category = "Miscellaneous"
+description = "A bash and zsh shell history suggestion box for your command history."
+homepage = "https://github.com/dvorka/hstr"
+
+[install.recipe]
+install = "brew install hstr"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

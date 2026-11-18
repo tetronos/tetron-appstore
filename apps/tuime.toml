@@ -1,0 +1,9 @@
+id = "tuime"
+name = "tuime"
+bin = "tuime"
+category = "Miscellaneous"
+description = "A colorful and customizable TUI clock written in Rust."
+homepage = "https://github.com/nthnd/tuime"
+
+[source]
+lists = ["terminaltrove"]

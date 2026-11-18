@@ -1,0 +1,10 @@
+id = "qalc"
+name = "qalc"
+check = "qalc"
+store = false
+
+[install.pkg]
+apt = "qalc"
+dnf = "qalculate"
+pacman = "libqalculate"
+brew = "libqalculate"

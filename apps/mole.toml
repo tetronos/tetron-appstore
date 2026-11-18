@@ -1,0 +1,15 @@
+id = "mole"
+name = "mole"
+bin = "mole"
+category = "Miscellaneous"
+description = "Deep clean and optimize your Mac."
+homepage = "https://github.com/tw93/Mole"
+cli = true
+
+[install.recipe]
+install = "brew install mole"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "prs"
+name = "prs"
+bin = "prs"
+category = "Development"
+description = "Stay updated on PRs without leaving the terminal"
+homepage = "https://github.com/dhth/prs"
+
+[install.recipe]
+install = "brew install prs"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

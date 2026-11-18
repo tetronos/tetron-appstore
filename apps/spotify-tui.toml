@@ -1,0 +1,14 @@
+id = "spotify-tui"
+name = "spotify-tui"
+bin = "spotify-tui"
+category = "Multimedia"
+description = "Spotify for the terminal written in Rust"
+homepage = "https://github.com/Rigellute/spotify-tui"
+
+[install.recipe]
+install = "cargo install --locked spotify-tui"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

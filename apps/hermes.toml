@@ -1,0 +1,22 @@
+id = "hermes"
+name = "Hermes"
+bin = "hermes"
+category = "AI"
+description = "Nous Research's self-improving AI agent: creates skills from experience and builds a persistent model of its user. Chat TUI via hermes --tui."
+homepage = "https://hermes-agent.nousresearch.com"
+cli = true
+
+[notes]
+tip = "First run: `hermes model` in a shell to add providers and API keys (or `hermes setup --portal`). Config lives in ~/.hermes/config.yaml. Chat with `hermes --tui`."
+
+[agent]
+label = "Hermes"
+
+[install.recipe]
+install = "curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash"
+method = "script"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["tetron"]

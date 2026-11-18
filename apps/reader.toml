@@ -1,0 +1,9 @@
+id = "reader"
+name = "reader"
+bin = "reader"
+category = "Web"
+description = "Readability for the command line."
+homepage = "https://github.com/mrusme/reader"
+
+[source]
+lists = ["terminaltrove"]

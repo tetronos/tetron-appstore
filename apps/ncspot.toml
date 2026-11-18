@@ -1,0 +1,15 @@
+id = "ncspot"
+name = "ncspot"
+bin = "ncspot"
+category = "Multimedia"
+description = "Cross-platform ncurses Spotify client written in Rust"
+homepage = "https://github.com/hrkfdn/ncspot"
+
+[install.recipe]
+install = "brew install ncspot"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

@@ -1,0 +1,10 @@
+id = "hledger"
+name = "hledger"
+bin = "hledger"
+category = "Productivity"
+description = "Fast, friendly, robust plain text accounting software"
+homepage = "https://github.com/hledgerorg/hledger"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

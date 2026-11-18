@@ -1,0 +1,14 @@
+id = "scooter"
+name = "scooter"
+bin = "scooter"
+category = "Development"
+description = "Interactive find and replace in the terminal."
+homepage = "https://github.com/thomasschafer/scooter"
+
+[install.recipe]
+install = "brew install scooter"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

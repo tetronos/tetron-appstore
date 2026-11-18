@@ -1,0 +1,9 @@
+id = "wikiman"
+name = "wikiman"
+bin = "wikiman"
+category = "Miscellaneous"
+description = "A universal offline documentation search engine for manual pages."
+homepage = "https://github.com/filiparag/wikiman"
+
+[source]
+lists = ["terminaltrove"]

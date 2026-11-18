@@ -1,0 +1,14 @@
+id = "kplay"
+name = "kplay"
+bin = "kplay"
+category = "Miscellaneous"
+description = "Inspect messages in a Kafka topic in a simple and deliberate manner."
+homepage = "https://github.com/dhth/kplay"
+
+[install.recipe]
+install = "go install github.com/dhth/kplay@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

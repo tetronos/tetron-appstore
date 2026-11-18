@@ -1,0 +1,15 @@
+id = "gotip"
+name = "gotip"
+bin = "gotip"
+category = "Development"
+description = "A TUI application for interactively selecting and running Go tests."
+homepage = "https://github.com/lusingander/gotip"
+cli = true
+
+[install.recipe]
+install = "go install github.com/lusingander/gotip/cmd/gotip@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

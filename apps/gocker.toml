@@ -1,0 +1,9 @@
+id = "gocker"
+name = "gocker"
+bin = "gocker"
+category = "Docker/LXC/K8s"
+description = "TUI for Docker management."
+homepage = "https://github.com/micoli/gocker"
+
+[source]
+lists = ["terminaltrove"]

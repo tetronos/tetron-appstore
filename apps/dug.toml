@@ -1,0 +1,14 @@
+id = "dug"
+name = "dug"
+bin = "dug"
+category = "Development"
+description = "A global DNS propagation checker on your CLI"
+homepage = "https://github.com/unfrl/dug"
+
+[install.recipe]
+install = "brew install dug"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

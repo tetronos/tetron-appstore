@@ -1,0 +1,9 @@
+id = "swaptop"
+name = "swaptop"
+bin = "swaptop"
+category = "Dashboards"
+description = "A real-time swap usage monitor with a TUI."
+homepage = "https://github.com/luis-ota/swaptop"
+
+[source]
+lists = ["terminaltrove"]

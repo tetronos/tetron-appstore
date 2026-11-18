@@ -1,0 +1,14 @@
+id = "mdtt"
+name = "mdtt"
+bin = "mdtt"
+category = "Productivity"
+description = "Markdown Table Editor TUI."
+homepage = "https://github.com/szktkfm/mdtt"
+
+[install.recipe]
+install = "go install github.com/szktkfm/mdtt/cmd/mdtt@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

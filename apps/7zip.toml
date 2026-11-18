@@ -1,0 +1,13 @@
+id = "7zip"
+name = "7zip"
+check = "7z|7zz"
+store = false
+
+[install]
+deb = "7zip | p7zip-full"
+
+[install.pkg]
+apt = "7zip"
+dnf = "7zip"
+pacman = "7zip"
+brew = "sevenzip"

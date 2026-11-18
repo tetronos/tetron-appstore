@@ -1,0 +1,15 @@
+id = "vlc"
+name = "vlc"
+bin = "vlc"
+category = "Multimedia"
+description = "VLC includes an ncurses interface, `vlc --intf ncurses`"
+homepage = "https://github.com/videolan/vlc"
+
+[install.recipe]
+install = "brew install vlc"
+method = "brew"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

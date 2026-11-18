@@ -1,0 +1,9 @@
+id = "rucola"
+name = "rucola"
+bin = "rucola"
+category = "Miscellaneous"
+description = "A terminal based markdown note manager."
+homepage = "https://github.com/Linus-Mussmaecher/rucola"
+
+[source]
+lists = ["terminaltrove"]

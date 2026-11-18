@@ -1,0 +1,14 @@
+id = "llmfit"
+name = "llmfit"
+bin = "llmfit"
+category = "AI"
+description = "A terminal tool that finds what LLM models can run on your system's RAM, CPU, and GPU."
+homepage = "https://github.com/AlexsJones/llmfit"
+
+[install.recipe]
+install = "brew install llmfit"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

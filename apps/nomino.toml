@@ -1,0 +1,15 @@
+id = "nomino"
+name = "nomino"
+bin = "nomino"
+category = "Dashboards"
+description = "Batch rename utility for developers."
+homepage = "https://github.com/yaa110/nomino"
+cli = true
+
+[install.recipe]
+install = "brew install nomino"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

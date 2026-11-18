@@ -1,0 +1,10 @@
+id = "smartcat"
+name = "smartcat"
+bin = "smartcat"
+category = "AI"
+description = "Putting a brain behind cat(1)."
+homepage = "https://github.com/efugier/smartcat"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

@@ -1,0 +1,14 @@
+id = "gwm-cli"
+name = "gwm-cli"
+bin = "gwm-cli"
+category = "Development"
+description = "A Git worktree manager with a CLI, TUI, config, and safety checks."
+homepage = "https://github.com/kbrdn1/gwm-cli"
+
+[install.recipe]
+install = "cargo install --locked gwm-cli"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

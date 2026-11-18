@@ -1,0 +1,15 @@
+id = "below"
+name = "below"
+bin = "below"
+category = "Dashboards"
+description = "A time traveling resource monitor for modern Linux systems"
+homepage = "https://github.com/facebookincubator/below"
+
+[install.recipe]
+install = "cargo install --git https://github.com/facebookincubator/below.git below"
+method = "other"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

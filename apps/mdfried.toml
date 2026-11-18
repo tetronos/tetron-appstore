@@ -1,0 +1,14 @@
+id = "mdfried"
+name = "mdfried"
+bin = "mdfried"
+category = "Productivity"
+description = "A markdown viewer for the terminal that renders images and Big Headers™."
+homepage = "https://github.com/benjajaja/mdfried"
+
+[install.recipe]
+install = "brew install mdfried"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

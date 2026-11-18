@@ -1,0 +1,10 @@
+id = "kpcli"
+name = "kpcli"
+check = "kpcli"
+store = false
+
+[install.pkg]
+apt = "kpcli"
+dnf = ""
+pacman = ""
+brew = ""

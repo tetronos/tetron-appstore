@@ -1,0 +1,16 @@
+id = "zeit"
+name = "zeit"
+bin = "zeit"
+category = "Productivity"
+description = "A command line tool for tracking time spent on activities."
+homepage = "https://github.com/mrusme/zeit"
+cli = true
+
+[install.recipe]
+install = "go install xn--gckvb8fzb.com/zeit@latest"
+method = "go"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

@@ -1,0 +1,14 @@
+id = "vignore"
+name = "vignore"
+bin = "vignore"
+category = "Development"
+description = "A powerful tool to visualize ignored files."
+homepage = "https://github.com/James4Ever0/vignore"
+
+[install.recipe]
+install = "pipx install vignore"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

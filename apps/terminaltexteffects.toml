@@ -1,0 +1,10 @@
+id = "terminaltexteffects"
+name = "terminaltexteffects"
+bin = "terminaltexteffects"
+category = "Development"
+description = "Inline Visual Effects in the Terminal."
+homepage = "https://github.com/ChrisBuilds/terminaltexteffects"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

@@ -1,0 +1,15 @@
+id = "csol"
+name = "csol"
+bin = "csol"
+category = "Games"
+description = "Collection of solitaire/patience games, such as Klondike, FreeCell, Spider, and Yukon"
+homepage = "https://github.com/nielssp/csol"
+
+[install.recipe]
+install = "cmake . && make && sudo make install"
+method = "source"
+os = ["linux", "macos"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

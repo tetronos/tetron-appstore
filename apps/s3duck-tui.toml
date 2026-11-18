@@ -1,0 +1,15 @@
+id = "s3duck-tui"
+name = "s3duck-tui"
+bin = "s3duck-tui"
+category = "File Managers"
+description = "A TUI S3 client."
+homepage = "https://github.com/nexusriot/s3duck-tui"
+
+[install.recipe]
+install = "go install github.com/nexusriot/s3duck-tui/cmd/s3duck-tui@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

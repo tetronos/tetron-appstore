@@ -1,0 +1,14 @@
+id = "ov"
+name = "ov"
+bin = "ov"
+category = "Miscellaneous"
+description = "A feature rich terminal-based pager."
+homepage = "https://github.com/noborus/ov"
+
+[install.recipe]
+install = "brew install ov"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

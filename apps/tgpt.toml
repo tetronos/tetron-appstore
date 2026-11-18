@@ -1,0 +1,15 @@
+id = "tgpt"
+name = "tgpt"
+bin = "tgpt"
+category = "AI"
+description = "AI Chatbots in the terminal without needing API keys."
+homepage = "https://github.com/aandrew-me/tgpt"
+cli = true
+
+[install.recipe]
+install = "brew install tgpt"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

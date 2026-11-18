@@ -1,0 +1,14 @@
+id = "mcpsnoop"
+name = "mcpsnoop"
+bin = "mcpsnoop"
+category = "AI"
+description = "A TUI to inspect MCP traffic, like Wireshark for MCP."
+homepage = "https://github.com/kerlenton/mcpsnoop"
+
+[install.recipe]
+install = "brew install mcpsnoop"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

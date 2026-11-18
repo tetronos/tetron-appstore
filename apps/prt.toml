@@ -1,0 +1,14 @@
+id = "prt"
+name = "prt"
+bin = "prt"
+category = "Dashboards"
+description = "Interactive network port monitor with process details and SSH tunnel inspection for macOS and Linux."
+homepage = "https://github.com/rekurt/prt"
+
+[install.recipe]
+install = "cargo install --locked prt"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

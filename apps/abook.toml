@@ -1,0 +1,15 @@
+id = "abook"
+name = "abook"
+bin = "abook"
+category = "Productivity"
+description = "TUI addressbook with [mutt](http://www.mutt.org/) integration"
+homepage = "https://abook.sourceforge.io/"
+
+[install.recipe]
+install = "brew install abook"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

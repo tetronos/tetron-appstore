@@ -1,0 +1,15 @@
+id = "asciimol"
+name = "asciiMol"
+bin = "asciimol"
+category = "Miscellaneous"
+description = "Curses based ASCII molecule viewer for linux terminals."
+homepage = "https://github.com/dewberryants/asciiMol"
+
+[install.recipe]
+install = "pip install asciimol"
+method = "pip"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

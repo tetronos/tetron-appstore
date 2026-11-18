@@ -1,0 +1,9 @@
+id = "parqv"
+name = "parqv"
+bin = "parqv"
+category = "Miscellaneous"
+description = "A TUI for visualizing and analyzing files with multiple formats."
+homepage = "https://github.com/sanspareilsmyn/parqv"
+
+[source]
+lists = ["terminaltrove"]

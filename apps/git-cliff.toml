@@ -1,0 +1,15 @@
+id = "git-cliff"
+name = "git-cliff"
+bin = "git-cliff"
+category = "Development"
+description = "Changelog generator for git repositories."
+homepage = "https://github.com/orhun/git-cliff"
+cli = true
+
+[install.recipe]
+install = "brew install git-cliff"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

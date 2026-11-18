@@ -1,0 +1,15 @@
+id = "para-cada"
+name = "para-cada"
+bin = "para-cada"
+category = "Dashboards"
+description = "Executes your command for each file selected using glob expression(s)."
+homepage = "https://github.com/gergelyk/para-cada"
+cli = true
+
+[install.recipe]
+install = "pipx install para-cada"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

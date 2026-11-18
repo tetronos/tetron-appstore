@@ -1,0 +1,15 @@
+id = "trophy"
+name = "Trophy"
+bin = "trophy"
+category = "Multimedia"
+description = "A TUI 3D Model Viewer for OBJ and GLB files"
+homepage = "https://github.com/taigrr/trophy"
+
+[install.recipe]
+install = "go install github.com/taigrr/trophy/cmd/trophy@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

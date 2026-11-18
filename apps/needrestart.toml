@@ -1,0 +1,10 @@
+id = "needrestart"
+name = "needrestart"
+check = "needrestart"
+store = false
+
+[install.pkg]
+apt = "needrestart"
+dnf = ""
+pacman = ""
+brew = ""

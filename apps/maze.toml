@@ -1,0 +1,15 @@
+id = "maze"
+name = "Maze"
+bin = "maze"
+category = "Games"
+description = "Simple maze game written in Go."
+homepage = "https://github.com/itchyny/maze"
+
+[install.recipe]
+install = "brew install itchyny/tap/maze"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

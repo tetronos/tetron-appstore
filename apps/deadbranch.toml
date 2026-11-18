@@ -1,0 +1,14 @@
+id = "deadbranch"
+name = "deadbranch"
+bin = "deadbranch"
+category = "Development"
+description = "Clean up stale git branches safely."
+homepage = "https://github.com/armgabrielyan/deadbranch"
+
+[install.recipe]
+install = "cargo install --locked deadbranch"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

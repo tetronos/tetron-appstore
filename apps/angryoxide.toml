@@ -1,0 +1,9 @@
+id = "angryoxide"
+name = "angryoxide"
+bin = "angryoxide"
+category = "Development"
+description = "A WiFi attack and pentesting tool built in Rust."
+homepage = "https://github.com/Ragnt/AngryOxide"
+
+[source]
+lists = ["terminaltrove"]

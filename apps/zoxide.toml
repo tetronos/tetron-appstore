@@ -1,0 +1,15 @@
+id = "zoxide"
+name = "zoxide"
+bin = "zoxide"
+category = "Miscellaneous"
+description = "A smarter cd command. Supports all major shells."
+homepage = "https://github.com/ajeetdsouza/zoxide"
+cli = true
+
+[install.recipe]
+install = "brew install zoxide"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

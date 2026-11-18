@@ -1,0 +1,15 @@
+id = "ballast"
+name = "ballast"
+bin = "ballast"
+category = "Web"
+description = "A tool for snapshot load testing APIs."
+homepage = "https://github.com/synoet/ballast"
+cli = true
+
+[install.recipe]
+install = "cargo install --locked ballast"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

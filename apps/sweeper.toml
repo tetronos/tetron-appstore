@@ -1,0 +1,15 @@
+id = "sweeper"
+name = "sweeper"
+bin = "sweeper"
+category = "Games"
+description = "Minesweeper game using curtsies"
+homepage = "https://github.com/igor47/sweeper"
+
+[install.recipe]
+install = "git clone https://github.com/igor47/sweeper && cd sweeper && uv run sweeper.py"
+method = "script"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

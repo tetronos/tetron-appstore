@@ -1,0 +1,19 @@
+id = "aerc"
+name = "aerc"
+bin = "aerc"
+category = "Messaging"
+description = "Email client"
+homepage = "https://aerc-mail.org/"
+
+[install.pkg]
+dnf = "aerc"
+pacman = "aerc"
+
+[install.recipe]
+install = "brew install aerc"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

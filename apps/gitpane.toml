@@ -1,0 +1,14 @@
+id = "gitpane"
+name = "gitpane"
+bin = "gitpane"
+category = "Development"
+description = "Multi repo Git workspace dashboard for the terminal."
+homepage = "https://github.com/affromero/gitpane"
+
+[install.recipe]
+install = "cargo install --locked gitpane"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "brows"
+name = "brows"
+bin = "brows"
+category = "Development"
+description = "CLI GitHub release browser"
+homepage = "https://github.com/rubysolo/brows"
+
+[install.recipe]
+install = "brew tap rubysolo/tools && brew install brows"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

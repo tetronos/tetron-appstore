@@ -1,0 +1,15 @@
+id = "eilmeldung"
+name = "eilmeldung"
+bin = "eilmeldung"
+category = "Web"
+description = "RSS reader, supporting many RSS providers, bulk-operations and configuration options."
+homepage = "https://github.com/christo-auer/eilmeldung"
+
+[install.recipe]
+install = "brew tap christo-auer/eilmeldung https://github.com/christo-auer/eilmeldung && brew install eilmeldung"
+method = "brew"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

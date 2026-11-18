@@ -1,0 +1,14 @@
+id = "nmail"
+name = "nmail"
+bin = "nmail"
+category = "Messaging"
+description = "Terminal email client for Linux and macOS."
+homepage = "https://github.com/d99kris/nmail"
+
+[install.recipe]
+install = "brew install nmail"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

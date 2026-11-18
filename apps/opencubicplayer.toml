@@ -1,0 +1,10 @@
+id = "opencubicplayer"
+name = "opencubicplayer"
+bin = "opencubicplayer"
+category = "Multimedia"
+description = "a text-based audio player with some few graphical views."
+homepage = "https://github.com/mywave82/opencubicplayer"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

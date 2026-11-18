@@ -1,0 +1,9 @@
+id = "dupster"
+name = "dupster"
+bin = "dupster"
+category = "Miscellaneous"
+description = "The lazy way to find duplicates in your Terminal. Easily find duplicates, preview them and delete them."
+homepage = "https://github.com/karimz1/dupster"
+
+[source]
+lists = ["awesome-tuis"]

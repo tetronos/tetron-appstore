@@ -1,0 +1,14 @@
+id = "fileview"
+name = "FileView"
+bin = "fileview"
+category = "File Managers"
+description = "A terminal file browser with image previews, Git status, search, and an MCP server."
+homepage = "https://github.com/Hiro-Chiba/fileview"
+
+[install.recipe]
+install = "cargo install --locked fileview"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

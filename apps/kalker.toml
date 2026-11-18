@@ -1,0 +1,15 @@
+id = "kalker"
+name = "kalker"
+bin = "kalker"
+category = "Productivity"
+description = "A scientific terminal calculator with math syntax."
+homepage = "https://github.com/PaddiM8/kalker"
+cli = true
+
+[install.recipe]
+install = "brew install kalker"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

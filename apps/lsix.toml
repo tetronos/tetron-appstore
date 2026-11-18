@@ -1,0 +1,15 @@
+id = "lsix"
+name = "lsix"
+bin = "lsix"
+category = "Miscellaneous"
+description = "like \"ls\", but for sixel images."
+homepage = "https://github.com/hackerb9/lsix"
+cli = true
+
+[install.recipe]
+install = "brew install lsix"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

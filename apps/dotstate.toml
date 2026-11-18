@@ -1,0 +1,14 @@
+id = "dotstate"
+name = "dotstate"
+bin = "dotstate"
+category = "Miscellaneous"
+description = "A modern, secure, and user-friendly dotfile manager."
+homepage = "https://github.com/serkanyersen/dotstate"
+
+[install.recipe]
+install = "cargo install --locked dotstate"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

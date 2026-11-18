@@ -1,0 +1,9 @@
+id = "dawn"
+name = "dawn"
+bin = "dawn"
+category = "Editors"
+description = "A distraction-free writing environment. draft anything, write now."
+homepage = "https://github.com/andrewmd5/dawn"
+
+[source]
+lists = ["terminaltrove"]

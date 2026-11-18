@@ -1,0 +1,20 @@
+id = "neovim"
+name = "Neovim"
+bin = "nvim"
+category = "Editors"
+description = "Vim, refactored: a modal editor with Lua scripting and built-in LSP."
+homepage = "https://neovim.io"
+
+[install.pkg]
+apt = "neovim"
+dnf = "neovim"
+pacman = "neovim"
+brew = "neovim"
+
+[install.recipe]
+install = "brew install neovim"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

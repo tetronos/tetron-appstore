@@ -1,0 +1,9 @@
+id = "handler"
+name = "handler"
+bin = "handler"
+category = "AI"
+description = "A2A Protocol client and developer toolkit."
+homepage = "https://github.com/alDuncanson/Handler"
+
+[source]
+lists = ["terminaltrove"]

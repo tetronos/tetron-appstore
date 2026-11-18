@@ -1,0 +1,15 @@
+id = "kubecolor"
+name = "kubecolor"
+bin = "kubecolor"
+category = "Docker/LXC/K8s"
+description = "Colorize your kubectl output."
+homepage = "https://github.com/kubecolor/kubecolor"
+cli = true
+
+[install.recipe]
+install = "brew install kubecolor"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

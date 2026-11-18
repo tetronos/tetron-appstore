@@ -1,0 +1,15 @@
+id = "ttyper"
+name = "ttyper"
+bin = "ttyper"
+category = "Miscellaneous"
+description = "Terminal-based typing test"
+homepage = "https://github.com/max-niederman/ttyper"
+
+[install.recipe]
+install = "cargo install ttyper"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

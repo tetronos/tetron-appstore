@@ -1,0 +1,15 @@
+id = "cruise"
+name = "cruise"
+bin = "cruise"
+category = "Docker/LXC/K8s"
+description = "A container management TUI"
+homepage = "https://github.com/cruise-org/cruise"
+
+[install.recipe]
+install = "brew tap cruise-org/homebrew-tap && brew install --cask cruise"
+method = "brew"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

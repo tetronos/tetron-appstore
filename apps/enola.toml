@@ -1,0 +1,14 @@
+id = "enola"
+name = "enola"
+bin = "enola"
+category = "Messaging"
+description = "A CLI tool to search for usernames across social networks."
+homepage = "https://github.com/TheYahya/enola"
+
+[install.recipe]
+install = "go install github.com/theyahya/enola/cmd/enola@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

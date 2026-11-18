@@ -1,0 +1,14 @@
+id = "toofan"
+name = "toofan"
+bin = "toofan"
+category = "Productivity"
+description = "A minimal, lightning-fast typing tester TUI."
+homepage = "https://github.com/vyrx-dev/toofan"
+
+[install.recipe]
+install = "go install github.com/vyrx-dev/toofan@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

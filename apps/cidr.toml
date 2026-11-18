@@ -1,0 +1,15 @@
+id = "cidr"
+name = "cidr"
+bin = "cidr"
+category = "Development"
+description = "A CLI to perform various actions on CIDR ranges."
+homepage = "https://github.com/bschaatsbergen/cidr"
+cli = true
+
+[install.recipe]
+install = "brew install cidr"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

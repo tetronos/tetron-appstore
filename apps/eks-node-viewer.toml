@@ -1,0 +1,15 @@
+id = "eks-node-viewer"
+name = "eks-node-viewer"
+bin = "eks-node-viewer"
+category = "Docker/LXC/K8s"
+description = "visualizing dynamic node usage within a kubernetes cluster"
+homepage = "https://github.com/awslabs/eks-node-viewer/"
+
+[install.recipe]
+install = "brew tap aws/tap && brew install eks-node-viewer"
+method = "brew"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,9 @@
+id = "pik"
+name = "pik"
+bin = "pik"
+category = "Miscellaneous"
+description = "A TUI for interactively stopping processes."
+homepage = "https://github.com/jacek-kurlit/pik"
+
+[source]
+lists = ["terminaltrove"]

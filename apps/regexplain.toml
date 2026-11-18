@@ -1,0 +1,9 @@
+id = "regexplain"
+name = "regexplain"
+bin = "regexplain"
+category = "Development"
+description = "A TUI for explaining and visualizing regular expressions, a regex101 for your shell."
+homepage = "https://github.com/kapilpokhrel/regexplain"
+
+[source]
+lists = ["terminaltrove"]

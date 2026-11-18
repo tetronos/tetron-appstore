@@ -1,0 +1,14 @@
+id = "lazynpm"
+name = "lazynpm"
+bin = "lazynpm"
+category = "Miscellaneous"
+description = "A simple TUI for npm commands."
+homepage = "https://github.com/jesseduffield/lazynpm"
+
+[install.recipe]
+install = "go install github.com/jesseduffield/lazynpm@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "numbat"
+name = "numbat"
+bin = "numbat"
+category = "Productivity"
+description = "high precision scientific calculator with full support for physical units."
+homepage = "https://github.com/sharkdp/numbat"
+cli = true
+
+[install.recipe]
+install = "brew install numbat"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

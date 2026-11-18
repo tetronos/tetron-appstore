@@ -1,0 +1,19 @@
+id = "orbiton"
+name = "orbiton"
+bin = "orbiton"
+category = "Editors"
+description = "Text editor limited by VT100, suitable for programming, writing git commit messages and editing Markdown"
+homepage = "https://github.com/xyproto/orbiton"
+
+[install.pkg]
+pacman = "orbiton"
+brew = "orbiton"
+
+[install.recipe]
+install = "brew install orbiton"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

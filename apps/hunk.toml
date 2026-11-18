@@ -1,0 +1,15 @@
+id = "hunk"
+name = "hunk"
+bin = "hunk"
+category = "Development"
+description = "A review-first terminal diff viewer for agent-authored changesets: a multi-file review stream with sidebar navigation, inline AI annotations, split/stack/auto layouts, watch mode, and Git difftool support."
+homepage = "https://github.com/modem-dev/hunk"
+
+[install.recipe]
+install = "brew install modem-dev/tap/hunk"
+method = "brew"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

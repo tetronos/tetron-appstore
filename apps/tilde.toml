@@ -1,0 +1,12 @@
+id = "tilde"
+name = "tilde"
+bin = "tilde"
+category = "Editors"
+description = "Intuitive text editor for the terminal"
+homepage = "https://github.com/gphalkes/tilde"
+
+[install.pkg]
+apt = "tilde"
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,15 @@
+id = "taskwarrior-tui"
+name = "taskwarrior-tui"
+bin = "taskwarrior-tui"
+category = "Productivity"
+description = "A Terminal User Interface for Taskwarrior"
+homepage = "https://github.com/kdheepak/taskwarrior-tui"
+
+[install.recipe]
+install = "brew install taskwarrior-tui"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

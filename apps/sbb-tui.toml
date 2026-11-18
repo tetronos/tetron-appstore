@@ -1,0 +1,14 @@
+id = "sbb-tui"
+name = "sbb-tui"
+bin = "sbb-tui"
+category = "Miscellaneous"
+description = "TUI client for Switzerland's public transport timetables, inspidered by the SBB/CFF/FFS app."
+homepage = "https://github.com/necrom4/sbb-tui"
+
+[install.recipe]
+install = "go install github.com/necrom4/sbb-tui@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

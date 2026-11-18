@@ -1,0 +1,14 @@
+id = "cueitup"
+name = "cueitup"
+bin = "cueitup"
+category = "Miscellaneous"
+description = "Inspect messages in an AWS SQS queue."
+homepage = "https://github.com/dhth/cueitup"
+
+[install.recipe]
+install = "go install github.com/dhth/cueitup@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

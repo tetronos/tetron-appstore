@@ -1,0 +1,15 @@
+id = "hydrotodo"
+name = "HydroToDo"
+bin = "hydrotodo"
+category = "Productivity"
+description = "A simple and beautiful TUI to-do list"
+homepage = "https://github.com/Henriquehnnm/hydrotodo"
+
+[install.recipe]
+install = "git clone https://github.com/Henriquehnnm/hydrotodo.git && cd hydrotodo && python3 hydrotodo.py"
+method = "source"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

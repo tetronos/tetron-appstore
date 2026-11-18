@@ -1,0 +1,15 @@
+id = "httm"
+name = "httm"
+bin = "httm"
+category = "Dashboards"
+description = "Interactive, file-level Time Machine-like tool for ZFS/btrfs/nilfs2."
+homepage = "https://github.com/kimono-koans/httm"
+cli = true
+
+[install.recipe]
+install = "brew install httm"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

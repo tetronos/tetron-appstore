@@ -1,0 +1,14 @@
+id = "vscli"
+name = "vscli"
+bin = "vscli"
+category = "Docker/LXC/K8s"
+description = "A CLI/TUI making it easy to launch Visual Studio Code (vscode) projects."
+homepage = "https://github.com/michidk/vscli"
+
+[install.recipe]
+install = "brew install vscli"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

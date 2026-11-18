@@ -1,0 +1,9 @@
+id = "flamelens"
+name = "flamelens"
+bin = "flamelens"
+category = "Development"
+description = "An interactive flamegraph viewer in the terminal."
+homepage = "https://github.com/YS-L/flamelens"
+
+[source]
+lists = ["terminaltrove"]

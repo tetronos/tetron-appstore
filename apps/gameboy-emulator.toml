@@ -1,0 +1,15 @@
+id = "gameboy-emulator"
+name = "Gameboy Emulator"
+bin = "php-gameboy"
+category = "Games"
+description = "A PHP Terminal GameBoy Emulator"
+homepage = "https://github.com/gabrielrcouto/php-terminal-gameboy-emulator"
+
+[install.recipe]
+install = "wget https://raw.githubusercontent.com/gabrielrcouto/php-terminal-gameboy-emulator/master/bin/php-gameboy.phar && chmod +x php-gameboy.phar && mv php-gameboy.phar /usr/local/bin/php-gameboy"
+method = "binary"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,14 @@
+id = "ttt-editor"
+name = "ttt-editor"
+bin = "ttt-editor"
+category = "Editors"
+description = "A terminal IDE with LSP, Git and plugins."
+homepage = "https://github.com/eugenioenko/ttt"
+
+[install.recipe]
+install = "go install github.com/eugenioenko/ttt/cmd/ttt@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

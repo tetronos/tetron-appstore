@@ -1,0 +1,9 @@
+id = "letrain"
+name = "LeTrain"
+bin = "letrain"
+category = "Games"
+description = "- Open-source procedural train simulator using Java 17, LibGDX and Lanterna."
+homepage = "https://github.com/antoniovazquezaraujo/LeTrain"
+
+[source]
+lists = ["awesome-tuis"]

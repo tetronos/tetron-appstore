@@ -1,0 +1,14 @@
+id = "jless"
+name = "jless"
+bin = "jless"
+category = "Development"
+description = "A command-line JSON viewer."
+homepage = "https://github.com/PaulJuliusMartinez/jless"
+
+[install.recipe]
+install = "brew install jless"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

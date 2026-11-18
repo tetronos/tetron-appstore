@@ -1,0 +1,15 @@
+id = "git-split-diffs"
+name = "git-split-diffs"
+bin = "git-split-diffs"
+category = "Development"
+description = "Syntax highlighted side-by-side diffs in your terminal"
+homepage = "https://github.com/banga/git-split-diffs"
+cli = true
+
+[install.recipe]
+install = "brew install git-split-diffs"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

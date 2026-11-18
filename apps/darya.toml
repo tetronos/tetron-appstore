@@ -1,0 +1,14 @@
+id = "darya"
+name = "darya"
+bin = "darya"
+category = "Dashboards"
+description = "A disk usage explorer with a TUI and live treemap."
+homepage = "https://github.com/mrkatebzadeh/darya"
+
+[install.recipe]
+install = "cargo install --locked darya"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

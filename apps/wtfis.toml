@@ -1,0 +1,15 @@
+id = "wtfis"
+name = "wtfis"
+bin = "wtfis"
+category = "Development"
+description = "Passive hostname, domain and IP lookup tool for non-robots."
+homepage = "https://github.com/pirxthepilot/wtfis"
+cli = true
+
+[install.recipe]
+install = "brew install wtfis"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

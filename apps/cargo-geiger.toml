@@ -1,0 +1,15 @@
+id = "cargo-geiger"
+name = "cargo-geiger"
+bin = "cargo-geiger"
+category = "Miscellaneous"
+description = "Detects usage of unsafe Rust in a Rust crate and its dependencies."
+homepage = "https://github.com/geiger-rs/cargo-geiger"
+cli = true
+
+[install.recipe]
+install = "brew install cargo-geiger"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

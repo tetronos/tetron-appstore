@@ -1,0 +1,15 @@
+id = "dysk"
+name = "dysk"
+bin = "dysk"
+category = "Dashboards"
+description = "A linux utility listing your filesystems."
+homepage = "https://github.com/Canop/dysk"
+cli = true
+
+[install.recipe]
+install = "brew install dysk"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

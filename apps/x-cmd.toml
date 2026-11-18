@@ -1,0 +1,16 @@
+id = "x-cmd"
+name = "x-cmd"
+bin = "x-cmd"
+category = "Miscellaneous"
+description = "A vast and interesting collection of tools that can then bootstrap lots of other programs / functions in a consistent and structured way."
+homepage = "https://github.com/x-cmd/x-cmd"
+cli = true
+
+[install.recipe]
+install = "brew install x-cmd"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

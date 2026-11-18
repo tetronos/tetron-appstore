@@ -1,0 +1,15 @@
+id = "eva"
+name = "eva"
+bin = "eva"
+category = "Productivity"
+description = "A calculator REPL, similar to bc."
+homepage = "https://github.com/oppiliappan/eva"
+cli = true
+
+[install.recipe]
+install = "brew install eva"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

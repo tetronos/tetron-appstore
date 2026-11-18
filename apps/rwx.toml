@@ -1,0 +1,14 @@
+id = "rwx"
+name = "rwx"
+bin = "rwx"
+category = "Dashboards"
+description = "A Unix permissions and ownership manager in the terminal."
+homepage = "https://github.com/vncsmnl/rwx"
+
+[install.recipe]
+install = "cargo install --locked rwx"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

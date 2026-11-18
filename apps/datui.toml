@@ -1,0 +1,14 @@
+id = "datui"
+name = "datui"
+bin = "datui"
+category = "Development"
+description = "Data Exploration in the Terminal."
+homepage = "https://github.com/derekwisong/datui"
+
+[install.recipe]
+install = "cargo install --locked datui"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

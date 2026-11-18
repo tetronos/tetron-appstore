@@ -1,0 +1,15 @@
+id = "patat"
+name = "patat"
+bin = "patat"
+category = "Productivity"
+description = "Terminal-based presentations using Pandoc"
+homepage = "https://github.com/jaspervdj/patat"
+
+[install.recipe]
+install = "brew install patat"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

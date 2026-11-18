@@ -1,0 +1,10 @@
+id = "direnv"
+name = "direnv"
+check = "direnv"
+store = false
+
+[install.pkg]
+apt = "direnv"
+dnf = "direnv"
+pacman = "direnv"
+brew = "direnv"

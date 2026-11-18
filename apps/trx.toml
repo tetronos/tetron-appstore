@@ -1,0 +1,14 @@
+id = "trx"
+name = "trx"
+bin = "trx"
+category = "Productivity"
+description = "Terminal package manager with fuzzy search and keyboard-driven package discovery."
+homepage = "https://github.com/pie-314/trx"
+
+[install.recipe]
+install = "curl -fsSL https://trx.pidev.tech/install.sh | sh"
+method = "script"
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

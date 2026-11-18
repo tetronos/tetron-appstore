@@ -1,0 +1,15 @@
+id = "ducker"
+name = "ducker"
+bin = "ducker"
+category = "Docker/LXC/K8s"
+description = "A slightly quackers Docker TUI based on k9s"
+homepage = "https://github.com/robertpsoane/ducker"
+
+[install.recipe]
+install = "brew install ducker"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

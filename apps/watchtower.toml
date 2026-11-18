@@ -1,0 +1,9 @@
+id = "watchtower"
+name = "watchtower"
+bin = "watchtower"
+category = "AI"
+description = "A clean, minimal, terminal-based global intelligence dashboard."
+homepage = "https://github.com/lajosdeme/watchtower"
+
+[source]
+lists = ["terminaltrove"]

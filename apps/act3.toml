@@ -1,0 +1,16 @@
+id = "act3"
+name = "act3"
+bin = "act3"
+category = "Development"
+description = "Glance at the last 3 runs of your Github Actions"
+homepage = "https://github.com/dhth/act3"
+cli = true
+
+[install.recipe]
+install = "brew install dhth/tap/act3"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

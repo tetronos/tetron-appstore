@@ -1,0 +1,14 @@
+id = "gtrash"
+name = "gtrash"
+bin = "gtrash"
+category = "Miscellaneous"
+description = "A featureful trash CLI manager."
+homepage = "https://github.com/umlx5h/gtrash"
+
+[install.recipe]
+install = "brew install gtrash"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

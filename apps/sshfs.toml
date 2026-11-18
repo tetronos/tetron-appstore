@@ -1,0 +1,10 @@
+id = "sshfs"
+name = "sshfs"
+check = "sshfs"
+store = false
+
+[install.pkg]
+apt = "sshfs"
+dnf = "fuse-sshfs"
+pacman = "sshfs"
+brew = ""

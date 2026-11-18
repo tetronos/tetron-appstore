@@ -1,0 +1,15 @@
+id = "canard"
+name = "Canard"
+bin = "canard"
+category = "Web"
+description = "A command line TUI client for the [Journalist](https://github.com/mrusme/journalist) RSS aggregator."
+homepage = "https://github.com/mrusme/canard"
+
+[install.recipe]
+install = "go install github.com/mrusme/canard@latest"
+method = "go"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

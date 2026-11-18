@@ -1,0 +1,15 @@
+id = "logshark"
+name = "logshark"
+bin = "logshark"
+category = "Development"
+description = "A debugger CLI for JSON logs written in Go"
+homepage = "https://github.com/ugosan/logshark"
+
+[install.recipe]
+install = "go install github.com/ugosan/logshark/cmd/logshark@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

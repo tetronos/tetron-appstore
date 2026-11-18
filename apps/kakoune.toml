@@ -1,0 +1,15 @@
+id = "kakoune"
+name = "kakoune"
+bin = "kakoune"
+category = "Editors"
+description = "A modern, modal text editor with focus on interactivity and efficiency"
+homepage = "http://kakoune.org/"
+
+[install.recipe]
+install = "brew install kakoune"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

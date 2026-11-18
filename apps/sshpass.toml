@@ -1,0 +1,10 @@
+id = "sshpass"
+name = "sshpass"
+check = "sshpass"
+store = false
+
+[install.pkg]
+apt = "sshpass"
+dnf = "sshpass"
+pacman = "sshpass"
+brew = "sshpass"

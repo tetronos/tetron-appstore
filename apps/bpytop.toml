@@ -1,0 +1,15 @@
+id = "bpytop"
+name = "bpytop"
+bin = "bpytop"
+category = "Dashboards"
+description = "A Python-based system monitor with lots of information."
+homepage = "https://github.com/aristocratos/bpytop"
+
+[install.recipe]
+install = "brew install bpytop"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

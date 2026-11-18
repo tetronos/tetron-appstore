@@ -1,0 +1,10 @@
+id = "dog"
+name = "dog"
+bin = "dog"
+category = "Development"
+description = "A command-line DNS client."
+homepage = "https://github.com/ogham/dog"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

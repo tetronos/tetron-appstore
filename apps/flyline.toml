@@ -1,0 +1,14 @@
+id = "flyline"
+name = "flyline"
+bin = "flyline"
+category = "Miscellaneous"
+description = "Modern command-line editing for bash."
+homepage = "https://github.com/HalFrgrd/flyline"
+
+[install.recipe]
+install = "brew install flyline"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

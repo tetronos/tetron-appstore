@@ -1,0 +1,15 @@
+id = "tegratop"
+name = "tegratop"
+bin = "tegratop"
+category = "Dashboards"
+description = "Monitoring tool (top like) for Nvidia jetson boards"
+homepage = "https://github.com/pythops/tegratop"
+
+[install.recipe]
+install = "cargo install tegratop"
+method = "cargo"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

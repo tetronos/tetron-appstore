@@ -1,0 +1,15 @@
+id = "stegodon"
+name = "stegodon"
+bin = "stegodon"
+category = "Web"
+description = "SSH-first federated microblog with ActivityPub, web UI, and RSS feeds"
+homepage = "https://github.com/deemkeen/stegodon"
+
+[install.recipe]
+install = "go install github.com/deemkeen/stegodon@latest"
+method = "go"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,14 @@
+id = "serpl"
+name = "serpl"
+bin = "serpl"
+category = "Development"
+description = "A simple TUI for search and replace, akin to VS Code."
+homepage = "https://github.com/yassinebridi/serpl"
+
+[install.recipe]
+install = "brew install serpl"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

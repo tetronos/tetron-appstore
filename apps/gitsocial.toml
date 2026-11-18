@@ -1,0 +1,10 @@
+id = "gitsocial"
+name = "gitsocial"
+bin = "gitsocial"
+category = "Development"
+description = "Social layer for git repositories."
+homepage = "https://github.com/gitsocial-org/gitsocial"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

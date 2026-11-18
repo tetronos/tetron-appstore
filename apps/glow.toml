@@ -1,0 +1,20 @@
+id = "glow"
+name = "Glow"
+bin = "glow"
+category = "Productivity"
+description = "A markdown reader, designed from the ground up to showcase the elegance and capabilities of TUI."
+homepage = "https://github.com/charmbracelet/glow"
+
+[install.release]
+repo = "charmbracelet/glow"
+amd64 = "glow_*_amd64.deb"
+arm64 = "glow_*_arm64.deb"
+
+[install.recipe]
+install = "brew install glow"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

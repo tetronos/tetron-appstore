@@ -1,0 +1,14 @@
+id = "syswatch"
+name = "syswatch"
+bin = "syswatch"
+category = "Dashboards"
+description = "A single-host system diagnostics TUI."
+homepage = "https://github.com/matthart1983/syswatch"
+
+[install.recipe]
+install = "brew install syswatch"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

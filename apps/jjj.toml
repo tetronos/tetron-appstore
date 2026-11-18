@@ -1,0 +1,9 @@
+id = "jjj"
+name = "jjj"
+bin = "jjj"
+category = "Development"
+description = "A TUI interface for Jujutsu VCS."
+homepage = "https://github.com/icorbrey/jjj"
+
+[source]
+lists = ["terminaltrove"]

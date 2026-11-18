@@ -1,0 +1,15 @@
+id = "multranslate"
+name = "multranslate"
+bin = "multranslate"
+category = "Productivity"
+description = "A TUI for translating text in multiple translators simultaneously, with support for translation history and language detection"
+homepage = "https://github.com/Lifailon/multranslate"
+
+[install.recipe]
+install = "npm install -g multranslate"
+method = "npm"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,15 @@
+id = "balatrotui"
+name = "balatrotui"
+bin = "balatro_tui"
+category = "Games"
+description = "A TUI clone of Balatro"
+homepage = "https://github.com/Passeriform/BalatroTUI"
+
+[install.recipe]
+install = "cargo build --release --package balatro_tui"
+method = "source"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

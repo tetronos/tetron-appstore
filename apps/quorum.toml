@@ -1,0 +1,15 @@
+id = "quorum"
+name = "Quorum"
+bin = "quorum"
+category = "Development"
+description = "Multi-agent AI discussion system for structured debates between LLMs"
+homepage = "https://github.com/Detrol/quorum-cli"
+
+[install.recipe]
+install = "pipx install quorum-cli"
+method = "pipx"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

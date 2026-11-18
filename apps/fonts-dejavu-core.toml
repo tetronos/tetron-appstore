@@ -1,0 +1,10 @@
+id = "fonts-dejavu-core"
+name = "fonts-dejavu-core"
+check = "font=DejaVu Sans Mono"
+store = false
+
+[install.pkg]
+apt = "fonts-dejavu-core"
+dnf = "dejavu-sans-mono-fonts"
+pacman = "ttf-dejavu"
+brew = ""

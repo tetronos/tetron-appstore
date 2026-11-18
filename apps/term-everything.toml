@@ -1,0 +1,15 @@
+id = "term-everything"
+name = "term.everything"
+bin = "term.everything"
+category = "Miscellaneous"
+description = "Run any GUI app in the terminal"
+homepage = "https://github.com/mmulet/term.everything"
+
+[install.recipe]
+install = "cd /tmp && curl -L https://github.com/mmulet/term.everything/releases/download/0.7.8/term.everything.mmulet.com-dont_forget_to_chmod_+x_this_file -o term.everything && chmod +x term.everything && sudo mv term.everything /usr/local/bin/"
+method = "binary"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,15 @@
+id = "awkaster"
+name = "awkaster"
+bin = "awkaster"
+category = "Games"
+description = "Pseudo-3D shooter written completely in gawk using raycasting technique"
+homepage = "https://github.com/TheMozg/awk-raycaster"
+
+[install.recipe]
+install = "brew install gawk && git clone https://github.com/TheMozg/awk-raycaster && cd awk-raycaster && gawk -f awkaster.awk"
+method = "source"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,15 @@
+id = "doom-ascii"
+name = "DOOM-ASCII"
+bin = "doom-ascii"
+category = "Games"
+description = "Text-based DOOM running in terminal."
+homepage = "https://github.com/wojciech-graj/doom-ascii"
+
+[install.recipe]
+install = "make"
+method = "source"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,15 @@
+id = "reqlog"
+name = "reqlog"
+bin = "reqlog"
+category = "Dashboards"
+description = "A CLI for tracing and filtering requests across distributed systems."
+homepage = "https://github.com/SagarMaheshwary/reqlog"
+cli = true
+
+[install.recipe]
+install = "go install github.com/sagarmaheshwary/reqlog/cmd/reqlog@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

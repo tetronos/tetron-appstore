@@ -1,0 +1,15 @@
+id = "gitv"
+name = "gitv"
+bin = "gitv"
+category = "Development"
+description = ": A beautiful, feature-rich and performant terminal client for GitHub issues."
+homepage = "https://github.com/jayanaxhf/gitv"
+
+[install.recipe]
+install = "cargo install --locked gitv-tui"
+method = "cargo"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

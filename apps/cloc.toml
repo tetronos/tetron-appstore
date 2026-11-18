@@ -1,0 +1,15 @@
+id = "cloc"
+name = "cloc"
+bin = "cloc"
+category = "Miscellaneous"
+description = "Count lines of code in many programming languages"
+homepage = "https://github.com/AlDanial/cloc"
+cli = true
+
+[install.recipe]
+install = "brew install cloc"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

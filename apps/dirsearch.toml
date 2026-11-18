@@ -1,0 +1,10 @@
+id = "dirsearch"
+name = "dirsearch"
+bin = "dirsearch"
+category = "Web"
+description = "A web path scanner for finding hidden files and directories."
+homepage = "https://github.com/maurosoria/dirsearch"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

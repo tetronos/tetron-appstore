@@ -1,0 +1,15 @@
+id = "chess-tui"
+name = "chess-tui"
+bin = "chess-tui"
+category = "Games"
+description = "Play Chess in your terminal, built in rust"
+homepage = "https://github.com/thomas-mauran/chess-tui"
+
+[install.recipe]
+install = "brew install thomas-mauran/tap/chess-tui"
+method = "brew"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

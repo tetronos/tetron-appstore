@@ -1,0 +1,14 @@
+id = "hours"
+name = "hours"
+bin = "hours"
+category = "Miscellaneous"
+description = "no-frills time tracking toolkit for the command line."
+homepage = "https://github.com/dhth/hours"
+
+[install.recipe]
+install = "go install github.com/dhth/hours@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

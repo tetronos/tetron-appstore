@@ -1,0 +1,15 @@
+id = "chezmoi"
+name = "chezmoi"
+bin = "chezmoi"
+category = "Miscellaneous"
+description = "Manage dotfiles across multiple machines."
+homepage = "https://github.com/twpayne/chezmoi"
+cli = true
+
+[install.recipe]
+install = "brew install chezmoi"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

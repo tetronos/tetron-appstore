@@ -1,0 +1,15 @@
+id = "jiratui"
+name = "jiratui"
+bin = "jiratui"
+category = "Productivity"
+description = "A TUI for interacting with Atlassian Jira directly from your shell"
+homepage = "https://github.com/whyisdifficult/jiratui"
+
+[install.recipe]
+install = "brew install jiratui"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

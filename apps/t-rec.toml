@@ -1,0 +1,15 @@
+id = "t-rec"
+name = "t-rec"
+bin = "t-rec"
+category = "Miscellaneous"
+description = "Blazingly fast terminal recorder that generates animated gif images."
+homepage = "https://github.com/sassman/t-rec-rs"
+cli = true
+
+[install.recipe]
+install = "brew install t-rec"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

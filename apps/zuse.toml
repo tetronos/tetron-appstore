@@ -1,0 +1,14 @@
+id = "zuse"
+name = "zuse"
+bin = "zuse"
+category = "Messaging"
+description = "A sleek, minimal IRC client for your terminal."
+homepage = "https://github.com/babycommando/zuse"
+
+[install.recipe]
+install = "go install github.com/babycommando/zuse@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

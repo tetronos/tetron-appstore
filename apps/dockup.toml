@@ -1,0 +1,15 @@
+id = "dockup"
+name = "dockup"
+bin = "dockup"
+category = "Docker/LXC/K8s"
+description = "An interactive TUI to install, harden, and audit container runtimes: Docker Engine + Compose v2 and the NVIDIA Container Toolkit on Linux, Apple's native container tool on Apple Silicon."
+homepage = "https://github.com/paulo-amaral/dockup"
+
+[install.recipe]
+install = "go install github.com/paulo-amaral/dockup/v2/cmd/dockup@latest"
+method = "go"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

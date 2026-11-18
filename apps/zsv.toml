@@ -1,0 +1,14 @@
+id = "zsv"
+name = "zsv"
+bin = "zsv"
+category = "Development"
+description = "A SIMD accelerated CLI for querying and exploring CSV data."
+homepage = "https://github.com/liquidaty/zsv"
+
+[install.recipe]
+install = "brew install zsv"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

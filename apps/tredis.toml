@@ -1,0 +1,14 @@
+id = "tredis"
+name = "tredis"
+bin = "tredis"
+category = "Development"
+description = "A modern TUI for managing Redis servers."
+homepage = "https://github.com/huseyinbabal/tredis"
+
+[install.recipe]
+install = "cargo install --locked tredis"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

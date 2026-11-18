@@ -1,0 +1,21 @@
+id = "mpv"
+name = "mpv"
+bin = "mpv"
+category = "Multimedia"
+description = "A command-line media player for playing video, audio and streams from the terminal."
+homepage = "https://github.com/mpv-player/mpv"
+cli = true
+
+[install.pkg]
+apt = "mpv"
+dnf = "mpv"
+pacman = "mpv"
+brew = "mpv"
+
+[install.recipe]
+install = "brew install mpv"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

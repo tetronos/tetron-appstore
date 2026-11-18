@@ -1,0 +1,14 @@
+id = "tatuin"
+name = "tatuin"
+bin = "tatuin"
+category = "Miscellaneous"
+description = "Task Aggregator TUI for N providers."
+homepage = "https://github.com/panter-dsd/tatuin"
+
+[install.recipe]
+install = "cargo install --locked tatuin"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

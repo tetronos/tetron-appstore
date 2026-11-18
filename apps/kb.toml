@@ -1,0 +1,9 @@
+id = "kb"
+name = "kb"
+bin = "kb"
+category = "Miscellaneous"
+description = "A minimalist knowledge base manager."
+homepage = "https://github.com/gnebbia/kb"
+
+[source]
+lists = ["terminaltrove"]

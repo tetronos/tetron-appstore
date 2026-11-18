@@ -1,0 +1,14 @@
+id = "taws"
+name = "taws"
+bin = "taws"
+category = "Development"
+description = "A terminal based AWS resource viewer and manager."
+homepage = "https://github.com/huseyinbabal/taws"
+
+[install.recipe]
+install = "cargo install --locked taws"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

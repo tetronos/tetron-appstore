@@ -1,0 +1,15 @@
+id = "stu"
+name = "stu"
+bin = "stu"
+category = "Development"
+description = "A TUI for Amazon S3"
+homepage = "https://github.com/lusingander/stu"
+
+[install.recipe]
+install = "brew install stu"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

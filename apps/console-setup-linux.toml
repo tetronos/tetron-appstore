@@ -1,0 +1,10 @@
+id = "console-setup-linux"
+name = "console-setup-linux"
+check = "consolefonts"
+store = false
+
+[install.pkg]
+apt = "console-setup-linux"
+dnf = "kbd"
+pacman = "kbd"
+brew = ""

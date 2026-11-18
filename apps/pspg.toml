@@ -1,0 +1,14 @@
+id = "pspg"
+name = "pspg"
+bin = "pspg"
+category = "Development"
+description = "A UNIX pager optimized for tabular data."
+homepage = "https://github.com/okbob/pspg"
+
+[install.recipe]
+install = "brew install pspg"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

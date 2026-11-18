@@ -1,0 +1,14 @@
+id = "depsguard"
+name = "depsguard"
+bin = "depsguard"
+category = "Development"
+description = "A CLI to harden package manager configs against supply chain attacks."
+homepage = "https://github.com/arnica/depsguard"
+
+[install.recipe]
+install = "brew install depsguard"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

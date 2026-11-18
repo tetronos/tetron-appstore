@@ -1,0 +1,15 @@
+id = "sen"
+name = "sen"
+bin = "sen"
+category = "Docker/LXC/K8s"
+description = "Terminal User Interface for docker engine"
+homepage = "https://github.com/TomasTomecek/sen"
+
+[install.recipe]
+install = "pipx install sen"
+method = "pipx"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

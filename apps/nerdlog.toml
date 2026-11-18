@@ -1,0 +1,18 @@
+id = "nerdlog"
+name = "nerdlog"
+bin = "nerdlog"
+category = "Dashboards"
+description = "fast, remote-first, multi-host TUI log viewer"
+homepage = "https://github.com/dimonomid/nerdlog"
+
+[install.pkg]
+brew = "nerdlog"
+
+[install.recipe]
+install = "brew install nerdlog"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

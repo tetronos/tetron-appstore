@@ -1,0 +1,15 @@
+id = "lazysql"
+name = "lazysql"
+bin = "lazysql"
+category = "Development"
+description = "A cross-platform TUI database management tool written in Go."
+homepage = "https://github.com/jorgerojas26/lazysql"
+
+[install.recipe]
+install = "brew install lazysql"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

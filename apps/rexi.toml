@@ -1,0 +1,14 @@
+id = "rexi"
+name = "rexi"
+bin = "rexi"
+category = "Development"
+description = "A terminal UI for regex testing."
+homepage = "https://github.com/royreznik/rexi"
+
+[install.recipe]
+install = "pipx install rexi"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

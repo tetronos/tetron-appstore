@@ -1,0 +1,9 @@
+id = "dijo"
+name = "dijo"
+bin = "dijo"
+category = "Productivity"
+description = "scriptable, curses-based, digital habit tracker."
+homepage = "https://github.com/oppiliappan/dijo"
+
+[source]
+lists = ["terminaltrove"]

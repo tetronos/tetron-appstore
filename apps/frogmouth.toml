@@ -1,0 +1,15 @@
+id = "frogmouth"
+name = "frogmouth"
+bin = "frogmouth"
+category = "Editors"
+description = "A Markdown browser for your terminal"
+homepage = "https://github.com/Textualize/frogmouth"
+
+[install.recipe]
+install = "pipx install frogmouth"
+method = "pipx"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "hexed"
+name = "hexed"
+bin = "hexed"
+category = "Editors"
+description = "(Yet another) hex editor — a minimal terminal hex editor written in C, built from source with make. Linux only."
+homepage = "https://codeberg.org/quorend/hexed"
+
+[install.recipe]
+install = "git clone https://codeberg.org/quorend/hexed.git && cd hexed && make && install -Dm755 build/hexed ~/.local/bin/hexed"
+method = "source"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

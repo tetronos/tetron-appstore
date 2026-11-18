@@ -1,0 +1,24 @@
+id = "llm"
+name = "llm"
+bin = "llm"
+category = "AI"
+description = "Run prompts against large language models from the command line, with support for dozens of models via plugins."
+homepage = "https://llm.datasette.io"
+cli = true
+requires_cwd = true
+
+[notes]
+tip = "Comes with its Ollama plugin (llm -m MODEL with a local Ollama). Settings > Updates upgrades it (uv tool upgrade --all); add plugins with uv tool install llm --with PLUGIN."
+how = "uv tool install llm --with llm-ollama; Settings > Updates upgrades the uv tools"
+
+[install]
+script = "llm"
+
+[install.recipe]
+install = "uv tool install llm --with llm-ollama"
+method = "uv"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["tetron"]

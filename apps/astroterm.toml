@@ -1,0 +1,15 @@
+id = "astroterm"
+name = "astroterm"
+bin = "astroterm"
+category = "Screensavers"
+description = "A planetarium for your terminal! Explore stars, planets, constellations, and more"
+homepage = "https://github.com/da-luce/astroterm"
+
+[install.recipe]
+install = "brew install astroterm"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

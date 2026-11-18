@@ -1,0 +1,14 @@
+id = "rizin"
+name = "rizin"
+bin = "rizin"
+category = "Development"
+description = "open source reverse engineering tool based on radare2."
+homepage = "https://github.com/rizinorg/rizin"
+
+[install.recipe]
+install = "brew install rizin"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

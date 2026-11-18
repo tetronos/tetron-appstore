@@ -1,0 +1,15 @@
+id = "lf"
+name = "lf"
+bin = "lf"
+category = "File Managers"
+description = "A terminal file manager written in Go with heavy inspiration from ranger file manager."
+homepage = "https://github.com/gokcehan/lf"
+
+[install.recipe]
+install = "brew install lf"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

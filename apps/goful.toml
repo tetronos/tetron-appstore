@@ -1,0 +1,15 @@
+id = "goful"
+name = "goful"
+bin = "goful"
+category = "File Managers"
+description = "a powerful TUI file manager written in Go."
+homepage = "https://github.com/anmitsu/goful"
+
+[install.recipe]
+install = "go install github.com/anmitsu/goful@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

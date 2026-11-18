@@ -1,0 +1,15 @@
+id = "tododo"
+name = "tododo"
+bin = "tododo"
+category = "Productivity"
+description = "A pretty TUI TODO.md manager for tasks and projects"
+homepage = "https://github.com/bmarse/tododo"
+
+[install.recipe]
+install = "brew install bmarse/tap/tododo"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

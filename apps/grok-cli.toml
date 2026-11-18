@@ -1,0 +1,16 @@
+id = "grok-cli"
+name = "Grok CLI"
+bin = "grok"
+category = "AI"
+description = "Open-source terminal coding agent built on the xAI Grok API with a TUI, sub-agents, real-time web/X search, and media generation."
+homepage = "https://github.com/superagent-ai/grok-cli"
+requires_cwd = true
+
+[install.recipe]
+install = "curl -fsSL https://raw.githubusercontent.com/superagent-ai/grok-cli/main/install.sh | bash"
+method = "script"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["tetron"]

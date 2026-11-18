@@ -1,0 +1,10 @@
+id = "hunspell"
+name = "hunspell"
+check = "hunspell"
+store = false
+
+[install.pkg]
+apt = "hunspell"
+dnf = "hunspell"
+pacman = "hunspell"
+brew = "hunspell"

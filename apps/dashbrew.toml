@@ -1,0 +1,15 @@
+id = "dashbrew"
+name = "dashbrew"
+bin = "dashbrew"
+category = "Dashboards"
+description = "TUI dashboard builder that lets you visualize data from scripts and APIs."
+homepage = "https://github.com/rasjonell/dashbrew"
+
+[install.recipe]
+install = "go install github.com/rasjonell/dashbrew/cmd/dashbrew@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

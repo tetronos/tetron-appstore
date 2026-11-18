@@ -1,0 +1,15 @@
+id = "servonaut"
+name = "Servonaut"
+bin = "servonaut"
+category = "Dashboards"
+description = "A Textual TUI for managing AWS, Hetzner, OVH, and custom servers over SSH, with a built-in AI assistant and MCP server."
+homepage = "https://github.com/zb-ss/servonaut"
+
+[install.recipe]
+install = "pipx install servonaut"
+method = "pip"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

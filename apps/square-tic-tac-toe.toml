@@ -1,0 +1,15 @@
+id = "square-tic-tac-toe"
+name = "Square Tic Tac Toe"
+bin = "squaretictactoe"
+category = "Games"
+description = "Like Tic Tac Toe, but form a square with 4 corners instead of a line"
+homepage = "https://github.com/learnbyexample/TUI-apps/tree/main/SquareTicTacToe"
+
+[install.recipe]
+install = "pipx install squaretictactoe"
+method = "pipx"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

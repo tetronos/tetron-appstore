@@ -1,0 +1,16 @@
+id = "topydo"
+name = "topydo"
+bin = "topydo"
+category = "Productivity"
+description = "A powerful todo list application using the todo.txt format"
+homepage = "https://github.com/topydo/topydo"
+cli = true
+
+[install.recipe]
+install = "brew install topydo"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

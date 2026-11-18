@@ -1,0 +1,16 @@
+id = "mcfly"
+name = "mcfly"
+bin = "mcfly"
+category = "Productivity"
+description = "Intelligent context-aware search engine for your shell history"
+homepage = "https://github.com/cantino/mcfly"
+cli = true
+
+[install.recipe]
+install = "brew install mcfly"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

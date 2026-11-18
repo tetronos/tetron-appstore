@@ -1,0 +1,14 @@
+id = "lazyjj"
+name = "lazyjj"
+bin = "lazyjj"
+category = "Development"
+description = "A TUI for Jujutsu / jj."
+homepage = "https://github.com/Cretezy/lazyjj"
+
+[install.recipe]
+install = "brew install lazyjj"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "pug"
+name = "pug"
+bin = "pug"
+category = "Miscellaneous"
+description = "terraform and tofu module and infrastructure management."
+homepage = "https://github.com/leg100/pug"
+
+[install.recipe]
+install = "brew install pug"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

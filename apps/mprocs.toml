@@ -1,0 +1,9 @@
+id = "mprocs"
+name = "mprocs"
+bin = "mprocs"
+category = "Miscellaneous"
+description = "Run multiple commands in parallel."
+homepage = "https://github.com/pvolok/dekit"
+
+[source]
+lists = ["terminaltrove"]

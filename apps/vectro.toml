@@ -1,0 +1,9 @@
+id = "vectro"
+name = "vectro"
+bin = "vectro"
+category = "Productivity"
+description = "The rpn calculator for your terminal."
+homepage = "https://github.com/gurgeous/vectro"
+
+[source]
+lists = ["terminaltrove"]

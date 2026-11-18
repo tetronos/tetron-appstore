@@ -1,0 +1,14 @@
+id = "gsty"
+name = "gsty"
+bin = "gsty"
+category = "Miscellaneous"
+description = "Browse and apply Ghostty themes with live preview."
+homepage = "https://github.com/tappunk/gsty"
+
+[install.recipe]
+install = "cargo install --locked gsty"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

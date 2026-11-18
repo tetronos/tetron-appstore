@@ -1,0 +1,15 @@
+id = "ani-l"
+name = "ani-l"
+bin = "ani-l"
+category = "Multimedia"
+description = "Rust-based anime browsing and streaming all without leaving the terminal"
+homepage = "https://github.com/komposer-aml/ani-l"
+
+[install.recipe]
+install = "cargo install ani-l"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

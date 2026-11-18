@@ -1,0 +1,16 @@
+id = "haxor-news"
+name = "haxor-news"
+bin = "hn"
+category = "Web"
+description = "Browse Hacker News like a haxor: A Hacker News command line interface (CLI)"
+homepage = "https://github.com/donnemartin/haxor-news"
+cli = true
+
+[install.recipe]
+install = "pipx install haxor-news"
+method = "pipx"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

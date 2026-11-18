@@ -1,0 +1,14 @@
+id = "pipeform"
+name = "pipeform"
+bin = "pipeform"
+category = "Development"
+description = "A TUI for Terraform runtime progress."
+homepage = "https://github.com/magodo/pipeform"
+
+[install.recipe]
+install = "go install github.com/magodo/pipeform@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

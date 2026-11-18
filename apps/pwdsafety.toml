@@ -1,0 +1,14 @@
+id = "pwdsafety"
+name = "pwdsafety"
+bin = "pwdsafety"
+category = "Development"
+description = "A command line tool checking password safety."
+homepage = "https://github.com/edoardottt/pwdsafety"
+
+[install.recipe]
+install = "go install github.com/edoardottt/pwdsafety/cmd/pwdsafety@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

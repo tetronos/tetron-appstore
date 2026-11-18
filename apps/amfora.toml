@@ -1,0 +1,14 @@
+id = "amfora"
+name = "amfora"
+bin = "amfora"
+category = "Miscellaneous"
+description = "A fancy terminal browser for the Gemini protocol."
+homepage = "https://github.com/makew0rld/amfora"
+
+[install.recipe]
+install = "brew install amfora"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

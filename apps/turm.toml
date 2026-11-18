@@ -1,0 +1,14 @@
+id = "turm"
+name = "turm"
+bin = "turm"
+category = "Development"
+description = "TUI for the Slurm Workload Manager."
+homepage = "https://github.com/karimknaebel/turm"
+
+[install.recipe]
+install = "cargo install --locked turm"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

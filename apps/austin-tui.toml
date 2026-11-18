@@ -1,0 +1,15 @@
+id = "austin-tui"
+name = "austin-tui"
+bin = "austin-tui"
+category = "Development"
+description = "The top-like text-based user interface for Austin"
+homepage = "https://github.com/P403n1x87/austin-tui"
+
+[install.recipe]
+install = "pipx install austin-tui"
+method = "pipx"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

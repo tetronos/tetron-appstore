@@ -1,0 +1,15 @@
+id = "sc-im"
+name = "sc-im"
+bin = "sc-im"
+category = "Productivity"
+description = "An ncurses spreadsheet program for terminal. Reignited version of sc"
+homepage = "https://github.com/andmarti1424/sc-im"
+
+[install.recipe]
+install = "brew install sc-im"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

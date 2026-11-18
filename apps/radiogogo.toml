@@ -1,0 +1,15 @@
+id = "radiogogo"
+name = "RadioGoGo"
+bin = "radiogogo"
+category = "Multimedia"
+description = "Go-powered CLI to surf global radio waves via a sleek TUI."
+homepage = "https://github.com/Zi0P4tch0/RadioGoGo"
+
+[install.recipe]
+install = "go install github.com/zi0p4tch0/radiogogo@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

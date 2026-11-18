@@ -1,0 +1,22 @@
+id = "delta"
+name = "delta"
+bin = "delta"
+category = "Development"
+description = "A syntax-highlighting pager for git, diff, and grep output"
+homepage = "https://github.com/dandavison/delta"
+cli = true
+
+[install.pkg]
+apt = "git-delta"
+dnf = "git-delta"
+pacman = "git-delta"
+brew = "git-delta"
+
+[install.recipe]
+install = "brew install git-delta"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

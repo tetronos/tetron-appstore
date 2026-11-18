@@ -1,0 +1,15 @@
+id = "nvrs"
+name = "nvrs"
+bin = "nvrs"
+category = "Miscellaneous"
+description = "Fast new version checker for software releases."
+homepage = "https://github.com/koibtw/nvrs"
+cli = true
+
+[install.recipe]
+install = "cargo install --locked nvrs"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

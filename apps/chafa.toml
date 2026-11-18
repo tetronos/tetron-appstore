@@ -1,0 +1,22 @@
+id = "chafa"
+name = "chafa"
+bin = "chafa"
+category = "Multimedia"
+description = "A powerful utility that converts image data, including animated GIFs, into graphics formats or ANSI/Unicode character art suitable for display in a terminal."
+homepage = "https://hpjansson.org/chafa/"
+cli = true
+
+[install.pkg]
+apt = "chafa"
+dnf = "chafa"
+pacman = "chafa"
+brew = "chafa"
+
+[install.recipe]
+install = "brew install chafa"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

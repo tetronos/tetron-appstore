@@ -1,0 +1,15 @@
+id = "hwinfo-tui"
+name = "hwinfo-tui"
+bin = "hwinfo-tui"
+category = "Dashboards"
+description = "A gping-inspired terminal visualization tool for monitoring real-time hardware sensor data from HWInfo"
+homepage = "https://github.com/JuanjoFuchs/hwinfo-tui"
+
+[install.recipe]
+install = "pip install hwinfo-tui"
+method = "pip"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

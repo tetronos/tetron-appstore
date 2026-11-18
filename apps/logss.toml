@@ -1,0 +1,14 @@
+id = "logss"
+name = "logss"
+bin = "logss"
+category = "Dashboards"
+description = "A simple cli for logs splitting."
+homepage = "https://github.com/todoesverso/logss"
+
+[install.recipe]
+install = "cargo install --locked logss"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

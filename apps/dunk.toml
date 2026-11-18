@@ -1,0 +1,14 @@
+id = "dunk"
+name = "dunk"
+bin = "dunk"
+category = "Development"
+description = "Prettier git diffs in the terminal 🎨"
+homepage = "https://github.com/darrenburns/dunk"
+
+[install.recipe]
+install = "pipx install dunk"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

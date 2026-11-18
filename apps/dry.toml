@@ -1,0 +1,15 @@
+id = "dry"
+name = "dry"
+bin = "dry"
+category = "Docker/LXC/K8s"
+description = "A Docker manager for the terminal"
+homepage = "https://github.com/moncho/dry"
+
+[install.recipe]
+install = "brew install dry"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

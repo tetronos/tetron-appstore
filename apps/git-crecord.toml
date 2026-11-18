@@ -1,0 +1,15 @@
+id = "git-crecord"
+name = "git-crecord"
+bin = "git-crecord"
+category = "Development"
+description = "interactive selective commit tool"
+homepage = "https://github.com/andrewshadura/git-crecord"
+
+[install.recipe]
+install = "pipx install git-crecord"
+method = "pipx"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

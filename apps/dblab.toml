@@ -1,0 +1,15 @@
+id = "dblab"
+name = "dblab"
+bin = "dblab"
+category = "Development"
+description = "The database client every command line junkie deserves"
+homepage = "https://github.com/danvergara/dblab"
+
+[install.recipe]
+install = "brew install dblab"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

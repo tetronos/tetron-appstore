@@ -1,0 +1,15 @@
+id = "eza"
+name = "eza"
+bin = "eza"
+category = "Dashboards"
+description = "A modern replacement for ls"
+homepage = "https://github.com/eza-community/eza"
+cli = true
+
+[install.recipe]
+install = "brew install eza"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

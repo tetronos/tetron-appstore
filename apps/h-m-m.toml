@@ -1,0 +1,15 @@
+id = "h-m-m"
+name = "h-m-m"
+bin = "h-m-m"
+category = "Productivity"
+description = "Hackers Mind Map"
+homepage = "https://github.com/nadrad/h-m-m"
+
+[install.recipe]
+install = "wget -q -O - 'https://raw.githubusercontent.com/nadrad/h-m-m/main/install.sh' | sh"
+method = "script"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

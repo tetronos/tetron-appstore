@@ -1,0 +1,15 @@
+id = "hledger-ui"
+name = "hledger-ui"
+bin = "hledger-ui"
+category = "Productivity"
+description = "A fast TUI for browsing double entry bookkeeping data"
+homepage = "https://github.com/simonmichael/hledger"
+
+[install.recipe]
+install = "brew install hledger"
+method = "brew"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,14 @@
+id = "pop"
+name = "pop"
+bin = "pop"
+category = "Messaging"
+description = "Send emails from your terminal."
+homepage = "https://github.com/charmbracelet/pop"
+
+[install.recipe]
+install = "brew install pop"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

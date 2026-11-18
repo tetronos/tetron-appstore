@@ -1,0 +1,15 @@
+id = "ls-horizons"
+name = "ls-horizons"
+bin = "ls-horizons"
+category = "Dashboards"
+description = "Terminal UI for visualizing NASA's Deep Space Network in real-time"
+homepage = "https://github.com/litescript/ls-horizons"
+
+[install.recipe]
+install = "go install github.com/litescript/ls-horizons/cmd/ls-horizons@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

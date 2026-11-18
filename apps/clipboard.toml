@@ -1,0 +1,15 @@
+id = "clipboard"
+name = "clipboard"
+bin = "clipboard"
+category = "Miscellaneous"
+description = "Your new, ridonkulously smart clipboard manager."
+homepage = "https://github.com/Slackadays/Clipboard"
+cli = true
+
+[install.recipe]
+install = "brew install clipboard"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

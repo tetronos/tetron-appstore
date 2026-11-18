@@ -1,0 +1,15 @@
+id = "cargo-seek"
+name = "cargo-seek"
+bin = "cargo-seek"
+category = "Development"
+description = "A TUI for searching, adding and installing cargo crates"
+homepage = "https://github.com/tareqimbasher/cargo-seek"
+
+[install.recipe]
+install = "cargo install cargo-seek"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

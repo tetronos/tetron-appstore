@@ -1,0 +1,9 @@
+id = "gemini-cli-gemini-cli"
+name = "gemini-cli"
+bin = "gemini-cli"
+category = "AI"
+description = "An AI agent that brings the power of Gemini directly into your terminal by Google."
+homepage = "https://github.com/google-gemini/gemini-cli"
+
+[source]
+lists = ["terminaltrove"]

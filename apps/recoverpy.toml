@@ -1,0 +1,15 @@
+id = "recoverpy"
+name = "recoverpy"
+bin = "recoverpy"
+category = "Miscellaneous"
+description = "A TUI to recover overwritten or deleted data."
+homepage = "https://github.com/PabloLec/recoverpy"
+
+[install.recipe]
+install = "brew install recoverpy"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

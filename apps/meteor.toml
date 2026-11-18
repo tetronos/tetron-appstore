@@ -1,0 +1,14 @@
+id = "meteor"
+name = "meteor"
+bin = "meteor"
+category = "Development"
+description = "A highly configurable CLI tool for writing conventional commits."
+homepage = "https://github.com/stefanlogue/meteor"
+
+[install.recipe]
+install = "go install github.com/stefanlogue/meteor@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,10 @@
+id = "traceroute"
+name = "traceroute"
+check = "traceroute"
+store = false
+
+[install.pkg]
+apt = "traceroute"
+dnf = "traceroute"
+pacman = "traceroute"
+brew = ""

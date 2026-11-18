@@ -1,0 +1,15 @@
+id = "deletor"
+name = "deletor"
+bin = "deletor"
+category = "File Managers"
+description = "Manage and delete files efficiently with an interactive TUI and scriptable CLI."
+homepage = "https://github.com/pashkov256/deletor"
+
+[install.recipe]
+install = "go install github.com/pashkov256/deletor@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

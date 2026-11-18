@@ -1,0 +1,15 @@
+id = "oxker"
+name = "oxker"
+bin = "oxker"
+category = "Docker/LXC/K8s"
+description = "A simple tui to view & control docker containers"
+homepage = "https://github.com/mrjackwills/oxker"
+
+[install.recipe]
+install = "brew install oxker"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

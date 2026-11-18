@@ -1,0 +1,15 @@
+id = "tinytetris"
+name = "tinytetris"
+bin = "tinytetris"
+category = "Games"
+description = "80x23 terminal tetris!"
+homepage = "https://github.com/taylorconor/tinytetris"
+
+[install.recipe]
+install = "git clone https://github.com/taylorconor/tinytetris && cd tinytetris && make"
+method = "source"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

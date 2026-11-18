@@ -1,0 +1,14 @@
+id = "fnug"
+name = "fnug"
+bin = "fnug"
+category = "Development"
+description = "Run all your lints, tests and commands at once, in the terminal."
+homepage = "https://github.com/nickolaj-jepsen/fnug"
+
+[install.recipe]
+install = "cargo install --locked fnug"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

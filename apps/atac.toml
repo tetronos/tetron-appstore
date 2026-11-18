@@ -1,0 +1,15 @@
+id = "atac"
+name = "ATAC"
+bin = "atac"
+category = "Development"
+description = "A feature-full TUI API client made in Rust. ATAC is free, open-source, offline and account-less."
+homepage = "https://github.com/Julien-cpsn/ATAC"
+
+[install.recipe]
+install = "brew install atac"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

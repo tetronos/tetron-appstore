@@ -1,0 +1,15 @@
+id = "tio"
+name = "tio"
+bin = "tio"
+category = "Dashboards"
+description = "A serial device I/O tool."
+homepage = "https://github.com/tio/tio"
+cli = true
+
+[install.recipe]
+install = "brew install tio"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

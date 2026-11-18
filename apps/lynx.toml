@@ -1,0 +1,18 @@
+id = "lynx"
+name = "LYNX"
+bin = "lynx"
+category = "Web"
+description = "A text based Terminal browser"
+homepage = "https://lynx.invisible-island.net/"
+
+[install.pkg]
+brew = "lynx"
+
+[install.recipe]
+install = "brew install lynx"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "godap"
+name = "godap"
+bin = "godap"
+category = "Miscellaneous"
+description = "A complete TUI for LDAP written in Golang"
+homepage = "https://github.com/Macmod/godap"
+
+[install.recipe]
+install = "brew install godap"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

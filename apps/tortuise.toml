@@ -1,0 +1,15 @@
+id = "tortuise"
+name = "tortuise"
+bin = "tortuise"
+category = "Multimedia"
+description = "Gaussian Splatting 3D viewer in your terminal. 6 render modes, CPU-only via crossterm + rayon"
+homepage = "https://github.com/buildoak/tortuise"
+
+[install.recipe]
+install = "cargo install tortuise"
+method = "cargo"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

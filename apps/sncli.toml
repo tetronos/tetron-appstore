@@ -1,0 +1,14 @@
+id = "sncli"
+name = "sncli"
+bin = "sncli"
+category = "Miscellaneous"
+description = "A TUI and CLI for Simplenote."
+homepage = "https://github.com/insanum/sncli"
+
+[install.recipe]
+install = "pipx install sncli"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

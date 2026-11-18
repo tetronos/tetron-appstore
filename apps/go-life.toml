@@ -1,0 +1,15 @@
+id = "go-life"
+name = "go-life"
+bin = "go-life"
+category = "Games"
+description = "Terminal based Conway's Game of Life"
+homepage = "https://github.com/sachaos/go-life"
+
+[install.recipe]
+install = "go install github.com/sachaos/go-life@latest"
+method = "go"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,14 @@
+id = "bmm"
+name = "bmm"
+bin = "bmm"
+category = "Miscellaneous"
+description = "Get to your bookmarks in a flash."
+homepage = "https://github.com/dhth/bmm"
+
+[install.recipe]
+install = "cargo install --locked bmm"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

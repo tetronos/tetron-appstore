@@ -1,0 +1,9 @@
+id = "lumon"
+name = "lumon"
+bin = "lumon"
+category = "Miscellaneous"
+description = "The work is mysterious and important..."
+homepage = "https://github.com/terminaltrove/lumon"
+
+[source]
+lists = ["terminaltrove"]

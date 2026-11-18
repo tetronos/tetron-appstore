@@ -1,0 +1,9 @@
+id = "moe"
+name = "moe"
+bin = "moe"
+category = "Editors"
+description = "A command line Nim based editor inspired by Vim."
+homepage = "https://github.com/fox0430/moe"
+
+[source]
+lists = ["terminaltrove"]

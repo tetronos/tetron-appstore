@@ -1,0 +1,15 @@
+id = "lazyjournal"
+name = "lazyjournal"
+bin = "lazyjournal"
+category = "Development"
+description = "TUI for journalctl, file system logs, as well Docker and Podman containers for quick viewing and filtering"
+homepage = "https://github.com/Lifailon/lazyjournal"
+
+[install.recipe]
+install = "brew install lazyjournal"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

@@ -1,0 +1,9 @@
+id = "nexus"
+name = "nexus"
+bin = "nexus"
+category = "Development"
+description = "A terminal-based HTTP client for API testing."
+homepage = "https://github.com/pranav-cs-1/nexus"
+
+[source]
+lists = ["terminaltrove"]

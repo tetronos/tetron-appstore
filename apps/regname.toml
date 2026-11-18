@@ -1,0 +1,9 @@
+id = "regname"
+name = "regname"
+bin = "regname"
+category = "Dashboards"
+description = "Mass renamer TUI written in Rust."
+homepage = "https://github.com/linkdd/regname"
+
+[source]
+lists = ["terminaltrove"]

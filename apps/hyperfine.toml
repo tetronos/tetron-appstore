@@ -1,0 +1,21 @@
+id = "hyperfine"
+name = "hyperfine"
+bin = "hyperfine"
+category = "Miscellaneous"
+description = "A command-line benchmarking tool."
+homepage = "https://github.com/sharkdp/hyperfine"
+cli = true
+
+[install.pkg]
+apt = "hyperfine"
+dnf = "hyperfine"
+pacman = "hyperfine"
+brew = "hyperfine"
+
+[install.recipe]
+install = "brew install hyperfine"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

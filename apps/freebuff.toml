@@ -1,0 +1,9 @@
+id = "freebuff"
+name = "freebuff"
+store = false
+
+[notes]
+how = "the native binary its npm launcher fetches from codebuff.com, checked against the sha256 the npm package lists, into ~/.local/share/freebuff linked from ~/.local/bin (Linux); Settings > Updates replaces it the same way"
+
+[install]
+script = "freebuff"

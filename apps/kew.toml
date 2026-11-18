@@ -1,0 +1,18 @@
+id = "kew"
+name = "kew"
+bin = "kew"
+category = "Multimedia"
+description = "A terminal music player for Linux"
+homepage = "https://github.com/ravachol/kew"
+
+[install.pkg]
+pacman = "kew"
+
+[install.recipe]
+install = "brew install kew"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

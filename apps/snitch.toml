@@ -1,0 +1,14 @@
+id = "snitch"
+name = "snitch"
+bin = "snitch"
+category = "Development"
+description = "A TUI for inspecting network connections, like netstat for humans."
+homepage = "https://github.com/karol-broda/snitch"
+
+[install.recipe]
+install = "brew install snitch"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

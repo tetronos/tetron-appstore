@@ -1,0 +1,16 @@
+id = "crush"
+name = "Crush"
+bin = "crush"
+category = "AI"
+description = "A terminal-based agentic AI coding assistant that wires LLMs into your tools, code, and workflows."
+homepage = "https://github.com/charmbracelet/crush"
+requires_cwd = true
+
+[install.recipe]
+install = "brew install charmbracelet/tap/crush"
+method = "brew"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

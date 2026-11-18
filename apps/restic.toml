@@ -1,0 +1,21 @@
+id = "restic"
+name = "restic"
+bin = "restic"
+category = "Productivity"
+description = "Fast, secure, efficient backup program."
+homepage = "https://github.com/restic/restic"
+cli = true
+
+[install.pkg]
+apt = "restic"
+dnf = "restic"
+pacman = "restic"
+brew = "restic"
+
+[install.recipe]
+install = "brew install restic"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

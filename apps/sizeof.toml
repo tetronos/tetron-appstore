@@ -1,0 +1,14 @@
+id = "sizeof"
+name = "sizeof"
+bin = "sizeof"
+category = "Productivity"
+description = "A command-line tool to calculate the size of data structures"
+homepage = "https://github.com/zackproser/sizeof"
+
+[install.recipe]
+install = "go install github.com/zackproser/sizeof@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

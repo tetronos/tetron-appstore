@@ -1,0 +1,9 @@
+id = "dbterm"
+name = "dbterm"
+bin = "dbterm"
+category = "Development"
+description = "Terminal database workbench for PostgreSQL, MySQL, SQLite, Turso, and Cloudflare D1"
+homepage = "https://github.com/shreyam1008/dbterm"
+
+[source]
+lists = ["awesome-tuis"]

@@ -1,0 +1,14 @@
+id = "b4n"
+name = "b4n"
+bin = "b4n"
+category = "Docker/LXC/K8s"
+description = "A terminal user interface (TUI) for the Kubernetes API."
+homepage = "https://github.com/fioletoven/b4n"
+
+[install.recipe]
+install = "brew install b4n"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

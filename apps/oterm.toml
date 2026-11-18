@@ -1,0 +1,14 @@
+id = "oterm"
+name = "oterm"
+bin = "oterm"
+category = "AI"
+description = "A text-based terminal client for ollama."
+homepage = "https://github.com/ggozad/oterm"
+
+[install.recipe]
+install = "brew install oterm"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

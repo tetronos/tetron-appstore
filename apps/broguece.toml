@@ -1,0 +1,15 @@
+id = "broguece"
+name = "BrogueCE"
+bin = "brogue"
+category = "Games"
+description = "Beautiful roguelike dungeon crawler"
+homepage = "https://github.com/tmewett/BrogueCE"
+
+[install.recipe]
+install = "git clone https://github.com/tmewett/BrogueCE.git && cd BrogueCE && make bin/brogue"
+method = "source"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

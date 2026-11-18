@@ -1,0 +1,16 @@
+id = "humble-explorer"
+name = "HumBLE Explorer"
+bin = "humbleexplorer"
+category = "Miscellaneous"
+description = "A cross-platform, command-line and human-friendly Bluetooth Low Energy scanner"
+homepage = "https://github.com/koenvervloesem/humble-explorer"
+cli = true
+
+[install.recipe]
+install = "pipx install humble-explorer"
+method = "pipx"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "tzupdate"
+name = "tzupdate"
+bin = "tzupdate"
+category = "Development"
+description = "Set the system timezone based on IP geolocation."
+homepage = "https://github.com/cdown/tzupdate"
+cli = true
+
+[install.recipe]
+install = "cargo install --locked tzupdate"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

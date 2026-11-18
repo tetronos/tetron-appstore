@@ -1,0 +1,14 @@
+id = "hapless"
+name = "hapless"
+bin = "hapless"
+category = "Miscellaneous"
+description = "Run and manage background processes."
+homepage = "https://github.com/bmwant/hapless"
+
+[install.recipe]
+install = "brew install hapless"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

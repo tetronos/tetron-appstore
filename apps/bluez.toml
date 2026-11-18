@@ -1,0 +1,11 @@
+id = "bluez"
+name = "bluez"
+check = "bluetoothctl"
+group = "services"
+store = false
+
+[install.pkg]
+apt = "bluez"
+dnf = "bluez"
+pacman = "bluez-utils"
+brew = ""

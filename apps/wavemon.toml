@@ -1,0 +1,15 @@
+id = "wavemon"
+name = "wavemon"
+bin = "wavemon"
+category = "Miscellaneous"
+description = "A wireless device monitoring application"
+homepage = "https://github.com/uoaerg/wavemon"
+
+[install.recipe]
+install = "./configure && make && sudo make install"
+method = "source"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

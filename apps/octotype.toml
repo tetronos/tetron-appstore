@@ -1,0 +1,14 @@
+id = "octotype"
+name = "octotype"
+bin = "octotype"
+category = "Productivity"
+description = "A typing trainer for your terminal."
+homepage = "https://github.com/mahlquistj/octotype"
+
+[install.recipe]
+install = "cargo install --locked octotype"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

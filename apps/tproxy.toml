@@ -1,0 +1,15 @@
+id = "tproxy"
+name = "tproxy"
+bin = "tproxy"
+category = "Development"
+description = "A CLI tool to proxy and analyze TCP connections."
+homepage = "https://github.com/kevwan/tproxy"
+cli = true
+
+[install.recipe]
+install = "brew install tproxy"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,14 @@
+id = "memtui"
+name = "memtui"
+bin = "memtui"
+category = "Development"
+description = "A TUI to visualize and manage Memcached."
+homepage = "https://github.com/nnnkkk7/memtui"
+
+[install.recipe]
+install = "go install github.com/nnnkkk7/memtui/cmd/memtui@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

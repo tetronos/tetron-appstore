@@ -1,0 +1,14 @@
+id = "dcv"
+name = "dcv"
+bin = "dcv"
+category = "Docker/LXC/K8s"
+description = "A TUI viewer for docker-compose."
+homepage = "https://github.com/tokuhirom/dcv"
+
+[install.recipe]
+install = "go install github.com/tokuhirom/dcv@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

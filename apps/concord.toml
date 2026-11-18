@@ -1,0 +1,15 @@
+id = "concord"
+name = "concord"
+bin = "concord"
+category = "Messaging"
+description = "A feature-rich TUI client for Discord"
+homepage = "https://github.com/chojs23/concord"
+
+[install.recipe]
+install = "brew install concord"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

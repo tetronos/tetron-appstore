@@ -1,0 +1,15 @@
+id = "pacsea"
+name = "pacsea"
+bin = "pacsea"
+category = "Miscellaneous"
+description = "Fast TUI for searching, inspecting, and queueing pacman/AUR packages."
+homepage = "https://github.com/Firstp1ck/Pacsea"
+cli = true
+
+[install.recipe]
+install = "cargo install --locked pacsea"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

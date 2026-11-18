@@ -1,0 +1,14 @@
+id = "ugdb"
+name = "ugdb"
+bin = "ugdb"
+category = "Development"
+description = "An alternative TUI for gdb."
+homepage = "https://github.com/ftilde/ugdb"
+
+[install.recipe]
+install = "cargo install --locked ugdb"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "nvtop"
+name = "nvtop"
+bin = "nvtop"
+category = "Dashboards"
+description = "GPUs process monitoring for AMD, Intel and NVIDIA"
+homepage = "https://github.com/Syllo/nvtop"
+
+[install.recipe]
+install = "brew install nvtop"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

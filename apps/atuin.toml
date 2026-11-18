@@ -1,0 +1,14 @@
+id = "atuin"
+name = "atuin"
+bin = "atuin"
+category = "Miscellaneous"
+description = "Sync, search and backup shell history."
+homepage = "https://github.com/atuinsh/atuin"
+
+[install.recipe]
+install = "brew install atuin"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

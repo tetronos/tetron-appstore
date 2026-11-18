@@ -1,0 +1,15 @@
+id = "vctui"
+name = "vctui"
+bin = "vctui"
+category = "Development"
+description = "Console interface for vCenter"
+homepage = "https://github.com/thebsdbox/vctui"
+
+[install.recipe]
+install = "go install github.com/thebsdbox/vctui@latest"
+method = "go"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

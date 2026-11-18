@@ -1,0 +1,15 @@
+id = "harlequin"
+name = "harlequin"
+bin = "harlequin"
+category = "Development"
+description = "The SQL IDE for Your Terminal"
+homepage = "https://github.com/tconbeer/harlequin"
+
+[install.recipe]
+install = "brew install harlequin"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

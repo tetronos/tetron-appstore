@@ -1,0 +1,18 @@
+id = "k9s"
+name = "k9s"
+bin = "k9s"
+category = "Docker/LXC/K8s"
+description = "TUI for managing a Kubernetes cluster"
+homepage = "https://github.com/derailed/k9s"
+
+[install.pkg]
+brew = "k9s"
+
+[install.recipe]
+install = "brew install k9s"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

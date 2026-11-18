@@ -1,0 +1,15 @@
+id = "typing-game-cli"
+name = "typing-game-cli"
+bin = "typing-game-cli"
+category = "Games"
+description = "Command line game to practice your typing speed by competing against typer-robot or against your best result"
+homepage = "https://github.com/akgondber/typing-game-cli"
+
+[install.recipe]
+install = "npm install -g typing-game-cli"
+method = "npm"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

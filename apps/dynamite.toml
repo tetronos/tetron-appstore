@@ -1,0 +1,14 @@
+id = "dynamite"
+name = "dynamite"
+bin = "dynamite"
+category = "Dashboards"
+description = "A TUI query engine for Amazon DynamoDB full of quality-of-life features."
+homepage = "https://github.com/wolfwfr/dynamite"
+
+[install.recipe]
+install = "go install github.com/wolfwfr/dynamite/cmd/dynamite@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

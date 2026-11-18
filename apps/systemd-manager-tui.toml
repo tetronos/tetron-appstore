@@ -1,0 +1,15 @@
+id = "systemd-manager-tui"
+name = "Systemd-manager-tui"
+bin = "systemd-manager-tui"
+category = "Miscellaneous"
+description = "A program for managing systemd services through a TUI."
+homepage = "https://github.com/matheus-git/systemd-manager-tui"
+
+[install.recipe]
+install = "cargo install --locked systemd-manager-tui"
+method = "cargo"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

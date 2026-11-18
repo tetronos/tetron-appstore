@@ -1,0 +1,14 @@
+id = "keyb"
+name = "keyb"
+bin = "keyb"
+category = "Miscellaneous"
+description = "Create and view custom hotkey cheatsheets in the terminal."
+homepage = "https://github.com/kencx/keyb"
+
+[install.recipe]
+install = "go install github.com/kencx/keyb@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

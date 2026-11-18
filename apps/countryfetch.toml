@@ -1,0 +1,10 @@
+id = "countryfetch"
+name = "countryfetch"
+bin = "countryfetch"
+category = "Miscellaneous"
+description = "A neofetch-like tool for fetching information about your country."
+homepage = "https://github.com/nik-rev/countryfetch"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

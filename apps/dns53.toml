@@ -1,0 +1,14 @@
+id = "dns53"
+name = "dns53"
+bin = "dns53"
+category = "Development"
+description = "Expose your EC2 quickly, easily and privately within a VPC."
+homepage = "https://github.com/purpleclay/dns53"
+
+[install.recipe]
+install = "go install github.com/purpleclay/dns53@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

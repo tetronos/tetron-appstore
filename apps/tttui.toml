@@ -1,0 +1,15 @@
+id = "tttui"
+name = "tttui"
+bin = "tttui"
+category = "Miscellaneous"
+description = "A Monkeytype-inspired typing test that runs entirely in your terminal"
+homepage = "https://github.com/reidoboss/tttui"
+
+[install.recipe]
+install = "cargo install tttui"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

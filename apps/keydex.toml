@@ -1,0 +1,15 @@
+id = "keydex"
+name = "keydex"
+bin = "keydex"
+category = "Miscellaneous"
+description = "TUI password manager for KeePass databases."
+homepage = "https://github.com/shikaan/keydex"
+
+[install.recipe]
+install = "curl -s https://shikaan.github.io/sup/install | REPO=shikaan/keydex sh -"
+method = "script"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

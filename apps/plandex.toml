@@ -1,0 +1,16 @@
+id = "plandex"
+name = "Plandex"
+bin = "plandex"
+category = "AI"
+description = "Open-source terminal AI coding agent designed for large projects and multi-file tasks."
+homepage = "https://github.com/plandex-ai/plandex"
+requires_cwd = true
+
+[install.recipe]
+install = "curl -sL https://plandex.ai/install.sh | bash"
+method = "script"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["tetron"]

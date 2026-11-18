@@ -1,0 +1,15 @@
+id = "pet"
+name = "pet"
+bin = "pet"
+category = "Miscellaneous"
+description = "Simple command-line snippet manager."
+homepage = "https://github.com/knqyf263/pet"
+cli = true
+
+[install.recipe]
+install = "brew install pet"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

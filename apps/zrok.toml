@@ -1,0 +1,14 @@
+id = "zrok"
+name = "zrok"
+bin = "zrok"
+category = "Development"
+description = "a next-generation peer-to-peer sharing platform"
+homepage = "https://github.com/openziti/zrok"
+
+[install.recipe]
+install = "brew install zrok"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

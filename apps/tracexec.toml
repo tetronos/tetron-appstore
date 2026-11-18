@@ -1,0 +1,9 @@
+id = "tracexec"
+name = "tracexec"
+bin = "tracexec"
+category = "Development"
+description = "A small utility for tracing/debugging program execution."
+homepage = "https://github.com/kxxt/tracexec"
+
+[source]
+lists = ["terminaltrove"]

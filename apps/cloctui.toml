@@ -1,0 +1,9 @@
+id = "cloctui"
+name = "cloctui"
+bin = "cloctui"
+category = "Miscellaneous"
+description = "A TUI interface for CLOC (Count Lines of Code)"
+homepage = "https://github.com/brent-lidstone/cloctui"
+
+[source]
+lists = ["terminaltrove"]

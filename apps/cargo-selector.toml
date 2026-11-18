@@ -1,0 +1,15 @@
+id = "cargo-selector"
+name = "cargo-selector"
+bin = "cargo-selector"
+category = "Miscellaneous"
+description = "Cargo subcommand to select and execute binary/example targets."
+homepage = "https://github.com/lusingander/cargo-selector"
+cli = true
+
+[install.recipe]
+install = "cargo install --locked cargo-selector"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

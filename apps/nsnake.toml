@@ -1,0 +1,15 @@
+id = "nsnake"
+name = "nSnake"
+bin = "nsnake"
+category = "Games"
+description = "The classic snake game with textual interface"
+homepage = "https://github.com/alexdantas/nSnake"
+
+[install.recipe]
+install = "brew install nsnake"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

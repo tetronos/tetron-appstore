@@ -1,0 +1,15 @@
+id = "froggit"
+name = "Froggit"
+bin = "froggit"
+category = "Development"
+description = "Minimalist Git TUI with GitHub CLI integration"
+homepage = "https://github.com/thewizardshell/froggit"
+
+[install.recipe]
+install = "go install github.com/thewizardshell/froggit@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "vortix"
+name = "vortix"
+bin = "vortix"
+category = "Miscellaneous"
+description = "Terminal UI for WireGuard and OpenVPN with real-time telemetry, leak detection, and kill switch."
+homepage = "https://github.com/Harry-kp/vortix"
+
+[install.recipe]
+install = "cargo install vortix"
+method = "cargo"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

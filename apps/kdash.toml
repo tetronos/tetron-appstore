@@ -1,0 +1,15 @@
+id = "kdash"
+name = "kdash"
+bin = "kdash"
+category = "Docker/LXC/K8s"
+description = "A simple and fast dashboard for Kubernetes"
+homepage = "https://github.com/kdash-rs/kdash"
+
+[install.recipe]
+install = "brew tap kdash-rs/kdash && brew install kdash"
+method = "brew"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

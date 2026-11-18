@@ -1,0 +1,14 @@
+id = "up"
+name = "up"
+bin = "up"
+category = "Development"
+description = "A tool for writing Linux pipes with instant live preview."
+homepage = "https://github.com/akavel/up"
+
+[install.recipe]
+install = "brew install up"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

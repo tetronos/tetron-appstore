@@ -1,0 +1,14 @@
+id = "xfr"
+name = "xfr"
+bin = "xfr"
+category = "Development"
+description = "A modern iperf3 alternative with a live TUI."
+homepage = "https://github.com/lance0/xfr"
+
+[install.recipe]
+install = "brew install xfr"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

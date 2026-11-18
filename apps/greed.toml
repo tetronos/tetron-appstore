@@ -1,0 +1,18 @@
+id = "greed"
+name = "Greed"
+bin = "greed"
+category = "Games"
+description = "A game of consumption. Eat as much as you can before munching yourself into a corner!"
+homepage = "https://gitlab.com/esr/greed"
+
+[install.pkg]
+apt = "greed"
+
+[install.recipe]
+install = "brew install greed"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

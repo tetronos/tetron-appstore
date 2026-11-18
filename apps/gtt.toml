@@ -1,0 +1,14 @@
+id = "gtt"
+name = "gtt"
+bin = "gtt"
+category = "AI"
+description = "A TUI for Google Translate, ChatGPT, DeepL and other AI services."
+homepage = "https://github.com/eeeXun/gtt"
+
+[install.recipe]
+install = "go install github.com/eeeXun/gtt@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

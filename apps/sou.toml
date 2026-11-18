@@ -1,0 +1,14 @@
+id = "sou"
+name = "sou"
+bin = "sou"
+category = "Docker/LXC/K8s"
+description = "A tool for exploring files in container image layers."
+homepage = "https://github.com/knqyf263/sou"
+
+[install.recipe]
+install = "go install github.com/knqyf263/sou@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

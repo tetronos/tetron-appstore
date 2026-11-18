@@ -1,0 +1,15 @@
+id = "emu2"
+name = "emu2"
+bin = "emu2"
+category = "Miscellaneous"
+description = "A simple DOS emulator for the Linux text console, supporting basic DOS system calls and console I/O."
+homepage = "https://github.com/dmsc/emu2"
+
+[install.recipe]
+install = "make && sudo make install"
+method = "source"
+os = ["linux", "macos"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

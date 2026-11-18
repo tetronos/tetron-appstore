@@ -1,0 +1,20 @@
+id = "micro"
+name = "micro"
+bin = "micro"
+category = "Editors"
+description = "A modern and intuitive terminal-based text editor"
+homepage = "https://github.com/zyedidia/micro"
+
+[install.pkg]
+apt = "micro"
+pacman = "micro"
+brew = "micro"
+
+[install.recipe]
+install = "brew install micro"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

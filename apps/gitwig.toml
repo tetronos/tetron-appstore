@@ -1,0 +1,14 @@
+id = "gitwig"
+name = "gitwig"
+bin = "gitwig"
+category = "Development"
+description = "- A mouse-drivable git TUI and multi-repo dashboard built in Rust."
+homepage = "https://github.com/tareqmy/gitwig"
+
+[install.recipe]
+install = "cargo install --locked gitwig"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

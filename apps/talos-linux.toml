@@ -1,0 +1,15 @@
+id = "talos-linux"
+name = "talos linux"
+bin = "taloslinux"
+category = "Dashboards"
+description = "A Linux distro with a TUI dashboard for local and remote usage"
+homepage = "https://github.com/siderolabs/talos"
+
+[install.recipe]
+install = "brew install siderolabs/tap/talosctl"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,9 @@
+id = "nerd-font"
+name = "nerd-font"
+store = false
+
+[notes]
+how = "Symbols Nerd Font: ~/.local/share/fonts on Linux, a Homebrew cask on macOS"
+
+[install]
+script = "nerd-font"

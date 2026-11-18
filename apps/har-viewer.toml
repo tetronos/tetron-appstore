@@ -1,0 +1,9 @@
+id = "har-viewer"
+name = "har-viewer"
+bin = "har-viewer"
+category = "Web"
+description = "A terminal UI for inspecting HAR (HTTP Archive) files."
+homepage = "https://github.com/nassendelft/har-viewer"
+
+[source]
+lists = ["terminaltrove"]

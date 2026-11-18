@@ -1,0 +1,14 @@
+id = "lobtui"
+name = "lobtui"
+bin = "lobtui"
+category = "Messaging"
+description = "A TUI for lobste.rs website."
+homepage = "https://github.com/pythops/lobtui"
+
+[install.recipe]
+install = "cargo install --locked lobtui"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

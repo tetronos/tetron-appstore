@@ -1,0 +1,15 @@
+id = "chawan"
+name = "Chawan"
+bin = "chawan"
+category = "Web"
+description = "A TUI web (and (S)FTP, Gopher, Gemini) browser with CSS, inline image and JavaScript support."
+homepage = "https://chawan.net"
+
+[install.recipe]
+install = "brew install chawan"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

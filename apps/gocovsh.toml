@@ -1,0 +1,14 @@
+id = "gocovsh"
+name = "gocovsh"
+bin = "gocovsh"
+category = "Development"
+description = "A shell for interacting with Go coverage profiles."
+homepage = "https://github.com/orlangure/gocovsh"
+
+[install.recipe]
+install = "go install github.com/orlangure/gocovsh@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

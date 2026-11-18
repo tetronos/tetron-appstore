@@ -1,0 +1,14 @@
+id = "wrkflw"
+name = "wrkflw"
+bin = "wrkflw"
+category = "Docker/LXC/K8s"
+description = "A CLI and TUI to validate and run GitHub Actions locally."
+homepage = "https://github.com/bahdotsh/wrkflw"
+
+[install.recipe]
+install = "brew install wrkflw"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

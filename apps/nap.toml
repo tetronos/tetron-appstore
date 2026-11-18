@@ -1,0 +1,15 @@
+id = "nap"
+name = "nap"
+bin = "nap"
+category = "Development"
+description = "Code snippets in your terminal"
+homepage = "https://github.com/maaslalani/nap"
+
+[install.recipe]
+install = "brew install nap"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

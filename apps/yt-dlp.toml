@@ -1,0 +1,21 @@
+id = "yt-dlp"
+name = "yt-dlp"
+bin = "yt-dlp"
+category = "Miscellaneous"
+description = "A youtube-dl fork with additional features and fixes."
+homepage = "https://github.com/yt-dlp/yt-dlp"
+cli = true
+
+[notes]
+how = "uv tool install yt-dlp[default,deno] (deno is the JS runtime it needs for YouTube, inside its venv), since distribution packages fall behind the sites; Settings > Updates upgrades the uv tools"
+
+[install]
+script = "yt-dlp"
+
+[install.recipe]
+install = "brew install yt-dlp"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

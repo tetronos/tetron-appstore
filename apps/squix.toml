@@ -1,0 +1,14 @@
+id = "squix"
+name = "squix"
+bin = "squix"
+category = "Development"
+description = "A minimal CLI tool for managing and executing SQL queries with a TUI."
+homepage = "https://github.com/eduardofuncao/squix"
+
+[install.recipe]
+install = "go install github.com/eduardofuncao/squix/cmd/squix@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

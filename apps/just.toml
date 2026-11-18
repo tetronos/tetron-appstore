@@ -1,0 +1,21 @@
+id = "just"
+name = "just"
+bin = "just"
+category = "Development"
+description = "Just a command runner."
+homepage = "https://github.com/casey/just"
+cli = true
+
+[install.pkg]
+apt = "just"
+dnf = "just"
+pacman = "just"
+brew = "just"
+
+[install.recipe]
+install = "brew install just"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

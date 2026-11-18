@@ -1,0 +1,15 @@
+id = "cmus"
+name = "cmus"
+bin = "cmus"
+category = "Multimedia"
+description = "A small, fast and powerful console music player for Unix-like operating systems."
+homepage = "https://cmus.github.io/"
+
+[install.recipe]
+install = "brew install cmus"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

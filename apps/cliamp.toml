@@ -1,0 +1,14 @@
+id = "cliamp"
+name = "cliamp"
+bin = "cliamp"
+category = "Multimedia"
+description = "A terminal music player inspired by winamp."
+homepage = "https://github.com/bjarneo/cliamp"
+
+[install.recipe]
+install = "go install github.com/bjarneo/cliamp@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

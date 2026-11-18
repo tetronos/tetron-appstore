@@ -1,0 +1,15 @@
+id = "nodebro"
+name = "nodebro"
+bin = "nodebro"
+category = "Development"
+description = "Easily view most recent Github releases/tags and release notes from the terminal"
+homepage = "https://github.com/jonaburg/nodebro"
+
+[install.recipe]
+install = "go install github.com/jonaburg/nodebro@latest"
+method = "go"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

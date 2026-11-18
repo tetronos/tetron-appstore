@@ -1,0 +1,22 @@
+id = "antigravity-cli"
+name = "Antigravity CLI"
+bin = "agy"
+category = "AI"
+description = "Google's terminal coding agent, the successor of Gemini CLI; reads AGENTS.md as its rules file."
+homepage = "https://antigravity.google"
+requires_cwd = true
+
+[notes]
+tip = "First run: start `agy` and sign in with your Google account."
+
+[agent]
+label = "Antigravity"
+
+[install.recipe]
+install = "curl -fsSL https://antigravity.google/cli/install.sh | bash"
+method = "script"
+os = ["macos", "linux"]
+verified = false
+
+[source]
+lists = ["tetron"]

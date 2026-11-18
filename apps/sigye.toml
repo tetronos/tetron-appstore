@@ -1,0 +1,14 @@
+id = "sigye"
+name = "sigye"
+bin = "sigye"
+category = "Miscellaneous"
+description = "A beautiful terminal clock with ASCII art fonts."
+homepage = "https://github.com/am2rican5/sigye"
+
+[install.recipe]
+install = "cargo install --locked sigye"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "fblog"
+name = "fblog"
+bin = "fblog"
+category = "Dashboards"
+description = "Small command-line JSON Log viewer."
+homepage = "https://github.com/brocode/fblog"
+cli = true
+
+[install.recipe]
+install = "brew install fblog"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

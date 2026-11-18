@@ -1,0 +1,10 @@
+id = "hoard"
+name = "hoard"
+bin = "hoard"
+category = "Miscellaneous"
+description = "A CLI command organizer tool to hoard all your precious commands."
+homepage = "https://github.com/Hyde46/hoard"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

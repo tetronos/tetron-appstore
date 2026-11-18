@@ -1,0 +1,15 @@
+id = "tiki"
+name = "tiki"
+bin = "tiki"
+category = "Productivity"
+description = "Markdown-based git-versioned project and issue manager"
+homepage = "https://github.com/boolean-maybe/tiki"
+
+[install.recipe]
+install = "brew install boolean-maybe/tap/tiki"
+method = "brew"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

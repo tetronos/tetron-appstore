@@ -1,0 +1,9 @@
+id = "g1c"
+name = "g1c"
+bin = "g1c"
+category = "Dashboards"
+description = "Google Cloud Instances Terminal UI Manager."
+homepage = "https://github.com/nlamirault/g1c"
+
+[source]
+lists = ["terminaltrove"]

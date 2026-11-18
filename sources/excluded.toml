@@ -1,0 +1,10 @@
+# Names on the imported lists that are not catalog apps (libraries,
+# collections, duplicates). scripts/new_apps_report.py and the importers
+# (ASCAT-018) never propose them. Matched by name in any case.
+exclude = [
+  "termui",         # Go widget library, not a runnable app
+  "iconicfonts",    # patched-font collection, not a runnable app
+  "learnbyexample", # collection of separate tutorial apps, no single binary
+  "carbonyl",       # Chromium in the terminal; tetron-browser covers the web
+  "dua-cli",        # same app as dua (command dua)
+]

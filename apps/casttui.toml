@@ -1,0 +1,9 @@
+id = "casttui"
+name = "casttui"
+store = false
+
+[notes]
+how = "uv tool install from github.com/tetronos/casttui"
+
+[install]
+script = "casttui"

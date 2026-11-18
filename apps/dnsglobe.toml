@@ -1,0 +1,14 @@
+id = "dnsglobe"
+name = "dnsglobe"
+bin = "dnsglobe"
+category = "Development"
+description = "A global DNS propagation checker for your terminal."
+homepage = "https://github.com/514-labs/dnsglobe"
+
+[install.recipe]
+install = "brew install dnsglobe"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

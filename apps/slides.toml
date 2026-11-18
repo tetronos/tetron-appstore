@@ -1,0 +1,15 @@
+id = "slides"
+name = "slides"
+bin = "slides"
+category = "Productivity"
+description = "A terminal based presentation tool, supporting markdown syntax."
+homepage = "https://github.com/maaslalani/slides"
+
+[install.recipe]
+install = "brew install slides"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

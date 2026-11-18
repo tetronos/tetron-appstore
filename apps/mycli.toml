@@ -1,0 +1,15 @@
+id = "mycli"
+name = "mycli"
+bin = "mycli"
+category = "Development"
+description = "MySQL/MariaDB CLI with auto-completion and syntax highlighting."
+homepage = "https://github.com/dbcli/mycli"
+
+[install.recipe]
+install = "brew install mycli"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["tetron"]

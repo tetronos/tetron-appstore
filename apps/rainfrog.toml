@@ -1,0 +1,15 @@
+id = "rainfrog"
+name = "rainfrog"
+bin = "rainfrog"
+category = "Development"
+description = "A database management TUI for Postgres, MySQL, and SQLite written in Rust"
+homepage = "https://github.com/achristmascarl/rainfrog"
+
+[install.recipe]
+install = "brew install rainfrog"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

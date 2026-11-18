@@ -1,0 +1,15 @@
+id = "etcd-walker"
+name = "etcd-walker"
+bin = "etcd-walker"
+category = "Docker/LXC/K8s"
+description = "Opensource TUI tool for managing etcd keys"
+homepage = "https://github.com/nexusriot/etcd-walker/"
+
+[install.recipe]
+install = "go install github.com/nexusriot/etcd-walker/cmd/etcd-walker@latest"
+method = "go"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

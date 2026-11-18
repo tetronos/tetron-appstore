@@ -1,0 +1,14 @@
+id = "rum"
+name = "rum"
+bin = "rum"
+category = "Miscellaneous"
+description = "A TUI to list, search and run package.json scripts."
+homepage = "https://github.com/thekarel/rum"
+
+[install.recipe]
+install = "go install github.com/thekarel/rum@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,14 @@
+id = "ali"
+name = "ali"
+bin = "ali"
+category = "Web"
+description = "A load testing tool capable of performing real-time analysis."
+homepage = "https://github.com/nakabonne/ali"
+
+[install.recipe]
+install = "brew install ali"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

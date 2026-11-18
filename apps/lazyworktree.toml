@@ -1,0 +1,14 @@
+id = "lazyworktree"
+name = "lazyworktree"
+bin = "lazyworktree"
+category = "Development"
+description = "Effortless Git worktree management for the terminal."
+homepage = "https://github.com/chmouel/lazyworktree"
+
+[install.recipe]
+install = "go install github.com/chmouel/lazyworktree/cmd/lazyworktree@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

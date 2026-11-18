@@ -1,0 +1,14 @@
+id = "diffnav"
+name = "diffnav"
+bin = "diffnav"
+category = "Development"
+description = "A git diff pager based on delta but with a file tree, à la GitHub."
+homepage = "https://github.com/dlvhdr/diffnav"
+
+[install.recipe]
+install = "brew install diffnav"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,9 @@
+id = "fq"
+name = "fq"
+bin = "fq"
+category = "Development"
+description = "jq for binary formats."
+homepage = "https://github.com/wader/fq"
+
+[source]
+lists = ["terminaltrove"]

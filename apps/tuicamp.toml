@@ -1,0 +1,15 @@
+id = "tuicamp"
+name = "tuicamp"
+bin = "tuicamp"
+category = "Dashboards"
+description = "Unofficial TimeCamp TUI"
+homepage = "https://github.com/AbeEstrada/tuicamp"
+
+[install.recipe]
+install = "go install github.com/AbeEstrada/tuicamp@latest"
+method = "go"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

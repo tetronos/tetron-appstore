@@ -1,0 +1,16 @@
+id = "openhands"
+name = "OpenHands"
+bin = "openhands"
+category = "AI"
+description = "AI-driven software development agent that runs interactively in your terminal to write and execute code on your behalf."
+homepage = "https://github.com/All-Hands-AI/OpenHands"
+requires_cwd = true
+
+[install.recipe]
+install = "uv tool install openhands --python 3.12"
+method = "uv"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["tetron"]

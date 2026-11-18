@@ -1,0 +1,18 @@
+id = "start-page"
+name = "Start Page"
+bin = "tetron-wm-startpage"
+category = "Web"
+description = "Your bookmarks as a start page with a search box, opened in tetron-browser, else w3m. The page is tetron-browser's bookmarks file (~/.config/tetron-browser/bookmarks.html, also its home page and where its bookmark button adds), a Netscape bookmarks file other browsers import and export; it works without tetron-browser too. `tetron-wm-startpage add TITLE URL [FOLDER]` adds one."
+homepage = "https://github.com/tetronos/tetron-wm/tree/main/scripts"
+
+[notes]
+tip = "Edit your bookmarks with `tetron-wm-startpage edit` or `tetron-wm-startpage add TITLE URL [FOLDER]`, or the bookmark button in tetron-browser. Opens in tetron-browser if installed, else w3m."
+
+[install.recipe]
+install = "mkdir -p ~/.local/bin && curl -fsSL https://raw.githubusercontent.com/tetronos/tetron-wm/main/scripts/tetron-wm-startpage -o ~/.local/bin/tetron-wm-startpage && chmod +x ~/.local/bin/tetron-wm-startpage"
+method = "script"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["tetron"]

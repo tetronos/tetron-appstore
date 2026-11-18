@@ -1,0 +1,14 @@
+id = "lazycut"
+name = "lazycut"
+bin = "lazycut"
+category = "Multimedia"
+description = "A simple terminal UI for video trimming."
+homepage = "https://github.com/ozemin/lazycut"
+
+[install.recipe]
+install = "brew install lazycut"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

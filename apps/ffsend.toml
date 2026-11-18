@@ -1,0 +1,15 @@
+id = "ffsend"
+name = "ffsend"
+bin = "ffsend"
+category = "Miscellaneous"
+description = "Securely share files from the command line."
+homepage = "https://github.com/timvisee/ffsend"
+cli = true
+
+[install.recipe]
+install = "brew install ffsend"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

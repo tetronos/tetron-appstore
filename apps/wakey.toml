@@ -1,0 +1,9 @@
+id = "wakey"
+name = "wakey"
+bin = "wakey"
+category = "Development"
+description = "A TUI built for managing and waking your devices using Wake-on-LAN."
+homepage = "https://github.com/jonathanruiz/wakey"
+
+[source]
+lists = ["terminaltrove"]

@@ -1,0 +1,15 @@
+id = "superfile"
+name = "superfile"
+bin = "spf"
+category = "File Managers"
+description = "Pretty fancy and modern terminal file manager."
+homepage = "https://github.com/MHNightCat/superfile"
+
+[install.recipe]
+install = "brew install superfile"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

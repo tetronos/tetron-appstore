@@ -1,0 +1,14 @@
+id = "dskditto"
+name = "dskditto"
+bin = "dskditto"
+category = "Dashboards"
+description = "An ultra fast and easy duplicate file finder."
+homepage = "https://github.com/jdefrancesco/dskDitto"
+
+[install.recipe]
+install = "brew install dskditto"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

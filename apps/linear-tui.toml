@@ -1,0 +1,14 @@
+id = "linear-tui"
+name = "linear-tui"
+bin = "linear-tui"
+category = "Productivity"
+description = "A terminal user interface for Linear built with Go and tview."
+homepage = "https://github.com/roeyazroel/linear-tui"
+
+[install.recipe]
+install = "go install github.com/roeyazroel/linear-tui/cmd/linear-tui@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

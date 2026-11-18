@@ -1,0 +1,15 @@
+id = "wifui"
+name = "WifUI"
+bin = "wifui"
+category = "Miscellaneous"
+description = "TUI for managing Wi-Fi connections on Windows natively (Rust)"
+homepage = "https://github.com/sohamw03/wifui"
+
+[install.recipe]
+install = "cargo install wifui"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

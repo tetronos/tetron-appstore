@@ -1,0 +1,15 @@
+id = "tuihub"
+name = "tuihub"
+bin = "tuihub"
+category = "Productivity"
+description = "A utility hub/dashboard for personal use"
+homepage = "https://github.com/ashis0013/tuihub"
+
+[install.recipe]
+install = "go install github.com/ashis0013/tuihub@latest"
+method = "go"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

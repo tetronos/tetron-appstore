@@ -1,0 +1,22 @@
+id = "pyradio"
+name = "pyradio"
+bin = "pyradio"
+category = "Multimedia"
+description = "TUI web radio player with thousands of stations from around the world"
+homepage = "https://github.com/coderholic/pyradio"
+
+[notes]
+tip = "Needs uv, git and mpv. Settings > Updates upgrades it (uv tool upgrade --all); use that rather than pyradio -U, which expects pipx."
+how = "uv tool install from github.com/coderholic/pyradio with its Python dependencies; Settings > Updates upgrades the uv tools"
+
+[install]
+script = "pyradio"
+
+[install.recipe]
+install = "uv tool install git+https://github.com/coderholic/pyradio --with rich --with requests --with dnspython --with psutil --with netifaces-plus --with python-dateutil --with charset-normalizer"
+method = "uv"
+os = ["linux", "macos"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,9 @@
+id = "yt-x"
+name = "yt-x"
+bin = "yt-x"
+category = "Multimedia"
+description = "Browse youtube from your terminal."
+homepage = "https://github.com/Benexl/yt-x"
+
+[source]
+lists = ["terminaltrove"]

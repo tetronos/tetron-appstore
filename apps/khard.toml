@@ -1,0 +1,20 @@
+id = "khard"
+name = "khard"
+bin = "khard"
+category = "Productivity"
+description = "Console CardDAV address book and contact manager."
+homepage = "https://github.com/lucc/khard"
+cli = true
+
+[install.pkg]
+apt = "khard"
+dnf = "khard"
+
+[install.recipe]
+install = "pipx install khard"
+method = "pipx"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["tetron"]

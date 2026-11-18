@@ -1,0 +1,9 @@
+id = "omp-manager"
+name = "omp-manager"
+bin = "omp-manager"
+category = "Miscellaneous"
+description = "A TUI that sets up Oh My Posh from scratch."
+homepage = "https://github.com/psmux/omp-manager"
+
+[source]
+lists = ["terminaltrove"]

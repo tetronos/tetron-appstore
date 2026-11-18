@@ -1,0 +1,15 @@
+id = "lazyslurm"
+name = "lazyslurm"
+bin = "lazyslurm"
+category = "Dashboards"
+description = "A lazygit-style TUI for Slurm HPC clusters: monitor and manage jobs, nodes, partitions, and job history."
+homepage = "https://github.com/hill/lazyslurm"
+
+[install.recipe]
+install = "brew install hill/tap/lazyslurm"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

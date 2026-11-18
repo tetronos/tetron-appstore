@@ -1,0 +1,15 @@
+id = "doxx"
+name = "doxx"
+bin = "doxx"
+category = "Productivity"
+description = "A TUI document viewer for Microsoft Word files"
+homepage = "https://github.com/bgreenwell/doxx"
+
+[install.recipe]
+install = "brew install doxx"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

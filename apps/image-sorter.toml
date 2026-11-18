@@ -1,0 +1,15 @@
+id = "image-sorter"
+name = "image-sorter"
+bin = "image-sorter"
+category = "Multimedia"
+description = "Terminal user interface for sorting images using key bindings written in Rust"
+homepage = "https://github.com/jgalat/image-sorter"
+
+[install.recipe]
+install = "cargo install image-sorter"
+method = "cargo"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

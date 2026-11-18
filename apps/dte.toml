@@ -1,0 +1,10 @@
+id = "dte"
+name = "dte"
+bin = "dte"
+category = "Editors"
+description = "A small, configurable console text editor."
+homepage = "https://github.com/craigbarnes/dte"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

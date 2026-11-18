@@ -1,0 +1,15 @@
+id = "nanocore"
+name = "NanoCore"
+bin = "nanocore"
+category = "Miscellaneous"
+description = "An 8-bit CPU emulator TUI written in Rust with an assembler and a custom ISA."
+homepage = "https://github.com/AfaanBilal/NanoCore"
+
+[install.recipe]
+install = "cargo install nanocore"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

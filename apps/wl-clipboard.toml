@@ -1,0 +1,11 @@
+id = "wl-clipboard"
+name = "wl-clipboard"
+check = "wl-copy"
+group = "gui"
+store = false
+
+[install.pkg]
+apt = "wl-clipboard"
+dnf = "wl-clipboard"
+pacman = "wl-clipboard"
+brew = ""

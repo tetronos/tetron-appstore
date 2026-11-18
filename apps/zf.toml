@@ -1,0 +1,15 @@
+id = "zf"
+name = "zf"
+bin = "zf"
+category = "Miscellaneous"
+description = "A fuzzy finder that excels at filtering filepaths."
+homepage = "https://github.com/natecraddock/zf"
+cli = true
+
+[install.recipe]
+install = "brew install zf"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

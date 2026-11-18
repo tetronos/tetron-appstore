@@ -1,0 +1,22 @@
+id = "fd"
+name = "fd"
+bin = "fd"
+check = "fdfind|fd"
+category = "Dashboards"
+description = "A simple, fast and user-friendly alternative to 'find'"
+homepage = "https://github.com/sharkdp/fd"
+cli = true
+
+[install.pkg]
+apt = "fd-find"
+dnf = "fd-find"
+pacman = "fd"
+brew = "fd"
+
+[install.recipe]
+install = "brew install fd"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,14 @@
+id = "pqviewer"
+name = "pqviewer"
+bin = "pqviewer"
+category = "Miscellaneous"
+description = "View Apache Parquet Files In Your Terminal."
+homepage = "https://github.com/thread53/pqviewer"
+
+[install.recipe]
+install = "pipx install pqviewer"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

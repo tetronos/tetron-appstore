@@ -1,0 +1,15 @@
+id = "fancy-cat"
+name = "fancy-cat"
+bin = "fancy-cat"
+category = "Multimedia"
+description = "A Lightweight terminal-based PDF reader with Vim keybindings"
+homepage = "https://github.com/freref/fancy-cat"
+
+[install.recipe]
+install = "brew install fancy-cat"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

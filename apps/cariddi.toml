@@ -1,0 +1,15 @@
+id = "cariddi"
+name = "cariddi"
+bin = "cariddi"
+category = "Web"
+description = "A tool to crawl urls, scan endpoints, secrets, api keys, file extensions, tokens and more."
+homepage = "https://github.com/edoardottt/cariddi"
+cli = true
+
+[install.recipe]
+install = "brew install cariddi"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

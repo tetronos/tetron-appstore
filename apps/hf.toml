@@ -1,0 +1,15 @@
+id = "hf"
+name = "hf"
+bin = "hf"
+category = "Dashboards"
+description = "Cross-platform hidden file library and utility."
+homepage = "https://github.com/sorairolake/hf"
+cli = true
+
+[install.recipe]
+install = "cargo install --locked hf"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "longbridge-terminal"
+name = "longbridge-terminal"
+bin = "longbridge-terminal"
+category = "Productivity"
+description = "AI-native TUI for Longbridge Securities: real-time quotes, portfolio management, and trading for HK/US/A-share/SG markets."
+homepage = "https://github.com/longbridge/longbridge-terminal"
+
+[install.recipe]
+install = "brew install --cask longbridge/tap/longbridge-terminal"
+method = "brew"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

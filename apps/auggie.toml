@@ -1,0 +1,16 @@
+id = "auggie"
+name = "Auggie"
+bin = "auggie"
+category = "AI"
+description = "Agentic AI coding assistant that runs in your terminal, understands your codebase, and makes code edits via natural language."
+homepage = "https://github.com/augmentcode/auggie"
+requires_cwd = true
+
+[install.recipe]
+install = "npm install -g @augmentcode/auggie"
+method = "npm"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["tetron"]

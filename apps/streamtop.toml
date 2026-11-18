@@ -1,0 +1,14 @@
+id = "streamtop"
+name = "streamtop"
+bin = "streamtop"
+category = "Multimedia"
+description = "A terminal monitor for debugging HLS, DASH and internet live streams."
+homepage = "https://github.com/Jorji49/streamtop"
+
+[install.recipe]
+install = "cargo install --locked streamtop"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

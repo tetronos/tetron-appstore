@@ -1,0 +1,14 @@
+id = "ugm"
+name = "ugm"
+bin = "ugm"
+category = "Development"
+description = "A TUI to view information about UNIX users and groups"
+homepage = "https://github.com/ariasmn/ugm"
+
+[install.recipe]
+install = "go install github.com/ariasmn/ugm@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

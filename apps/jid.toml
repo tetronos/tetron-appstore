@@ -1,0 +1,14 @@
+id = "jid"
+name = "jid"
+bin = "jid"
+category = "Development"
+description = "A JSON incremental digger with auto completions and expressions."
+homepage = "https://github.com/simeji/jid"
+
+[install.recipe]
+install = "brew install jid"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

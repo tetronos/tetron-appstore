@@ -1,0 +1,15 @@
+id = "moribito"
+name = "moribito"
+bin = "moribito"
+category = "Miscellaneous"
+description = "Browse LDAP directory trees, viewing records, and executing custom queries."
+homepage = "https://github.com/ericschmar/moribito"
+
+[install.recipe]
+install = "brew install moribito"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

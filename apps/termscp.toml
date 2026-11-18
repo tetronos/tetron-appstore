@@ -1,0 +1,15 @@
+id = "termscp"
+name = "termscp"
+bin = "termscp"
+category = "Productivity"
+description = "A TUI file transfer and explorer, with support for SCP/SFTP/FTP/S3."
+homepage = "https://github.com/veeso/termscp"
+
+[install.recipe]
+install = "brew install termscp"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "corefreq"
+name = "CoreFreq"
+bin = "corefreq-cli"
+category = "Dashboards"
+description = "CPU monitoring software designed for the 64-bits Processors"
+homepage = "https://github.com/cyring/CoreFreq"
+
+[install.recipe]
+install = "git clone https://github.com/cyring/CoreFreq.git && cd CoreFreq && make -j && make install"
+method = "source"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

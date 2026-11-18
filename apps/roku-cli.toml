@@ -1,0 +1,15 @@
+id = "roku-cli"
+name = "roku-cli"
+bin = "roku-tui"
+category = "Multimedia"
+description = "A command line TUI remote for Roku"
+homepage = "https://github.com/winsbe01/roku-cli"
+
+[install.recipe]
+install = "python3 -m pip install roku-tui"
+method = "pip"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

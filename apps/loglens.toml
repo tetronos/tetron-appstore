@@ -1,0 +1,16 @@
+id = "loglens"
+name = "LogLens"
+bin = "loglens"
+category = "Development"
+description = "A structured log viewer and query engine for the terminal."
+homepage = "https://github.com/Caelrith/loglens-core"
+cli = true
+
+[install.recipe]
+install = "brew tap Caelrith/loglens && brew install loglens"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,10 @@
+id = "netcat-openbsd"
+name = "netcat-openbsd"
+check = "nc"
+store = false
+
+[install.pkg]
+apt = "netcat-openbsd"
+dnf = "netcat"
+pacman = "openbsd-netcat"
+brew = "netcat"

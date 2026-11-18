@@ -1,0 +1,14 @@
+id = "gollama"
+name = "gollama"
+bin = "gollama"
+category = "AI"
+description = "Go manage your ollama models."
+homepage = "https://github.com/sammcj/gollama"
+
+[install.recipe]
+install = "brew install gollama"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

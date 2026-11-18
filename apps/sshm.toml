@@ -1,0 +1,15 @@
+id = "sshm"
+name = "sshm"
+bin = "sshm"
+category = "Productivity"
+description = "SSH made easy and fast: browse, connect, and control from your terminal with a modern TUI"
+homepage = "https://github.com/gu1llaum-3/sshm"
+
+[install.recipe]
+install = "brew install Gu1llaum-3/sshm/sshm"
+method = "brew"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

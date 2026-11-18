@@ -1,0 +1,14 @@
+id = "rdmatop"
+name = "rdmatop"
+bin = "rdmatop"
+category = "Dashboards"
+description = "A real-time TUI monitor for RDMA network interfaces."
+homepage = "https://github.com/uccl-project/rdmatop"
+
+[install.recipe]
+install = "cargo install --locked rdmatop"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,14 @@
+id = "emacs"
+name = "emacs"
+bin = "emacs"
+category = "Editors"
+description = "The extensible, customizable, free/libre display editor."
+homepage = "https://github.com/emacs-mirror/emacs"
+
+[install.recipe]
+install = "brew install emacs"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

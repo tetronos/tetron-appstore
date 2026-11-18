@@ -1,0 +1,15 @@
+id = "pkm"
+name = "pkm"
+bin = "pkm"
+category = "Productivity"
+description = "A super minimal TUI package manager wrapper written in BASH v4.2+"
+homepage = "https://github.com/wick3dr0se/pkm"
+
+[install.recipe]
+install = "git clone https://github.com/wick3dr0se/pkm; cd pkm"
+method = "script"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

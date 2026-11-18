@@ -1,0 +1,14 @@
+id = "diffyml"
+name = "diffyml"
+bin = "diffyml"
+category = "Docker/LXC/K8s"
+description = "A fast, structural YAML diff tool with built-in Kubernetes intelligence."
+homepage = "https://github.com/szhekpisov/diffyml"
+
+[install.recipe]
+install = "go install github.com/szhekpisov/diffyml@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

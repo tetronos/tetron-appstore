@@ -1,0 +1,16 @@
+id = "ghcup"
+name = "ghcup"
+bin = "ghcup"
+category = "Development"
+description = "Installer and version manager for the Haskell toolchain (GHC, cabal, stack, HLS). Subcommand-driven; an interactive mode is available via 'ghcup tui'."
+homepage = "https://www.haskell.org/ghcup/"
+cli = true
+
+[install.recipe]
+install = "brew install ghcup"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

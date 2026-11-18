@@ -1,0 +1,15 @@
+id = "sockttop"
+name = "sockttop"
+bin = "sockttop"
+category = "Dashboards"
+description = "socktop is a remote system monitor with a rich TUI, inspired by top/btop, talking to a lightweight agent over WebSockets."
+homepage = "https://github.com/jasonwitty/socktop"
+
+[install.recipe]
+install = "cargo install socktop"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

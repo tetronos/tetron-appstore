@@ -1,0 +1,14 @@
+id = "csvi"
+name = "csvi"
+bin = "csvi"
+category = "Miscellaneous"
+description = "A simple cross-platform terminal CSV editor."
+homepage = "https://github.com/hymkor/csvi"
+
+[install.recipe]
+install = "go install github.com/hymkor/csvi@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

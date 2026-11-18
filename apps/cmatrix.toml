@@ -1,0 +1,15 @@
+id = "cmatrix"
+name = "cmatrix"
+bin = "cmatrix"
+category = "Miscellaneous"
+description = "Matrix like effect in your terminal."
+homepage = "https://github.com/abishekvashok/cmatrix"
+cli = true
+
+[install.recipe]
+install = "brew install cmatrix"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

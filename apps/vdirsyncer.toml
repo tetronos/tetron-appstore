@@ -1,0 +1,16 @@
+id = "vdirsyncer"
+name = "vdirsyncer"
+bin = "vdirsyncer"
+category = "Productivity"
+description = "Synchronize calendars and contacts (CalDAV/CardDAV)."
+homepage = "https://github.com/pimutils/vdirsyncer"
+cli = true
+
+[install.recipe]
+install = "pipx install vdirsyncer"
+method = "pipx"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["tetron"]

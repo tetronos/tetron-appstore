@@ -1,0 +1,9 @@
+id = "simutil"
+name = "simutil"
+bin = "simutil"
+category = "Docker/LXC/K8s"
+description = "A TUI for launching Android Emulators / iOS Simulators and using physical devices."
+homepage = "https://github.com/dungngminh/simutil"
+
+[source]
+lists = ["terminaltrove"]

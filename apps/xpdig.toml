@@ -1,0 +1,14 @@
+id = "xpdig"
+name = "xpdig"
+bin = "xpdig"
+category = "Docker/LXC/K8s"
+description = "A TUI to explore crossplane traces."
+homepage = "https://github.com/brunoluiz/xpdig"
+
+[install.recipe]
+install = "go install github.com/brunoluiz/xpdig/cmd/xpdig@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

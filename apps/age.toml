@@ -1,0 +1,15 @@
+id = "age"
+name = "age"
+bin = "age"
+category = "Development"
+description = "A simple, modern and secure file encryption tool."
+homepage = "https://github.com/FiloSottile/age"
+cli = true
+
+[install.recipe]
+install = "brew install age"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

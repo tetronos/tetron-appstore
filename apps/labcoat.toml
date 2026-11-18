@@ -1,0 +1,14 @@
+id = "labcoat"
+name = "labcoat"
+bin = "labcoat"
+category = "Development"
+description = "NixOS system deployment TUI."
+homepage = "https://github.com/jhillyerd/labcoat"
+
+[install.recipe]
+install = "go install github.com/jhillyerd/labcoat@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

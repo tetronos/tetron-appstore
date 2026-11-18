@@ -1,0 +1,9 @@
+id = "codemark"
+name = "codemark"
+bin = "codemark"
+category = "AI"
+description = "Structural code bookmarks for humans and coding agents."
+homepage = "https://github.com/DanielCardonaRojas/codemark"
+
+[source]
+lists = ["terminaltrove"]

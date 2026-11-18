@@ -1,0 +1,15 @@
+id = "tui-deck"
+name = "tui-deck"
+bin = "tui-deck"
+category = "Productivity"
+description = "A TUI frontend for Nextcloud Deck app written in GO"
+homepage = "https://github.com/mebitek/tui-deck"
+
+[install.recipe]
+install = "go install github.com/mebitek/tui-deck@latest"
+method = "go"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

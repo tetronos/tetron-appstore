@@ -1,0 +1,10 @@
+id = "arp-scan"
+name = "arp-scan"
+check = "arp-scan"
+store = false
+
+[install.pkg]
+apt = "arp-scan"
+dnf = "arp-scan"
+pacman = "arp-scan"
+brew = "arp-scan"

@@ -1,0 +1,14 @@
+id = "parllama"
+name = "parllama"
+bin = "parllama"
+category = "AI"
+description = "TUI for ollama and other LLM providers."
+homepage = "https://github.com/paulrobello/parllama"
+
+[install.recipe]
+install = "pipx install parllama"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

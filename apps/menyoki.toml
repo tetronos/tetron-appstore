@@ -1,0 +1,10 @@
+id = "menyoki"
+name = "menyoki"
+bin = "menyoki"
+category = "Miscellaneous"
+description = "Screenshot/cast and perform ImageOps on the command line."
+homepage = "https://github.com/orhun/menyoki"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

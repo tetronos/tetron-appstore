@@ -1,0 +1,15 @@
+id = "sup"
+name = "sup"
+bin = "sup"
+category = "Messaging"
+description = "A curses threads-with-tags style email client"
+homepage = "https://github.com/sup-heliotrope/sup"
+
+[install.recipe]
+install = "gem install sup"
+method = "other"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,15 @@
+id = "gping"
+name = "gping"
+bin = "gping"
+category = "Dashboards"
+description = "Ping, but with a graph"
+homepage = "https://github.com/orf/gping"
+
+[install.recipe]
+install = "brew install gping"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

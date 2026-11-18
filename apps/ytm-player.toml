@@ -1,0 +1,14 @@
+id = "ytm-player"
+name = "ytm-player"
+bin = "ytm-player"
+category = "Multimedia"
+description = "A YouTube Music TUI client with vim keybindings, synced lyrics, and cross-platform media keys."
+homepage = "https://github.com/peternaame-boop/ytm-player"
+
+[install.recipe]
+install = "pipx install ytm-player"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

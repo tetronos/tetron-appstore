@@ -1,0 +1,10 @@
+id = "tcping"
+name = "tcping"
+bin = "tcping"
+category = "Development"
+description = "A cross-platform ping program for TCP ports."
+homepage = "https://github.com/pouriyajamshidi/tcping"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

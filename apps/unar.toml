@@ -1,0 +1,10 @@
+id = "unar"
+name = "unar"
+check = "unar"
+store = false
+
+[install.pkg]
+apt = "unar"
+dnf = "unar"
+pacman = "unarchiver"
+brew = "unar"

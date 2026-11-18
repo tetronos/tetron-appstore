@@ -1,0 +1,9 @@
+id = "tuistash"
+name = "tuistash"
+bin = "tuistash"
+category = "Dashboards"
+description = "A terminal user interface for Logstash."
+homepage = "https://github.com/edmocosta/tuistash"
+
+[source]
+lists = ["terminaltrove"]

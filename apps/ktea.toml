@@ -1,0 +1,14 @@
+id = "ktea"
+name = "ktea"
+bin = "ktea"
+category = "Development"
+description = "An Apache Kafka TUI client."
+homepage = "https://github.com/jonas-grgt/ktea"
+
+[install.recipe]
+install = "brew install ktea"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

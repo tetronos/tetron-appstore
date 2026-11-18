@@ -1,0 +1,15 @@
+id = "spotify-player"
+name = "spotify-player"
+bin = "spotify_player"
+category = "Multimedia"
+description = "A Spotify player in the terminal with full feature parity"
+homepage = "https://github.com/aome510/spotify-player"
+
+[install.recipe]
+install = "brew install spotify_player"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

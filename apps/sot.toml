@@ -1,0 +1,15 @@
+id = "sot"
+name = "sot"
+bin = "sot"
+category = "Development"
+description = "A top like system observability tool written in python"
+homepage = "https://github.com/anistark/sot"
+
+[install.recipe]
+install = "brew install anistark/tools/sot"
+method = "brew"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

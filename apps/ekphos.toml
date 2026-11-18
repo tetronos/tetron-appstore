@@ -1,0 +1,15 @@
+id = "ekphos"
+name = "ekphos"
+bin = "ekphos"
+category = "Productivity"
+description = "A fast, lightweight, markdown research tool written in rust"
+homepage = "https://github.com/hanebox/ekphos"
+
+[install.recipe]
+install = "brew install ekphos"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

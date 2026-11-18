@@ -1,0 +1,14 @@
+id = "oh-my-reddit"
+name = "oh-my-reddit"
+bin = "oh-my-reddit"
+category = "Messaging"
+description = "Beautiful Reddit threads, live in your terminal."
+homepage = "https://github.com/renatoworks/oh-my-reddit"
+
+[install.recipe]
+install = "brew install oh-my-reddit"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

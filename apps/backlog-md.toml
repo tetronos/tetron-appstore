@@ -1,0 +1,16 @@
+id = "backlog-md"
+name = "Backlog.md"
+bin = "backlog.md"
+category = "Dashboards"
+description = "A tool for managing project collaboration between humans and AI Agents in a git ecosystem"
+homepage = "https://github.com/MrLesk/Backlog.md"
+cli = true
+
+[install.recipe]
+install = "brew install backlog-md"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

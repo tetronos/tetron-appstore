@@ -1,0 +1,14 @@
+id = "y509"
+name = "y509"
+bin = "y509"
+category = "Development"
+description = "Inspect X.509 certificate chains, catching the missing intermediates that break curl but not browsers"
+homepage = "https://github.com/kanywst/y509"
+
+[install.recipe]
+install = "go install github.com/kanywst/y509/cmd/y509@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "macmon"
+name = "macmon"
+bin = "macmon"
+category = "Dashboards"
+description = "Sudoless performance monitoring for Apple Silicon processors written in Rust"
+homepage = "https://github.com/vladkens/macmon"
+
+[install.recipe]
+install = "brew install macmon"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "qsv"
+name = "qsv"
+bin = "qsv"
+category = "Miscellaneous"
+description = "Blazing-fast CSV data-wrangling toolkit"
+homepage = "https://github.com/dathere/qsv"
+cli = true
+
+[install.recipe]
+install = "brew install qsv"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

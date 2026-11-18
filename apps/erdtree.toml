@@ -1,0 +1,15 @@
+id = "erdtree"
+name = "erdtree"
+bin = "erdtree"
+category = "Dashboards"
+description = "A general purpose filesystem and disk-usage utility."
+homepage = "https://github.com/solidiquis/erdtree"
+cli = true
+
+[install.recipe]
+install = "brew install erdtree"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

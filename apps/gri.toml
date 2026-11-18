@@ -1,0 +1,9 @@
+id = "gri"
+name = "gri"
+bin = "gri"
+category = "Development"
+description = "manage git/gerrit change requests in the terminal."
+homepage = "https://github.com/pycontribs/gri"
+
+[source]
+lists = ["terminaltrove"]

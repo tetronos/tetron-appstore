@@ -1,0 +1,10 @@
+id = "gddrescue"
+name = "gddrescue"
+check = "ddrescue"
+store = false
+
+[install.pkg]
+apt = "gddrescue"
+dnf = "ddrescue"
+pacman = "ddrescue"
+brew = "ddrescue"

@@ -1,0 +1,9 @@
+id = "rgx"
+name = "rgx"
+bin = "rgx"
+category = "Development"
+description = "A terminal regex tester with real-time matching and multi-engine support."
+homepage = "https://github.com/brevity1swos/rgx"
+
+[source]
+lists = ["terminaltrove"]

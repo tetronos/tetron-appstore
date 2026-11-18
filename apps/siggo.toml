@@ -1,0 +1,15 @@
+id = "siggo"
+name = "siggo"
+bin = "siggo"
+category = "Messaging"
+description = "A terminal ui for signal-cli, written in Go"
+homepage = "https://github.com/derricw/siggo"
+
+[install.recipe]
+install = "make build"
+method = "source"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

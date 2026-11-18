@@ -1,0 +1,15 @@
+id = "slap"
+name = "slap"
+bin = "slap"
+category = "Editors"
+description = "Sublime-like terminal-based text editor"
+homepage = "https://github.com/slap-editor/slap"
+
+[install.recipe]
+install = "npm install -g slap@latest"
+method = "npm"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

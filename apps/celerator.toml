@@ -1,0 +1,9 @@
+id = "celerator"
+name = "celerator"
+bin = "celerator"
+category = "Dashboards"
+description = "Monitor and debug celery tasks in the terminal."
+homepage = "https://github.com/f4rih/celerator"
+
+[source]
+lists = ["terminaltrove"]

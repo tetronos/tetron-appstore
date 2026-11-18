@@ -1,0 +1,10 @@
+id = "nmap"
+name = "nmap"
+check = "nmap"
+store = false
+
+[install.pkg]
+apt = "nmap"
+dnf = "nmap"
+pacman = "nmap"
+brew = "nmap"

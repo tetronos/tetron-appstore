@@ -1,0 +1,15 @@
+id = "pipe-viewer"
+name = "pipe-viewer"
+bin = "pipe-viewer"
+category = "Multimedia"
+description = "A lightweight YouTube client for Linux, without requiring an API key."
+homepage = "https://github.com/trizen/pipe-viewer"
+
+[install.recipe]
+install = "perl Build.PL && sudo ./Build installdeps && sudo ./Build install"
+method = "source"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

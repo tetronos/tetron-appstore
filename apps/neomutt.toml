@@ -1,0 +1,14 @@
+id = "neomutt"
+name = "neomutt"
+bin = "neomutt"
+category = "Messaging"
+description = "A command line mail reader based on mutt"
+homepage = "https://github.com/neomutt/neomutt"
+
+[install.recipe]
+install = "brew install neomutt"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

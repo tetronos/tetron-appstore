@@ -1,0 +1,15 @@
+id = "peco"
+name = "peco"
+bin = "peco"
+category = "Miscellaneous"
+description = "A simplistic interactive filtering tool."
+homepage = "https://github.com/peco/peco"
+cli = true
+
+[install.recipe]
+install = "brew install peco"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

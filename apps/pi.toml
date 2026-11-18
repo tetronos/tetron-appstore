@@ -1,0 +1,25 @@
+id = "pi"
+name = "pi"
+bin = "pi"
+category = "AI"
+description = "Minimal, extensible terminal coding agent: four core tools, many model providers, extensions and skills."
+homepage = "https://github.com/badlogic/pi-mono"
+requires_cwd = true
+
+[notes]
+tip = "First run: start `pi` and log in with /login, or set a provider API key in the environment."
+
+[agent]
+label = "pi"
+
+[agent.briefing]
+args = ["--append-system-prompt", "{{BRIEFING}}"]
+
+[install.recipe]
+install = "npm install -g @mariozechner/pi-coding-agent"
+method = "npm"
+os = ["macos", "linux"]
+verified = false
+
+[source]
+lists = ["tetron"]

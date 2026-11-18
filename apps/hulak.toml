@@ -1,0 +1,14 @@
+id = "hulak"
+name = "hulak"
+bin = "hulak"
+category = "Development"
+description = "Lightweight file-based API client with encrypted secrets store."
+homepage = "https://github.com/xaaha/hulak"
+
+[install.recipe]
+install = "go install github.com/xaaha/hulak@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

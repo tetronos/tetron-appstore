@@ -1,0 +1,15 @@
+id = "gokemon"
+name = "gokemon"
+bin = "poketerm"
+category = "Games"
+description = "A terminal based Pokemon battle simulator"
+homepage = "https://github.com/nathanieltooley/gokemon"
+
+[install.recipe]
+install = "go install github.com/nathanieltooley/gokemon/poketerm@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

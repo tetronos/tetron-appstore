@@ -1,0 +1,15 @@
+id = "toad"
+name = "Toad"
+bin = "toad"
+category = "Development"
+description = "A unified interface for AI"
+homepage = "https://github.com/batrachianai/toad"
+
+[install.recipe]
+install = "pipx install batrachian-toad"
+method = "pipx"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

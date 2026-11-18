@@ -1,0 +1,9 @@
+id = "mcp-probe"
+name = "mcp-probe"
+bin = "mcp-probe"
+category = "AI"
+description = "Advanced MCP Protocol Debugger & Interactive TUI."
+homepage = "https://github.com/conikeec/mcp-probe"
+
+[source]
+lists = ["terminaltrove"]

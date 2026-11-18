@@ -1,0 +1,14 @@
+id = "ttop"
+name = "ttop"
+bin = "ttop"
+category = "Dashboards"
+description = "System monitoring tool with historical data service, triggers and top-like TUI"
+homepage = "https://github.com/inv2004/ttop"
+
+[install.recipe]
+install = "curl -LO https://github.com/inv2004/ttop/releases/latest/download/ttop && chmod +x ttop && mv ttop ~/.local/bin/"
+method = "binary"
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

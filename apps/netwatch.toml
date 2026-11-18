@@ -1,0 +1,14 @@
+id = "netwatch"
+name = "netwatch"
+bin = "netwatch"
+category = "Dashboards"
+description = "Real time network diagnostics in your terminal."
+homepage = "https://github.com/matthart1983/netwatch"
+
+[install.recipe]
+install = "brew install netwatch"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

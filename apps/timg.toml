@@ -1,0 +1,16 @@
+id = "timg"
+name = "timg"
+bin = "timg"
+category = "Multimedia"
+description = "A terminal image viewer"
+homepage = "https://github.com/hzeller/timg"
+cli = true
+
+[install.recipe]
+install = "brew install timg"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

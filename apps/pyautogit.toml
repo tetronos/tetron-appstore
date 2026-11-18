@@ -1,0 +1,15 @@
+id = "pyautogit"
+name = "pyautogit"
+bin = "pyautogit"
+category = "Development"
+description = "A terminal UI for managing git repositories, written using py_cui"
+homepage = "https://github.com/jwlodek/pyautogit"
+
+[install.recipe]
+install = "pip install pyautogit"
+method = "pip"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

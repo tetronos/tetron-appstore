@@ -1,0 +1,15 @@
+id = "pastel"
+name = "pastel"
+bin = "pastel"
+category = "Miscellaneous"
+description = "Generate, analyze, convert and manipulate colors."
+homepage = "https://github.com/sharkdp/pastel"
+cli = true
+
+[install.recipe]
+install = "brew install pastel"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

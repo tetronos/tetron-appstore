@@ -1,0 +1,14 @@
+id = "papis"
+name = "papis"
+bin = "papis"
+category = "Miscellaneous"
+description = "A powerful and highly extensible CLI document and bibliography manager."
+homepage = "https://github.com/papis/papis"
+
+[install.recipe]
+install = "brew install papis"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

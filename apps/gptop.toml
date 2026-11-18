@@ -1,0 +1,14 @@
+id = "gptop"
+name = "gptop"
+bin = "gptop"
+category = "Dashboards"
+description = "A TUI GPU monitor with support for both Apple Silicon and NVIDIA GPUs."
+homepage = "https://github.com/evilsocket/gptop"
+
+[install.recipe]
+install = "cargo install --locked gptop"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

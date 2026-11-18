@@ -1,0 +1,15 @@
+id = "atop"
+name = "atop"
+bin = "atop"
+category = "Dashboards"
+description = "root level system and process monitor for Linux"
+homepage = "https://github.com/Atoptool/atop/"
+
+[install.recipe]
+install = "brew install atop"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

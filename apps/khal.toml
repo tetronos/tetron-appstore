@@ -1,0 +1,16 @@
+id = "khal"
+name = "khal"
+bin = "khal"
+category = "Productivity"
+description = "A standards based CLI calendar program, able to synchronize with CalDAV servers"
+homepage = "https://github.com/pimutils/khal"
+cli = true
+
+[install.recipe]
+install = "brew install khal"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

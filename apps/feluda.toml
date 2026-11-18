@@ -1,0 +1,16 @@
+id = "feluda"
+name = "Feluda"
+bin = "feluda"
+category = "Development"
+description = "Detect restrictive and incompatible licesenses in all dependencies of your project."
+homepage = "https://github.com/anistark/feluda"
+cli = true
+
+[install.recipe]
+install = "brew install feluda"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

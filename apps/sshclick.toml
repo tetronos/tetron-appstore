@@ -1,0 +1,14 @@
+id = "sshclick"
+name = "sshclick"
+bin = "sshclick"
+category = "Development"
+description = "Terminal based assisted management of your SSH config files."
+homepage = "https://github.com/karlot/sshclick"
+
+[install.recipe]
+install = "pipx install sshclick"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

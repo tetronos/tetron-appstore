@@ -1,0 +1,15 @@
+id = "jqp"
+name = "jqp"
+bin = "jqp"
+category = "Development"
+description = "A TUI playground to experiment with jq"
+homepage = "https://github.com/noahgorstein/jqp"
+
+[install.recipe]
+install = "brew install jqp"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

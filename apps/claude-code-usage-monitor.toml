@@ -1,0 +1,15 @@
+id = "claude-code-usage-monitor"
+name = "Claude Code Usage Monitor"
+bin = "claude-monitor"
+category = "Development"
+description = "Monitor Claude token usage"
+homepage = "https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor"
+
+[install.recipe]
+install = "pipx install claude-monitor"
+method = "pipx"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

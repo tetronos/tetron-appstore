@@ -1,0 +1,21 @@
+id = "rclone"
+name = "rclone"
+bin = "rclone"
+category = "Dashboards"
+description = "rsync for cloud storage"
+homepage = "https://github.com/rclone/rclone"
+cli = true
+
+[install.pkg]
+apt = "rclone"
+dnf = "rclone"
+pacman = "rclone"
+brew = "rclone"
+
+[install.recipe]
+install = "brew install rclone"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

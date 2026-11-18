@@ -1,0 +1,14 @@
+id = "aic"
+name = "aic"
+bin = "aic"
+category = "AI"
+description = "Fetch the latest changelogs for popular AI coding assistants."
+homepage = "https://github.com/reyamira/aic"
+
+[install.recipe]
+install = "go install github.com/arimxyer/aic@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,14 @@
+id = "mdp"
+name = "mdp"
+bin = "mdp"
+category = "Productivity"
+description = "A command-line based markdown presentation tool"
+homepage = "https://github.com/visit1985/mdp"
+
+[install.recipe]
+install = "brew install mdp"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

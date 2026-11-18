@@ -1,0 +1,15 @@
+id = "cotp"
+name = "cotp"
+bin = "cotp"
+category = "Productivity"
+description = "trusted, encrypted, TOTP/HOTP authenticator with import functionality."
+homepage = "https://github.com/replydev/cotp"
+cli = true
+
+[install.recipe]
+install = "brew install cotp"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

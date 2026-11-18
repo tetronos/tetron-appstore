@@ -1,0 +1,15 @@
+id = "ffuf"
+name = "ffuf"
+bin = "ffuf"
+category = "Web"
+description = "Fuzz Faster U Fool."
+homepage = "https://github.com/ffuf/ffuf"
+cli = true
+
+[install.recipe]
+install = "brew install ffuf"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

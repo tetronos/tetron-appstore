@@ -1,0 +1,15 @@
+id = "relax-player"
+name = "Relax-player"
+bin = "relax-player"
+category = "Multimedia"
+description = "A lightweight, distraction-free alternative to web-based ambient players."
+homepage = "https://github.com/ebithril/relax-player"
+
+[install.recipe]
+install = "cargo install relax-player"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

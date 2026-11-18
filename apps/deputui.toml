@@ -1,0 +1,15 @@
+id = "deputui"
+name = "deputui"
+bin = "deputui"
+category = "Development"
+description = "Review and install NPM package updates"
+homepage = "https://github.com/twiddler/deputui"
+
+[install.recipe]
+install = "make all"
+method = "source"
+os = ["linux", "macos"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

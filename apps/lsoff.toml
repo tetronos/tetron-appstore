@@ -1,0 +1,14 @@
+id = "lsoff"
+name = "lsoff"
+bin = "lsoff"
+category = "Development"
+description = "A CLI / TUI that lists listening TCP/UDP ports."
+homepage = "https://github.com/yutat23/lsoff"
+
+[install.recipe]
+install = "brew install lsoff"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

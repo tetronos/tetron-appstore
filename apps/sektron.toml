@@ -1,0 +1,9 @@
+id = "sektron"
+name = "sektron"
+bin = "sektron"
+category = "Multimedia"
+description = "A midi step sequencer in the terminal, made with live performance in mind."
+homepage = "https://github.com/emprcl/sektron"
+
+[source]
+lists = ["terminaltrove"]

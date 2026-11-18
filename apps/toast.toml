@@ -1,0 +1,14 @@
+id = "toast"
+name = "toast"
+bin = "toast"
+category = "Editors"
+description = "A lightweight TUI IDE for making quick in-the-moment edits."
+homepage = "https://github.com/paradise-runner/toast"
+
+[install.recipe]
+install = "go install github.com/paradise-runner/toast/cmd/toast@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

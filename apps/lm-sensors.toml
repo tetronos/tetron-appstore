@@ -1,0 +1,10 @@
+id = "lm-sensors"
+name = "lm-sensors"
+check = "sensors"
+store = false
+
+[install.pkg]
+apt = "lm-sensors"
+dnf = "lm_sensors"
+pacman = "lm_sensors"
+brew = ""

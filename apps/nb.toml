@@ -1,0 +1,16 @@
+id = "nb"
+name = "nb"
+bin = "nb"
+category = "Productivity"
+description = "Plain-text note-taking, bookmarking, and knowledge base."
+homepage = "https://github.com/xwmx/nb"
+cli = true
+
+[install.recipe]
+install = "brew install nb"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["tetron"]

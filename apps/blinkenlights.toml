@@ -1,0 +1,15 @@
+id = "blinkenlights"
+name = "blinkenlights"
+bin = "blinkenlights"
+category = "Development"
+description = "TUI that may be used for debugging x86_64-linux or i8086 programs across platforms"
+homepage = "https://github.com/jart/blink"
+
+[install.recipe]
+install = "./configure && make -j4 && sudo make install"
+method = "source"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

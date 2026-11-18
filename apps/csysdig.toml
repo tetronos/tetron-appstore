@@ -1,0 +1,15 @@
+id = "csysdig"
+name = "csysdig"
+bin = "csysdig"
+category = "Dashboards"
+description = "root level Ncurses interface for sysdig, Linux system exploration and troubleshooting tool with first class support for containers"
+homepage = "https://github.com/draios/sysdig"
+
+[install.recipe]
+install = "brew install sysdig"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

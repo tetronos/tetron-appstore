@@ -1,0 +1,10 @@
+id = "upower"
+name = "upower"
+check = "upower"
+store = false
+
+[install.pkg]
+apt = "upower"
+dnf = "upower"
+pacman = "upower"
+brew = ""

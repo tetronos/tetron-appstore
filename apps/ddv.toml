@@ -1,0 +1,15 @@
+id = "ddv"
+name = "ddv"
+bin = "ddv"
+category = "Development"
+description = "Terminal DynamoDB viewer"
+homepage = "https://github.com/lusingander/ddv"
+
+[install.recipe]
+install = "brew install lusingander/tap/ddv"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

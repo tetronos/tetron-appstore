@@ -1,0 +1,15 @@
+id = "termframe"
+name = "termframe"
+bin = "termframe"
+category = "Miscellaneous"
+description = "Terminal output SVG screenshot tool."
+homepage = "https://github.com/pamburus/termframe"
+cli = true
+
+[install.recipe]
+install = "brew install termframe"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

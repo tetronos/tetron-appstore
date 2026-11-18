@@ -1,0 +1,15 @@
+id = "rga"
+name = "rga"
+bin = "rga"
+category = "Development"
+description = "Ripgrep, but can also search in docs, PDFs, E-Books, zip, tar.gz, etc."
+homepage = "https://github.com/phiresky/ripgrep-all"
+cli = true
+
+[install.recipe]
+install = "brew install ripgrep-all"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

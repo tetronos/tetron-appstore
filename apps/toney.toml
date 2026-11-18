@@ -1,0 +1,15 @@
+id = "toney"
+name = "Toney"
+bin = "Toney"
+category = "Productivity"
+description = "a fast, lightweight, terminal-based note-taking app for the modern developer."
+homepage = "https://github.com/SourcewareLab/Toney"
+
+[install.recipe]
+install = "go install github.com/SourcewareLab/Toney@latest"
+method = "go"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

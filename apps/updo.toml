@@ -1,0 +1,15 @@
+id = "updo"
+name = "updo"
+bin = "updo"
+category = "Dashboards"
+description = "Website monitoring tool with uptime tracking, response time metrics, and SSL certificate monitoring."
+homepage = "https://github.com/Owloops/updo"
+
+[install.recipe]
+install = "brew install owloops/tap/updo"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

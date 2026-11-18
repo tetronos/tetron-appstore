@@ -1,0 +1,15 @@
+id = "herdr"
+name = "herdr"
+bin = "herdr"
+category = "AI"
+description = "An agent multiplexer for your terminal: run every coding agent in one place with persistent sessions and at-a-glance blocked/working/done state, like tmux rebuilt for agents."
+homepage = "https://herdr.dev"
+
+[install.recipe]
+install = "brew install herdr"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

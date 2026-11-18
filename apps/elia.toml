@@ -1,0 +1,15 @@
+id = "elia"
+name = "elia"
+bin = "elia"
+category = "Productivity"
+description = "A terminal ChatGPT client build with Textual"
+homepage = "https://github.com/darrenburns/elia"
+
+[install.recipe]
+install = "pipx install elia-chat"
+method = "pipx"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

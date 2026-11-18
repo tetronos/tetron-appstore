@@ -1,0 +1,14 @@
+id = "navi"
+name = "navi"
+bin = "navi"
+category = "Miscellaneous"
+description = "An interactive cheatsheet tool for the command line."
+homepage = "https://github.com/denisidoro/navi"
+
+[install.recipe]
+install = "brew install navi"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

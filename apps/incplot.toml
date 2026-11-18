@@ -1,0 +1,9 @@
+id = "incplot"
+name = "incplot"
+bin = "incplot"
+category = "Miscellaneous"
+description = "A CLI tool for drawing great looking plots in the terminal using unicode characters."
+homepage = "https://github.com/InCom-0/incplot"
+
+[source]
+lists = ["terminaltrove"]

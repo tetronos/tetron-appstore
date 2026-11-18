@@ -1,0 +1,14 @@
+id = "crates-tui"
+name = "crates-tui"
+bin = "crates-tui"
+category = "Miscellaneous"
+description = "A TUI for exploring crates.io"
+homepage = "https://github.com/ratatui/crates-tui"
+
+[install.recipe]
+install = "brew install crates-tui"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

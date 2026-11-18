@@ -1,0 +1,14 @@
+id = "netshow"
+name = "netshow"
+bin = "netshow"
+category = "Development"
+description = "An interactive, process-aware network monitoring for your terminal."
+homepage = "https://github.com/taylorwilsdon/netshow"
+
+[install.recipe]
+install = "brew install netshow"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

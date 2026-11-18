@@ -1,0 +1,14 @@
+id = "cli-chess"
+name = "cli-chess"
+bin = "cli-chess"
+category = "Games"
+description = "A highly customizable way to play chess in your terminal. Play online (via Lichess.org) and offline against the Fairy-Stockfish engine. All Lichess variants are supported."
+homepage = "https://github.com/trevorbayless/cli-chess"
+
+[install.recipe]
+install = "pipx install cli-chess"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,15 @@
+id = "amtui"
+name = "amtui"
+bin = "amtui"
+category = "Development"
+description = "Alertmanager TUI - Your Terminal Companion for Alertmanager"
+homepage = "https://github.com/pehlicd/amtui/"
+
+[install.recipe]
+install = "brew tap pehlicd/tap && brew install amtui"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

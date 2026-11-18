@@ -1,0 +1,14 @@
+id = "diskbloom"
+name = "diskbloom"
+bin = "diskbloom"
+category = "Dashboards"
+description = "A pastel, WizTree-style treemap disk visualizer that lives in your terminal."
+homepage = "https://github.com/Zingzy/diskbloom"
+
+[install.recipe]
+install = "go install github.com/Zingzy/diskbloom@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

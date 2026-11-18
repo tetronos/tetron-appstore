@@ -1,0 +1,9 @@
+id = "lue"
+name = "lue"
+bin = "lue"
+category = "Miscellaneous"
+description = "A TUI ebook reader with Text-to-Speech (TTS)."
+homepage = "https://github.com/paulilaaso/lue"
+
+[source]
+lists = ["terminaltrove"]

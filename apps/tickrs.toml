@@ -1,0 +1,9 @@
+id = "tickrs"
+name = "tickrs"
+bin = "tickrs"
+category = "Productivity"
+description = "Realtime ticker data in your terminal."
+homepage = "https://github.com/tarkah/tickrs"
+
+[source]
+lists = ["terminaltrove"]

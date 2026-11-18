@@ -1,0 +1,20 @@
+id = "duf"
+name = "duf"
+bin = "duf"
+category = "Miscellaneous"
+description = "Disk Usage/Free Utility - a better 'df' alternative."
+homepage = "https://github.com/muesli/duf"
+
+[install.pkg]
+apt = "duf"
+dnf = "duf"
+pacman = "duf"
+brew = "duf"
+
+[install.recipe]
+install = "brew install duf"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

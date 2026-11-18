@@ -1,0 +1,9 @@
+id = "vtop"
+name = "vtop"
+bin = "vtop"
+category = "Dashboards"
+description = "Wow such top. So stats. More better than regular top"
+homepage = "https://github.com/MrRio/vtop"
+
+[source]
+lists = ["terminaltrove"]

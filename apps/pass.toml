@@ -1,0 +1,10 @@
+id = "pass"
+name = "pass"
+check = "pass"
+store = false
+
+[install.pkg]
+apt = "pass"
+dnf = "pass"
+pacman = "pass"
+brew = "pass"

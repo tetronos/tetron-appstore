@@ -1,0 +1,14 @@
+id = "gruyere"
+name = "gruyere"
+bin = "gruyere"
+category = "Development"
+description = "A tiny (and pretty) program for viewing + killing listening ports."
+homepage = "https://github.com/savannahostrowski/gruyere"
+
+[install.recipe]
+install = "brew install gruyere"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

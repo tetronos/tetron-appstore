@@ -1,0 +1,15 @@
+id = "ollama"
+name = "ollama"
+bin = "ollama"
+category = "AI"
+description = "Get up and running with large language models locally."
+homepage = "https://github.com/ollama/ollama"
+cli = true
+
+[install.recipe]
+install = "brew install ollama"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

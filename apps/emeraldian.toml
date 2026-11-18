@@ -1,0 +1,14 @@
+id = "emeraldian"
+name = "emeraldian"
+bin = "emeraldian"
+category = "AI"
+description = "A terminal UI for Obsidian with graphical live-preview notes"
+homepage = "https://github.com/iamrohithrnair/emeraldian"
+
+[install.recipe]
+install = "brew install emeraldian"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

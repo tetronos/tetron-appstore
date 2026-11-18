@@ -1,0 +1,15 @@
+id = "mutt"
+name = "Mutt"
+bin = "mutt"
+category = "Messaging"
+description = "Email client"
+homepage = "https://gitlab.com/muttmua/mutt"
+
+[install.recipe]
+install = "brew install mutt"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

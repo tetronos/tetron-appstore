@@ -1,0 +1,10 @@
+id = "bind9-dnsutils"
+name = "bind9-dnsutils"
+check = "dig"
+store = false
+
+[install.pkg]
+apt = "bind9-dnsutils"
+dnf = "bind-utils"
+pacman = "bind"
+brew = "bind"

@@ -1,0 +1,15 @@
+id = "mastui"
+name = "mastui"
+bin = "mastui"
+category = "Messaging"
+description = "Mastodon TUI"
+homepage = "https://github.com/kimusan/mastui"
+
+[install.recipe]
+install = "pipx install mastui"
+method = "pipx"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

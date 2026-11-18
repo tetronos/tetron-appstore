@@ -1,0 +1,14 @@
+id = "nmtui"
+name = "nmtui"
+bin = "nmtui"
+category = "Miscellaneous"
+description = "ncurses network manager"
+homepage = "https://developer.gnome.org/NetworkManager/stable/nmtui.html"
+
+[install.pkg]
+apt = "network-manager"
+dnf = "NetworkManager-tui"
+pacman = "networkmanager"
+
+[source]
+lists = ["awesome-tuis", "tetron"]

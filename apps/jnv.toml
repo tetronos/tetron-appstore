@@ -1,0 +1,14 @@
+id = "jnv"
+name = "jnv"
+bin = "jnv"
+category = "Development"
+description = "Interactive JSON filter using jq."
+homepage = "https://github.com/ynqa/jnv"
+
+[install.recipe]
+install = "brew install jnv"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

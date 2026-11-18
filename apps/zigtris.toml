@@ -1,0 +1,15 @@
+id = "zigtris"
+name = "Zigtris"
+bin = "zigtris"
+category = "Games"
+description = "YA terminal tetris"
+homepage = "https://github.com/ringtailsoftware/zigtris"
+
+[install.recipe]
+install = "zig build -Doptimize=ReleaseFast && ./zig-cache/bin/zigtris"
+method = "source"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

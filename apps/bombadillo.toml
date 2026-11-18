@@ -1,0 +1,15 @@
+id = "bombadillo"
+name = "bombadillo"
+bin = "bombadillo"
+category = "Web"
+description = "A TUI browser for the non-web: Gopher, Gemini, Finger"
+homepage = "https://bombadillo.colorfield.space/"
+
+[install.recipe]
+install = "brew install bombadillo"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

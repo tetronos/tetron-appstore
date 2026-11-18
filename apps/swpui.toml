@@ -1,0 +1,14 @@
+id = "swpui"
+name = "swpui"
+bin = "swpui"
+category = "Development"
+description = "A minimal utility to preview search-and-replacement of text."
+homepage = "https://github.com/beeb/swpui"
+
+[install.recipe]
+install = "cargo install --locked swpui"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

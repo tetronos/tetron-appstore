@@ -1,0 +1,15 @@
+id = "pdiary"
+name = "pdiary"
+bin = "pdiary"
+category = "Productivity"
+description = "A simple terminal diary journal application written in Python with encryption support"
+homepage = "https://github.com/manipuladordedados/pdiary"
+
+[install.recipe]
+install = "pip install pdiary"
+method = "pip"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

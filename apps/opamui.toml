@@ -1,0 +1,9 @@
+id = "opamui"
+name = "opamui"
+bin = "opamui"
+category = "Miscellaneous"
+description = "A TUI for browsing and searching OCaml opam packages."
+homepage = "https://github.com/nlamirault/opamui"
+
+[source]
+lists = ["terminaltrove"]

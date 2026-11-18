@@ -1,0 +1,15 @@
+id = "judo"
+name = "Judo"
+bin = "judo"
+category = "Productivity"
+description = "A multi-database TUI for ToDo lists, using Rust + Ratatui + SQLite"
+homepage = "https://github.com/giacomopiccinini/judo"
+
+[install.recipe]
+install = "cargo install judo"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

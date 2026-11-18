@@ -1,0 +1,15 @@
+id = "cgdb"
+name = "cgdb"
+bin = "cgdb"
+category = "Dashboards"
+description = "Console front-end to the GNU debugger"
+homepage = "https://github.com/cgdb/cgdb"
+
+[install.recipe]
+install = "brew install cgdb"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "tuidict"
+name = "tuidict"
+bin = "tuidict"
+category = "Productivity"
+description = "Fast offline dictionary with in-app downloads and multi-language support from FreeDict"
+homepage = "https://github.com/404Simon/tuidict"
+
+[install.recipe]
+install = "cargo install tuidict"
+method = "cargo"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

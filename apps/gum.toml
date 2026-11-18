@@ -1,0 +1,16 @@
+id = "gum"
+name = "gum"
+bin = "gum"
+category = "Development"
+description = "A tool for glamorous shell scripts (prompts, menus, spinners)."
+homepage = "https://github.com/charmbracelet/gum"
+cli = true
+
+[install.recipe]
+install = "brew install gum"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["tetron"]

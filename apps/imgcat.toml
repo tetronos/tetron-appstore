@@ -1,0 +1,15 @@
+id = "imgcat"
+name = "imgcat"
+bin = "imgcat"
+category = "Miscellaneous"
+description = "Display images and gifs in your terminal."
+homepage = "https://github.com/danielgatis/imgcat"
+cli = true
+
+[install.recipe]
+install = "go install github.com/danielgatis/imgcat@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

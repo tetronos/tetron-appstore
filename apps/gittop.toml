@@ -1,0 +1,14 @@
+id = "gittop"
+name = "gittop"
+bin = "gittop"
+category = "Development"
+description = "A TUI for visualizing Git repository statistics.﻿"
+homepage = "https://github.com/hjr265/gittop"
+
+[install.recipe]
+install = "go install github.com/hjr265/gittop@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

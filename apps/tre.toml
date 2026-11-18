@@ -1,0 +1,9 @@
+id = "tre"
+name = "tre"
+bin = "tre"
+category = "Dashboards"
+description = "A modern and improved alternative to the tree(1) command."
+homepage = "https://github.com/dduan/tre"
+
+[source]
+lists = ["terminaltrove"]

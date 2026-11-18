@@ -1,0 +1,14 @@
+id = "rura"
+name = "rura"
+bin = "rura"
+category = "Development"
+description = "An Interactive TUI scratchpad for building shell pipelines."
+homepage = "https://github.com/tlipinski/rura"
+
+[install.recipe]
+install = "brew install rura"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

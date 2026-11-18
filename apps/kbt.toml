@@ -1,0 +1,14 @@
+id = "kbt"
+name = "kbt"
+bin = "kbt"
+category = "Dashboards"
+description = "A keyboard tester in terminal."
+homepage = "https://github.com/bloznelis/kbt"
+
+[install.recipe]
+install = "brew install kbt"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

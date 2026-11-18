@@ -1,0 +1,10 @@
+id = "pulsemixer"
+name = "pulsemixer"
+check = "pulsemixer"
+store = false
+
+[install.pkg]
+apt = "pulsemixer"
+dnf = ""
+pacman = "pulsemixer"
+brew = ""

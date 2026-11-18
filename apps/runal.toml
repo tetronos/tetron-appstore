@@ -1,0 +1,15 @@
+id = "runal"
+name = "runal"
+bin = "runal"
+category = "Miscellaneous"
+description = "A creative coding environment for the terminal."
+homepage = "https://github.com/emprcl/runal"
+cli = true
+
+[install.recipe]
+install = "go install github.com/emprcl/runal/cmd/runal@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

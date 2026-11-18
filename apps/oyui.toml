@@ -1,0 +1,14 @@
+id = "oyui"
+name = "oyui"
+bin = "oyui"
+category = "Development"
+description = "A modern merge editor for jujutsu and git."
+homepage = "https://github.com/emilien-jegou/oyui"
+
+[install.recipe]
+install = "cargo install --locked oyui"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

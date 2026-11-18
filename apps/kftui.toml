@@ -1,0 +1,15 @@
+id = "kftui"
+name = "kftui"
+bin = "kftui"
+category = "Docker/LXC/K8s"
+description = "A TUI to manage multiple kubectl port-forward commands, with support for UDP and K8s proxy."
+homepage = "https://github.com/hcavarsan/kftray"
+
+[install.recipe]
+install = "cargo install kftui"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

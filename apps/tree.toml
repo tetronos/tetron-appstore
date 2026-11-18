@@ -1,0 +1,10 @@
+id = "tree"
+name = "tree"
+check = "tree"
+store = false
+
+[install.pkg]
+apt = "tree"
+dnf = "tree"
+pacman = "tree"
+brew = "tree"

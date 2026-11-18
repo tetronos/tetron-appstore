@@ -1,0 +1,15 @@
+id = "ddqa"
+name = "ddqa"
+bin = "ddqa"
+category = "Development"
+description = "Jira TUI to help with software releases"
+homepage = "https://github.com/DataDog/ddqa"
+
+[install.recipe]
+install = "pipx install ddqa"
+method = "pipx"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

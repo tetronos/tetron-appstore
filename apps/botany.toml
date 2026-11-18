@@ -1,0 +1,15 @@
+id = "botany"
+name = "botany"
+bin = "botany"
+category = "Games"
+description = "Virtual plant buddy"
+homepage = "https://github.com/jifunks/botany/"
+
+[install.recipe]
+install = "git clone https://github.com/jifunks/botany.git && cd botany && python3 botany.py"
+method = "script"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

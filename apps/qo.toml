@@ -1,0 +1,15 @@
+id = "qo"
+name = "qo"
+bin = "qo"
+category = "Development"
+description = "Interactive SQL filter for JSON, CSV, TSV and other streams."
+homepage = "https://github.com/kiki-ki/go-qo"
+
+[install.recipe]
+install = "brew install qo"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

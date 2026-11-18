@@ -1,0 +1,15 @@
+id = "sshtron"
+name = "sshtron"
+bin = "sshtron"
+category = "Games"
+description = "multiplayer lightcycle game that runs through SSH"
+homepage = "https://github.com/zachlatta/sshtron"
+
+[install.recipe]
+install = "go install github.com/zachlatta/sshtron@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

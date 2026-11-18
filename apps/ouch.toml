@@ -1,0 +1,15 @@
+id = "ouch"
+name = "ouch"
+bin = "ouch"
+category = "Miscellaneous"
+description = "Painless compression and decompression in the terminal"
+homepage = "https://github.com/ouch-org/ouch"
+cli = true
+
+[install.recipe]
+install = "brew install ouch"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

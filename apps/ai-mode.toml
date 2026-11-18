@@ -1,0 +1,24 @@
+id = "ai-mode"
+name = "AI Mode"
+bin = "tetron-aimode"
+category = "AI"
+description = "Ask Gemini questions in a full screen terminal app, with optional Google Search grounding. Needs a free Gemini API key in GEMINI_API_KEY or ~/.config/aimode/key (https://aistudio.google.com/apikey)."
+homepage = "https://github.com/tetronos/tetron-aimode"
+
+[notes]
+tip = "Needs a free Gemini API key from https://aistudio.google.com/apikey. The first run asks for it and saves it to ~/.config/aimode/key (readable only by you); `tetron-aimode --key` replaces it, or set GEMINI_API_KEY. Google Search grounding (`tetron-aimode --search`) needs billing on the key."
+
+[install.pkg]
+apt = "tetron-aimode"
+dnf = ""
+pacman = ""
+brew = ""
+
+[install.recipe]
+install = "mkdir -p ~/.local/bin && curl -fsSL https://raw.githubusercontent.com/tetronos/tetron-aimode/main/tetron-aimode -o ~/.local/bin/tetron-aimode && chmod +x ~/.local/bin/tetron-aimode"
+method = "script"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["tetron"]

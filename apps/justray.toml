@@ -1,0 +1,9 @@
+id = "justray"
+name = "justray"
+bin = "justray"
+category = "Miscellaneous"
+description = "A modern VPN client that lives in your terminal."
+homepage = "https://github.com/luynrs/justray"
+
+[source]
+lists = ["terminaltrove"]

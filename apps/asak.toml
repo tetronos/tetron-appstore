@@ -1,0 +1,15 @@
+id = "asak"
+name = "asak"
+bin = "asak"
+category = "Multimedia"
+description = "A cross-platform audio recording/playback TUI"
+homepage = "https://github.com/chaosprint/asak"
+
+[install.recipe]
+install = "brew install asak"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

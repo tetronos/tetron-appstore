@@ -1,0 +1,9 @@
+id = "jolt"
+name = "jolt"
+bin = "jolt"
+category = "Dashboards"
+description = "A beautiful TUI battery and energy monitor for your terminal."
+homepage = "https://github.com/jordond/jolt"
+
+[source]
+lists = ["terminaltrove"]

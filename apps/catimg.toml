@@ -1,0 +1,10 @@
+id = "catimg"
+name = "catimg"
+check = "catimg"
+store = false
+
+[install.pkg]
+apt = "catimg"
+dnf = "catimg"
+pacman = "catimg"
+brew = "catimg"

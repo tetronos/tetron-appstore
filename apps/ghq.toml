@@ -1,0 +1,15 @@
+id = "ghq"
+name = "ghq"
+bin = "ghq"
+category = "Development"
+description = "Remote repository management made easy."
+homepage = "https://github.com/x-motemen/ghq"
+cli = true
+
+[install.recipe]
+install = "brew install ghq"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

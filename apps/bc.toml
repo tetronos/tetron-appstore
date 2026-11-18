@@ -1,0 +1,10 @@
+id = "bc"
+name = "bc"
+check = "bc"
+store = false
+
+[install.pkg]
+apt = "bc"
+dnf = "bc"
+pacman = "bc"
+brew = "bc"

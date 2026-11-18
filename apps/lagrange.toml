@@ -1,0 +1,15 @@
+id = "lagrange"
+name = "Lagrange"
+bin = "lagrange"
+category = "Web"
+description = "Lagrange is a cross-platform client for browsing Geminispace"
+homepage = "https://gmi.skyjake.fi/lagrange"
+
+[install.recipe]
+install = "brew install --cask lagrange"
+method = "brew"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

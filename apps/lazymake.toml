@@ -1,0 +1,15 @@
+id = "lazymake"
+name = "lazymake"
+bin = "lazymake"
+category = "Development"
+description = "Modern TUI for Makefiles with interactive target selection, dependency visualization, and command safety analysis."
+homepage = "https://github.com/rshelekhov/lazymake"
+
+[install.recipe]
+install = "brew install lazymake"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

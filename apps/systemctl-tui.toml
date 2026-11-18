@@ -1,0 +1,9 @@
+id = "systemctl-tui"
+name = "systemctl-tui"
+bin = "systemctl-tui"
+category = "Dashboards"
+description = "A fast, simple TUI for interacting with systemd services and their logs."
+homepage = "https://github.com/rgwood/systemctl-tui"
+
+[source]
+lists = ["terminaltrove"]

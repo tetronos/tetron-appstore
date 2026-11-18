@@ -1,0 +1,15 @@
+id = "srgn"
+name = "srgn"
+bin = "srgn"
+category = "Development"
+description = "A syntax‑aware grep alternative with code edits."
+homepage = "https://github.com/alexpovel/srgn"
+cli = true
+
+[install.recipe]
+install = "brew install srgn"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

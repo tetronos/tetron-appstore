@@ -1,0 +1,14 @@
+id = "git-interactive-rebase-tool"
+name = "git-interactive-rebase-tool"
+bin = "git-interactive-rebase-tool"
+category = "Development"
+description = "An improved sequence editor for Git."
+homepage = "https://github.com/MitMaro/git-interactive-rebase-tool"
+
+[install.recipe]
+install = "brew install git-interactive-rebase-tool"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

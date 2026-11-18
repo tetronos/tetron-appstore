@@ -1,0 +1,9 @@
+id = "kudu"
+name = "kudu"
+bin = "kudu"
+category = "Docker/LXC/K8s"
+description = "Easily manage QEMU VMs from a Linux TUI."
+homepage = "https://github.com/pythops/kudu"
+
+[source]
+lists = ["terminaltrove"]

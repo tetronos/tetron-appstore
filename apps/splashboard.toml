@@ -1,0 +1,14 @@
+id = "splashboard"
+name = "splashboard"
+bin = "splashboard"
+category = "Miscellaneous"
+description = "A customizable terminal splash screen with plugin-based data sources."
+homepage = "https://github.com/unhappychoice/splashboard"
+
+[install.recipe]
+install = "cargo install --locked splashboard"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "kilo"
+name = "kilo"
+bin = "kilo"
+category = "Editors"
+description = "A minimal but complete editor in ~1000 lines of C code."
+homepage = "https://github.com/antirez/kilo"
+
+[install.recipe]
+install = "git clone https://github.com/antirez/kilo.git && cd kilo && make && sudo cp kilo /usr/local/bin/"
+method = "source"
+os = ["linux", "macos"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

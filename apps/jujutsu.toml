@@ -1,0 +1,15 @@
+id = "jujutsu"
+name = "jujutsu"
+bin = "jujutsu"
+category = "Development"
+description = "A Git-compatible VCS that is both simple and powerful."
+homepage = "https://github.com/jj-vcs/jj"
+cli = true
+
+[install.recipe]
+install = "brew install jj"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

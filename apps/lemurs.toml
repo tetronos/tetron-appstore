@@ -1,0 +1,9 @@
+id = "lemurs"
+name = "lemurs"
+bin = "lemurs"
+category = "Development"
+description = "A customizable TUI display/login manager written in Rust."
+homepage = "https://github.com/coastalwhite/lemurs"
+
+[source]
+lists = ["terminaltrove"]

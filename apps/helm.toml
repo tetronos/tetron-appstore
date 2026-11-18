@@ -1,0 +1,15 @@
+id = "helm"
+name = "helm"
+bin = "helm"
+category = "Productivity"
+description = "A minimalistic & customizable pomodoro-like timer for your terminal"
+homepage = "https://github.com/0xjuanma/helm"
+
+[install.recipe]
+install = "brew install helm"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

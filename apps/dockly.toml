@@ -1,0 +1,15 @@
+id = "dockly"
+name = "dockly"
+bin = "dockly"
+category = "Docker/LXC/K8s"
+description = "Immersive terminal interface for managing docker containers and services"
+homepage = "https://github.com/lirantal/dockly"
+
+[install.recipe]
+install = "brew install dockly"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

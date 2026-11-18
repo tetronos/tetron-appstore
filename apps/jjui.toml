@@ -1,0 +1,14 @@
+id = "jjui"
+name = "jjui"
+bin = "jjui"
+category = "Development"
+description = "A terminal user interface for working with Jujutsu."
+homepage = "https://github.com/idursun/jjui"
+
+[install.recipe]
+install = "brew install jjui"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

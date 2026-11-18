@@ -1,0 +1,15 @@
+id = "wireguard-monitor"
+name = "WireGuard Monitor"
+bin = "wireguardmonitor"
+category = "Miscellaneous"
+description = "Simple TUI written in Rust to display the status of WireGuard connections on a host."
+homepage = "https://codeberg.org/anthonymills/Wireguard_Monitor"
+
+[install.recipe]
+install = "cargo install --git https://codeberg.org/anthonymills/Wireguard_Monitor"
+method = "cargo"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["tetron"]

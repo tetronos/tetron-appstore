@@ -1,0 +1,14 @@
+id = "linecast"
+name = "linecast"
+bin = "linecast"
+category = "Miscellaneous"
+description = "Interactive weather, radar, tides, sun and moon views, a planetarium with stars and constellations, and maps with a rotatable globe for the terminal."
+homepage = "https://github.com/ashuttl/linecast"
+
+[install.recipe]
+install = "brew install linecast"
+method = "brew"
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

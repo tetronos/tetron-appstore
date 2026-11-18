@@ -1,0 +1,15 @@
+id = "cpufetch"
+name = "cpufetch"
+bin = "cpufetch"
+category = "Dashboards"
+description = "Simple yet fancy CPU architecture fetching tool."
+homepage = "https://github.com/Dr-Noob/cpufetch"
+cli = true
+
+[install.recipe]
+install = "brew install cpufetch"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,10 @@
+id = "unzip"
+name = "unzip"
+check = "unzip"
+store = false
+
+[install.pkg]
+apt = "unzip"
+dnf = "unzip"
+pacman = "unzip"
+brew = ""

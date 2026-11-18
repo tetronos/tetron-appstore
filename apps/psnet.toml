@@ -1,0 +1,15 @@
+id = "psnet"
+name = "psnet"
+bin = "psnet"
+category = "Dashboards"
+description = "Real-time TUI network monitor for Windows with speed graphs, DNS resolution, and packet inspection."
+homepage = "https://github.com/marlocarlo/psnet"
+
+[install.recipe]
+install = "cargo install psnet"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

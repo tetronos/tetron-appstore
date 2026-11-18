@@ -1,0 +1,15 @@
+id = "xplr"
+name = "xplr"
+bin = "xplr"
+category = "Miscellaneous"
+description = "A hackable, minimal, fast TUI file explorer, stealing ideas from nnn and fzf."
+homepage = "https://github.com/sayanarijit/xplr"
+
+[install.recipe]
+install = "brew install xplr"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

@@ -1,0 +1,9 @@
+id = "docfd"
+name = "docfd"
+bin = "docfd"
+category = "Development"
+description = "TUI multiline fuzzy document finder."
+homepage = "https://github.com/darrenldl/docfd"
+
+[source]
+lists = ["terminaltrove"]

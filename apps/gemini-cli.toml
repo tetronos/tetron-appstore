@@ -1,0 +1,19 @@
+id = "gemini-cli"
+name = "Gemini CLI"
+bin = "gemini"
+category = "AI"
+description = "An open-source AI agent that brings Gemini directly into your terminal for coding, file operations, and shell tasks."
+homepage = "https://github.com/google-gemini/gemini-cli"
+requires_cwd = true
+
+[install.pkg]
+brew = "gemini-cli"
+
+[install.recipe]
+install = "npm install -g @google/gemini-cli"
+method = "npm"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["tetron"]

@@ -1,0 +1,15 @@
+id = "brief"
+name = "Brief"
+bin = "brief"
+category = "Productivity"
+description = "Terminal-first OpenAI chat client with slash-command palette and local tool execution."
+homepage = "https://github.com/WilliamAGH/brief"
+
+[install.recipe]
+install = "brew install williamagh/tap/brief"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

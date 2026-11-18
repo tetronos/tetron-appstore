@@ -1,0 +1,14 @@
+id = "drydock"
+name = "drydock"
+bin = "drydock"
+category = "Development"
+description = "A live terminal dashboard for a fleet of Git repositories."
+homepage = "https://github.com/yetidevworks/drydock"
+
+[install.recipe]
+install = "brew install drydock"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

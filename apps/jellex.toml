@@ -1,0 +1,14 @@
+id = "jellex"
+name = "jellex"
+bin = "jellex"
+category = "Development"
+description = "A TUI to filter JSON and JSON Lines data with Python syntax."
+homepage = "https://github.com/kellyjonbrazil/jellex"
+
+[install.recipe]
+install = "pipx install jellex"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

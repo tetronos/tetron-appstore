@@ -1,0 +1,9 @@
+id = "tempy"
+name = "tempy"
+bin = "tempy"
+category = "Miscellaneous"
+description = "A simple TUI for displaying the current weather in the terminal"
+homepage = "https://github.com/noprobelm/tempy"
+
+[source]
+lists = ["terminaltrove"]

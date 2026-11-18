@@ -1,0 +1,15 @@
+id = "zoridor"
+name = "Zoridor"
+bin = "zoridor"
+category = "Games"
+description = "Play Quoridor in the terminal"
+homepage = "https://github.com/ringtailsoftware/zoridor"
+
+[install.recipe]
+install = "git clone https://github.com/ringtailsoftware/zoridor && cd zoridor && zig build -Doptimize=ReleaseSafe && sudo cp zig-out/bin/zoridor /usr/local/bin/zoridor"
+method = "zig"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

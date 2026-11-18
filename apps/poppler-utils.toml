@@ -1,0 +1,10 @@
+id = "poppler-utils"
+name = "poppler-utils"
+check = "pdftoppm"
+store = false
+
+[install.pkg]
+apt = "poppler-utils"
+dnf = "poppler-utils"
+pacman = "poppler"
+brew = "poppler"

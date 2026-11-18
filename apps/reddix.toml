@@ -1,0 +1,14 @@
+id = "reddix"
+name = "reddix"
+bin = "reddix"
+category = "Messaging"
+description = "Reddit, refined for the terminal."
+homepage = "https://github.com/ck-zhang/reddix"
+
+[install.recipe]
+install = "brew install reddix"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

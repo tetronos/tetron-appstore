@@ -1,0 +1,14 @@
+id = "git-tailor"
+name = "git-tailor"
+bin = "git-tailor"
+category = "Development"
+description = "An interactive terminal tool for tidying up Git commits on a branch"
+homepage = "https://github.com/jordfras/git-tailor"
+
+[install.recipe]
+install = "cargo install --locked git-tailor"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

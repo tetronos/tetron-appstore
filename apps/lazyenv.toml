@@ -1,0 +1,14 @@
+id = "lazyenv"
+name = "lazyenv"
+bin = "lazyenv"
+category = "Miscellaneous"
+description = "A TUI tool for managing multiple .env files in the terminal."
+homepage = "https://github.com/lazynop/lazyenv"
+
+[install.recipe]
+install = "go install github.com/lazynop/lazyenv@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

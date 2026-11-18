@@ -1,0 +1,14 @@
+id = "mcat"
+name = "mcat"
+bin = "mcat"
+category = "Miscellaneous"
+description = "Parse, convert & preview images, videos & markdown in your terminal."
+homepage = "https://github.com/Skardyy/mcat"
+
+[install.recipe]
+install = "brew install mcat"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

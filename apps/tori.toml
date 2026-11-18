@@ -1,0 +1,14 @@
+id = "tori"
+name = "tori"
+bin = "tori"
+category = "Docker/LXC/K8s"
+description = "A TUI for multi-server Docker and host monitoring over SSH."
+homepage = "https://github.com/thobiasn/tori-cli"
+
+[install.recipe]
+install = "go install github.com/thobiasn/tori-cli/cmd/tori@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

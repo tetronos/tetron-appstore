@@ -1,0 +1,15 @@
+id = "diary"
+name = "diary"
+bin = "diary"
+category = "Miscellaneous"
+description = "A diary app written in Rust that encrypts both text and file data, and can decrypt and build a rich HTML representation of your diary when required."
+homepage = "https://github.com/actuday6418/Diary"
+
+[install.recipe]
+install = "brew install diary"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

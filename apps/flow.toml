@@ -1,0 +1,14 @@
+id = "flow"
+name = "flow"
+bin = "flow"
+category = "Dashboards"
+description = "Real-time network throughput dashboard for the terminal."
+homepage = "https://github.com/programmersd21/flow"
+
+[install.recipe]
+install = "go install github.com/programmersd21/flow/cmd/flow@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

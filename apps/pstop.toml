@@ -1,0 +1,14 @@
+id = "pstop"
+name = "pstop"
+bin = "pstop"
+category = "Dashboards"
+description = "htop-style system monitor for Windows with per-core CPU bars, tree view, and 7 color schemes."
+homepage = "https://github.com/marlocarlo/pstop"
+
+[install.recipe]
+install = "cargo install pstop"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

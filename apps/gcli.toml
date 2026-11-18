@@ -1,0 +1,15 @@
+id = "gcli"
+name = "gcli"
+bin = "gcli"
+category = "Development"
+description = "A Portable Git(hub|lab|tea)/Forgejo/Bugzilla CLI tool."
+homepage = "https://github.com/herrhotzenplotz/gcli"
+cli = true
+
+[install.recipe]
+install = "brew install gcli"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

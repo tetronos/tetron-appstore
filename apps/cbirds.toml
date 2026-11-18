@@ -1,0 +1,9 @@
+id = "cbirds"
+name = "cbirds"
+bin = "cbirds"
+category = "Screensavers"
+description = "A flock of boids in your terminal, in C99 with zero dependencies: braille anywhere, sprites in Kitty and Ghostty"
+homepage = "https://github.com/clainstone/cbirds"
+
+[source]
+lists = ["awesome-tuis"]

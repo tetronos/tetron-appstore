@@ -1,0 +1,15 @@
+id = "ntc"
+name = "ntc"
+bin = "ntc"
+category = "File Managers"
+description = "Ncurses Tabbed file Chooser."
+homepage = "https://codeberg.org/ItsZariep/ntc"
+
+[install.recipe]
+install = "git clone https://codeberg.org/ItsZariep/ntc && cd ntc/src && make"
+method = "source"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

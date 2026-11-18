@@ -1,0 +1,15 @@
+id = "riff"
+name = "riff"
+bin = "riff"
+category = "Development"
+description = "A diff filter highlighting which line parts have changed."
+homepage = "https://github.com/walles/riff"
+cli = true
+
+[install.recipe]
+install = "brew install riff"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

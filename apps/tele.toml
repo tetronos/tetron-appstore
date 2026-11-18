@@ -1,0 +1,14 @@
+id = "tele"
+name = "tele"
+bin = "tele"
+category = "Messaging"
+description = "A keyboard-first Telegram messaging inside the terminal."
+homepage = "https://github.com/sorokin-vladimir/tele"
+
+[install.recipe]
+install = "brew install tele"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

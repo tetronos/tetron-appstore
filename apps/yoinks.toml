@@ -1,0 +1,15 @@
+id = "yoinks"
+name = "yoinks"
+bin = "yoinks"
+category = "Multimedia"
+description = "Download videos from YouTube, X, Instagram, TikTok, and 1,800+ other sites — paste a URL, pick a resolution (or audio-only MP3), done. A clickable full-screen UI powered by yt-dlp (auto-fetched, no Python needed); saves to ~/Downloads."
+homepage = "https://github.com/pablostanley/yoinks"
+
+[install.recipe]
+install = "npm install -g yoinks"
+method = "npm"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["tetron"]

@@ -1,0 +1,15 @@
+id = "ostui"
+name = "ostui"
+bin = "ostui"
+category = "Multimedia"
+description = "CLI client for Subsonic-API servers like gonic and Navidrome"
+homepage = "https://git.sr.ht/~ser/ostui"
+
+[install.recipe]
+install = "go install ser1.net/ostui@latest"
+method = "go"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

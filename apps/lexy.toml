@@ -1,0 +1,9 @@
+id = "lexy"
+name = "lexy"
+bin = "lexy"
+category = "Miscellaneous"
+description = "A CLI for reading Learn X in Y Minutes directly into your terminal."
+homepage = "https://github.com/antoniorodr/lexy"
+
+[source]
+lists = ["terminaltrove"]

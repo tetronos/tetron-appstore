@@ -1,0 +1,10 @@
+id = "tuptime"
+name = "tuptime"
+bin = "tuptime"
+category = "Development"
+description = "Like uptime(1), but preserves shutdown / restart stats."
+homepage = "https://github.com/rfmoz/tuptime"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

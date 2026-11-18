@@ -1,0 +1,15 @@
+id = "mps-youtube"
+name = "mps-youtube"
+bin = "mps-youtube"
+category = "Multimedia"
+description = "Terminal based YouTube player and downloader"
+homepage = "https://github.com/mps-youtube/mps-youtube"
+
+[install.recipe]
+install = "pipx install mps-youtube"
+method = "pipx"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

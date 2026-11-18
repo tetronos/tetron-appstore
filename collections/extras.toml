@@ -1,0 +1,5 @@
+name = "extras"
+description = "Further apps for special needs"
+includes = "recommended"
+apps = [
+]

@@ -1,0 +1,15 @@
+id = "mal-cli"
+name = "MAL-Cli"
+bin = "mal-cli"
+category = "Multimedia"
+description = "A terminal interface for the official myanimelist api written in rust."
+homepage = "https://github.com/L4z3x/mal-tui"
+
+[install.recipe]
+install = "cargo install mal-cli-rs"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

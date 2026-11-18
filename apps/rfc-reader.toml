@@ -1,0 +1,15 @@
+id = "rfc-reader"
+name = "rfc_reader"
+bin = "rfc_reader"
+category = "Web"
+description = "A tool to read RFCs (Request for Comments) with a TUI, allowing you to fetch, cache, and browse RFC documents."
+homepage = "https://github.com/ozan2003/rfc_reader"
+
+[install.recipe]
+install = "curl --proto '=https' --tlsv1.2 -LsSf https://github.com/ozan2003/rfc_reader/releases/download/v0.11.2/rfc_reader-installer.sh | sh"
+method = "script"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

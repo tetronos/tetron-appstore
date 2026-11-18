@@ -1,0 +1,15 @@
+id = "pream-team"
+name = "pream-team"
+bin = "pream-team"
+category = "Productivity"
+description = "a TUI utility that helps you keep track of your teams GitHub PRs across multiple repositories"
+homepage = "https://github.com/nikoladucak/pream-team/"
+
+[install.recipe]
+install = "pip install pream-team"
+method = "pip"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

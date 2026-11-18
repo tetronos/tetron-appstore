@@ -1,0 +1,15 @@
+id = "mqttui"
+name = "mqttui"
+bin = "mqttui"
+category = "Miscellaneous"
+description = "MQTT Client written in rust"
+homepage = "https://github.com/EdJoPaTo/mqttui"
+
+[install.recipe]
+install = "brew install mqttui"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

@@ -1,0 +1,14 @@
+id = "ox"
+name = "ox"
+bin = "ox"
+category = "Editors"
+description = "A Rust text editor that runs in your terminal!"
+homepage = "https://github.com/curlpipe/ox"
+
+[install.recipe]
+install = "brew install ox"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

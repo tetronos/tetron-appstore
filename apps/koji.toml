@@ -1,0 +1,15 @@
+id = "koji"
+name = "koji"
+bin = "koji"
+category = "Development"
+description = "An interactive CLI for creating conventional commits."
+homepage = "https://github.com/cococonscious/koji"
+cli = true
+
+[install.recipe]
+install = "brew install koji"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

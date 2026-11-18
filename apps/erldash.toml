@@ -1,0 +1,14 @@
+id = "erldash"
+name = "erldash"
+bin = "erldash"
+category = "Dashboards"
+description = "A simple, terminal-based Erlang dashboard."
+homepage = "https://github.com/sile/erldash"
+
+[install.recipe]
+install = "cargo install --locked erldash"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

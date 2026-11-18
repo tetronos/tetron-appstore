@@ -1,0 +1,10 @@
+id = "moar"
+name = "moar"
+bin = "moar"
+category = "Miscellaneous"
+description = "the nice pager, designed to just do the right thing without any configuration."
+homepage = "https://github.com/walles/moor"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

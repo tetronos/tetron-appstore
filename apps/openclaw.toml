@@ -1,0 +1,19 @@
+id = "openclaw"
+name = "OpenClaw"
+bin = "openclaw"
+category = "AI"
+description = "Your own personal AI assistant — self-hosted gateway answering on WhatsApp/Telegram/Slack/Discord and more; terminal chat via openclaw tui."
+homepage = "https://openclaw.ai"
+cli = true
+
+[notes]
+tip = "First run: `openclaw onboard --install-daemon` in a shell — picks a provider, adds API keys, starts the gateway. Needs Node 22.19+. Chat with `openclaw tui`."
+
+[install.recipe]
+install = "curl -fsSL https://openclaw.ai/install.sh | bash"
+method = "script"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

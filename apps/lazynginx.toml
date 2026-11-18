@@ -1,0 +1,15 @@
+id = "lazynginx"
+name = "lazynginx"
+bin = "lazynginx"
+category = "Miscellaneous"
+description = "Simple TUI for nginx management."
+homepage = "https://github.com/giacomomasseron/lazynginx"
+
+[install.recipe]
+install = "go install github.com/giacomomasseron/lazynginx@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

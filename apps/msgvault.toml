@@ -1,0 +1,14 @@
+id = "msgvault"
+name = "msgvault"
+bin = "msgvault"
+category = "Messaging"
+description = "Archive a lifetime of email with analytics and search in milliseconds, entirely offline."
+homepage = "https://github.com/kenn-io/msgvault"
+
+[install.recipe]
+install = "brew install msgvault"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

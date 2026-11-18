@@ -1,0 +1,14 @@
+id = "otree"
+name = "otree"
+bin = "otree"
+category = "Development"
+description = "A tool to view objects (JSON/YAML/TOML) in a TUI tree widget."
+homepage = "https://github.com/fioncat/otree"
+
+[install.recipe]
+install = "brew install otree"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

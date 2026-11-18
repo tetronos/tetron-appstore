@@ -1,0 +1,14 @@
+id = "tinboard"
+name = "tinboard"
+bin = "tinboard"
+category = "Miscellaneous"
+description = "A terminal-based client for pinboard.in"
+homepage = "https://github.com/davep/tinboard"
+
+[install.recipe]
+install = "pipx install tinboard"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,14 @@
+id = "ssh-list"
+name = "ssh-list"
+bin = "ssh-list"
+category = "Development"
+description = "An SSH connection manager with a TUI interface."
+homepage = "https://github.com/akinoiro/ssh-list"
+
+[install.recipe]
+install = "cargo install --locked ssh-list"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

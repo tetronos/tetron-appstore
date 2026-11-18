@@ -1,0 +1,10 @@
+id = "starlit"
+name = "starlit"
+bin = "starlit"
+category = "Miscellaneous"
+description = "A minimal, cute and customizable weather cli."
+homepage = "https://github.com/ashuhlee/starlit"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

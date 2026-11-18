@@ -1,0 +1,15 @@
+id = "irssi"
+name = "irssi"
+bin = "irssi"
+category = "Messaging"
+description = "An IRC terminal client"
+homepage = "https://irssi.org/"
+
+[install.recipe]
+install = "brew install irssi"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

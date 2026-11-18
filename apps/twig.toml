@@ -1,0 +1,15 @@
+id = "twig"
+name = "Twig"
+bin = "twg"
+category = "Development"
+description = "Terminal UI for interactively exploring JSON and YAML files."
+homepage = "https://github.com/workdone0/twig"
+
+[install.recipe]
+install = "pipx install twg"
+method = "pipx"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

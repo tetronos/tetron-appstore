@@ -1,0 +1,14 @@
+id = "braindrop"
+name = "braindrop"
+bin = "braindrop"
+category = "Miscellaneous"
+description = "A terminal-based client for raindrop.io."
+homepage = "https://github.com/davep/braindrop"
+
+[install.recipe]
+install = "pipx install braindrop"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

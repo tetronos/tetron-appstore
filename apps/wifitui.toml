@@ -1,0 +1,15 @@
+id = "wifitui"
+name = "wifitui"
+bin = "wifitui"
+category = "Miscellaneous"
+description = "Fast featureful friendly wifi terminal UI, supports NetworkManager and iwd over dbus."
+homepage = "https://github.com/shazow/wifitui"
+
+[install.recipe]
+install = "brew install wifitui"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

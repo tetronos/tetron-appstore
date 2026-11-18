@@ -1,0 +1,14 @@
+id = "clin"
+name = "clin"
+bin = "clin"
+category = "Miscellaneous"
+description = "A TUI note management app inspired by Obsidian."
+homepage = "https://github.com/reekta92/clin-rs"
+
+[install.recipe]
+install = "cargo install --locked clin-rs"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

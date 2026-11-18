@@ -1,0 +1,9 @@
+id = "ralph-tui"
+name = "ralph-tui"
+bin = "ralph-tui"
+category = "AI"
+description = "A terminal UI for orchestrating AI coding agents."
+homepage = "https://github.com/subsy/ralph-tui"
+
+[source]
+lists = ["terminaltrove"]

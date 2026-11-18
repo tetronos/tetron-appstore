@@ -1,0 +1,15 @@
+id = "gadacz"
+name = "gadacz"
+bin = "gadacz"
+category = "Multimedia"
+description = "Audiobook player"
+homepage = "https://github.com/rareitems/gadacz"
+
+[install.recipe]
+install = "cargo install --git https://github.com/rareitems/gadacz --branch master"
+method = "cargo"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

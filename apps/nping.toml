@@ -1,0 +1,9 @@
+id = "nping"
+name = "nping"
+bin = "nping"
+category = "Development"
+description = "A TUI concurrent ping tool developed in Rust."
+homepage = "https://github.com/hanshuaikang/NBping"
+
+[source]
+lists = ["terminaltrove"]

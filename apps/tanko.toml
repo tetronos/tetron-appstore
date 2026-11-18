@@ -1,0 +1,9 @@
+id = "tanko"
+name = "Tanko"
+bin = "tanko"
+category = "Multimedia"
+description = "A tool for reading and downloading manga from the terminal, with image rendering support"
+homepage = "https://github.com/Alexandro521/Tanko"
+
+[source]
+lists = ["awesome-tuis"]

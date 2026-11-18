@@ -1,0 +1,21 @@
+id = "pandoc"
+name = "pandoc"
+bin = "pandoc"
+category = "Productivity"
+description = "a universal markup converter."
+homepage = "https://github.com/jgm/pandoc"
+cli = true
+
+[install.pkg]
+apt = "pandoc"
+dnf = "pandoc-cli"
+pacman = "pandoc-cli"
+brew = "pandoc"
+
+[install.recipe]
+install = "brew install pandoc"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

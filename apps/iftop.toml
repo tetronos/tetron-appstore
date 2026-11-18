@@ -1,0 +1,10 @@
+id = "iftop"
+name = "iftop"
+check = "iftop"
+store = false
+
+[install.pkg]
+apt = "iftop"
+dnf = "iftop"
+pacman = "iftop"
+brew = "iftop"

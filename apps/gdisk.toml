@@ -1,0 +1,10 @@
+id = "gdisk"
+name = "gdisk"
+check = "gdisk"
+store = false
+
+[install.pkg]
+apt = "gdisk"
+dnf = "gdisk"
+pacman = "gptfdisk"
+brew = ""

@@ -1,0 +1,14 @@
+id = "ytunnel"
+name = "ytunnel"
+bin = "ytunnel"
+category = "Miscellaneous"
+description = "A TUI for creating and managing Cloudflare Tunnels with custom domains"
+homepage = "https://github.com/yetidevworks/ytunnel"
+
+[install.recipe]
+install = "cargo install --locked ytunnel"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

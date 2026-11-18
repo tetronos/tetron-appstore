@@ -1,0 +1,10 @@
+id = "gpm"
+name = "gpm"
+check = "gpm"
+store = false
+
+[install.pkg]
+apt = "gpm"
+dnf = "gpm"
+pacman = "gpm"
+brew = ""

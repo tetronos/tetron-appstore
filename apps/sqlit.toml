@@ -1,0 +1,15 @@
+id = "sqlit"
+name = "sqlit"
+bin = "sqlit"
+category = "Development"
+description = "A lightweight TUI for SQL databases inspired by lazygit"
+homepage = "https://github.com/Maxteabag/sqlit"
+
+[install.recipe]
+install = "pipx install sqlit-tui"
+method = "pipx"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

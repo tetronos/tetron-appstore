@@ -1,0 +1,15 @@
+id = "profanity"
+name = "Profanity"
+bin = "profanity"
+category = "Messaging"
+description = "XMPP (Jabber) client"
+homepage = "https://profanity-im.github.io"
+
+[install.recipe]
+install = "brew install profanity"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,14 @@
+id = "upmd"
+name = "upmd"
+bin = "upmd"
+category = "Productivity"
+description = "Run tasks and workflows from Markdown."
+homepage = "https://github.com/rezigned/upmd"
+
+[install.recipe]
+install = "brew install upmd"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

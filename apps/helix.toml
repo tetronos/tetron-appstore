@@ -1,0 +1,15 @@
+id = "helix"
+name = "helix"
+bin = "hx"
+category = "Editors"
+description = "A post-modern text editor."
+homepage = "https://helix-editor.com/"
+
+[install.recipe]
+install = "brew install helix"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

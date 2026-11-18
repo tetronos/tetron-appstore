@@ -1,0 +1,15 @@
+id = "termusic"
+name = "termusic"
+bin = "termusic"
+category = "Multimedia"
+description = "Music Player TUI written in Rust"
+homepage = "https://github.com/tramhao/termusic"
+
+[install.recipe]
+install = "brew install termusic"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

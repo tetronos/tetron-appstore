@@ -1,0 +1,15 @@
+id = "nomadnet"
+name = "nomadnet"
+bin = "nomadnet"
+category = "Messaging"
+description = "Secure messaging network built on Reticulum"
+homepage = "https://github.com/markqvist/NomadNet"
+
+[install.recipe]
+install = "pipx install nomadnet"
+method = "pipx"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

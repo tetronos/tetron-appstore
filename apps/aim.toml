@@ -1,0 +1,15 @@
+id = "aim"
+name = "aim"
+bin = "aim"
+category = "Miscellaneous"
+description = "A command line download/upload tool with resume."
+homepage = "https://github.com/mihaigalos/aim"
+cli = true
+
+[install.recipe]
+install = "cargo install --locked aim"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

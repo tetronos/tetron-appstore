@@ -1,0 +1,15 @@
+id = "termdbms"
+name = "termdbms"
+bin = "termdbms"
+category = "Development"
+description = "A TUI for viewing and editing database files."
+homepage = "https://github.com/mathaou/termdbms"
+
+[install.recipe]
+install = "go install github.com/mathaou/termdbms@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]
