@@ -1,0 +1,13 @@
+# Agent Workflow Hooks for tetron-appstore (`libspec agent-workflow` recites them).
+
+hooks:
+  post-edit:
+    - "Review the spec change: `uv run libspec diff`"
+
+  post-implement:
+    - "Rust tests: `cargo test`"
+    - "Catalog script tests: `python3 -m unittest discover -s scripts -p 'test_*.py'`"
+    - "Generated files current: `python3 scripts/build_catalog.py --check`"
+
+  pre-commit:
+    - "Gates: `python3 reconcile.py` exits 0"

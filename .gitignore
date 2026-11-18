@@ -1,2 +1,4 @@
 /target
 /DO-NOT-COMMIT/
+/.venv/
+__pycache__/
