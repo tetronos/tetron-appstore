@@ -2,7 +2,7 @@
 
 All notable changes to tetron-appstore. The version follows the tetron core minor (0.15.x).
 
-## [Unreleased]
+## [0.15.1] — 2026-11-18
 
 ### Changed
 - Changing a collection is one line in `collections/`: the catalog release builds the collection metapackages when their Depends or Recommends differ from the newest published ones (apt repository and catalog releases), at the next patch version (ASPUB-003). `packaging/VERSION` is only the floor (0.15.19, above the 0.15.18 tetron-wm built); CI no longer asks for a hand-raised version.
