@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Derive upstream install recipes by language for catalog apps that have no
-package names and no verified recipe (recipe blocks appended to
-lists/tetron.toml, then merged into assets/catalog.json).
+package names and no verified recipe (recipes written into
+the app files (apps/<id>.toml), then built into assets/catalog.json).
 
 Usage:
     python3 scripts/match_lang_recipes.py            # query (cached), write, merge
@@ -32,7 +32,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
-from merge_catalog import catalog_recipes, gh_repo, save_recipes  # noqa: E402
+from appfiles import catalog_recipes, gh_repo, save_recipes  # noqa: E402
 
 CACHE = ROOT / "target" / "lang-cache"
 OFFLINE = "--offline" in sys.argv[1:]

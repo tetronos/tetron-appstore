@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Find each catalog app's package name per package manager (WMCAT-005) on
 Repology (https://repology.org, read-only API, one request per second as its
-terms ask) and write lists/repology.json; then merge the catalog again.
+terms ask) and write sources/repology.json; then build the catalog again.
 
 Usage:
     python3 scripts/match_repology.py            # query (cached), write, merge
@@ -16,7 +16,7 @@ project name, and a different program with the same name must never be
 installed. Homepages come from apt metadata (debian:trixie, ubuntu:24.04,
 debian:12 containers, needs docker), Fedora mdapi, the Arch package API and
 Homebrew's formula index. Rejected names are listed for a look; a `pkg` table in
-lists/tetron.toml overrides any name ("" removes it). Responses are cached in
+an app file's [install.pkg] overrides any name ("" removes it). Responses are cached in
 target/repology-cache/ (not committed). Stdlib only.
 """
 import json
@@ -29,7 +29,7 @@ import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-OUT = ROOT / "lists" / "repology.json"
+OUT = ROOT / "sources" / "repology.json"
 CACHE = ROOT / "target" / "repology-cache"
 API = "https://repology.org/api/v1/project/"
 AGENT = "tetron-wm-catalog/1 (+https://github.com/tetronos/tetron-wm)"
@@ -244,9 +244,9 @@ def verify(apps, names, apt=None, brew=None, home=homepage):
 
 def main():
     sys.path.insert(0, str(ROOT / "scripts"))
-    import merge_catalog  # noqa: E402
+    import build_catalog  # noqa: E402
     offline = "--offline" in sys.argv[1:]
-    apps = json.loads(merge_catalog.OUT.read_text(encoding="utf-8"))["apps"]
+    apps = json.loads((ROOT / "assets" / "catalog.json").read_text(encoding="utf-8"))["apps"]
     names, review, unchecked = match(apps, offline)
     if unchecked:
         print(f"not checked (Repology unreachable), run again: {', '.join(unchecked)}")
@@ -255,7 +255,7 @@ def main():
     names, rejected = verify(apps, names)
     doc = {"source": "https://repology.org", "names": dict(sorted(names.items()))}
     OUT.write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    merge_catalog.OUT.write_text(merge_catalog.merge(), encoding="utf-8")
+    build_catalog.write()
     count = {m: sum(1 for v in names.values() if m in v) for m in ("apt", "dnf", "pacman", "brew")}
     print(f"{len(names)}/{len(apps)} apps have a package (Repology matched {found}); {count}")
     if rejected:

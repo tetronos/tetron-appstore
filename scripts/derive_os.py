@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Fill in the `os` field for recipes that don't already have one (agent-derived
 `platforms` are written by merge_recipes.py and are left untouched). Changed
-recipes are appended to lists/tetron.toml and the catalog is merged again.
+recipes are written into the app files (apps/<id>.toml) and the catalog is built again.
 
 Safe by construction — it never excludes a platform without a hard signal:
   - brew recipes      -> ["macos", "linux"]  (Homebrew is cross-platform)
@@ -14,7 +14,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
-from merge_catalog import catalog_recipes, save_recipes  # noqa: E402
+from appfiles import catalog_recipes, save_recipes  # noqa: E402
 LINUX_METHODS = {"apt", "pacman", "dnf", "yum", "apk", "snap", "yay", "yaourt"}
 
 

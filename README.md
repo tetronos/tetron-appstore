@@ -22,14 +22,16 @@ The catalog merges imported lists (awesome-tuis https://github.com/rothgar/aweso
 
 ## Maintaining the catalog
 
-`assets/catalog.json` (compiled in, and published for Update list) is built by `scripts/merge_catalog.py` from:
+Every app is one file, `apps/<id>.toml` (format: `schema/app.schema.json`), imported apps included. Each collection is one list of app ids, `collections/<name>.toml` (`desktop`, `essentials`, `recommended`, `extras`; format: `schema/collection.schema.json`). Adding an app is one new file; adding it to a collection is one line. An app that is in a collection but is not a Store app (a library or service package) has `store = false`.
 
-- `lists/awesome-tuis.json` (`scripts/import_awesome_tuis.py`, from the awesome-tuis README) and `lists/terminaltrove.json` (`scripts/import_terminaltrove.py`, from https://carcaradotdev.github.io/terminaltrove-stars/data.json), never edited by hand;
-- `lists/tetron.toml`, our corrections and additions, which win;
-- `lists/repology.json` (`scripts/match_repology.py`: distribution package names), `lists/releases.json` (`scripts/match_releases.py`: GitHub releases with binaries), and install recipes from `scripts/match_brew.py` and `scripts/match_lang_recipes.py`;
-- `assets/suite-apps.txt`, tetron-wm's install sizes, copied by `scripts/sync_suite_list.sh`.
+`scripts/build_catalog.py` builds `assets/catalog.json` (compiled in, and published for Update list) and `assets/suite-apps.txt` (tetron-wm's suite installer list) from those files and:
 
-CI checks that `catalog.json` is current (`python3 scripts/merge_catalog.py --check`). A weekly workflow opens an issue when either imported list has new apps. The library in `crates/tetron-catalog` is shared with tetron-wm, which uses it from this repository.
+- `sources/repology.json` (`scripts/match_repology.py`: distribution package names; an app file's `[install.pkg]` wins name by name);
+- `sources/releases.json` (`scripts/match_releases.py`: GitHub releases with binaries).
+
+`sources/awesome-tuis.json` (`scripts/import_awesome_tuis.py`) and `sources/terminaltrove.json` (`scripts/import_terminaltrove.py`, from https://carcaradotdev.github.io/terminaltrove-stars/data.json) are the imported lists, never edited by hand; `scripts/new_apps_report.py` lists their apps that have no app file yet, apart from `sources/excluded.toml`. Install recipes come from `scripts/match_brew.py` and `scripts/match_lang_recipes.py`, written into the app files.
+
+CI checks that the generated files are current (`python3 scripts/build_catalog.py --check`). `python3 reconcile.py` runs the spec's constraints (`spec/`, libspec). A weekly workflow opens an issue when either imported list has new apps. The library in `crates/tetron-catalog` is shared with tetron-wm, which uses it from this repository.
 
 ## License
 
