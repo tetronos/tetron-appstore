@@ -1,13 +1,16 @@
 name: CI
 
-# Tests and clippy on every pull request and push to main.
+# Tests and clippy on every pull request and push to main; the catalog checks
+# also run again when a pull request's labels change (ASCAT-025).
 on:
   pull_request:
+    types: [opened, synchronize, reopened, labeled, unlabeled]
   push:
     branches: ["main"]
 
 jobs:
   check:
+    if: github.event.action != 'labeled' && github.event.action != 'unlabeled'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -21,9 +24,33 @@ jobs:
       - run: cargo test --locked
       - run: cargo clippy --locked --all-targets -- -D warnings
       - run: sh -n install.sh
-      # The catalog (ASCAT-009 to ASCAT-014, ASCAT-024): the generated files are
-      # what the build makes from apps/ and collections/; the scripts' tests
-      # pass; the spec's constraints hold.
-      - run: python3 scripts/build_catalog.py --check
+      # The scripts' tests pass; the spec's constraints hold.
       - run: python3 -m unittest discover -s scripts -p 'test_*.py'
       - run: python3 reconcile.py
+
+  catalog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      # Release lookups (ASCAT-023), kept between runs; entries expire after a day.
+      - uses: actions/cache@v4
+        with:
+          path: target/release-assets.json
+          key: release-assets-${{ github.run_id }}
+          restore-keys: release-assets-
+      # ASCAT-020 to ASCAT-024: schemas, uniqueness, collection references,
+      # generated files current; on a pull request also the release assets
+      # and the reviewed-script label of the changed app files.
+      - name: Catalog checks
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          BASE: ${{ github.base_ref }}
+          LABELS: ${{ join(github.event.pull_request.labels.*.name, ',') }}
+        run: |
+          if [ -n "$BASE" ]; then
+            python3 scripts/check_catalog.py --base "origin/$BASE" --labels "$LABELS"
+          else
+            python3 scripts/check_catalog.py
+          fi

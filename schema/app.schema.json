@@ -11,6 +11,7 @@
     "name": {"type": "string", "minLength": 1},
     "bin": {"type": "string", "minLength": 1},
     "check": {"type": "string", "minLength": 1},
+    "shares_bin": {"type": "array", "items": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"}},
     "category": {"type": "string", "minLength": 1},
     "description": {"type": "string", "minLength": 1},
     "homepage": {"type": "string", "minLength": 1},

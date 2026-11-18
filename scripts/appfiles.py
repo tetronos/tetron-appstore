@@ -19,7 +19,7 @@ MANAGERS = ("apt", "dnf", "pacman", "brew")
 COLLECTION_NAMES = ("desktop", "essentials", "recommended", "extras")
 
 # The layout of an app file: top-level keys, then tables, in this order.
-TOP = ("id", "aliases", "name", "bin", "check", "category", "description", "homepage", "license",
+TOP = ("id", "aliases", "name", "bin", "check", "shares_bin", "category", "description", "homepage", "license",
        "cli", "requires_cwd", "needs_url", "group", "store")
 TABLES = ("notes", "variants", "agent", "install", "source")
 SUB = {

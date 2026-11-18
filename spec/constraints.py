@@ -18,9 +18,10 @@ class GeneratedFilesCurrent(Constraint):
 class FilesValid(Constraint):
     """CONSTRAINT-ID: CON-AS02
 
-    Every app and collection file matches its schema, ids, aliases and
-    bins are unique, every collection id names an app file, and no app is
-    in two collections (ASCAT-020, ASCAT-021, ASCAT-022).
+    Every app and collection file matches its schema, ids and aliases are
+    unique, a command is used by one app unless shared (ASCAT-021), every
+    collection id names an app file, and no app is in two collections
+    (ASCAT-020, ASCAT-021, ASCAT-022).
     ENFORCEMENT (reconcile.py): files.problems is empty.
     """
     constraint_id = "CON-AS02"

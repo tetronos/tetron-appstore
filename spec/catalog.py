@@ -36,7 +36,7 @@ class AppDescriptionFields(Requirement):
     An app file describes the app with `name`, `bin` (the command it
     runs), `check` (how the suite installer tells it is present when that is
     not `bin`: a command on PATH, `a|b` for alternatives, `font=NAME` or
-    `consolefonts`), `category`, `description`, `homepage`, `license`,
+    `consolefonts`), `shares_bin` (ASCAT-021), `category`, `description`, `homepage`, `license`,
     `cli`, `requires_cwd`, `needs_url`, `group` (`apps`, `gui` or
     `services`), `store` (false for a collection member not shown as a Store
     app; such a file needs only `name`), `[notes]` (`tip`; `how`, what the
@@ -240,8 +240,10 @@ class CheckSchemas(Requirement):
 class CheckUniqueness(Requirement):
     """REQUIREMENT-ID: ASCAT-021
 
-    CI fails when an id, alias or `bin` is used by two apps (listed `a|b`
-    alternatives aside).
+    CI fails when an id or alias is used by two apps, or a command (`bin`
+    or a `check` alternative) by two apps that do not both name the other in
+    `shares_bin` (different apps that install the same command; the Store
+    can not tell which one is installed).
     """
 
 

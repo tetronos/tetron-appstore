@@ -1,6 +1,7 @@
 id = "flow"
 name = "flow"
 bin = "flow"
+shares_bin = ["flow-control"]
 category = "Dashboards"
 description = "Real-time network throughput dashboard for the terminal."
 homepage = "https://github.com/programmersd21/flow"

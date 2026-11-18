@@ -1,6 +1,7 @@
 id = "amp"
 name = "amp"
 bin = "amp"
+shares_bin = ["ampcode"]
 category = "Editors"
 description = "A complete text editor for your terminal"
 homepage = "https://github.com/jmacdonald/amp"

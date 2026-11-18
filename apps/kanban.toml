@@ -1,6 +1,7 @@
 id = "kanban"
 name = "kanban"
 bin = "kanban"
+shares_bin = ["kanban-python"]
 category = "Productivity"
 description = "TUI kanban board for projects management with sprint tracking and task prioritization."
 homepage = "https://github.com/fulsomenko/kanban"

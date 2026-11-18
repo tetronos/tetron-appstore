@@ -1,6 +1,7 @@
 id = "snake"
 name = "snake"
 bin = "snake"
+shares_bin = ["micro-snake"]
 category = "Games"
 description = ":video_game: A super minimal TUI snake game written in pure BASH v5.1+"
 homepage = "https://github.com/wick3dr0se/snake"
