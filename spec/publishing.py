@@ -39,8 +39,13 @@ class CollectionPackages(Requirement):
     `tetron-wm (>= MAJOR.MINOR)`. Version: tetron's MAJOR.MINOR with an
     independent patch number that rises with each catalog release that
     changes a collection and never goes down, so an upgrade from the
-    packages tetron-wm built before never sees a downgrade. They are
-    attached to the catalog release for tetronos/apt to pick up.
+    packages tetron-wm built before never sees a downgrade. The version is
+    `packaging/VERSION`; CI fails when a pull request changes a
+    metapackage's recommends without raising it, and the release builds the
+    metapackages only when it is newer than every one in the tetronos apt
+    repository (the same version is skipped, an older one fails the
+    release). They are attached to the catalog release for tetronos/apt to
+    pick up, after an install test with their Recommends.
     """
 
 

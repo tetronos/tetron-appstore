@@ -1,0 +1,18 @@
+# tetron-catalog-data: the catalog as a file, for machines without network
+# and the TetronOS ISO (ASPUB-002). Built by the catalog release from the
+# catalog it publishes (scripts/build_catalog.py --release), version = the
+# catalog version. Paths are relative to this file.
+name = "tetron-catalog-data"
+description = "The tetron app catalog for machines without network"
+long_description = """
+Installs the tetron app catalog (the Store's apps and the collections
+tetron-wm installs) at /usr/share/tetron/catalog.json. The Store and
+tetron-wm read it when they have no newer copy from the network."""
+section = "misc"
+license = "MIT"
+homepage = "https://github.com/tetronos/tetron-appstore"
+
+[[files]]
+src = "../target/catalog-release/catalog.json"
+dst = "usr/share/tetron/catalog.json"
+mode = "0644"

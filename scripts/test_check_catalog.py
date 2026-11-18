@@ -106,6 +106,45 @@ class ChangedFiles(unittest.TestCase):
             self.assertEqual((got["a"][0], got["a"][1]["cli"], got["c"][0]), (app("a"), True, None))
 
 
+class MetapackageVersion(unittest.TestCase):
+    def repo(self, d, recs, version):
+        root = Path(d)
+        (root / "packaging").mkdir(exist_ok=True)
+        (root / "packaging" / "recommended.toml").write_text(f"recommends = {recs}\n")
+        (root / "packaging" / "VERSION").write_text(version + "\n")
+        return root
+
+    def test_changed_recommends_need_a_higher_version(self):
+        with tempfile.TemporaryDirectory() as d:
+            run = lambda *a: subprocess.run(a, cwd=d, check=True, capture_output=True)
+            run("git", "init", "-q", "-b", "main")
+            run("git", "config", "user.email", "t@t"), run("git", "config", "user.name", "t")
+            root = self.repo(d, '["a"]', "0.15.30")
+            run("git", "add", "."), run("git", "commit", "-qm", "base")
+            self.assertEqual(cc.metapackage_version("HEAD", root), [])
+            self.repo(d, '["a", "b"]', "0.15.30")
+            self.assertEqual(len(cc.metapackage_version("HEAD", root)), 1)
+            self.repo(d, '["a", "b"]', "0.15.31")
+            self.assertEqual(cc.metapackage_version("HEAD", root), [])
+
+    def test_version_tuple(self):
+        self.assertEqual(cc.version_tuple("0.15.3-1\n"), (0, 15, 3))
+        self.assertLess(cc.version_tuple("0.15.9"), cc.version_tuple("0.15.10"))
+
+
+class Plan(unittest.TestCase):
+    INDEX = "".join(f"Package: tetron-wm-{s}\nVersion: {v}-1\n\n" for s in ("essentials", "recommended", "extras")
+                    for v in ("0.15.16", "0.15.17")) + "Package: tetron-wm-desktop\nVersion: 0.15.40-1\n\n"
+
+    def test_newer_builds_published_skips_older_refuses(self):
+        import metapackage_plan as mp
+        self.assertEqual(mp.plan("0.15.30", self.INDEX), ("build", None))
+        self.assertEqual(mp.plan("0.15.17", self.INDEX), ("skip", None))
+        self.assertIsNone(mp.plan("0.15.0", self.INDEX)[0])
+        self.assertIsNone(mp.plan("0.15.16", self.INDEX)[0])
+        self.assertEqual(mp.plan("0.15.1", ""), ("build", None))
+
+
 class Offline(unittest.TestCase):
     def test_real_catalog_passes(self):
         self.assertEqual(cc.offline(), [])

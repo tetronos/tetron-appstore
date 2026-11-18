@@ -1,0 +1,122 @@
+name: Catalog release
+
+# ASPUB-001 to ASPUB-003. A tag catalog-YYYY.MM.DD.N on main publishes the
+# catalog: the checks run, then catalog.json (with "version" set to the tag
+# without its prefix) and suite-apps.txt go to the GitHub release and to
+# GitHub Pages, with tetron-catalog-data (the catalog as a deb). The
+# collection metapackages are built when packaging/VERSION is newer than the
+# ones in the tetronos apt repository (scripts/metapackage_plan.py); the apt
+# repository picks the debs up from the release. Store binary releases keep
+# their own v* tags (release.yml).
+on:
+  push:
+    tags: ["catalog-*"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.v.outputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - id: v
+        run: |
+          tag="${GITHUB_REF_NAME}"
+          echo "$tag" | grep -Eq '^catalog-[0-9]{4}\.[0-9]{2}\.[0-9]{2}\.[0-9]+$' \
+            || { echo "::error::tag $tag is not catalog-YYYY.MM.DD.N"; exit 1; }
+          git merge-base --is-ancestor HEAD origin/main || { echo "::error::$tag is not on main"; exit 1; }
+          echo "version=${tag#catalog-}" >> "$GITHUB_OUTPUT"
+      - name: Checks (ASCAT-020 to ASCAT-025)
+        run: |
+          python3 scripts/check_catalog.py
+          python3 -m unittest discover -s scripts -p 'test_*.py'
+      - name: Build the published catalog
+        run: python3 scripts/build_catalog.py --release "${{ steps.v.outputs.version }}" target/catalog-release
+      - name: Build tetron-catalog-data .deb
+        id: data
+        uses: tetronos/tetron-packaging@87d8405791a0e679af6deb720fe932410f38feb5
+        with:
+          deb-toml: packaging/catalog-data.toml
+          version: ${{ steps.v.outputs.version }}
+          maintainer: ${{ vars.DEB_MAINTAINER }}
+          out: deb-data-out
+      - name: Metapackages or not
+        id: plan
+        run: echo "decision=$(python3 scripts/metapackage_plan.py)" >> "$GITHUB_OUTPUT"
+      - id: mv
+        run: echo "version=$(cat packaging/VERSION)" >> "$GITHUB_OUTPUT"
+      - name: Build tetron-wm-essentials .deb
+        id: essentials
+        if: steps.plan.outputs.decision == 'build'
+        uses: tetronos/tetron-packaging@87d8405791a0e679af6deb720fe932410f38feb5
+        with:
+          deb-toml: packaging/essentials.toml
+          version: ${{ steps.mv.outputs.version }}
+          maintainer: ${{ vars.DEB_MAINTAINER }}
+          out: deb-essentials-out
+          test: "false"
+      - name: Build tetron-wm-recommended .deb
+        id: recommended
+        if: steps.plan.outputs.decision == 'build'
+        uses: tetronos/tetron-packaging@87d8405791a0e679af6deb720fe932410f38feb5
+        with:
+          deb-toml: packaging/recommended.toml
+          version: ${{ steps.mv.outputs.version }}
+          maintainer: ${{ vars.DEB_MAINTAINER }}
+          out: deb-recommended-out
+          test: "false"
+      - name: Build tetron-wm-extras .deb
+        id: extras
+        if: steps.plan.outputs.decision == 'build'
+        uses: tetronos/tetron-packaging@87d8405791a0e679af6deb720fe932410f38feb5
+        with:
+          deb-toml: packaging/extras.toml
+          version: ${{ steps.mv.outputs.version }}
+          maintainer: ${{ vars.DEB_MAINTAINER }}
+          out: deb-extras-out
+          test: "false"
+      # The metapackages with their Recommends and the published tetron-wm
+      # and tetron-wm-desktop from the apt repository (WMDEB-009 to -011).
+      - name: Test the metapackages with their Recommends
+        if: steps.plan.outputs.decision == 'build'
+        run: |
+          packaging/test-metapackages.sh "${{ steps.essentials.outputs.deb }}" \
+            "${{ steps.recommended.outputs.deb }}" "${{ steps.extras.outputs.deb }}"
+      - name: GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: Catalog ${{ steps.v.outputs.version }}
+          files: |
+            target/catalog-release/catalog.json
+            target/catalog-release/suite-apps.txt
+            ${{ steps.data.outputs.deb }}
+            ${{ steps.data.outputs.sha256 }}
+            ${{ steps.essentials.outputs.deb }}
+            ${{ steps.essentials.outputs.sha256 }}
+            ${{ steps.recommended.outputs.deb }}
+            ${{ steps.recommended.outputs.sha256 }}
+            ${{ steps.extras.outputs.deb }}
+            ${{ steps.extras.outputs.sha256 }}
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: target/catalog-release
+
+  # https://tetronos.github.io/tetron-appstore/catalog.json (Pages must use
+  # "GitHub Actions" as its source in the repository settings).
+  pages:
+    needs: release
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4
