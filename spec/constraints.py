@@ -33,8 +33,9 @@ class NoPlanningNotes(Constraint):
     Committed files explain the code, the data and the reason for them; who
     decided, when, and plans stay out (they belong in the CHANGELOG and in
     notes outside git). No committed file outside an allowlist names the
-    DO-NOT-COMMIT directory or carries a date in a comment (dates in data,
-    such as `[source]` tables, status files and the CHANGELOG, are fine).
+    private planning directory or the owner placeholder, or carries a date
+    in a comment (dates in data, such as `[source]` tables, status files,
+    the imported lists in `sources/` and the CHANGELOG, are fine).
     ENFORCEMENT (reconcile.py): planning_notes.count equals 0.
     """
     constraint_id = "CON-AS03"

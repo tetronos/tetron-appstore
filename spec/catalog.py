@@ -33,12 +33,14 @@ class StableAppId(Requirement):
 class AppDescriptionFields(Requirement):
     """REQUIREMENT-ID: ASCAT-003
 
-    An app file describes the app with `name`, `bin` (the check command: a
-    command on PATH, `a|b` for alternatives, `font=NAME` or
+    An app file describes the app with `name`, `bin` (the command it
+    runs), `check` (how the suite installer tells it is present when that is
+    not `bin`: a command on PATH, `a|b` for alternatives, `font=NAME` or
     `consolefonts`), `category`, `description`, `homepage`, `license`,
     `cli`, `requires_cwd`, `needs_url`, `group` (`apps`, `gui` or
     `services`), `store` (false for a collection member not shown as a Store
-    app), `[notes]` (`tip`), `[variants]` and `[agent]`.
+    app; such a file needs only `name`), `[notes]` (`tip`; `how`, what the
+    suite installer's method does), `[variants]` and `[agent]`.
     """
 
 
@@ -49,8 +51,9 @@ class AppInstallTable(Requirement):
     `pkg` names per manager (apt, dnf, pacman, brew; `""` means none there,
     a missing manager is looked up in `sources/repology.json`), `release`
     (`repo`, and `amd64` and `arm64` asset patterns where `*` matches the
-    version), `recipe` (`method`, `install`, `os`) and `deb` (a Recommends
-    relation that is not the apt name).
+    version), `recipe` (`method`, `install`, `os`), `deb` (a Recommends
+    relation that is not the apt name) and `script` (the name of the suite
+    installer's own method for an app no distribution packages).
     """
 
 
@@ -103,7 +106,8 @@ class BuildFromFilesOnly(Requirement):
     """REQUIREMENT-ID: ASCAT-009
 
     `scripts/build_catalog.py` (stdlib, Python 3.11+) reads only `apps/`,
-    `collections/`, `status/` and `sources/repology.json`, and writes
+    `collections/`, `status/`, `sources/repology.json` (package names) and
+    `sources/releases.json` (repositories with release binaries), and writes
     `assets/catalog.json`, `assets/suite-apps.txt` and the recommends of
     `packaging/{essentials,recommended,extras}.toml` (ASPUB-003).
     Generated files are committed and never edited by hand.
@@ -132,10 +136,13 @@ class CatalogDocument(Requirement):
 
     `assets/catalog.json` is one document: `schema` (`"MAJOR.MINOR"`),
     `version` (the catalog release, ASPUB-001), `apps` (one entry per app
-    file, with `id`, its `collection` when it is in one, and its `status`
-    from ASCAT-016), `collections` (name, description, includes, app ids in
-    order) and `suite_apps` (ASCAT-014), so one fetch updates the Store and
-    the collections together.
+    file shown in the Store, with `id`, its `collection` when it is in one,
+    and its `status` from ASCAT-016), `collections` (name, description,
+    includes, app ids in order) and `suite_apps` (ASCAT-014), so one fetch
+    updates the Store and the collections together. Until the client of
+    ASCLI-001 is released, `schema` stays the integer 1 the released clients
+    parse, and the entries keep the fields they read (`tier` and `set` from
+    the collection, `sources`, `releases`, `pkg`, `recipe`).
     """
 
 
@@ -182,8 +189,9 @@ class StatusChangesOnlyOnFlip(Requirement):
     `status/<id>.json` changes only when an app's result on a platform flips
     (ok to fail, fail to ok, or a first result). Those changes reach the
     repository by a bot pull request a maintainer merges, never by a direct
-    commit. The Store shows the tested status; there is no hand-written
-    `verified` flag.
+    commit. The Store shows the tested status. The hand-written `verified`
+    of a recipe stays only until the released Store reads status instead;
+    it is then removed.
     """
 
 
@@ -311,8 +319,11 @@ class MigrationKeepsTheCatalog(Requirement):
     """REQUIREMENT-ID: ASCAT-029
 
     A test proves the first catalog built from the files equals the catalog
-    before the move: every app and field, and `suite_apps` line for line,
-    apart from the fields this spec adds (`id`, `collection`,
-    `collections`, `version`, the new `schema`) and the removed
-    hand-written `verified`.
+    before the move: every app and field, and the same `suite_apps` lines
+    per size, apart from the fields this spec adds (`id`, `collection`,
+    `collections`) and a short list of named changes the test carries, each
+    with its reason: a collection member's package names are the ones its
+    suite line used (checked in containers), `tier` follows the collection,
+    `sources` names each list once, and the order and header of the suite
+    lines.
     """
