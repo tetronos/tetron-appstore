@@ -1,9 +1,0 @@
-id = "claude-code-claude-code"
-name = "claude-code"
-bin = "claude-code"
-category = "AI"
-description = "An agentic coding tool that lives in your terminal, from Anthropic."
-homepage = "https://github.com/anthropics/claude-code"
-
-[source]
-lists = ["terminaltrove"]

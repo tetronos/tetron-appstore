@@ -235,20 +235,8 @@
    },
    "tier": "optional",
    "sources": [
+    "terminaltrove",
     "tetron"
-   ]
-  },
-  {
-   "id": "claude-code-claude-code",
-   "name": "claude-code",
-   "bin": "claude-code",
-   "category": "AI",
-   "description": "An agentic coding tool that lives in your terminal, from Anthropic.",
-   "homepage": "https://github.com/anthropics/claude-code",
-   "releases": true,
-   "tier": "optional",
-   "sources": [
-    "terminaltrove"
    ]
   },
   {
@@ -392,23 +380,8 @@
    },
    "tier": "optional",
    "sources": [
+    "terminaltrove",
     "tetron"
-   ]
-  },
-  {
-   "id": "gemini-cli-gemini-cli",
-   "name": "gemini-cli",
-   "bin": "gemini-cli",
-   "category": "AI",
-   "description": "An AI agent that brings the power of Gemini directly into your terminal by Google.",
-   "homepage": "https://github.com/google-gemini/gemini-cli",
-   "releases": true,
-   "pkg": {
-    "pacman": "gemini-cli"
-   },
-   "tier": "optional",
-   "sources": [
-    "terminaltrove"
    ]
   },
   {

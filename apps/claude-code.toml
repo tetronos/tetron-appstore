@@ -1,4 +1,5 @@
 id = "claude-code"
+aliases = ["claude-code-claude-code"]
 name = "Claude Code"
 bin = "claude"
 category = "AI"
@@ -30,4 +31,4 @@ os = ["macos", "linux", "windows"]
 verified = true
 
 [source]
-lists = ["tetron"]
+lists = ["terminaltrove", "tetron"]
