@@ -11,7 +11,8 @@ test takes the code path users get. A rotating sample of N other Store apps
 with an apt package (chosen by the ISO week W) is installed with apt-get, the
 suite installer's way for a package. Then each app's check runs. Each result
 is ok, fail (with the last installer lines that name it) or skipped (this
-platform has no way to install it: no apt name, release or script; gui and
+platform has no way to install it: no apt name, release or script, or an
+apt name with no candidate on this platform and no release or script; gui and
 service members, which need a desktop session or a booted system; gpm, which
 needs a mouse). --changed-since REF tests the members a pull request added to
 a collection or whose app file it changed; --strict exits 1 when one fails.
@@ -65,6 +66,20 @@ def skip_reason(app, names):
         return "needs a mouse device"
     if not (names["apt"] or inst.get("release") or inst.get("script")):
         return "no apt package, release or script"
+    return None
+
+
+def apt_candidate(name):
+    """apt has a version of package name to install here (after apt-get update)."""
+    r = subprocess.run(["apt-cache", "policy", name], capture_output=True, text=True)
+    return any(line.strip().startswith("Candidate:") and "(none)" not in line for line in r.stdout.splitlines())
+
+
+def no_candidate(app, names, has=apt_candidate):
+    """Why this platform can not install an apt-only member, or None."""
+    inst = app.get("install", {})
+    if names["apt"] and not (inst.get("release") or inst.get("script")) and not has(names["apt"]):
+        return "no apt package on this platform, and no release or script"
     return None
 
 
@@ -130,11 +145,18 @@ def main(argv):
     results, log = {}, ""
 
     names = {i: bc.package_names(apps[i], repology) for i in members}
-    todo = [i for i in members if not skip_reason(apps[i], names[i])]
+    if members and shutil.which("apt-cache"):
+        run(["apt-get", "update", "-q"])
+        has = apt_candidate
+    else:
+        has = lambda _name: True  # noqa: E731
+    todo = []
     for i in members:
-        why = skip_reason(apps[i], names[i])
+        why = skip_reason(apps[i], names[i]) or no_candidate(apps[i], names[i], has)
         if why:
             results[i] = {"result": "skipped", "method": "suite", "why": why}
+        else:
+            todo.append(i)
     if todo:
         only = [dict(c, apps=[i for i in c["apps"] if i in todo]) for c in collections]
         listfile = Path(a.out).with_suffix(".suite-apps.txt")
