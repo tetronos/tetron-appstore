@@ -1,0 +1,107 @@
+name: Install tests
+
+# ASCAT-015 to ASCAT-017. Weekly (and by hand): every collection member and a
+# rotating sample of other Store apps install in fresh Debian 13 and Ubuntu
+# 24.04 containers, through tetron-wm's suite installer; the results that
+# flipped reach status/ by a pull request a maintainer merges, and failing or
+# flagged collection members open or update an issue. On a pull request that
+# changes a collection or an app file: the members it adds or changes must
+# install (no status written).
+on:
+  schedule:
+    - cron: "0 5 * * 1" # Mondays 05:00 UTC
+  workflow_dispatch: {}
+  pull_request:
+    paths: ["collections/**", "apps/**"]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: debian-13
+            image: debian:13
+          - platform: ubuntu-24.04
+            image: ubuntu:24.04
+    container: ${{ matrix.image }}
+    timeout-minutes: 90
+    steps:
+      # python3 and git for the harness; curl and certificates for the installer.
+      - run: apt-get update -q && DEBIAN_FRONTEND=noninteractive apt-get install -y -q git python3 curl ca-certificates
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+      # The suite installer users get: tetron-wm's, from its main branch.
+      - run: curl -fsSL https://raw.githubusercontent.com/tetronos/tetron-wm/main/install-tetron-wm-suite.sh -o /tmp/suite.sh
+      - name: Install and check
+        env:
+          BASE: ${{ github.base_ref }}
+        run: |
+          mkdir -p out
+          if [ -n "$BASE" ]; then
+            python3 scripts/install_test.py --platform ${{ matrix.platform }} --installer /tmp/suite.sh \
+              --out out/${{ matrix.platform }}.json --changed-since "origin/$BASE" --strict
+          else
+            python3 scripts/install_test.py --platform ${{ matrix.platform }} --installer /tmp/suite.sh \
+              --out out/${{ matrix.platform }}.json --sample 20 --week "$(date +%V)"
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: install-test-${{ matrix.platform }}
+          path: out/
+
+  status:
+    needs: test
+    if: github.event_name != 'pull_request' && !cancelled()
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: out
+          pattern: install-test-*
+          merge-multiple: true
+      - name: Upstream health
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/upstream_health.py out/health.json
+      - name: Status files (only what flipped)
+        run: |
+          python3 scripts/update_status.py out/debian-13.json out/ubuntu-24.04.json \
+            --health out/health.json --issue out/issue.md | tee out/changed.txt
+          python3 scripts/build_catalog.py
+      - name: Pull request with the flipped status
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          [ -n "$(git status --porcelain status assets)" ] || { echo "nothing flipped"; exit 0; }
+          branch="bot/install-status-$(date +%Y%m%d)-${{ github.run_id }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add status assets
+          git commit -q -m "status: install test results that flipped ($(wc -l < out/changed.txt) apps)"
+          git push -q origin "$branch"
+          gh pr create --title "Install status: $(wc -l < out/changed.txt) app(s) flipped" \
+            --body "The weekly install test (run ${{ github.run_id }}) changed these status files. The full results are the run's artifacts." \
+            --head "$branch"
+      - name: Issue for failing or flagged collection members
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          [ -s out/issue.md ] || exit 0
+          gh label create install-test -c D93F0B -d "Collection member fails to install or is flagged" 2>/dev/null || true
+          n="$(gh issue list --label install-test --state open --json number --jq '.[0].number // empty')"
+          if [ -n "$n" ]; then gh issue comment "$n" --body-file out/issue.md
+          else gh issue create --title "Collection members fail to install or are flagged" --label install-test --body-file out/issue.md; fi
