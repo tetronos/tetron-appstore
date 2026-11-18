@@ -1,0 +1,14 @@
+id = "hostctl"
+name = "hostctl"
+bin = "hostctl"
+category = "Development"
+description = "A CLI tool to manage /etc/hosts like a pro!"
+homepage = "https://github.com/guumaster/hostctl"
+
+[install.recipe]
+install = "go install github.com/guumaster/hostctl/cmd/hostctl@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

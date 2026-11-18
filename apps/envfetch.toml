@@ -1,0 +1,15 @@
+id = "envfetch"
+name = "envfetch"
+bin = "envfetch"
+category = "Miscellaneous"
+description = "Lightweight cross-platform CLI tool for working with environment variables."
+homepage = "https://github.com/ankddev/envfetch"
+cli = true
+
+[install.recipe]
+install = "cargo install --locked envfetch"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

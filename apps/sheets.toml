@@ -1,0 +1,15 @@
+id = "sheets"
+name = "sheets"
+bin = "sheets"
+category = "Productivity"
+description = "Terminal-based spreadsheet tool backed by CSV files."
+homepage = "https://github.com/maaslalani/sheets"
+
+[install.recipe]
+install = "go install github.com/maaslalani/sheets@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

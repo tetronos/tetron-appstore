@@ -1,0 +1,14 @@
+id = "network-doctor"
+name = "network-doctor"
+bin = "network-doctor"
+category = "Development"
+description = "A network troubleshooting TUI that pinpoints DNS, TCP, TLS, HTTP, and proxy failures."
+homepage = "https://github.com/heymaikol/network-doctor"
+
+[install.recipe]
+install = "brew install network-doctor"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

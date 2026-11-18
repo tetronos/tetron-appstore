@@ -1,0 +1,15 @@
+id = "ttyplot"
+name = "ttyplot"
+bin = "ttyplot"
+category = "Productivity"
+description = "A realtime plotting utility for terminals with data input from stdin/pipe."
+homepage = "https://github.com/tenox7/ttyplot"
+
+[install.recipe]
+install = "brew install ttyplot"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

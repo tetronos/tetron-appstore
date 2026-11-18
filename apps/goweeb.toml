@@ -1,0 +1,9 @@
+id = "goweeb"
+name = "goweeb"
+bin = "goweeb"
+category = "Multimedia"
+description = "Download manga as pdf or cbz from multiple providers in multiple languages with a fast TUI and container support."
+homepage = "https://github.com/EliasLd/goweeb"
+
+[source]
+lists = ["awesome-tuis"]

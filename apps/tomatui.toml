@@ -1,0 +1,14 @@
+id = "tomatui"
+name = "Tomatui"
+bin = "tomatui"
+category = "Productivity"
+description = "A Pomodoro timer with a full-screen TUI, a minimal one-line mode, and local session statistics."
+homepage = "https://github.com/Hiro-Chiba/tomatui"
+
+[install.recipe]
+install = "cargo install --locked tomatui"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

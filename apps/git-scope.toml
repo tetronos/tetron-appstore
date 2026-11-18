@@ -1,0 +1,15 @@
+id = "git-scope"
+name = "git-scope"
+bin = "git-scope"
+category = "Development"
+description = "Terminal UI dashboard for inspecting multiple local Git repositories."
+homepage = "https://github.com/Bharath-code/git-scope"
+
+[install.recipe]
+install = "brew tap Bharath-code/tap && brew install git-scope"
+method = "brew"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

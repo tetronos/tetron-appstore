@@ -1,0 +1,14 @@
+id = "sttr"
+name = "sttr"
+bin = "sttr"
+category = "Development"
+description = "A CLI/TUI tool to perform 30+ string transformations on text."
+homepage = "https://github.com/abhimanyu003/sttr"
+
+[install.recipe]
+install = "brew install sttr"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

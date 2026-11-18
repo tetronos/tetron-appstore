@@ -1,0 +1,15 @@
+id = "grv"
+name = "grv"
+bin = "grv"
+category = "Development"
+description = "Terminal interface for viewing git repositories"
+homepage = "https://github.com/rgburke/grv"
+
+[install.recipe]
+install = "brew install grv"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

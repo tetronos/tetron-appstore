@@ -1,0 +1,15 @@
+id = "ssh-slides"
+name = "ssh-slides"
+bin = "ssh-slides"
+category = "Productivity"
+description = "Terminal-based presentations over SSH"
+homepage = "https://github.com/ivantsepp/ssh-slides"
+
+[install.recipe]
+install = "go install github.com/ivantsepp/ssh-slides@latest"
+method = "go"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,18 @@
+id = "myman"
+name = "MyMan"
+bin = "myman"
+category = "Games"
+description = "MyMan is a video game for color and monochrome text terminals in the genre of Namco's Pac-Man"
+homepage = "https://sourceforge.net/projects/myman/"
+
+[install.pkg]
+brew = "myman"
+
+[install.recipe]
+install = "brew install myman"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,15 @@
+id = "tmate"
+name = "tmate"
+bin = "tmate"
+category = "Development"
+description = "instant terminal sharing."
+homepage = "https://github.com/tmate-io/tmate"
+cli = true
+
+[install.recipe]
+install = "brew install tmate"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

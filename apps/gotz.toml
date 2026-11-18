@@ -1,0 +1,15 @@
+id = "gotz"
+name = "gotz"
+bin = "gotz"
+category = "Productivity"
+description = "A simple CLI timezone info tool."
+homepage = "https://github.com/merschformann/gotz"
+cli = true
+
+[install.recipe]
+install = "brew install gotz"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

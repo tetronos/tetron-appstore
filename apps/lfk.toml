@@ -1,0 +1,14 @@
+id = "lfk"
+name = "lfk"
+bin = "lfk"
+category = "Docker/LXC/K8s"
+description = "Keyboard-focused, yazi-inspired Kubernetes navigator with a Miller columns layout and an owner-based resource hierarchy"
+homepage = "https://github.com/janosmiko/lfk"
+
+[install.recipe]
+install = "brew install lfk"
+method = "brew"
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

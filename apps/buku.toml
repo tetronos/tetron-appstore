@@ -1,0 +1,15 @@
+id = "buku"
+name = "buku"
+bin = "buku"
+category = "Miscellaneous"
+description = "Personal mini-web in text"
+homepage = "https://github.com/jarun/buku"
+cli = true
+
+[install.recipe]
+install = "brew install buku"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

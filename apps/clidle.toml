@@ -1,0 +1,15 @@
+id = "clidle"
+name = "clidle"
+bin = "clidle"
+category = "Games"
+description = "Play Wordle in your terminal. Also works over SSH!"
+homepage = "https://github.com/ajeetdsouza/clidle"
+
+[install.recipe]
+install = "go install github.com/ajeetdsouza/clidle@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

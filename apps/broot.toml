@@ -1,0 +1,19 @@
+id = "broot"
+name = "broot"
+bin = "broot"
+category = "File Managers"
+description = "A new way to see and navigate directory trees"
+homepage = "https://github.com/Canop/broot"
+
+[install.pkg]
+apt = "broot"
+brew = "broot"
+
+[install.recipe]
+install = "brew install broot"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

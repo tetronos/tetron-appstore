@@ -1,0 +1,15 @@
+id = "pesterexplorer"
+name = "PesterExplorer"
+bin = "pesterexplorer"
+category = "Miscellaneous"
+description = "A TUI to explore Pester results."
+homepage = "https://github.com/HeyItsGilbert/PesterExplorer"
+
+[install.recipe]
+install = "Install-Module PesterExplorer -Scope CurrentUser"
+method = "other"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

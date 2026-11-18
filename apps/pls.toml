@@ -1,0 +1,10 @@
+id = "pls"
+name = "pls"
+bin = "pls"
+category = "Dashboards"
+description = "A prettier and powerful ls(1) for the pros."
+homepage = "https://github.com/pls-rs/pls"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

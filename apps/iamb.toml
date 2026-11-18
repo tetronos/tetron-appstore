@@ -1,0 +1,15 @@
+id = "iamb"
+name = "iamb"
+bin = "iamb"
+category = "Messaging"
+description = "A Matrix client for Vim addicts written in Rust"
+homepage = "https://iamb.chat"
+
+[install.recipe]
+install = "brew install iamb"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

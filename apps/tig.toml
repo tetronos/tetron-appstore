@@ -1,0 +1,15 @@
+id = "tig"
+name = "tig"
+bin = "tig"
+category = "Development"
+description = "Text-mode interface for git"
+homepage = "https://github.com/jonas/tig"
+
+[install.recipe]
+install = "brew install tig"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

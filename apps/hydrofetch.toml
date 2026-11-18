@@ -1,0 +1,16 @@
+id = "hydrofetch"
+name = "HydroFetch"
+bin = "hydrofetch"
+category = "Productivity"
+description = "A fast, beautiful, and lightweight system information tool written exclusively for the Fish shell."
+homepage = "https://github.com/Henriquehnnm/hydrofetch"
+cli = true
+
+[install.recipe]
+install = "curl -sSL https://raw.githubusercontent.com/Henriquehnnm/HydroFetch/main/install.fish | fish"
+method = "script"
+os = ["linux", "macos"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

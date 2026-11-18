@@ -1,0 +1,14 @@
+id = "threatdeck"
+name = "threatdeck"
+bin = "threatdeck"
+category = "Web"
+description = "A terminal based threat intelligence monitoring and alerting platform."
+homepage = "https://github.com/gripebomb/ThreatDeck"
+
+[install.recipe]
+install = "brew install threatdeck"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

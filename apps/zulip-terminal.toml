@@ -1,0 +1,15 @@
+id = "zulip-terminal"
+name = "zulip-terminal"
+bin = "zulip-term"
+category = "Messaging"
+description = "Official Zulip terminal client (similar to matterhorn)"
+homepage = "https://github.com/zulip/zulip-terminal"
+
+[install.recipe]
+install = "pipx install zulip-term"
+method = "pipx"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

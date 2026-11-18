@@ -1,0 +1,14 @@
+id = "desed"
+name = "desed"
+bin = "desed"
+category = "Development"
+description = "Demystify and debug your sed scripts, from the comfort of your terminal."
+homepage = "https://github.com/SoptikHa2/desed"
+
+[install.recipe]
+install = "brew install desed"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

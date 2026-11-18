@@ -1,0 +1,15 @@
+id = "zenith"
+name = "zenith"
+bin = "zenith"
+category = "Dashboards"
+description = "In terminal graphical metrics for your \\*nix system written in Rust"
+homepage = "https://github.com/bvaisvil/zenith"
+
+[install.recipe]
+install = "brew install zenith"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

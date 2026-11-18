@@ -1,0 +1,15 @@
+id = "caligula"
+name = "Caligula"
+bin = "caligula"
+category = "Miscellaneous"
+description = "A user-friendly, lightweight TUI for imaging disks."
+homepage = "https://github.com/ifd3f/caligula"
+
+[install.recipe]
+install = "brew tap philocalyst/tap && brew install caligula"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

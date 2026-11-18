@@ -1,0 +1,15 @@
+id = "claude-code-bridge"
+name = "Claude Code Bridge"
+bin = "ccb"
+category = "Development"
+description = "Real-time multi-AI collaboration between Claude, Codex and Gemini in terminal"
+homepage = "https://github.com/bfly123/claude_code_bridge"
+
+[install.recipe]
+install = "pip install claude-code-bridge"
+method = "pip"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

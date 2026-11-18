@@ -1,0 +1,14 @@
+id = "stew"
+name = "stew"
+bin = "stew"
+category = "Miscellaneous"
+description = "An independent package manager for compiled binaries."
+homepage = "https://github.com/marwanhawari/stew"
+
+[install.recipe]
+install = "go install github.com/marwanhawari/stew@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

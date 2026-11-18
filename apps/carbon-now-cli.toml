@@ -1,0 +1,10 @@
+id = "carbon-now-cli"
+name = "carbon-now-cli"
+bin = "carbon-now-cli"
+category = "Miscellaneous"
+description = "generate beautiful images of your code from right inside your terminal."
+homepage = "https://github.com/mixn/carbon-now-cli"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

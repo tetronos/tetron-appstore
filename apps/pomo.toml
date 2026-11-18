@@ -1,0 +1,15 @@
+id = "pomo"
+name = "pomo"
+bin = "pomo"
+category = "Productivity"
+description = "A minimal, customizable TUI Pomodoro timer with ASCII art, progress bar, desktop notifications, and productivity statistics."
+homepage = "https://github.com/Bahaaio/pomo"
+
+[install.recipe]
+install = "brew install --cask bahaaio/pomo/pomo"
+method = "brew"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

@@ -1,0 +1,14 @@
+id = "mcdu"
+name = "mcdu"
+bin = "mcdu"
+category = "Dashboards"
+description = "A modern disk usage analyzer & developer cleanup tool with a TUI."
+homepage = "https://github.com/mikalv/mcdu"
+
+[install.recipe]
+install = "cargo install --locked mcdu"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

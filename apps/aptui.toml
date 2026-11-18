@@ -1,0 +1,14 @@
+id = "aptui"
+name = "aptui"
+bin = "aptui"
+category = "Miscellaneous"
+description = "A TUI package manager for APT-based Linux distributions."
+homepage = "https://github.com/mexirica/aptui"
+
+[install.recipe]
+install = "go install github.com/mexirica/aptui@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

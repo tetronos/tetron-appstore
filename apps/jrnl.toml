@@ -1,0 +1,16 @@
+id = "jrnl"
+name = "jrnl"
+bin = "jrnl"
+category = "Miscellaneous"
+description = "Collect your thoughts and notes without leaving the command line. human-friendly. future-proof. secure."
+homepage = "https://jrnl.sh/"
+cli = true
+
+[install.recipe]
+install = "brew install jrnl"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

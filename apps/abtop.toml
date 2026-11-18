@@ -1,0 +1,14 @@
+id = "abtop"
+name = "abtop"
+bin = "abtop"
+category = "AI"
+description = "Like btop, but for your AI coding agents."
+homepage = "https://github.com/graykode/abtop"
+
+[install.recipe]
+install = "brew install abtop"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

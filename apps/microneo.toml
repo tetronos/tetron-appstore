@@ -1,0 +1,15 @@
+id = "microneo"
+name = "microNeo"
+bin = "microneo"
+category = "Editors"
+description = "A fork of Micro with in-place Markdown rendering — view and edit in the same window"
+homepage = "https://github.com/sollawen/microNeo"
+
+[install.recipe]
+install = "curl -fsSL https://raw.githubusercontent.com/sollawen/microNeo/master/tools/install.sh | sh"
+method = "script"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,14 @@
+id = "hexhog"
+name = "hexhog"
+bin = "hexhog"
+category = "Miscellaneous"
+description = "A configurable hex viewer/editor."
+homepage = "https://github.com/DVDTSB/hexhog"
+
+[install.recipe]
+install = "brew install hexhog"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

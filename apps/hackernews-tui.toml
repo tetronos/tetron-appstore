@@ -1,0 +1,15 @@
+id = "hackernews-tui"
+name = "hackernews-TUI"
+bin = "hackernews-tui"
+category = "Web"
+description = "A Terminal UI to browse Hacker News"
+homepage = "https://github.com/aome510/hackernews-TUI"
+
+[install.recipe]
+install = "cargo install hackernews_tui --locked"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

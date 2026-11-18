@@ -1,0 +1,15 @@
+id = "zee"
+name = "zee"
+bin = "zee"
+category = "Editors"
+description = "A modern text editor for the terminal written in Rust"
+homepage = "https://github.com/zee-editor/zee"
+
+[install.recipe]
+install = "cargo install --locked zee"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

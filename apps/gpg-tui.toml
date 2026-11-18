@@ -1,0 +1,18 @@
+id = "gpg-tui"
+name = "gpg-tui"
+bin = "gpg-tui"
+category = "Miscellaneous"
+description = "A terminal user interface for GnuPG"
+homepage = "https://github.com/orhun/gpg-tui"
+
+[install.pkg]
+brew = "gpg-tui"
+
+[install.recipe]
+install = "brew install gpg-tui"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

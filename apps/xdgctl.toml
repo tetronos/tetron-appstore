@@ -1,0 +1,9 @@
+id = "xdgctl"
+name = "xdgctl"
+bin = "xdgctl"
+category = "Miscellaneous"
+description = "A terminal manager for XDG default applications."
+homepage = "https://github.com/mitjafelicijan/xdgctl"
+
+[source]
+lists = ["terminaltrove"]

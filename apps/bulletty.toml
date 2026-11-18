@@ -1,0 +1,15 @@
+id = "bulletty"
+name = "bulletty"
+bin = "bulletty"
+category = "Web"
+description = "A pretty feed reader (ATOM/RSS) that stores articles in Markdown files"
+homepage = "https://github.com/CrociDB/bulletty"
+
+[install.recipe]
+install = "brew install bulletty"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

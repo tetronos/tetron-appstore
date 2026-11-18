@@ -1,0 +1,10 @@
+id = "wget"
+name = "wget"
+check = "wget"
+store = false
+
+[install.pkg]
+apt = "wget"
+dnf = "wget2-wget"
+pacman = "wget"
+brew = "wget"

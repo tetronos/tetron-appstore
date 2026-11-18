@@ -1,0 +1,10 @@
+id = "entr"
+name = "entr"
+check = "entr"
+store = false
+
+[install.pkg]
+apt = "entr"
+dnf = "entr"
+pacman = "entr"
+brew = "entr"

@@ -1,0 +1,15 @@
+id = "gurk-rs"
+name = "gurk-rs"
+bin = "gurk-rs"
+category = "Messaging"
+description = "Signal Messenger client for terminal"
+homepage = "https://github.com/boxdot/gurk-rs"
+
+[install.recipe]
+install = "brew install gurk"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

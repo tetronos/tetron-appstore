@@ -1,0 +1,15 @@
+id = "asn"
+name = "asn"
+bin = "asn"
+category = "Development"
+description = "ASN lookup tool and traceroute server"
+homepage = "https://github.com/nitefood/asn"
+cli = true
+
+[install.recipe]
+install = "brew install asn"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

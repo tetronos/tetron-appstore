@@ -1,0 +1,15 @@
+id = "slumber"
+name = "Slumber"
+bin = "slumber"
+category = "Web"
+description = "Terminal-based HTTP/REST client"
+homepage = "https://github.com/LucasPickering/slumber"
+
+[install.recipe]
+install = "brew install slumber"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

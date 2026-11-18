@@ -1,0 +1,15 @@
+id = "wikit"
+name = "Wikit"
+bin = "wikit"
+category = "Development"
+description = "TUI for managing Wiki.js instances"
+homepage = "https://github.com/BryanCE/wikit"
+
+[install.recipe]
+install = "npm install -g @bryance/wikit"
+method = "npm"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

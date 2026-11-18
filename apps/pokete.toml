@@ -1,0 +1,15 @@
+id = "pokete"
+name = "pokete"
+bin = "pokete"
+category = "Games"
+description = "A terminal based Pokemon like game"
+homepage = "https://github.com/lxgr-linux/pokete"
+
+[install.recipe]
+install = "pip install pokete"
+method = "pip"
+os = ["linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

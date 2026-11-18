@@ -1,0 +1,15 @@
+id = "tgt"
+name = "tgt"
+bin = "tgt"
+category = "Messaging"
+description = "A TUI for Telegram written in Rust"
+homepage = "https://github.com/FedericoBruzzone/tgt"
+
+[install.recipe]
+install = "cargo install tgt"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

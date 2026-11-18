@@ -1,0 +1,15 @@
+id = "k8s-tui"
+name = "k8s-tui"
+bin = "k8s-tui"
+category = "Docker/LXC/K8s"
+description = "TUI Kubernetes resource manager with multi-cluster support"
+homepage = "https://github.com/otavioCosta2110/k8s-tui"
+
+[install.recipe]
+install = "go install github.com/otavioCosta2110/k8s-tui/cmd@latest"
+method = "go"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

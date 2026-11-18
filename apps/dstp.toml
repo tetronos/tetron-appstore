@@ -1,0 +1,15 @@
+id = "dstp"
+name = "dstp"
+bin = "dstp"
+category = "Development"
+description = "Run common networking tests against any site."
+homepage = "https://github.com/ycd/dstp"
+cli = true
+
+[install.recipe]
+install = "brew install dstp"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

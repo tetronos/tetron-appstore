@@ -1,0 +1,15 @@
+id = "ytreenova"
+name = "ytreenova"
+bin = "ytnova"
+category = "File Managers"
+description = "The XTree style file manager Unix should have had all along."
+homepage = "https://github.com/robkam/ytreenova"
+
+[install.recipe]
+install = "git clone https://github.com/robkam/ytreenova.git && cd ytreenova && make && sudo make install"
+method = "source"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

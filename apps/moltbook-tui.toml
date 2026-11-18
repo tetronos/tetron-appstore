@@ -1,0 +1,14 @@
+id = "moltbook-tui"
+name = "moltbook-tui"
+bin = "moltbook-tui"
+category = "AI"
+description = "A TUI client for Moltbook, the social network for AI Agents."
+homepage = "https://github.com/terminaltrove/moltbook-tui"
+
+[install.recipe]
+install = "cargo install --locked moltbook-tui"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

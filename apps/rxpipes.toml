@@ -1,0 +1,15 @@
+id = "rxpipes"
+name = "rxpipes"
+bin = "rxpipes"
+category = "Screensavers"
+description = "2D recreation of the ancient Pipes screensaver for terminals."
+homepage = "https://github.com/inunix3/rxpipes"
+
+[install.recipe]
+install = "cargo install rxpipes"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

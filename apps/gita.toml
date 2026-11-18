@@ -1,0 +1,15 @@
+id = "gita"
+name = "gita"
+bin = "gita"
+category = "Development"
+description = "A command-line tool to manage multiple git repos."
+homepage = "https://github.com/nosarthur/gita"
+cli = true
+
+[install.recipe]
+install = "brew install gita"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

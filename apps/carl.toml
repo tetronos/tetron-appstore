@@ -1,0 +1,9 @@
+id = "carl"
+name = "carl"
+bin = "carl"
+category = "Miscellaneous"
+description = "a cal(1) alternative calendar for the command-line."
+homepage = "https://github.com/b1rger/carl"
+
+[source]
+lists = ["terminaltrove"]

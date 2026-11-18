@@ -1,0 +1,15 @@
+id = "hcom"
+name = "hcom"
+bin = "hcom"
+category = "Development"
+description = "Lets AI coding agents (Claude Code, Codex, Gemini, ...) message, watch, spawn, and fork each other across terminals, with a TUI dashboard."
+homepage = "https://github.com/aannoo/hcom"
+
+[install.recipe]
+install = "pipx install hcom"
+method = "pip"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

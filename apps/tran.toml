@@ -1,0 +1,14 @@
+id = "tran"
+name = "tran"
+bin = "tran"
+category = "Miscellaneous"
+description = "Securely transfer and send anything between computers with a TUI"
+homepage = "https://github.com/abdfnx/tran"
+
+[install.recipe]
+install = "go install github.com/abdfnx/tran@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

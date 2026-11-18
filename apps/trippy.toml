@@ -1,0 +1,15 @@
+id = "trippy"
+name = "trippy"
+bin = "trip"
+category = "Dashboards"
+description = "A network diagnostic tool that includes functionality like mtr and more"
+homepage = "https://github.com/fujiapple852/trippy"
+
+[install.recipe]
+install = "brew install trippy"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

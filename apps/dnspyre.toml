@@ -1,0 +1,15 @@
+id = "dnspyre"
+name = "dnspyre"
+bin = "dnspyre"
+category = "Development"
+description = "A CLI tool for a high QPS DNS benchmark."
+homepage = "https://github.com/Tantalor93/dnspyre"
+cli = true
+
+[install.recipe]
+install = "brew install dnspyre"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

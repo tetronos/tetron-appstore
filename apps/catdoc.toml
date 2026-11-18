@@ -1,0 +1,10 @@
+id = "catdoc"
+name = "catdoc"
+check = "catdoc"
+store = false
+
+[install.pkg]
+apt = "catdoc"
+dnf = "catdoc"
+pacman = "catdoc"
+brew = ""

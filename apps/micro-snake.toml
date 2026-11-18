@@ -1,0 +1,15 @@
+id = "micro-snake"
+name = "Micro Snake"
+bin = "snake"
+category = "Games"
+description = "A small snake game, utilizing ANSI escape sequences to draw the board."
+homepage = "https://github.com/troglobit/snake"
+
+[install.recipe]
+install = "git clone https://github.com/troglobit/snake && cd snake && make && sudo install -m 755 snake /usr/local/bin/snake"
+method = "make"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

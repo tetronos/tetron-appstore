@@ -1,0 +1,15 @@
+id = "fnt"
+name = "fnt"
+bin = "fnt"
+category = "Miscellaneous"
+description = "apt for fonts, the missing font manager for macOS and Linux"
+homepage = "https://github.com/alexmyczko/fnt"
+cli = true
+
+[install.recipe]
+install = "brew install fnt"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

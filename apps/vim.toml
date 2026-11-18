@@ -1,0 +1,20 @@
+id = "vim"
+name = "Vim"
+bin = "vim"
+category = "Editors"
+description = "The classic modal text editor: vi, improved."
+homepage = "https://www.vim.org"
+
+[install.pkg]
+apt = "vim"
+dnf = "vim-enhanced"
+pacman = "vim"
+brew = "vim"
+
+[install.recipe]
+install = "brew install vim"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

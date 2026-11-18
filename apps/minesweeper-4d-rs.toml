@@ -1,0 +1,15 @@
+id = "minesweeper-4d-rs"
+name = "minesweeper_4d_rs"
+bin = "minesweeper_4d_rs"
+category = "Games"
+description = "4D minesweeper written in Rust using Ratatui (can also be used for classic minesweeper)"
+homepage = "https://github.com/itabesamesa/minesweeper_4d_rs"
+
+[install.recipe]
+install = "cargo install minesweeper_4d"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

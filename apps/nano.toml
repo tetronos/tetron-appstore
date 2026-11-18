@@ -1,0 +1,20 @@
+id = "nano"
+name = "nano"
+bin = "nano"
+category = "Editors"
+description = "GNU nano: a small, friendly modeless editor with its key help on screen."
+homepage = "https://www.nano-editor.org"
+
+[install.pkg]
+apt = "nano"
+dnf = "nano"
+pacman = "nano"
+brew = "nano"
+
+[install.recipe]
+install = "brew install nano"
+method = "brew"
+verified = true
+
+[source]
+lists = ["tetron"]

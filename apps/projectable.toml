@@ -1,0 +1,14 @@
+id = "projectable"
+name = "projectable"
+bin = "projectable"
+category = "File Managers"
+description = "A terminal-based project manager"
+homepage = "https://github.com/dzfrias/projectable"
+
+[install.recipe]
+install = "brew install projectable"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

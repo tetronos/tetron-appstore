@@ -1,0 +1,15 @@
+id = "fast-resume"
+name = "fast-resume"
+bin = "fast-resume"
+category = "Development"
+description = "Index and fuzzy search coding agent sessions"
+homepage = "https://github.com/angristan/fast-resume"
+
+[install.recipe]
+install = "brew tap angristan/tap && brew install fast-resume"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,15 @@
+id = "bastet"
+name = "bastet"
+bin = "bastet"
+category = "Games"
+description = "Evil falling block game"
+homepage = "https://github.com/fph/bastet"
+
+[install.recipe]
+install = "brew install bastet"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

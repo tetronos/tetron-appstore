@@ -1,0 +1,10 @@
+id = "zigfetch"
+name = "zigfetch"
+bin = "zigfetch"
+category = "Miscellaneous"
+description = "A minimal neofetch/fastfetch like system information tool."
+homepage = "https://github.com/utox39/zigfetch"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

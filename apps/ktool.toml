@@ -1,0 +1,9 @@
+id = "ktool"
+name = "ktool"
+bin = "ktool"
+category = "Miscellaneous"
+description = "A TUI Mach-O/ObjC analysis and editing toolkit in the terminal."
+homepage = "https://github.com/0cyn/ktool"
+
+[source]
+lists = ["terminaltrove"]

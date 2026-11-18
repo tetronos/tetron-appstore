@@ -1,0 +1,15 @@
+id = "searxngr"
+name = "searxngr"
+bin = "searxngr"
+category = "Web"
+description = "Web search TUI for SearXNG"
+homepage = "https://github.com/scross01/searxngr"
+
+[install.recipe]
+install = "uv tool install https://github.com/scross01/searxngr.git"
+method = "other"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

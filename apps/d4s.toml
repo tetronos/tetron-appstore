@@ -1,0 +1,15 @@
+id = "d4s"
+name = "d4s"
+bin = "d4s"
+category = "Docker/LXC/K8s"
+description = "A fast, keyboard-driven terminal UI to manage Docker containers, Compose stacks, and Swarm services with the ergonomics of K9s"
+homepage = "https://github.com/jr-k/d4s"
+
+[install.recipe]
+install = "brew install jr-k/d4s/d4s"
+method = "brew"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

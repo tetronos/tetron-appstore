@@ -1,0 +1,15 @@
+id = "amux"
+name = "amux"
+bin = "amux"
+category = "Development"
+description = "Easily run parallel coding agents"
+homepage = "https://github.com/andyrewlee/amux"
+
+[install.recipe]
+install = "brew tap andyrewlee/amux && brew install amux"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

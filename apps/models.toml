@@ -1,0 +1,15 @@
+id = "models"
+name = "models"
+bin = "models"
+category = "Development"
+description = "TUI for browsing AI models and coding agents"
+homepage = "https://github.com/arimxyer/models"
+
+[install.recipe]
+install = "brew install models"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

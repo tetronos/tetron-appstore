@@ -1,0 +1,15 @@
+id = "mise"
+name = "mise"
+bin = "mise"
+category = "Miscellaneous"
+description = "The front-end to your dev env."
+homepage = "https://github.com/jdx/mise"
+cli = true
+
+[install.recipe]
+install = "brew install mise"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

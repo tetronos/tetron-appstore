@@ -1,0 +1,15 @@
+id = "cointop"
+name = "cointop"
+bin = "cointop"
+category = "Dashboards"
+description = "The fastest and most interactive terminal based UI application for tracking cryptocurrencies"
+homepage = "https://github.com/miguelmota/cointop"
+
+[install.recipe]
+install = "brew install cointop"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

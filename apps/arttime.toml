@@ -1,0 +1,18 @@
+id = "arttime"
+name = "arttime"
+bin = "arttime"
+category = "Miscellaneous"
+description = "An app that brings beauty of text-art together with functionality of clock, timer, and pattern-based time manager."
+homepage = "https://github.com/reportaman/arttime"
+
+[install.pkg]
+brew = "arttime"
+
+[install.recipe]
+install = "brew install arttime"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,15 @@
+id = "castero"
+name = "castero"
+bin = "castero"
+category = "Web"
+description = "A TUI app to listen to podcast"
+homepage = "https://github.com/xgi/castero"
+
+[install.recipe]
+install = "pip install castero"
+method = "pip"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "bfs"
+name = "bfs"
+bin = "bfs"
+category = "Dashboards"
+description = "A breadth-first version of the UNIX find command."
+homepage = "https://github.com/tavianator/bfs"
+cli = true
+
+[install.recipe]
+install = "brew install bfs"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

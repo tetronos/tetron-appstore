@@ -1,0 +1,14 @@
+id = "patch-hub"
+name = "patch-hub"
+bin = "patch-hub"
+category = "Development"
+description = "TUI for lore.kernel.org"
+homepage = "https://github.com/kworkflow/patch-hub"
+
+[install.recipe]
+install = "cargo install --locked patch-hub"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

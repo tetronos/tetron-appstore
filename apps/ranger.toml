@@ -1,0 +1,15 @@
+id = "ranger"
+name = "ranger"
+bin = "ranger"
+category = "File Managers"
+description = "A VIM-inspired file manager for the console."
+homepage = "https://github.com/ranger/ranger"
+
+[install.recipe]
+install = "brew install ranger"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

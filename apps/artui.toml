@@ -1,0 +1,14 @@
+id = "artui"
+name = "artui"
+bin = "artui"
+category = "Miscellaneous"
+description = "Read and track recent arXiv papers with a TUI."
+homepage = "https://github.com/fjonasALICE/arTui"
+
+[install.recipe]
+install = "pipx install artui"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

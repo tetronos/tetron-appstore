@@ -1,0 +1,15 @@
+id = "mq"
+name = "mq"
+bin = "mq"
+category = "Productivity"
+description = "jq-like command-line tool for markdown processing."
+homepage = "https://github.com/harehare/mq"
+cli = true
+
+[install.recipe]
+install = "brew install mq"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

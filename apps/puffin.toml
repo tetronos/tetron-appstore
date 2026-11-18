@@ -1,0 +1,15 @@
+id = "puffin"
+name = "Puffin"
+bin = "puffin"
+category = "Dashboards"
+description = "A beautiful terminal dashboard for hledger"
+homepage = "https://github.com/siddhantac/puffin"
+
+[install.recipe]
+install = "brew install siddhantac/puffin/puffin"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

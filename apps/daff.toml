@@ -1,0 +1,10 @@
+id = "daff"
+name = "daff"
+bin = "daff"
+category = "Development"
+description = "align and compare tables"
+homepage = "https://github.com/paulfitz/daff"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

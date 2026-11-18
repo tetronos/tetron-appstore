@@ -1,0 +1,9 @@
+id = "see-tui"
+name = "see-tui"
+bin = "see-tui"
+category = "Dashboards"
+description = "A TUI based tool to lookup logs from systemd services."
+homepage = "https://github.com/NustyFrozen/SEE"
+
+[source]
+lists = ["terminaltrove"]

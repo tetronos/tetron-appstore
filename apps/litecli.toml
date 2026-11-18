@@ -1,0 +1,15 @@
+id = "litecli"
+name = "litecli"
+bin = "litecli"
+category = "Development"
+description = "SQLite CLI with auto-completion and syntax highlighting."
+homepage = "https://github.com/dbcli/litecli"
+
+[install.recipe]
+install = "brew install litecli"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["tetron"]

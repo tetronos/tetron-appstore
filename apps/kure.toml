@@ -1,0 +1,15 @@
+id = "kure"
+name = "kure"
+bin = "kure"
+category = "Productivity"
+description = "A CLI password manager with sessions."
+homepage = "https://github.com/GGP1/kure"
+cli = true
+
+[install.recipe]
+install = "go install github.com/GGP1/kure@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

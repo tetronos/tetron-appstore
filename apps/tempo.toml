@@ -1,0 +1,14 @@
+id = "tempo"
+name = "tempo"
+bin = "tempo"
+category = "Development"
+description = "A terminal client for Temporal."
+homepage = "https://github.com/galaxy-io/tempo"
+
+[install.recipe]
+install = "go install github.com/galaxy-io/tempo/cmd/tempo@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

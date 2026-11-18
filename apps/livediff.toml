@@ -1,0 +1,14 @@
+id = "livediff"
+name = "livediff"
+bin = "livediff"
+category = "Development"
+description = "Watch file diffs live in your terminal."
+homepage = "https://github.com/SoCkEt7/Livediff"
+
+[install.recipe]
+install = "cargo install --locked livediff"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "gomi"
+name = "gomi"
+bin = "gomi"
+category = "Miscellaneous"
+description = "Unix rm(1) command that can restore deleted files."
+homepage = "https://github.com/babarot/gomi"
+cli = true
+
+[install.recipe]
+install = "brew install gomi"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

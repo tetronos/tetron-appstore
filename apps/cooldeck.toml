@@ -1,0 +1,14 @@
+id = "cooldeck"
+name = "cooldeck"
+bin = "cooldeck"
+category = "Dashboards"
+description = "A keyboard first terminal dashboard for Coolify."
+homepage = "https://github.com/Resetnak/cooldeck"
+
+[install.recipe]
+install = "go install github.com/resetnak/cooldeck/cmd/cooldeck@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

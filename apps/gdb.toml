@@ -1,0 +1,10 @@
+id = "gdb"
+name = "gdb"
+check = "gdb"
+store = false
+
+[install.pkg]
+apt = "gdb"
+dnf = "gdb"
+pacman = "gdb"
+brew = ""

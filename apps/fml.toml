@@ -1,0 +1,15 @@
+id = "fml"
+name = "fml"
+bin = "fml"
+category = "File Managers"
+description = ":file_folder: A stupid simple, fast file manager written in BASH v4.2+."
+homepage = "https://github.com/wick3dr0se/fml"
+
+[install.recipe]
+install = "git clone https://github.com/wick3dr0se/fml && cd fml && cp fml /usr/local/bin"
+method = "script"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

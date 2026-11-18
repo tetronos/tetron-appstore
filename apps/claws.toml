@@ -1,0 +1,15 @@
+id = "claws"
+name = "claws"
+bin = "claws"
+category = "Dashboards"
+description = "A terminal UI for AWS resource management with vim-style keybindings, command-mode navigation, and optional read-only mode."
+homepage = "https://github.com/clawscli/claws"
+
+[install.recipe]
+install = "brew install --cask clawscli/tap/claws"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

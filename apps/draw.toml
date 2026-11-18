@@ -1,0 +1,15 @@
+id = "draw"
+name = "draw"
+bin = "draw"
+category = "Multimedia"
+description = "A simple drawing tool in the terminal."
+homepage = "https://github.com/maaslalani/draw"
+
+[install.recipe]
+install = "go install github.com/maaslalani/draw@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

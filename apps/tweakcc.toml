@@ -1,0 +1,15 @@
+id = "tweakcc"
+name = "tweakcc"
+bin = "tweakcc"
+category = "Miscellaneous"
+description = "TUI to customize your Claude Code themes, thinking verbs, and more."
+homepage = "https://github.com/Piebald-AI/tweakcc"
+
+[install.recipe]
+install = "brew install tweakcc"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

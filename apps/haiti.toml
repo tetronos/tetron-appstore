@@ -1,0 +1,15 @@
+id = "haiti"
+name = "haiti"
+bin = "haiti"
+category = "Development"
+description = "A CLI to that identifies various hash types."
+homepage = "https://github.com/noraj/haiti"
+cli = true
+
+[install.recipe]
+install = "brew install haiti"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

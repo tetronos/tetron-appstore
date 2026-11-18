@@ -1,0 +1,15 @@
+id = "tldx"
+name = "tldx"
+bin = "tldx"
+category = "Development"
+description = "A Domain Availability Research Tool."
+homepage = "https://github.com/brandonyoungdev/tldx"
+cli = true
+
+[install.recipe]
+install = "brew install tldx"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

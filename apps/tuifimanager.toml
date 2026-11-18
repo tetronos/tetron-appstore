@@ -1,0 +1,15 @@
+id = "tuifimanager"
+name = "TUIFIManager"
+bin = "tuifi"
+category = "File Managers"
+description = "A cross-platform terminal-based file manager _(supports termux)_."
+homepage = "https://github.com/GiorgosXou/TUIFIManager"
+
+[install.recipe]
+install = "pip3 install TUIFIManager"
+method = "pip"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

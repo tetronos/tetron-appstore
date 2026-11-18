@@ -1,0 +1,15 @@
+id = "kaskade"
+name = "kaskade"
+bin = "kaskade"
+category = "Dashboards"
+description = "TUI for kafka, which allows you to interact and consume topics from your terminal in style!"
+homepage = "https://github.com/sauljabin/kaskade"
+
+[install.recipe]
+install = "brew install kaskade"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

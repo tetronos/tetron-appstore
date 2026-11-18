@@ -1,0 +1,15 @@
+id = "nless"
+name = "nless"
+bin = "nless"
+category = "Productivity"
+description = "Terminal pager for exploring tabular data with vi keybindings and automatic delimiter inference"
+homepage = "https://github.com/mpryor/nothing-less"
+
+[install.recipe]
+install = "brew install mpryor/tap/nless"
+method = "brew"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

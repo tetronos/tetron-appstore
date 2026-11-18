@@ -1,0 +1,14 @@
+id = "gtop"
+name = "gtop"
+bin = "gtop"
+category = "Dashboards"
+description = "System monitoring dashboard for terminal."
+homepage = "https://github.com/aksakalli/gtop"
+
+[install.recipe]
+install = "brew install gtop"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

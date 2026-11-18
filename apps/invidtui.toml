@@ -1,0 +1,15 @@
+id = "invidtui"
+name = "invidtui"
+bin = "invidtui"
+category = "Multimedia"
+description = "A TUI Invidious client for Windows, Linux and MacOS, that fetches and plays audio/video from an invidious instance. Supports viewing and playing from playlists and channels as well."
+homepage = "https://github.com/darkhz/invidtui"
+
+[install.recipe]
+install = "go install github.com/darkhz/invidtui@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

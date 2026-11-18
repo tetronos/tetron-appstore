@@ -1,0 +1,14 @@
+id = "bbrew"
+name = "bbrew"
+bin = "bbrew"
+category = "Miscellaneous"
+description = "A Homebrew TUI Manager."
+homepage = "https://github.com/Valkyrie00/bold-brew"
+
+[install.recipe]
+install = "brew install bbrew"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

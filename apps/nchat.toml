@@ -1,0 +1,15 @@
+id = "nchat"
+name = "nchat"
+bin = "nchat"
+category = "Messaging"
+description = "Telegram/WhatsApp client"
+homepage = "https://github.com/d99kris/nchat"
+
+[install.recipe]
+install = "brew tap d99kris/nchat && brew install nchat"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

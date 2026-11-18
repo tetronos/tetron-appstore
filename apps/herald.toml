@@ -1,0 +1,14 @@
+id = "herald"
+name = "herald"
+bin = "herald"
+category = "Messaging"
+description = "A powerful TUI email client & calendar tool for your terminal."
+homepage = "https://github.com/herald-email/herald-mail-app"
+
+[install.recipe]
+install = "go install github.com/herald-email/herald-mail-app@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

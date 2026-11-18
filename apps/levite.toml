@@ -1,0 +1,15 @@
+id = "levite"
+name = "levite"
+bin = "levite"
+category = "Productivity"
+description = "A TUI spreadsheet application that uses an RPN formulas and features a vi-friendly interface"
+homepage = "https://github.com/RauliL/levite"
+
+[install.recipe]
+install = "git clone https://github.com/RauliL/levite.git && cd levite && mkdir build && cd build && cmake .. && make"
+method = "source"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

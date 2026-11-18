@@ -1,0 +1,15 @@
+id = "dprs"
+name = "dprs"
+bin = "dprs"
+category = "Docker/LXC/K8s"
+description = "A TUI for managing Docker containers with real-time monitoring and log streaming"
+homepage = "https://github.com/durableprogramming/dprs"
+
+[install.recipe]
+install = "curl -fsSL https://get.durableprogramming.com/dprs | sh"
+method = "script"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,11 @@
+id = "network-manager"
+name = "network-manager"
+check = "nmcli"
+group = "services"
+store = false
+
+[install.pkg]
+apt = "network-manager"
+dnf = "NetworkManager"
+pacman = "networkmanager"
+brew = ""

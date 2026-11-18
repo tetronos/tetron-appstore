@@ -1,0 +1,15 @@
+id = "gitid"
+name = "gitid"
+bin = "gitid"
+category = "Development"
+description = "Manage multiple Git identities through a TUI."
+homepage = "https://github.com/nathabonfim59/gitid"
+cli = true
+
+[install.recipe]
+install = "go install github.com/nathabonfim59/gitid@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

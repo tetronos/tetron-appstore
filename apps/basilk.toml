@@ -1,0 +1,15 @@
+id = "basilk"
+name = "basilk"
+bin = "basilk"
+category = "Miscellaneous"
+description = "A TUI to manage your tasks with minimal kanban logic."
+homepage = "https://github.com/GabAlpha/basilk"
+cli = true
+
+[install.recipe]
+install = "cargo install --locked basilk"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

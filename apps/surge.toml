@@ -1,0 +1,15 @@
+id = "surge"
+name = "surge"
+bin = "surge"
+category = "Web"
+description = "A blazing fast, beautiful TUI download manager built in Go."
+homepage = "https://github.com/surge-downloader/surge"
+
+[install.recipe]
+install = "go install github.com/SurgeDM/Surge@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

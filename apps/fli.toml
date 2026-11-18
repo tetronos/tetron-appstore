@@ -1,0 +1,9 @@
+id = "fli"
+name = "fli"
+bin = "fli"
+category = "Dashboards"
+description = "A command-line tool that simplifies AWS VPC Flow Logs analysis."
+homepage = "https://github.com/fractalops/fli"
+
+[source]
+lists = ["terminaltrove"]

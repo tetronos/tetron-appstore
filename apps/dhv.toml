@@ -1,0 +1,14 @@
+id = "dhv"
+name = "dhv"
+bin = "dhv"
+category = "Miscellaneous"
+description = "A TUI for visually exploring disassembled Python bytecode."
+homepage = "https://github.com/davep/dhv"
+
+[install.recipe]
+install = "pipx install dhv"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

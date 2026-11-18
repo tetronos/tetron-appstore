@@ -1,0 +1,10 @@
+id = "mosh"
+name = "mosh"
+check = "mosh"
+store = false
+
+[install.pkg]
+apt = "mosh"
+dnf = "mosh"
+pacman = "mosh"
+brew = "mosh"

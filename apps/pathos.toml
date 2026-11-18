@@ -1,0 +1,9 @@
+id = "pathos"
+name = "pathos"
+bin = "pathos"
+category = "Miscellaneous"
+description = "A terminal interface for editing and managing PATH environment variables."
+homepage = "https://github.com/chip/pathos"
+
+[source]
+lists = ["terminaltrove"]

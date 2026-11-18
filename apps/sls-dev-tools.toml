@@ -1,0 +1,15 @@
+id = "sls-dev-tools"
+name = "sls-dev-tools"
+bin = "sls-dev-tools"
+category = "Development"
+description = "Dev Tools for the Serverless World"
+homepage = "https://github.com/Theodo-UK/sls-dev-tools"
+
+[install.recipe]
+install = "npm install -g sls-dev-tools"
+method = "npm"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

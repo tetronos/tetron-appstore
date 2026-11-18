@@ -1,0 +1,14 @@
+id = "pacseek"
+name = "pacseek"
+bin = "pacseek"
+category = "Miscellaneous"
+description = "A TUI for searching and installing Arch Linux packages."
+homepage = "https://github.com/moson-mo/pacseek"
+
+[install.recipe]
+install = "go install github.com/moson-mo/pacseek@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

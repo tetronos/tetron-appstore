@@ -1,0 +1,14 @@
+id = "mani"
+name = "mani"
+bin = "mani"
+category = "Development"
+description = "A CLI tool to help you manage multiple repositories."
+homepage = "https://github.com/alajmo/mani"
+
+[install.recipe]
+install = "brew install mani"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

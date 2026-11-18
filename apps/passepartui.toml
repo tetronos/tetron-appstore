@@ -1,0 +1,14 @@
+id = "passepartui"
+name = "passepartui"
+bin = "passepartui"
+category = "Productivity"
+description = "A TUI for pass."
+homepage = "https://github.com/kardwen/passepartui"
+
+[install.recipe]
+install = "cargo install --locked passepartui"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

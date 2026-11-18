@@ -1,0 +1,14 @@
+id = "superseedr"
+name = "superseedr"
+bin = "superseedr"
+category = "Miscellaneous"
+description = "A BitTorrent client in your terminal."
+homepage = "https://github.com/Jagalite/superseedr"
+
+[install.recipe]
+install = "brew install superseedr"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

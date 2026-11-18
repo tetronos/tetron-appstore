@@ -1,0 +1,15 @@
+id = "dtop"
+name = "dtop"
+bin = "dtop"
+category = "Docker/LXC/K8s"
+description = "Terminal dashboard for Docker monitoring across multiple hosts"
+homepage = "https://github.com/amir20/dtop"
+
+[install.recipe]
+install = "brew install dtop"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

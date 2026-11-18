@@ -1,0 +1,14 @@
+id = "swarmcli"
+name = "SwarmCLI"
+bin = "swarmcli"
+category = "Docker/LXC/K8s"
+description = "Swarm Management at the speed of thought — with real-time log streaming, instant shell access to containers, seamless port forwarding, and on-demand secret reveal capabilities, giving you full control over your Docker Swarm without breaking your flow."
+homepage = "https://github.com/Eldara-Tech/swarmcli"
+
+[install.recipe]
+install = "git clone https://github.com/Eldara-Tech/swarmcli.git && cd swarmcli && go install ."
+method = "source"
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

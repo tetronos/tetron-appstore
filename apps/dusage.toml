@@ -1,0 +1,15 @@
+id = "dusage"
+name = "dusage"
+bin = "dusage"
+category = "Dashboards"
+description = "A command line disk usage information tool."
+homepage = "https://github.com/mihaigalos/dusage"
+cli = true
+
+[install.recipe]
+install = "cargo install --locked dusage"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

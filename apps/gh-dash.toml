@@ -1,0 +1,15 @@
+id = "gh-dash"
+name = "gh-dash"
+bin = "gh-dash"
+category = "Dashboards"
+description = "A rich terminal UI for GitHub PRs and Issues"
+homepage = "https://github.com/dlvhdr/gh-dash"
+
+[install.recipe]
+install = "go install github.com/dlvhdr/gh-dash/v4@latest"
+method = "go"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

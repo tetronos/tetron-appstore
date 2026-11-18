@@ -1,0 +1,16 @@
+id = "dua"
+name = "dua"
+bin = "dua"
+category = "Miscellaneous"
+description = "Fast interactive disk-usage analyzer and cleaner."
+homepage = "https://github.com/Byron/dua-cli"
+cli = true
+
+[install.recipe]
+install = "cargo install dua-cli"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

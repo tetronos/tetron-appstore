@@ -1,0 +1,14 @@
+id = "fztea"
+name = "fztea"
+bin = "fztea"
+category = "Dashboards"
+description = "A flipperzero remote control locally in the terminal and ssh."
+homepage = "https://github.com/jon4hz/fztea"
+
+[install.recipe]
+install = "go install github.com/jon4hz/fztea@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

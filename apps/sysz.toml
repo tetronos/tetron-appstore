@@ -1,0 +1,15 @@
+id = "sysz"
+name = "sysz"
+bin = "sysz"
+category = "Dashboards"
+description = "An fzf terminal UI for systemctl"
+homepage = "https://github.com/joehillen/sysz"
+
+[install.recipe]
+install = "wget -O ~/.bin/sysz https://github.com/joehillen/sysz/releases/latest/download/sysz && chmod +x ~/.bin/sysz"
+method = "binary"
+os = ["linux", "macos"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

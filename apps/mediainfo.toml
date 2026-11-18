@@ -1,0 +1,10 @@
+id = "mediainfo"
+name = "mediainfo"
+check = "mediainfo"
+store = false
+
+[install.pkg]
+apt = "mediainfo"
+dnf = "mediainfo"
+pacman = "mediainfo"
+brew = "media-info"

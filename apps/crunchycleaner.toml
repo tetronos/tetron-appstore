@@ -1,0 +1,15 @@
+id = "crunchycleaner"
+name = "CrunchyCleaner"
+bin = "crunchycleaner"
+category = "Miscellaneous"
+description = "A lightweight, software cache cleanup tool for Windows & Linux."
+homepage = "https://github.com/knuspii/crunchycleaner"
+
+[install.recipe]
+install = "go install github.com/knuspii/crunchycleaner/v2@latest"
+method = "go"
+os = ["linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

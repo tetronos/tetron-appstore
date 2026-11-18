@@ -1,0 +1,14 @@
+id = "proxelar"
+name = "proxelar"
+bin = "proxelar"
+category = "Development"
+description = "Scriptable MITM proxy TUI to inspect, intercept, replay, and rewrite HTTP(S) and WebSocket traffic"
+homepage = "https://github.com/emanuele-em/proxelar"
+
+[install.recipe]
+install = "brew install proxelar"
+method = "brew"
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

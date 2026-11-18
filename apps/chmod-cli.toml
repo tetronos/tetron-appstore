@@ -1,0 +1,14 @@
+id = "chmod-cli"
+name = "chmod-cli"
+bin = "chmod-cli"
+category = "Dashboards"
+description = "effortlessly generate chmod commands."
+homepage = "https://github.com/Mayowa-Ojo/chmod-cli"
+
+[install.recipe]
+install = "go install github.com/Mayowa-Ojo/chmod-cli@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

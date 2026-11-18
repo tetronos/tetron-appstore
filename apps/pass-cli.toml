@@ -1,0 +1,15 @@
+id = "pass-cli"
+name = "pass-cli"
+bin = "pass-cli"
+category = "Miscellaneous"
+description = "A TUI and CLI password manager with rclone cloud syncing support"
+homepage = "https://github.com/arimxyer/pass-cli"
+
+[install.recipe]
+install = "brew tap arimxyer/homebrew-tap && brew install pass-cli"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

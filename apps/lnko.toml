@@ -1,0 +1,10 @@
+id = "lnko"
+name = "lnko"
+bin = "lnko"
+category = "Miscellaneous"
+description = "Simple stow-like dotfile linker."
+homepage = "https://github.com/Owloops/lnko"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

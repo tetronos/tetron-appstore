@@ -1,0 +1,22 @@
+id = "bat"
+name = "bat"
+bin = "bat"
+check = "batcat|bat"
+category = "Miscellaneous"
+description = "A cat(1) clone with wings."
+homepage = "https://github.com/sharkdp/bat"
+cli = true
+
+[install.pkg]
+apt = "bat"
+dnf = "bat"
+pacman = "bat"
+brew = "bat"
+
+[install.recipe]
+install = "brew install bat"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

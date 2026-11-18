@@ -1,0 +1,15 @@
+id = "gotop"
+name = "gotop"
+bin = "gotop"
+category = "Dashboards"
+description = "A terminal based graphical activity monitor inspired by gtop and vtop"
+homepage = "https://github.com/xxxserxxx/gotop"
+
+[install.recipe]
+install = "brew install gotop"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

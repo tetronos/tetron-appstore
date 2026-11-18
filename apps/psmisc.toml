@@ -1,0 +1,10 @@
+id = "psmisc"
+name = "psmisc"
+check = "pstree"
+store = false
+
+[install.pkg]
+apt = "psmisc"
+dnf = "psmisc"
+pacman = "psmisc"
+brew = "pstree"

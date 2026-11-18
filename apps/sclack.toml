@@ -1,0 +1,15 @@
+id = "sclack"
+name = "sclack"
+bin = "sclack"
+category = "Messaging"
+description = "Slack terminal client"
+homepage = "https://github.com/haskellcamargo/sclack"
+
+[install.recipe]
+install = "pip3 install -r requirements.txt"
+method = "source"
+os = ["linux", "macos"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

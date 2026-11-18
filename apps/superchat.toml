@@ -1,0 +1,15 @@
+id = "superchat"
+name = "SuperChat"
+bin = "superchat"
+category = "Messaging"
+description = "Terminal-based threaded chat application with a custom binary protocol."
+homepage = "https://github.com/serialexp/superchat"
+
+[install.recipe]
+install = "curl -fsSL https://raw.githubusercontent.com/aeolun/superchat/main/install.sh | sh"
+method = "script"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

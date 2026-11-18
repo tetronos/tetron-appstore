@@ -1,0 +1,15 @@
+id = "youplot"
+name = "youplot"
+bin = "youplot"
+category = "Miscellaneous"
+description = "A command line tool that draw plots on the terminal."
+homepage = "https://github.com/red-data-tools/YouPlot"
+cli = true
+
+[install.recipe]
+install = "brew install youplot"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

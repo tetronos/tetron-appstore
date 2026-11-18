@@ -1,0 +1,15 @@
+id = "ghgrab"
+name = "ghgrab"
+bin = "ghgrab"
+category = "Development"
+description = "A pretty ratatui TUI for browsing and downloading individual files or folders from GitHub, GitLab, Codeberg, Gitea, and Forgejo without a full clone — with fuzzy search, file preview, LFS support, batch grabs, and release-artifact downloads."
+homepage = "https://github.com/abhixdd/ghgrab"
+
+[install.recipe]
+install = "cargo install ghgrab"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

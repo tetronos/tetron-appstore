@@ -1,0 +1,16 @@
+id = "wttr-in"
+name = "wttr.in"
+bin = "wttr.in"
+category = "Miscellaneous"
+description = "The right way to check the weather"
+homepage = "https://github.com/chubin/wttr.in"
+cli = true
+
+[install.recipe]
+install = "git clone https://github.com/chubin/wttr.in && cd wttr.in && bash build.sh build"
+method = "source"
+os = ["linux", "macos"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

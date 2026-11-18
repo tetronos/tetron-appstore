@@ -1,0 +1,15 @@
+id = "nethogs"
+name = "nethogs"
+bin = "nethogs"
+category = "Dashboards"
+description = "'net top' tool"
+homepage = "https://github.com/raboof/nethogs"
+
+[install.recipe]
+install = "brew install nethogs"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

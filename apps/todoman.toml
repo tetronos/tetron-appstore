@@ -1,0 +1,16 @@
+id = "todoman"
+name = "todoman"
+bin = "todoman"
+category = "Productivity"
+description = "A simple, standards-based (ics, DAV), cli task-manager"
+homepage = "https://github.com/pimutils/todoman"
+cli = true
+
+[install.recipe]
+install = "brew install todoman"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

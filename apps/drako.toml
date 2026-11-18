@@ -1,0 +1,15 @@
+id = "drako"
+name = "drako"
+bin = "drako"
+category = "Productivity"
+description = "A grid-based, customizable and extendable command- and TUI-Deck launcher"
+homepage = "https://github.com/lucky7xz/drako"
+
+[install.recipe]
+install = "go install github.com/lucky7xz/drako@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,15 @@
+id = "treemd"
+name = "treemd"
+bin = "treemd"
+category = "Editors"
+description = "A markdown navigator with tree-based structural navigation"
+homepage = "https://github.com/Epistates/treemd"
+
+[install.recipe]
+install = "brew install treemd"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

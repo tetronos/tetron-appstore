@@ -1,0 +1,14 @@
+id = "ffdash"
+name = "ffdash"
+bin = "ffdash"
+category = "Multimedia"
+description = "A parallel batch video encoder for ffmpeg in the terminal."
+homepage = "https://github.com/bcherb2/ffdash"
+
+[install.recipe]
+install = "cargo install --locked ffdash"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,14 @@
+id = "pvetui"
+name = "pvetui"
+bin = "pvetui"
+category = "Docker/LXC/K8s"
+description = "A Terminal UI for Proxmox VE."
+homepage = "https://github.com/devnullvoid/pvetui"
+
+[install.recipe]
+install = "brew install pvetui"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

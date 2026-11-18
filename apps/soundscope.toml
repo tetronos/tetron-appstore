@@ -1,0 +1,9 @@
+id = "soundscope"
+name = "soundscope"
+bin = "soundscope"
+category = "Multimedia"
+description = "A TUI audio file analyzer tool."
+homepage = "https://github.com/bananaofhappiness/soundscope"
+
+[source]
+lists = ["terminaltrove"]

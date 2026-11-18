@@ -1,0 +1,15 @@
+id = "resterm"
+name = "resterm"
+bin = "resterm"
+category = "Development"
+description = "A terminal client for HTTP/GraphQL/gRPC with support for WebSockets, SSE, workflows, profiling, OpenAPI and response diffs."
+homepage = "https://github.com/unkn0wn-root/resterm"
+
+[install.recipe]
+install = "brew install resterm"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

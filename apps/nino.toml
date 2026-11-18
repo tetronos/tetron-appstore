@@ -1,0 +1,15 @@
+id = "nino"
+name = "nino"
+bin = "nino"
+category = "Editors"
+description = "A small terminal-based text editor written in C."
+homepage = "https://github.com/evanlin96069/nino"
+
+[install.recipe]
+install = "git clone https://github.com/evanlin96069/nino.git && cd nino && mkdir build && cd build && cmake .. && cmake --build . && cmake --install ."
+method = "source"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

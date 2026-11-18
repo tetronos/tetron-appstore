@@ -1,0 +1,15 @@
+id = "fselect"
+name = "fselect"
+bin = "fselect"
+category = "Dashboards"
+description = "Find files with SQL-like queries."
+homepage = "https://github.com/jhspetersson/fselect"
+cli = true
+
+[install.recipe]
+install = "brew install fselect"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

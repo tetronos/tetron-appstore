@@ -1,0 +1,10 @@
+id = "lsr"
+name = "lsr"
+bin = "lsr"
+category = "Dashboards"
+description = "Basically ls but readable."
+homepage = "https://github.com/jmattaa/laser"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

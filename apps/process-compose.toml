@@ -1,0 +1,15 @@
+id = "process-compose"
+name = "process-compose"
+bin = "process-compose"
+category = "Dashboards"
+description = "TUI for running apps and processes"
+homepage = "https://github.com/F1bonacc1/process-compose"
+
+[install.recipe]
+install = "brew install f1bonacc1/tap/process-compose"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

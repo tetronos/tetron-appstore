@@ -1,0 +1,15 @@
+id = "rtorrent"
+name = "rtorrent"
+bin = "rtorrent"
+category = "Web"
+description = "A text-based BitTorrent client written in C++"
+homepage = "https://github.com/rakshasa/rtorrent"
+
+[install.recipe]
+install = "brew install rtorrent"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,14 @@
+id = "dyff"
+name = "dyff"
+bin = "dyff"
+category = "Development"
+description = "diff tool for YAML files, and sometimes JSON."
+homepage = "https://github.com/homeport/dyff"
+
+[install.recipe]
+install = "brew install dyff"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

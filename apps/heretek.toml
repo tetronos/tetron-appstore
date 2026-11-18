@@ -1,0 +1,15 @@
+id = "heretek"
+name = "heretek"
+bin = "heretek"
+category = "Development"
+description = "GDB TUI Dashboard"
+homepage = "https://github.com/wcampbell0x2a/heretek"
+
+[install.recipe]
+install = "cargo install heretek --locked"
+method = "cargo"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

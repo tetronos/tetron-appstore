@@ -1,0 +1,16 @@
+id = "amp-amp"
+name = "Amp"
+bin = "amp"
+category = "AI"
+description = "An AI coding agent that runs in your terminal and lets you start, monitor, and drive agents from CLI, web, and mobile."
+homepage = "https://ampcode.com"
+requires_cwd = true
+
+[install.recipe]
+install = "brew install ampcode/tap/ampcode"
+method = "brew"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["tetron"]

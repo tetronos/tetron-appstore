@@ -1,0 +1,16 @@
+id = "tab-pal"
+name = "tab-pal"
+bin = "tab-pal"
+category = "Miscellaneous"
+description = "Add and edit custom colour palettes in Tableau from the command-line."
+homepage = "https://github.com/ben-n93/tab-pal"
+cli = true
+
+[install.recipe]
+install = "pipx install tab-pal"
+method = "pipx"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

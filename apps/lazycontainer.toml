@@ -1,0 +1,15 @@
+id = "lazycontainer"
+name = "lazycontainer"
+bin = "lazycontainer"
+category = "Docker/LXC/K8s"
+description = "TUI for managing Apple containers"
+homepage = "https://github.com/andreybleme/lazycontainer"
+
+[install.recipe]
+install = "brew install lazycontainer"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

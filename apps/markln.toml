@@ -1,0 +1,15 @@
+id = "markln"
+name = "markln"
+bin = "markln"
+category = "Editors"
+description = "A terminal-based markdown editor built with Textual."
+homepage = "https://github.com/xqtr/markln"
+
+[install.recipe]
+install = "git clone https://github.com/xqtr/markln && cd markln && pip install -r requirements.txt && python markln.py"
+method = "source"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

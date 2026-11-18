@@ -1,0 +1,15 @@
+id = "marstui-audio"
+name = "marstui-audio"
+bin = "marstui-audio"
+category = "Multimedia"
+description = "A nice audio management Interface, similar to pavucontrol with the benefit of customizing everything"
+homepage = "https://github.com/schooldanlp6/marstui-rustio"
+
+[install.recipe]
+install = "git clone https://github.com/schooldanlp6/marstui-rustio && cd marstui-rustio && cargo build --release && sudo cp target/release/marstui-audio /usr/local/bin/"
+method = "source"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

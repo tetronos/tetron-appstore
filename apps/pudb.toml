@@ -1,0 +1,15 @@
+id = "pudb"
+name = "pudb"
+bin = "pudb"
+category = "Development"
+description = "A console-based visual debugger for Python"
+homepage = "https://github.com/inducer/pudb"
+
+[install.recipe]
+install = "pipx install pudb"
+method = "pipx"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

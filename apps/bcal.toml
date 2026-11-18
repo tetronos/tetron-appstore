@@ -1,0 +1,15 @@
+id = "bcal"
+name = "bcal"
+bin = "bcal"
+category = "Productivity"
+description = "Bits, bytes and address calculator."
+homepage = "https://github.com/jarun/bcal"
+cli = true
+
+[install.recipe]
+install = "brew install bcal"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

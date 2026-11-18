@@ -1,0 +1,15 @@
+id = "ctop"
+name = "ctop"
+bin = "ctop"
+category = "Docker/LXC/K8s"
+description = "Top-like interface for container metrics"
+homepage = "https://github.com/bcicen/ctop"
+
+[install.recipe]
+install = "brew install ctop"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

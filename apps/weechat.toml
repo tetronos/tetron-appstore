@@ -1,0 +1,15 @@
+id = "weechat"
+name = "Weechat"
+bin = "weechat"
+category = "Messaging"
+description = "Extensible chat client"
+homepage = "https://weechat.org/"
+
+[install.recipe]
+install = "brew install weechat"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

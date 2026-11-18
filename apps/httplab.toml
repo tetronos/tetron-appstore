@@ -1,0 +1,14 @@
+id = "httplab"
+name = "httplab"
+bin = "httplab"
+category = "Web"
+description = "Inspect HTTP requests and mock their responses in the terminal."
+homepage = "https://github.com/qustavo/httplab"
+
+[install.recipe]
+install = "go install github.com/gchaincl/httplab/cmd/httplab@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

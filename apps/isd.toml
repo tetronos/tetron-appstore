@@ -1,0 +1,9 @@
+id = "isd"
+name = "isd"
+bin = "isd"
+category = "Development"
+description = "A keyboard-focused, highly customizable systemd units TUI."
+homepage = "https://github.com/kainctl/isd"
+
+[source]
+lists = ["terminaltrove"]

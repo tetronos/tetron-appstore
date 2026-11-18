@@ -1,0 +1,15 @@
+id = "tblogs"
+name = "tblogs"
+bin = "tblogs"
+category = "Web"
+description = "Read and browse development blogs from your terminal"
+homepage = "https://github.com/ezeoleaf/tblogs"
+
+[install.recipe]
+install = "brew tap ezeoleaf/tap && brew install tblogs"
+method = "brew"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

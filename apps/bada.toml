@@ -1,0 +1,9 @@
+id = "bada"
+name = "Bada"
+bin = "bada"
+category = "Productivity"
+description = "A minimalist, Vim-first task manager designed to help you focus without distraction."
+homepage = "https://github.com/Han8931/bada"
+
+[source]
+lists = ["awesome-tuis"]

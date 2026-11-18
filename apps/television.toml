@@ -1,0 +1,15 @@
+id = "television"
+name = "television"
+bin = "television"
+category = "Productivity"
+description = "A fast and versatile fuzzy finder TUI"
+homepage = "https://github.com/alexpasmantier/television"
+
+[install.recipe]
+install = "brew install television"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

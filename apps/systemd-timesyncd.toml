@@ -1,0 +1,9 @@
+id = "systemd-timesyncd"
+name = "systemd-timesyncd"
+store = false
+
+[install.pkg]
+apt = "systemd-timesyncd"
+dnf = ""
+pacman = ""
+brew = ""

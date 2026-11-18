@@ -1,0 +1,15 @@
+id = "tetron-appstore"
+name = "tetron-appstore"
+check = "tetron-appstore"
+store = false
+
+[install.pkg]
+apt = "tetron-appstore"
+dnf = ""
+pacman = ""
+brew = ""
+
+[install.release]
+repo = "tetronos/tetron-appstore"
+amd64 = "tetron-appstore-x86_64-unknown-linux-gnu.tar.gz"
+arm64 = "tetron-appstore-aarch64-unknown-linux-gnu.tar.gz"

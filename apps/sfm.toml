@@ -1,0 +1,15 @@
+id = "sfm"
+name = "sfm"
+bin = "sfm"
+category = "File Managers"
+description = "Simple file manager."
+homepage = "https://github.com/afify/sfm"
+
+[install.recipe]
+install = "git clone https://github.com/afify/sfm && cd sfm && make && make install"
+method = "source"
+os = ["linux", "macos"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

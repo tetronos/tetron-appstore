@@ -1,0 +1,9 @@
+id = "noodle"
+name = "noodle"
+bin = "noodle"
+category = "Development"
+description = "A delicious REST client for your terminal."
+homepage = "https://github.com/wilfredinni/noodle"
+
+[source]
+lists = ["terminaltrove"]

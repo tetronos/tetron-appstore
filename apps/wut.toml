@@ -1,0 +1,10 @@
+id = "wut"
+name = "wut"
+bin = "wut"
+category = "AI"
+description = "A CLI that explains the output of your last command."
+homepage = "https://github.com/shobrook/wut"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

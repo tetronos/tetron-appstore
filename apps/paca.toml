@@ -1,0 +1,9 @@
+id = "paca"
+name = "Paca"
+bin = "paca"
+category = "Productivity"
+description = "Task, timer, and Stripe invoicing for projects, with local-first SQLite storage"
+homepage = "https://github.com/wes/paca"
+
+[source]
+lists = ["awesome-tuis"]

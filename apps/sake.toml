@@ -1,0 +1,15 @@
+id = "sake"
+name = "sake"
+bin = "sake"
+category = "Docker/LXC/K8s"
+description = "A task runner for local and remote hosts."
+homepage = "https://github.com/alajmo/sake"
+cli = true
+
+[install.recipe]
+install = "go install github.com/alajmo/sake@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,14 @@
+id = "rssnix"
+name = "rssnix"
+bin = "rssnix"
+category = "Web"
+description = "filesystem-based rss/atom/json feed fetcher and reader"
+homepage = "https://github.com/aidlx/rssnix"
+
+[install.recipe]
+install = "go install github.com/aidlx/rssnix@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

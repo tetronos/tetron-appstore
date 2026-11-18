@@ -1,0 +1,10 @@
+id = "podman-compose"
+name = "podman-compose"
+check = "podman-compose"
+store = false
+
+[install.pkg]
+apt = "podman-compose"
+dnf = "podman-compose"
+pacman = "podman-compose"
+brew = "podman-compose"

@@ -1,0 +1,9 @@
+id = "quokka"
+name = "quokka"
+bin = "quokka"
+category = "Dashboards"
+description = "Inspect and clean iOS / Android devices over USB from your terminal."
+homepage = "https://github.com/dutradotdev/quokka"
+
+[source]
+lists = ["terminaltrove"]

@@ -1,0 +1,15 @@
+id = "raijin"
+name = "Raijin"
+bin = "raijin"
+category = "Dashboards"
+description = "A free, simple weather TUI that pulls data without the need for an API key, account, or subscription"
+homepage = "https://github.com/MasonStooksbury/Raijin"
+
+[install.recipe]
+install = "cargo install Raijin"
+method = "cargo"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

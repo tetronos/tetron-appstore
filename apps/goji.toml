@@ -1,0 +1,14 @@
+id = "goji"
+name = "goji"
+bin = "goji"
+category = "Development"
+description = "Commitizen-like tool for formatting commit messages using emojis."
+homepage = "https://github.com/muandane/goji"
+
+[install.recipe]
+install = "go install github.com/muandane/goji@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

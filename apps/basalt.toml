@@ -1,0 +1,15 @@
+id = "basalt"
+name = "basalt"
+bin = "basalt"
+category = "Messaging"
+description = "TUI Application to manage Obsidian vaults and notes directly from the terminal."
+homepage = "https://github.com/erikjuhani/basalt"
+
+[install.recipe]
+install = "cargo install basalt-tui"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

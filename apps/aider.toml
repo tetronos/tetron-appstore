@@ -1,0 +1,16 @@
+id = "aider"
+name = "Aider"
+bin = "aider"
+category = "AI"
+description = "AI pair programming tool that lets you edit code in your terminal using LLMs like Claude and GPT-4."
+homepage = "https://aider.chat"
+requires_cwd = true
+
+[install.recipe]
+install = "pipx install aider-chat"
+method = "pipx"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,9 @@
+id = "vy"
+name = "vy"
+bin = "vy"
+category = "Development"
+description = "Explore and query JSON and YAML, right in your terminal."
+homepage = "https://github.com/ynqa/vy"
+
+[source]
+lists = ["terminaltrove"]

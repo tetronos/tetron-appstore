@@ -1,0 +1,10 @@
+id = "docx2txt"
+name = "docx2txt"
+check = "docx2txt"
+store = false
+
+[install.pkg]
+apt = "docx2txt"
+dnf = ""
+pacman = ""
+brew = ""

@@ -1,0 +1,9 @@
+id = "pctrl"
+name = "pctrl"
+bin = "pctrl"
+category = "Dashboards"
+description = "A terminal-based process controller."
+homepage = "https://github.com/MohamedSherifNoureldin/PCtrl"
+
+[source]
+lists = ["terminaltrove"]

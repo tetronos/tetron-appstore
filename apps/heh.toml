@@ -1,0 +1,9 @@
+id = "heh"
+name = "heh"
+bin = "heh"
+category = "Miscellaneous"
+description = "A terminal UI to edit bytes by the nibble."
+homepage = "https://github.com/ndd7xv/heh"
+
+[source]
+lists = ["terminaltrove"]

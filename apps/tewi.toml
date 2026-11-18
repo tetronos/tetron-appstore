@@ -1,0 +1,9 @@
+id = "tewi"
+name = "tewi"
+bin = "tewi"
+category = "Miscellaneous"
+description = "Text-based interface for the Transmission BitTorrent daemon."
+homepage = "https://github.com/anlar/tewi"
+
+[source]
+lists = ["terminaltrove"]

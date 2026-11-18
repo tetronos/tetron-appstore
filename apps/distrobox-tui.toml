@@ -1,0 +1,15 @@
+id = "distrobox-tui"
+name = "distrobox-tui"
+bin = "distrobox-tui"
+category = "Miscellaneous"
+description = "TUI for managing distrobox containers"
+homepage = "https://github.com/phanirithvij/distrobox-tui"
+
+[install.recipe]
+install = "go install github.com/phanirithvij/distrobox-tui@latest"
+method = "go"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

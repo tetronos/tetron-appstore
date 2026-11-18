@@ -1,0 +1,15 @@
+id = "exa"
+name = "exa"
+bin = "exa"
+category = "Dashboards"
+description = "The original modern replacement for ls"
+homepage = "https://github.com/ogham/exa"
+cli = true
+
+[install.recipe]
+install = "cargo install --locked exa"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

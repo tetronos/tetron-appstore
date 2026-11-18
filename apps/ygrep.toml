@@ -1,0 +1,9 @@
+id = "ygrep"
+name = "ygrep"
+bin = "ygrep"
+category = "Development"
+description = "A fast, local, indexed code search TUI powered by Tantivy full-text indexing, optimized for AI coding assistants"
+homepage = "https://github.com/yetidevworks/ygrep"
+
+[source]
+lists = ["awesome-tuis"]

@@ -1,0 +1,15 @@
+id = "bttf"
+name = "bttf"
+bin = "bttf"
+category = "Miscellaneous"
+description = "A CLI tool for datetime arithmetic, parsing, formatting and more."
+homepage = "https://github.com/BurntSushi/bttf"
+cli = true
+
+[install.recipe]
+install = "brew install bttf"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

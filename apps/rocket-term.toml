@@ -1,0 +1,15 @@
+id = "rocket-term"
+name = "rocket.term"
+bin = "rocket.term"
+category = "Miscellaneous"
+description = "Text based chat client for the Rocket.chat messaging solution."
+homepage = "https://github.com/gerstner-hub/rocket.term"
+
+[install.recipe]
+install = "pip install rocket.term"
+method = "pip"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

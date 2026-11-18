@@ -1,0 +1,14 @@
+id = "mufetch"
+name = "mufetch"
+bin = "mufetch"
+category = "Multimedia"
+description = "neofetch-style CLI for music."
+homepage = "https://github.com/ashish0kumar/mufetch"
+
+[install.recipe]
+install = "brew install mufetch"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

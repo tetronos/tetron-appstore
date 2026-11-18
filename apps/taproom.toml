@@ -1,0 +1,14 @@
+id = "taproom"
+name = "taproom"
+bin = "taproom"
+category = "Miscellaneous"
+description = "An interactive TUI for Homebrew."
+homepage = "https://github.com/hzqtc/taproom"
+
+[install.recipe]
+install = "brew install taproom"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

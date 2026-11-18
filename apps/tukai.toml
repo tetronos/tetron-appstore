@@ -1,0 +1,9 @@
+id = "tukai"
+name = "tukai"
+bin = "tukai"
+category = "Productivity"
+description = "Terminal based touch typing application."
+homepage = "https://github.com/hlsxx/tukai"
+
+[source]
+lists = ["terminaltrove"]

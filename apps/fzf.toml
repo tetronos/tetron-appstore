@@ -1,0 +1,15 @@
+id = "fzf"
+name = "fzf"
+bin = "fzf"
+category = "Miscellaneous"
+description = "A general-purpose command-line fuzzy finder"
+homepage = "https://github.com/junegunn/fzf"
+
+[install.recipe]
+install = "brew install fzf"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

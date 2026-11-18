@@ -1,0 +1,14 @@
+id = "filessh"
+name = "filessh"
+bin = "filessh"
+category = "File Managers"
+description = "A fast and convenient TUI file browser for remote servers."
+homepage = "https://github.com/JayanAXHF/filessh"
+
+[install.recipe]
+install = "cargo install --locked filessh"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "catalyst"
+name = "catalyst"
+bin = "catalyst"
+category = "Development"
+description = "Elegant TUI for triggering GitHub Actions workflows with matrix configurations."
+homepage = "https://github.com/PraveenGongada/catalyst"
+
+[install.recipe]
+install = "brew tap PraveenGongada/tap && brew install catalyst"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,15 @@
+id = "macchina"
+name = "macchina"
+bin = "macchina"
+category = "Miscellaneous"
+description = "Fast, minimal and customizable system information frontend."
+homepage = "https://github.com/Macchina-CLI/macchina"
+cli = true
+
+[install.recipe]
+install = "brew install macchina"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

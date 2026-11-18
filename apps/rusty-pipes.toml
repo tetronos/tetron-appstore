@@ -1,0 +1,15 @@
+id = "rusty-pipes"
+name = "rusty-pipes"
+bin = "rusty-pipes"
+category = "Multimedia"
+description = "A sample-based, MIDI-controlled virtual pipe organ instrument compatible with GrandOrgue and Hauptwerk sample sets."
+homepage = "https://github.com/dividebysandwich/rusty-pipes"
+
+[install.recipe]
+install = ""
+method = "binary"
+os = ["linux", "macos", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

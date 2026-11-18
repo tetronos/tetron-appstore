@@ -1,0 +1,15 @@
+id = "burf"
+name = "burf"
+bin = "burf"
+category = "Development"
+description = "TUI for Google Cloud Storage (GCS)"
+homepage = "https://github.com/razeghi71/burf"
+
+[install.recipe]
+install = "pip install burf"
+method = "pip"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

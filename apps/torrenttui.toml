@@ -1,0 +1,15 @@
+id = "torrenttui"
+name = "torrentTUI"
+bin = "torrenttui"
+category = "Web"
+description = "A BitTorrent client: magnet links and .torrent files, built-in torrent search, command palette (:), background sessions."
+homepage = "https://github.com/thijsvos/torrentTUI"
+
+[install.recipe]
+install = "mkdir -p ~/.local/bin && curl -fsSL -o ~/.local/bin/torrenttui https://github.com/thijsvos/torrentTUI/releases/latest/download/torrenttui-linux-$(uname -m) && chmod 755 ~/.local/bin/torrenttui"
+method = "binary"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["tetron"]

@@ -1,0 +1,9 @@
+id = "toxic"
+name = "toxic"
+bin = "toxic"
+category = "Messaging"
+description = "A Tox-based instant messaging and video chat client"
+homepage = "https://github.com/JFreegman/toxic/"
+
+[source]
+lists = ["awesome-tuis"]

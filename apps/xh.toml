@@ -1,0 +1,26 @@
+id = "xh"
+name = "xh"
+bin = "xh"
+category = "Development"
+description = "Friendly and fast tool for sending HTTP requests."
+homepage = "https://github.com/ducaale/xh"
+cli = true
+
+[install.pkg]
+apt = "xh"
+dnf = ""
+pacman = "xh"
+brew = "xh"
+
+[install.release]
+repo = "ducaale/xh"
+amd64 = "xh-*-x86_64-unknown-linux-musl.tar.gz"
+arm64 = "xh-*-aarch64-unknown-linux-musl.tar.gz"
+
+[install.recipe]
+install = "brew install xh"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

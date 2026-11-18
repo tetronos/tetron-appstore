@@ -1,0 +1,15 @@
+id = "typeinc"
+name = "typeinc"
+bin = "typeinc"
+category = "Games"
+description = "ncurses based typing speed test with various difficulty levels."
+homepage = "https://github.com/AnirudhG07/Typeinc"
+
+[install.recipe]
+install = "pip install typeinc"
+method = "pip"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

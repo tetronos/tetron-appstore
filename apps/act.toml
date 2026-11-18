@@ -1,0 +1,15 @@
+id = "act"
+name = "act"
+bin = "act"
+category = "Docker/LXC/K8s"
+description = "Run your GitHub Actions locally"
+homepage = "https://github.com/nektos/act"
+cli = true
+
+[install.recipe]
+install = "brew install act"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

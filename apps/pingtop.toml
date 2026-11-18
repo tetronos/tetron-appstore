@@ -1,0 +1,9 @@
+id = "pingtop"
+name = "pingtop"
+bin = "pingtop"
+category = "Dashboards"
+description = "Ping multiple servers and show the result in a top like terminal UI."
+homepage = "https://github.com/laixintao/pingtop"
+
+[source]
+lists = ["terminaltrove"]

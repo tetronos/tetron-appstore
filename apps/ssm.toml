@@ -1,0 +1,14 @@
+id = "ssm"
+name = "ssm"
+bin = "ssm"
+category = "Development"
+description = "Streamline SSH connections with a simple TUI."
+homepage = "https://github.com/lfaoro/ssm"
+
+[install.recipe]
+install = "go install github.com/lfaoro/ssm@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

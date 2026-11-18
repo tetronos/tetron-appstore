@@ -1,0 +1,14 @@
+id = "tiptop"
+name = "tiptop"
+bin = "tiptop"
+category = "Dashboards"
+description = "Command-line system monitoring"
+homepage = "https://github.com/nschloe/tiptop"
+
+[install.recipe]
+install = "pipx install tiptop"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

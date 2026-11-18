@@ -1,0 +1,15 @@
+id = "proxymock"
+name = "proxymock"
+bin = "proxymock"
+category = "Development"
+description = "A network recorder that shows API payloads in a TUI and automatically generates tests and mocks from what it observes."
+homepage = "https://proxymock.io"
+
+[install.recipe]
+install = "brew install speedscale/tap/proxymock"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,14 @@
+id = "unifly"
+name = "unifly"
+bin = "unifly"
+category = "Dashboards"
+description = "A CLI/TUI for UniFi network controller management."
+homepage = "https://github.com/hyperb1iss/unifly"
+
+[install.recipe]
+install = "cargo install --locked unifly"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

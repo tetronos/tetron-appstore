@@ -1,0 +1,15 @@
+id = "lazyssh"
+name = "LazySSH"
+bin = "lazyssh"
+category = "Productivity"
+description = "TUI SSH manager to browse, connect, and manage servers from ssh config files."
+homepage = "https://github.com/adembc/lazyssh"
+
+[install.recipe]
+install = "brew install lazyssh"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

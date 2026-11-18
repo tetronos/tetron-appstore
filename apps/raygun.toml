@@ -1,0 +1,9 @@
+id = "raygun"
+name = "raygun"
+bin = "raygun"
+category = "Development"
+description = "A terminal receiver for Spatie's Ray debugger, speaking the same HTTP protocol as the desktop app, for PHP, Laravel and Grav"
+homepage = "https://github.com/yetidevworks/raygun"
+
+[source]
+lists = ["awesome-tuis"]

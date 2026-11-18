@@ -1,0 +1,14 @@
+id = "elio"
+name = "elio"
+bin = "elio"
+category = "File Managers"
+description = "A terminal-native file manager with rich previews."
+homepage = "https://github.com/elio-fm/elio"
+
+[install.recipe]
+install = "brew install elio"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,9 @@
+id = "monitui"
+name = "monitui"
+bin = "monitui"
+category = "Dashboards"
+description = "A delightfully minimal TUI for wrangling Hyprland monitors."
+homepage = "https://github.com/nathaniel-fargo/monitui"
+
+[source]
+lists = ["terminaltrove"]

@@ -1,0 +1,11 @@
+id = "xclip"
+name = "xclip"
+check = "xclip"
+group = "gui"
+store = false
+
+[install.pkg]
+apt = "xclip"
+dnf = "xclip"
+pacman = "xclip"
+brew = ""

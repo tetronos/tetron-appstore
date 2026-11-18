@@ -1,0 +1,15 @@
+id = "octocov"
+name = "octocov"
+bin = "octocov"
+category = "Development"
+description = "A toolkit for collecting code metrics."
+homepage = "https://github.com/k1LoW/octocov"
+cli = true
+
+[install.recipe]
+install = "go install github.com/k1LoW/octocov@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

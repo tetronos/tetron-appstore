@@ -1,0 +1,14 @@
+id = "mpv-music"
+name = "mpv-music"
+bin = "mpv-music"
+category = "Multimedia"
+description = "Cross-platform CLI/TUI music player and library browser written in Rust that lets you filter and select what you want to play and gets out of your way, with no background daemons."
+homepage = "https://github.com/FurqanHun/mpv-music"
+
+[install.recipe]
+install = "cargo install --locked mpv-music"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

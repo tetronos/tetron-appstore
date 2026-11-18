@@ -1,0 +1,9 @@
+id = "fyzenor"
+name = "fyzenor"
+bin = "fyzenor"
+category = "File Managers"
+description = "A modern, blazing-fast terminal file manager built in C++ with live previews, async workflows, and a polished three-column interface."
+homepage = "https://github.com/Bimbok/fyzenor"
+
+[source]
+lists = ["awesome-tuis"]

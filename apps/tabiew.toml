@@ -1,0 +1,15 @@
+id = "tabiew"
+name = "Tabiew"
+bin = "tabiew"
+category = "Productivity"
+description = "A lightweight app to view and query tabular data files, such as CSV, TSV, and parquet."
+homepage = "https://github.com/shshemi/tabiew"
+
+[install.recipe]
+install = "brew install tabiew"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

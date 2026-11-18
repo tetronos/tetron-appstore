@@ -1,0 +1,10 @@
+id = "powertop"
+name = "powertop"
+check = "powertop"
+store = false
+
+[install.pkg]
+apt = "powertop"
+dnf = "powertop"
+pacman = "powertop"
+brew = ""

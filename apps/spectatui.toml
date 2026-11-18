@@ -1,0 +1,14 @@
+id = "spectatui"
+name = "spectatui"
+bin = "spectatui"
+category = "AI"
+description = "A TUI dashboard for Github Spec-Kit."
+homepage = "https://github.com/tinesoft/spectatui"
+
+[install.recipe]
+install = "cargo install --locked spectatui"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

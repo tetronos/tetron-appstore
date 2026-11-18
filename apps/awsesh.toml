@@ -1,0 +1,9 @@
+id = "awsesh"
+name = "awsesh"
+bin = "awsesh"
+category = "Development"
+description = "A charming TUI for AWS SSO session management."
+homepage = "https://github.com/elva-labs/awsesh"
+
+[source]
+lists = ["terminaltrove"]

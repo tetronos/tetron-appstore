@@ -1,0 +1,15 @@
+id = "fubar"
+name = "fubar"
+bin = "fubar"
+category = "Dashboards"
+description = "Formidable Unix Binary Arsenal & Repository. TUI built for gtfobins power users."
+homepage = "https://github.com/irishmaestro/fubar"
+
+[install.recipe]
+install = "cargo install fubar-cli"
+method = "cargo"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

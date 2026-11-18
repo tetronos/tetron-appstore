@@ -1,0 +1,16 @@
+id = "vhs"
+name = "vhs"
+bin = "vhs"
+category = "Multimedia"
+description = "Write terminal GIFs as code — scriptable session recorder."
+homepage = "https://github.com/charmbracelet/vhs"
+cli = true
+
+[install.recipe]
+install = "brew install vhs"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

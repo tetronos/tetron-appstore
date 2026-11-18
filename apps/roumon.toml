@@ -1,0 +1,14 @@
+id = "roumon"
+name = "roumon"
+bin = "roumon"
+category = "Dashboards"
+description = "A universal goroutine monitor with a TUI."
+homepage = "https://github.com/becheran/roumon"
+
+[install.recipe]
+install = "go install github.com/becheran/roumon@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

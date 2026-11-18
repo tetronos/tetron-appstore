@@ -1,0 +1,14 @@
+id = "loggo"
+name = "loggo"
+bin = "loggo"
+category = "Dashboards"
+description = "A powerful terminal app for structured log streaming."
+homepage = "https://github.com/aurc/loggo"
+
+[install.recipe]
+install = "go install github.com/aurc/loggo@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

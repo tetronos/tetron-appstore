@@ -1,0 +1,14 @@
+id = "sunbeam"
+name = "sunbeam"
+bin = "sunbeam"
+category = "Miscellaneous"
+description = "A general purpose command-line launcher."
+homepage = "https://github.com/pomdtr/sunbeam"
+
+[install.recipe]
+install = "go install github.com/pomdtr/sunbeam@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

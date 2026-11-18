@@ -1,0 +1,19 @@
+id = "meli"
+name = "meli"
+bin = "meli"
+category = "Messaging"
+description = "Email client"
+homepage = "https://meli.delivery/"
+
+[install.pkg]
+apt = "meli"
+brew = "meli"
+
+[install.recipe]
+install = "brew install meli"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

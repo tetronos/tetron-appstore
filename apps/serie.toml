@@ -1,0 +1,15 @@
+id = "serie"
+name = "serie"
+bin = "serie"
+category = "Development"
+description = "A rich git commit graph"
+homepage = "https://github.com/lusingander/serie"
+
+[install.recipe]
+install = "brew install serie"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

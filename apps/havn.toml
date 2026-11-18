@@ -1,0 +1,14 @@
+id = "havn"
+name = "havn"
+bin = "havn"
+category = "Development"
+description = "A fast configurable port scanner with reasonable defaults."
+homepage = "https://github.com/mrjackwills/havn"
+
+[install.recipe]
+install = "brew install havn"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

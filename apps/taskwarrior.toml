@@ -1,0 +1,10 @@
+id = "taskwarrior"
+name = "taskwarrior"
+check = "task"
+store = false
+
+[install.pkg]
+apt = "taskwarrior"
+dnf = "task"
+pacman = "task"
+brew = "task"

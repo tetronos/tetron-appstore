@@ -1,0 +1,15 @@
+id = "talos-pilot"
+name = "talos-pilot"
+bin = "talos-pilot"
+category = "Docker/LXC/K8s"
+description = "TUI for Talos Linux providing real-time node monitoring, log streaming, and various diagnostics"
+homepage = "https://github.com/handfish/talos-pilot"
+
+[install.recipe]
+install = "brew install Handfish/tap/talos-pilot"
+method = "brew"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

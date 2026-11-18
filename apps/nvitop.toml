@@ -1,0 +1,9 @@
+id = "nvitop"
+name = "nvitop"
+bin = "nvitop"
+category = "Dashboards"
+description = "An interactive NVIDIA-GPU process viewer and beyond."
+homepage = "https://github.com/XuehaiPan/nvitop"
+
+[source]
+lists = ["terminaltrove"]

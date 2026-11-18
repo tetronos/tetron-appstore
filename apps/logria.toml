@@ -1,0 +1,14 @@
+id = "logria"
+name = "logria"
+bin = "logria"
+category = "Dashboards"
+description = "A powerful CLI tool that puts log aggregation at your fingertips."
+homepage = "https://github.com/ReagentX/Logria"
+
+[install.recipe]
+install = "cargo install --locked logria"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

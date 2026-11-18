@@ -1,0 +1,9 @@
+id = "sig"
+name = "sig"
+bin = "sig"
+category = "Development"
+description = "interactive grep. (for streaming)"
+homepage = "https://github.com/ynqa/sig"
+
+[source]
+lists = ["terminaltrove"]

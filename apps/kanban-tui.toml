@@ -1,0 +1,14 @@
+id = "kanban-tui"
+name = "kanban-tui"
+bin = "kanban-tui"
+category = "Miscellaneous"
+description = "A customizable task manager in the terminal."
+homepage = "https://github.com/Zaloog/kanban-tui"
+
+[install.recipe]
+install = "pipx install kanban-tui"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

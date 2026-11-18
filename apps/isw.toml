@@ -1,0 +1,15 @@
+id = "isw"
+name = "isw"
+bin = "isw"
+category = "Miscellaneous"
+description = "A simple terminal stopwatch application for pomodoro etc."
+homepage = "https://gitlab.com/thom-cameron/isw"
+
+[install.recipe]
+install = "cargo install isw"
+method = "cargo"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

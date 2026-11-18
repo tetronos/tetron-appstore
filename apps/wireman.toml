@@ -1,0 +1,9 @@
+id = "wireman"
+name = "wireman"
+bin = "wireman"
+category = "Development"
+description = "A TUI gRPC client for the terminal."
+homepage = "https://github.com/preiter93/wireman"
+
+[source]
+lists = ["terminaltrove"]

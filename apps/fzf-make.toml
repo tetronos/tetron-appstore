@@ -1,0 +1,14 @@
+id = "fzf-make"
+name = "fzf-make"
+bin = "fzf-make"
+category = "Miscellaneous"
+description = "Find and run multi-project tasks with fuzzy search in the terminal."
+homepage = "https://github.com/kyu08/fzf-make"
+
+[install.recipe]
+install = "brew install fzf-make"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

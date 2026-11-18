@@ -1,0 +1,15 @@
+id = "aichat"
+name = "aichat"
+bin = "aichat"
+category = "AI"
+description = "all-in-one AI powered CLI chat and copilot."
+homepage = "https://github.com/sigoden/aichat"
+cli = true
+
+[install.recipe]
+install = "brew install aichat"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

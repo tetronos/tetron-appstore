@@ -1,0 +1,14 @@
+id = "rusticon"
+name = "rusticon"
+bin = "rusticon"
+category = "Miscellaneous"
+description = "A mouse driven SVG favicon editor for your terminal."
+homepage = "https://github.com/ronilan/rusticon"
+
+[install.recipe]
+install = "cargo install --locked rusticon"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

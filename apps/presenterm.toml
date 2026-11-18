@@ -1,0 +1,15 @@
+id = "presenterm"
+name = "presenterm"
+bin = "presenterm"
+category = "Productivity"
+description = "A markdown terminal slideshow tool"
+homepage = "https://github.com/mfontanini/presenterm"
+
+[install.recipe]
+install = "brew install presenterm"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

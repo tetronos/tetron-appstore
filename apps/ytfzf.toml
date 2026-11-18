@@ -1,0 +1,16 @@
+id = "ytfzf"
+name = "ytfzf"
+bin = "ytfzf"
+category = "Multimedia"
+description = "A POSIX script that helps you find Youtube videos (without API) or Peertube videos and opens/downloads them using mpv/youtube-dl"
+homepage = "https://github.com/pystardust/ytfzf"
+cli = true
+
+[install.recipe]
+install = "git clone https://github.com/pystardust/ytfzf && cd ytfzf && sudo make install doc"
+method = "source"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

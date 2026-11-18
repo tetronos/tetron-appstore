@@ -1,0 +1,9 @@
+id = "fuzpad"
+name = "fuzpad"
+bin = "fuzpad"
+category = "Miscellaneous"
+description = "A minimalistic note management solution. Powered by fzf."
+homepage = "https://github.com/JianZcar/FuzPad"
+
+[source]
+lists = ["terminaltrove"]

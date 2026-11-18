@@ -1,0 +1,16 @@
+id = "dust"
+name = "dust"
+bin = "dust"
+category = "Miscellaneous"
+description = "A more intuitive, visual version of du (disk usage)."
+homepage = "https://github.com/bootandy/dust"
+cli = true
+
+[install.recipe]
+install = "cargo install du-dust"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

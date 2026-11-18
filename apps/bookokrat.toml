@@ -1,0 +1,15 @@
+id = "bookokrat"
+name = "bookokrat"
+bin = "bookokrat"
+category = "Multimedia"
+description = "Full-featured EPUB books reader with Vim keybindings."
+homepage = "https://github.com/bugzmanov/bookokrat"
+
+[install.recipe]
+install = "brew install bookokrat"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "miller"
+name = "miller"
+bin = "miller"
+category = "Development"
+description = "an all in one swiss army knife for data processing."
+homepage = "https://github.com/johnkerl/miller"
+cli = true
+
+[install.recipe]
+install = "brew install miller"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

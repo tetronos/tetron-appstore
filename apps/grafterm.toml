@@ -1,0 +1,15 @@
+id = "grafterm"
+name = "Grafterm"
+bin = "grafterm"
+category = "Dashboards"
+description = "Metrics dashboards on terminal, a Grafana inspired terminal version"
+homepage = "https://github.com/slok/grafterm"
+
+[install.recipe]
+install = "go install github.com/slok/grafterm/cmd/grafterm@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

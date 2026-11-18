@@ -1,0 +1,9 @@
+id = "holo"
+name = "holo"
+bin = "holo"
+category = "Development"
+description = "A terminal based profiler and app inspector for Android."
+homepage = "https://github.com/measure-sh/holo"
+
+[source]
+lists = ["terminaltrove"]

@@ -1,0 +1,10 @@
+id = "qpdf"
+name = "qpdf"
+check = "qpdf"
+store = false
+
+[install.pkg]
+apt = "qpdf"
+dnf = "qpdf"
+pacman = "qpdf"
+brew = "qpdf"

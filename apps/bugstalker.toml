@@ -1,0 +1,9 @@
+id = "bugstalker"
+name = "bugstalker"
+bin = "bugstalker"
+category = "Development"
+description = "A Modern Rust debugger for Linux x86-64."
+homepage = "https://github.com/godzie44/BugStalker"
+
+[source]
+lists = ["terminaltrove"]

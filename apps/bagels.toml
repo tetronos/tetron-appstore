@@ -1,0 +1,15 @@
+id = "bagels"
+name = "Bagels"
+bin = "bagels"
+category = "Productivity"
+description = "TUI expense tracker"
+homepage = "https://github.com/EnhancedJax/Bagels"
+
+[install.recipe]
+install = "brew install bagels"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

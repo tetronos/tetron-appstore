@@ -1,0 +1,15 @@
+id = "tuiserial"
+name = "tuiserial"
+bin = "tuiserial"
+category = "Productivity"
+description = "A serial-port debugging TUI in Rust/Ratatui: port/baud/parity configuration with persistence, real-time status, menu-bar navigation with full keyboard and mouse support, and an optional JS/TS plugin system."
+homepage = "https://github.com/Horldsence/tuiserial"
+
+[install.recipe]
+install = "cargo install tuiserial"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

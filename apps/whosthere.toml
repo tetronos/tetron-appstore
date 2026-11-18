@@ -1,0 +1,14 @@
+id = "whosthere"
+name = "whosthere"
+bin = "whosthere"
+category = "Development"
+description = "A local area network (LAN) discovery tool with a modern TUI interface."
+homepage = "https://github.com/ramonvermeulen/whosthere"
+
+[install.recipe]
+install = "brew install whosthere"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

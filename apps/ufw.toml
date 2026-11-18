@@ -1,0 +1,10 @@
+id = "ufw"
+name = "ufw"
+check = "ufw"
+store = false
+
+[install.pkg]
+apt = "ufw"
+dnf = "ufw"
+pacman = "ufw"
+brew = ""

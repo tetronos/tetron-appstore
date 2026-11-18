@@ -1,0 +1,15 @@
+id = "vifm"
+name = "Vifm"
+bin = "vifm"
+category = "File Managers"
+description = "A TUI file manager with vi-keybindings and other vim like behaviour."
+homepage = "https://github.com/vifm/vifm"
+
+[install.recipe]
+install = "brew install vifm"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

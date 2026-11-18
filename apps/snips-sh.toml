@@ -1,0 +1,15 @@
+id = "snips-sh"
+name = "snips.sh"
+bin = "snips.sh"
+category = "Development"
+description = "✂️ passwordless, anonymous SSH-powered pastebin with a human-friendly TUI and web UI"
+homepage = "https://github.com/robherley/snips.sh"
+
+[install.recipe]
+install = "go install github.com/robherley/snips.sh@latest"
+method = "go"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

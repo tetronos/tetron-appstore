@@ -1,0 +1,15 @@
+id = "fx"
+name = "fx"
+bin = "fx"
+category = "Development"
+description = "Terminal JSON viewer & processor"
+homepage = "https://github.com/antonmedv/fx"
+
+[install.recipe]
+install = "brew install fx"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "nemu"
+name = "nemu"
+bin = "nemu"
+category = "Miscellaneous"
+description = "A TUI for QEMU"
+homepage = "https://github.com/nemuTUI/nemu"
+
+[install.recipe]
+install = "brew install nemu"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

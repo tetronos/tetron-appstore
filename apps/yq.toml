@@ -1,0 +1,10 @@
+id = "yq"
+name = "yq"
+check = "yq"
+store = false
+
+[install.pkg]
+apt = "yq"
+dnf = "yq"
+pacman = "go-yq"
+brew = "yq"

@@ -1,0 +1,14 @@
+id = "nastro"
+name = "nastro"
+bin = "nastro"
+category = "Multimedia"
+description = "Record and transcribe audio from meetings locally in the terminal."
+homepage = "https://github.com/scaccogatto/nastro"
+
+[install.recipe]
+install = "go install github.com/scaccogatto/nastro@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

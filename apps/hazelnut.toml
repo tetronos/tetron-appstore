@@ -1,0 +1,9 @@
+id = "hazelnut"
+name = "hazelnut"
+bin = "hazelnut"
+category = "Dashboards"
+description = "A terminal based automated file organizer inspired by Hazel."
+homepage = "https://github.com/ricardodantas/hazelnut"
+
+[source]
+lists = ["terminaltrove"]

@@ -1,0 +1,16 @@
+id = "intelli-shell"
+name = "intelli-shell"
+bin = "intelli-shell"
+category = "Productivity"
+description = "Manage command templates/snippets with dynamic completions and AI integration"
+homepage = "https://github.com/lasantosr/intelli-shell"
+cli = true
+
+[install.recipe]
+install = "brew install intelli-shell"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

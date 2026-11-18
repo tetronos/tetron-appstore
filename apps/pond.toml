@@ -1,0 +1,15 @@
+id = "pond"
+name = "pond"
+bin = "pond"
+category = "Screensavers"
+description = "A soothing in-terminal idle screen that simulates a little pond."
+homepage = "https://gitlab.com/alice-lefebvre/pond"
+
+[install.recipe]
+install = "git clone https://gitlab.com/alice-lefebvre/pond/ && cd pond && make && sudo make install"
+method = "source"
+os = ["linux", "macos"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

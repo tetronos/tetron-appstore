@@ -1,0 +1,15 @@
+id = "jql"
+name = "jql"
+bin = "jql"
+category = "Development"
+description = "A JSON Query Language CLI tool."
+homepage = "https://github.com/yamafaktory/jql"
+cli = true
+
+[install.recipe]
+install = "brew install jql"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

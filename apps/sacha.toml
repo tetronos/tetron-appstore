@@ -1,0 +1,15 @@
+id = "sacha"
+name = "sacha"
+bin = "sacha"
+category = "Dashboards"
+description = "A two-pane AWS TUI for browsing, searching, and managing resources across seven services including CloudWatch Logs, S3, DynamoDB, Lambda, SSM, SQS, and EC2."
+homepage = "https://github.com/Sachamama/sacha"
+
+[install.recipe]
+install = "brew install sachamama/tap/sacha"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

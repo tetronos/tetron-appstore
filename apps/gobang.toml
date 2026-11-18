@@ -1,0 +1,15 @@
+id = "gobang"
+name = "gobang"
+bin = "gobang"
+category = "Dashboards"
+description = "A cross-platform TUI database management tool written in Rust"
+homepage = "https://github.com/TaKO8Ki/gobang"
+
+[install.recipe]
+install = "brew install tako8ki/tap/gobang"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

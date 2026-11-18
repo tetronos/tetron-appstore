@@ -1,0 +1,9 @@
+id = "epiq"
+name = "epiq"
+bin = "epiq"
+category = "Miscellaneous"
+description = "A distributed terminal native issue tracker backed by Git."
+homepage = "https://github.com/ljtn/epiq"
+
+[source]
+lists = ["terminaltrove"]

@@ -1,0 +1,14 @@
+id = "zizmor"
+name = "zizmor"
+bin = "zizmor"
+category = "Development"
+description = "A static analysis tool for GitHub Actions."
+homepage = "https://github.com/zizmorcore/zizmor"
+
+[install.recipe]
+install = "brew install zizmor"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

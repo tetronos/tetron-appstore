@@ -1,0 +1,15 @@
+id = "ec"
+name = "ec"
+bin = "ec"
+category = "Development"
+description = "A TUI native Git mergetool with 3 panes"
+homepage = "https://github.com/chojs23/ec"
+
+[install.recipe]
+install = "brew install chojs23/tap/ec"
+method = "brew"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

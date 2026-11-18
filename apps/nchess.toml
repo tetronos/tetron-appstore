@@ -1,0 +1,15 @@
+id = "nchess"
+name = "nchess"
+bin = "nchess"
+category = "Games"
+description = "Chess in the terminal, written in C."
+homepage = "https://github.com/billyvinning/nchess"
+
+[install.recipe]
+install = "make clean && make"
+method = "source"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

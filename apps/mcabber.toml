@@ -1,0 +1,18 @@
+id = "mcabber"
+name = "mcabber"
+bin = "mcabber"
+category = "Messaging"
+description = "XMPP (Jabber) client"
+homepage = "https://mcabber.com/"
+
+[install.pkg]
+pacman = "mcabber"
+
+[install.recipe]
+install = "brew install mcabber"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

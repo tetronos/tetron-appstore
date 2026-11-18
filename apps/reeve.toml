@@ -1,0 +1,9 @@
+id = "reeve"
+name = "reeve"
+bin = "reeve"
+category = "Web"
+description = "A TUI based local web development stack for macOS and Linux."
+homepage = "https://github.com/yetidevworks/reeve"
+
+[source]
+lists = ["terminaltrove"]

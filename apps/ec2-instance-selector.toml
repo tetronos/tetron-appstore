@@ -1,0 +1,16 @@
+id = "ec2-instance-selector"
+name = "ec2-instance-selector"
+bin = "ec2-instance-selector"
+category = "Miscellaneous"
+description = "A CLI tool and go library which recommends instance types based on resource criteria like vcpus and memory"
+homepage = "https://github.com/aws/amazon-ec2-instance-selector"
+cli = true
+
+[install.recipe]
+install = "brew tap aws/tap && brew install ec2-instance-selector"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,15 @@
+id = "difftastic"
+name = "difftastic"
+bin = "difftastic"
+category = "Development"
+description = "A structural diff that understands syntax."
+homepage = "https://github.com/Wilfred/difftastic"
+cli = true
+
+[install.recipe]
+install = "brew install difftastic"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "gopass"
+name = "gopass"
+bin = "gopass"
+category = "Productivity"
+description = "The enhanced unix password manager for teams."
+homepage = "https://github.com/gopasspw/gopass"
+cli = true
+
+[install.recipe]
+install = "brew install gopass"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

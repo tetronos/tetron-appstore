@@ -1,0 +1,15 @@
+id = "vt-code"
+name = "VT Code"
+bin = "vtcode"
+category = "Development"
+description = "VT Code - Semantic Coding Agent"
+homepage = "https://github.com/vinhnx/vtcode"
+
+[install.recipe]
+install = "brew install vtcode"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

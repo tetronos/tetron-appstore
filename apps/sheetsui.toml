@@ -1,0 +1,15 @@
+id = "sheetsui"
+name = "SheetsUI"
+bin = "sheetsui"
+category = "Productivity"
+description = "A console based spreadsheet application"
+homepage = "https://github.com/zaphar/sheetsui"
+
+[install.recipe]
+install = "cargo install --git https://github.com/zaphar/sheetsui --locked"
+method = "cargo"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

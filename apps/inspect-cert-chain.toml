@@ -1,0 +1,14 @@
+id = "inspect-cert-chain"
+name = "inspect-cert-chain"
+bin = "inspect-cert-chain"
+category = "Development"
+description = "Inspect and debug TLS certificate chains. (without OpenSSL)"
+homepage = "https://github.com/x52dev/inspect-cert-chain"
+
+[install.recipe]
+install = "cargo install --locked inspect-cert-chain"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

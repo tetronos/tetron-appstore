@@ -1,0 +1,15 @@
+id = "lychee"
+name = "lychee"
+bin = "lychee"
+category = "Web"
+description = "A fast, async link checker written in Rust."
+homepage = "https://github.com/lycheeverse/lychee"
+cli = true
+
+[install.recipe]
+install = "brew install lychee"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

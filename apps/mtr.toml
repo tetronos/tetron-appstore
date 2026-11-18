@@ -1,0 +1,21 @@
+id = "mtr"
+name = "mtr"
+bin = "mtr"
+category = "Development"
+description = "A network diagnostics tool"
+homepage = "https://github.com/traviscross/mtr"
+cli = true
+
+[install.pkg]
+apt = "mtr-tiny"
+dnf = "mtr"
+pacman = "mtr"
+brew = "mtr"
+
+[install.recipe]
+install = "brew install mtr"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

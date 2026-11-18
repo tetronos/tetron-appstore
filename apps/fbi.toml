@@ -1,0 +1,10 @@
+id = "fbi"
+name = "fbi"
+check = "fbi"
+store = false
+
+[install.pkg]
+apt = "fbi"
+dnf = "fbida"
+pacman = "fbida"
+brew = ""

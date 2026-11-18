@@ -1,0 +1,14 @@
+id = "cheznav"
+name = "cheznav"
+bin = "cheznav"
+category = "Miscellaneous"
+description = "A TUI for managing chezmoi dotfiles."
+homepage = "https://github.com/djetelina/cheznav"
+
+[install.recipe]
+install = "pipx install cheznav"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

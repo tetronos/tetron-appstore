@@ -1,0 +1,9 @@
+id = "hardcover-tui"
+name = "hardcover-tui"
+bin = "hardcover-tui"
+category = "Productivity"
+description = "An unofficial terminal user interface (TUI) client for Hardcover.app"
+homepage = "https://github.com/NotMugil/hardcover-tui"
+
+[source]
+lists = ["terminaltrove"]

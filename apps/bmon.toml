@@ -1,0 +1,18 @@
+id = "bmon"
+name = "bmon"
+bin = "bmon"
+category = "Dashboards"
+description = "A monitoring and debugging tool to capture networking related statistics and prepare them visually."
+homepage = "https://github.com/tgraf/bmon"
+
+[install.pkg]
+apt = "bmon"
+
+[install.recipe]
+install = "brew install bmon"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

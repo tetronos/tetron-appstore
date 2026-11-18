@@ -1,0 +1,9 @@
+id = "hdf5-ui"
+name = "hdf5_ui"
+bin = "hdf5_ui"
+category = "Miscellaneous"
+description = "A TUI for inspection of HDF5 files."
+homepage = "https://github.com/rhuygen/hdf5_ui"
+
+[source]
+lists = ["terminaltrove"]

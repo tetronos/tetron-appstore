@@ -1,0 +1,14 @@
+id = "steamfetch"
+name = "steamfetch"
+bin = "steamfetch"
+category = "Miscellaneous"
+description = "Display your Steam stats in the terminal."
+homepage = "https://github.com/unhappychoice/steamfetch"
+
+[install.recipe]
+install = "cargo install --locked steamfetch"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

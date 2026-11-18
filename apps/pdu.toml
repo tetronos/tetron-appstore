@@ -1,0 +1,10 @@
+id = "pdu"
+name = "pdu"
+bin = "pdu"
+category = "Dashboards"
+description = "Highly parallelized, blazing fast directory tree analyzer."
+homepage = "https://github.com/KSXGitHub/parallel-disk-usage"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

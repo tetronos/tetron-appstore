@@ -1,0 +1,14 @@
+id = "oatmeal"
+name = "oatmeal"
+bin = "oatmeal"
+category = "AI"
+description = "A TUI to chat with LLMs and direct integrations with your favourite editors."
+homepage = "https://github.com/dustinblackman/oatmeal"
+
+[install.recipe]
+install = "cargo install --locked oatmeal"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

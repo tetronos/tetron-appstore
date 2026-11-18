@@ -1,0 +1,15 @@
+id = "tfjournal"
+name = "tfjournal"
+bin = "tfjournal"
+category = "Development"
+description = "Record Terraform runs with git context, timing, and resource events."
+homepage = "https://github.com/Owloops/tfjournal"
+cli = true
+
+[install.recipe]
+install = "go install github.com/Owloops/tfjournal@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

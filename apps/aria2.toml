@@ -1,0 +1,22 @@
+id = "aria2"
+name = "aria2"
+bin = "aria2"
+check = "aria2c"
+category = "Miscellaneous"
+description = "The ultra fast download utility."
+homepage = "https://github.com/aria2/aria2"
+cli = true
+
+[install.pkg]
+apt = "aria2"
+dnf = "aria2"
+pacman = "aria2"
+brew = "aria2"
+
+[install.recipe]
+install = "brew install aria2"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

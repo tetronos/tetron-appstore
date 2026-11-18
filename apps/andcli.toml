@@ -1,0 +1,14 @@
+id = "andcli"
+name = "andcli"
+bin = "andcli"
+category = "Productivity"
+description = "A 2FA TUI for your shell."
+homepage = "https://github.com/tjblackheart/andcli"
+
+[install.recipe]
+install = "go install github.com/tjblackheart/andcli/v2/cmd/andcli@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

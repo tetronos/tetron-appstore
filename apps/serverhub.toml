@@ -1,0 +1,14 @@
+id = "serverhub"
+name = "ServerHub"
+bin = "serverhub"
+category = "Dashboards"
+description = "A TUI server monitoring dashboard for Linux with real-time metrics, scriptable widgets, and remote management"
+homepage = "https://github.com/nickprotop/ServerHub"
+
+[install.recipe]
+install = "curl -fsSL https://raw.githubusercontent.com/nickprotop/ServerHub/main/install.sh | bash"
+method = "script"
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

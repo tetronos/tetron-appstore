@@ -1,0 +1,15 @@
+id = "kabmat"
+name = "kabmat"
+bin = "kabmat"
+category = "Productivity"
+description = "TUI program for managing kanban boards with vim-like keybindings"
+homepage = "https://github.com/PlankCipher/kabmat"
+
+[install.recipe]
+install = "git clone https://github.com/PlankCipher/kabmat.git && cd kabmat && make && sudo make install"
+method = "source"
+os = ["linux", "macos"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

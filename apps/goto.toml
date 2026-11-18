@@ -1,0 +1,14 @@
+id = "goto"
+name = "goto"
+bin = "goto"
+category = "Development"
+description = "SSH manager for easy server access."
+homepage = "https://github.com/grafviktor/goto"
+
+[install.recipe]
+install = "go install github.com/grafviktor/goto/cmd/goto@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

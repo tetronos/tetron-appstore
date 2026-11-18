@@ -1,0 +1,14 @@
+id = "parqeye"
+name = "parqeye"
+bin = "parqeye"
+category = "Miscellaneous"
+description = "Peek inside Parquet files right from your terminal."
+homepage = "https://github.com/kaushiksrini/parqeye"
+
+[install.recipe]
+install = "brew install parqeye"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,11 @@
+id = "wireplumber"
+name = "wireplumber"
+check = "wpctl"
+group = "services"
+store = false
+
+[install.pkg]
+apt = "wireplumber"
+dnf = "wireplumber"
+pacman = "wireplumber"
+brew = ""

@@ -1,0 +1,14 @@
+id = "blueutil-tui"
+name = "blueutil-tui"
+bin = "blueutil-tui"
+category = "Miscellaneous"
+description = "A TUI for macOS to interact with bluetooth devices via blueutil."
+homepage = "https://github.com/Zaloog/blueutil-tui"
+
+[install.recipe]
+install = "pipx install blueutil-tui"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

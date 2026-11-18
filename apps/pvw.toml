@@ -1,0 +1,14 @@
+id = "pvw"
+name = "pvw"
+bin = "pvw"
+category = "Development"
+description = "A terminal-based (TUI) port viewer in Go"
+homepage = "https://github.com/allyring/pvw"
+
+[install.recipe]
+install = "go install github.com/allyring/pvw@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

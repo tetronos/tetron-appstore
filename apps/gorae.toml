@@ -1,0 +1,15 @@
+id = "gorae"
+name = "Gorae"
+bin = "gorae"
+category = "Multimedia"
+description = "TUI librarian for PDFs and EPUBs with Vim-style navigation."
+homepage = "https://github.com/Han8931/gorae"
+
+[install.recipe]
+install = "git clone https://github.com/Han8931/gorae.git && cd gorae && ./install.sh"
+method = "script"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "procs"
+name = "procs"
+bin = "procs"
+category = "Miscellaneous"
+description = "A modern replacement for ps written in Rust."
+homepage = "https://github.com/dalance/procs"
+cli = true
+
+[install.recipe]
+install = "brew install procs"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

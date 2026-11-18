@@ -1,0 +1,10 @@
+id = "gnupg"
+name = "gnupg"
+check = "gpg"
+store = false
+
+[install.pkg]
+apt = "gnupg"
+dnf = "gnupg2"
+pacman = "gnupg"
+brew = "gnupg"

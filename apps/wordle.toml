@@ -1,0 +1,15 @@
+id = "wordle"
+name = "Wordle"
+bin = "wordle"
+category = "Games"
+description = "Script and library for Wordle, written in Raku"
+homepage = "https://github.com/m-dango/raku-wordle/"
+
+[install.recipe]
+install = "brew install wordle"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

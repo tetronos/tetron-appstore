@@ -1,0 +1,15 @@
+id = "notox"
+name = "notox"
+bin = "notox"
+category = "Dashboards"
+description = "No toxic names anymore."
+homepage = "https://github.com/Its-Just-Nans/notox"
+cli = true
+
+[install.recipe]
+install = "cargo install --locked notox"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

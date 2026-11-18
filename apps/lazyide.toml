@@ -1,0 +1,9 @@
+id = "lazyide"
+name = "lazyide"
+bin = "lazyide"
+category = "Editors"
+description = "A lightweight terminal IDE in Rust: file tree, tabs, split panes, LSP, git diff view, minimap, 32 themes"
+homepage = "https://github.com/TysonLabs/lazyide"
+
+[source]
+lists = ["awesome-tuis"]

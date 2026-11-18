@@ -1,0 +1,15 @@
+id = "openmux"
+name = "openmux"
+bin = "openmux"
+category = "Productivity"
+description = "A terminal multiplexer with master-stack layout (Zellij-style)"
+homepage = "https://github.com/monotykamary/openmux"
+
+[install.recipe]
+install = "npm install -g openmux"
+method = "npm"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

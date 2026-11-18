@@ -1,0 +1,15 @@
+id = "lean-tui"
+name = "lean-tui"
+bin = "lean-tui"
+category = "Development"
+description = "Interactive visualization of proofs and programs written in the Lean4 proof-assistant"
+homepage = "https://codeberg.org/wvhulle/lean-tui"
+
+[install.recipe]
+install = "cargo install lean-tui"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

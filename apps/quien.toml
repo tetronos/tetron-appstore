@@ -1,0 +1,14 @@
+id = "quien"
+name = "quien"
+bin = "quien"
+category = "Development"
+description = "A better whois and domain intelligence toolkit."
+homepage = "https://github.com/retlehs/quien"
+
+[install.recipe]
+install = "brew install quien"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

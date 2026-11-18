@@ -1,0 +1,14 @@
+id = "mandown"
+name = "mandown"
+bin = "mandown"
+category = "Productivity"
+description = "man-page inspired Markdown viewer."
+homepage = "https://github.com/Titor8115/mandown"
+
+[install.recipe]
+install = "brew install mandown"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

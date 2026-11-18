@@ -1,0 +1,19 @@
+id = "kilo-code"
+name = "Kilo Code"
+bin = "kilo"
+category = "AI"
+description = "Agentic AI coding assistant with a keyboard-driven TUI that orchestrates code generation, editing, and terminal commands from the command line."
+homepage = "https://kilo.ai"
+requires_cwd = true
+
+[notes]
+tip = "First run: type /connect inside kilo (or `kilo auth login`) to add a provider. A free Kilo account includes hosted models; BYOK and Ollama also work."
+
+[install.recipe]
+install = "npm install -g @kilocode/cli"
+method = "npm"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["tetron"]

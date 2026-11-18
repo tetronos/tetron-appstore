@@ -1,0 +1,15 @@
+id = "geekcalendar"
+name = "GeekCalendar"
+bin = "geekcalendar"
+category = "Productivity"
+description = "TUI calendar with vim key bindings, which can import from calcure or calcurse."
+homepage = "https://github.com/fearlessgeekmedia/GeekCalendar"
+
+[install.recipe]
+install = "npm install -g github:fearlessgeekmedia/GeekCalendar"
+method = "npm"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,15 @@
+id = "tlock"
+name = "tlock"
+bin = "tlock"
+category = "Miscellaneous"
+description = "Two-Factor Authentication Tokens Manager in Terminal"
+homepage = "https://github.com/eklairs/tlock"
+
+[install.recipe]
+install = "go install github.com/eklairs/tlock@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

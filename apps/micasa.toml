@@ -1,0 +1,9 @@
+id = "micasa"
+name = "micasa"
+bin = "micasa"
+category = "Productivity"
+description = "A terminal UI for tracking everything about your home."
+homepage = "https://github.com/cpcloud/micasa"
+
+[source]
+lists = ["terminaltrove"]

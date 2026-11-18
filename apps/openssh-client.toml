@@ -1,0 +1,10 @@
+id = "openssh-client"
+name = "openssh-client"
+check = "ssh"
+store = false
+
+[install.pkg]
+apt = "openssh-client"
+dnf = "openssh-clients"
+pacman = "openssh"
+brew = ""

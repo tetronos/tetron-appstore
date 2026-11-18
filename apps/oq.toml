@@ -1,0 +1,14 @@
+id = "oq"
+name = "oq"
+bin = "oq"
+category = "Miscellaneous"
+description = "A terminal-based OpenAPI Spec (OAS) viewer."
+homepage = "https://github.com/plutov/oq"
+
+[install.recipe]
+install = "go install github.com/plutov/oq@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

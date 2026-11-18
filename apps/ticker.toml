@@ -1,0 +1,15 @@
+id = "ticker"
+name = "ticker"
+bin = "ticker"
+category = "Dashboards"
+description = "Track stocks, crypto, and derivatives prices and positions in real time from your terminal"
+homepage = "https://github.com/achannarasappa/ticker"
+
+[install.recipe]
+install = "brew install achannarasappa/tap/ticker"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

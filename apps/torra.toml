@@ -1,0 +1,9 @@
+id = "torra"
+name = "torra"
+bin = "torra"
+category = "Miscellaneous"
+description = "Find and download torrents without leaving your CLI."
+homepage = "https://github.com/stabldev/torrra"
+
+[source]
+lists = ["terminaltrove"]

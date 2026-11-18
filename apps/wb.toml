@@ -1,0 +1,15 @@
+id = "wb"
+name = "wb"
+bin = "wb"
+category = "Miscellaneous"
+description = "A TUI vocabulary notebook app for Linux based devices."
+homepage = "https://github.com/MertGunduz/wb"
+
+[install.recipe]
+install = "git clone https://github.com/MertGunduz/wb.git && cd wb && chmod 755 INSTALL.sh && ./INSTALL.sh"
+method = "script"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

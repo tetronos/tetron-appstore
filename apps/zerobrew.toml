@@ -1,0 +1,10 @@
+id = "zerobrew"
+name = "zerobrew"
+bin = "zerobrew"
+category = "Miscellaneous"
+description = "A drop-in, 5-20x faster, experimental Homebrew alternative."
+homepage = "https://github.com/zerobrewhq/zerobrew"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

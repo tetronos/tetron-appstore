@@ -1,0 +1,14 @@
+id = "mdns-scanner"
+name = "mdns-scanner"
+bin = "mdns-scanner"
+category = "Development"
+description = "Scan a network and create a list of IPs and associated hostnames."
+homepage = "https://github.com/CramBL/mdns-scanner"
+
+[install.recipe]
+install = "cargo install --locked mdns-scanner"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "gitsnip"
+name = "gitsnip"
+bin = "gitsnip"
+category = "Development"
+description = "A CLI tool to download specific folders from a git repository."
+homepage = "https://github.com/dagimg-dot/gitsnip"
+cli = true
+
+[install.recipe]
+install = "go install github.com/dagimg-dot/gitsnip/cmd/gitsnip@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

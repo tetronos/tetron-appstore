@@ -1,0 +1,15 @@
+id = "bkp"
+name = "bkp"
+bin = "bkp"
+category = "Productivity"
+description = "Utility that makes backups of your files/directories."
+homepage = "https://github.com/gergelyk/bkp"
+cli = true
+
+[install.recipe]
+install = "pipx install bkp"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,14 @@
+id = "so"
+name = "so"
+bin = "so"
+category = "Web"
+description = "A terminal interface for Stack Overflow."
+homepage = "https://github.com/samtay/so"
+
+[install.recipe]
+install = "brew install so"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "termshark"
+name = "termshark"
+bin = "termshark"
+category = "Miscellaneous"
+description = "Terminal UI for tshark"
+homepage = "https://github.com/gcla/termshark"
+
+[install.recipe]
+install = "brew install termshark"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

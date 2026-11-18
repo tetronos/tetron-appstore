@@ -1,0 +1,14 @@
+id = "circumflex"
+name = "circumflex"
+bin = "circumflex"
+category = "Messaging"
+description = "It's Hacker News in your terminal."
+homepage = "https://github.com/bensadeh/circumflex"
+
+[install.recipe]
+install = "brew install circumflex"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

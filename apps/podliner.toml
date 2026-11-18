@@ -1,0 +1,15 @@
+id = "podliner"
+name = "podliner"
+bin = "podliner"
+category = "Web"
+description = "A cross-platform podcast client"
+homepage = "https://github.com/timkicker/podliner"
+
+[install.recipe]
+install = "bash <(curl -fsSL https://github.com/timkicker/podliner/releases/latest/download/install-macos.sh)"
+method = "script"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

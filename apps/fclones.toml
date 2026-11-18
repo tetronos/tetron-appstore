@@ -1,0 +1,15 @@
+id = "fclones"
+name = "fclones"
+bin = "fclones"
+category = "Dashboards"
+description = "Efficient duplicate file finder and remover."
+homepage = "https://github.com/pkolaczk/fclones"
+cli = true
+
+[install.recipe]
+install = "brew install fclones"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

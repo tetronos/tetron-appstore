@@ -1,0 +1,15 @@
+id = "tmd-top"
+name = "tmd-top"
+bin = "tmd-top"
+category = "Dashboards"
+description = "Used to monitor the process tcp traffic of the linux system, detailed to each IP connection"
+homepage = "https://github.com/CDWEN0526/tmd-top"
+
+[install.recipe]
+install = "pipx install tmd-top"
+method = "pipx"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

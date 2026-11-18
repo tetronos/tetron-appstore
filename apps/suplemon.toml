@@ -1,0 +1,9 @@
+id = "suplemon"
+name = "suplemon"
+bin = "suplemon"
+category = "Editors"
+description = "Text editor with multiple cursors, in the style of Sublime Text"
+homepage = "https://github.com/leancode/suplemon"
+
+[source]
+lists = ["awesome-tuis"]

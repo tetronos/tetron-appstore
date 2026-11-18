@@ -1,0 +1,15 @@
+id = "bandwhich"
+name = "bandwhich"
+bin = "bandwhich"
+category = "Dashboards"
+description = "Terminal bandwidth utilization tool"
+homepage = "https://github.com/imsnif/bandwhich"
+
+[install.recipe]
+install = "brew install bandwhich"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

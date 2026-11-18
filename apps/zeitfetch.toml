@@ -1,0 +1,15 @@
+id = "zeitfetch"
+name = "zeitfetch"
+bin = "zeitfetch"
+category = "Miscellaneous"
+description = "Instantaneous snapshots of system information."
+homepage = "https://github.com/nidnogg/zeitfetch"
+cli = true
+
+[install.recipe]
+install = "cargo install --locked zeitfetch"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,9 @@
+id = "wuzz"
+name = "wuzz"
+bin = "wuzz"
+category = "Development"
+description = "An interactive TUI tool for HTTP inspection."
+homepage = "https://github.com/asciimoo/wuzz"
+
+[source]
+lists = ["terminaltrove"]

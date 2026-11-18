@@ -1,0 +1,15 @@
+id = "snowmachine"
+name = "snowmachine"
+bin = "snowmachine"
+category = "Miscellaneous"
+description = "Make it snow in the terminal!"
+homepage = "https://github.com/sontek/snowmachine"
+cli = true
+
+[install.recipe]
+install = "pipx install snowmachine"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,9 @@
+id = "wiper"
+name = "wiper"
+bin = "wiper"
+category = "Dashboards"
+description = "A TUI disk analyser and cleanup tool."
+homepage = "https://github.com/ikebastuz/wiper"
+
+[source]
+lists = ["terminaltrove"]

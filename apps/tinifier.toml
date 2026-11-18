@@ -1,0 +1,15 @@
+id = "tinifier"
+name = "tinifier"
+bin = "tinifier"
+category = "Miscellaneous"
+description = "A CLI tool for compressing images using the TinyPNG service."
+homepage = "https://github.com/tarampampam/tinifier"
+cli = true
+
+[install.recipe]
+install = "go install gh.tarampamp.am/tinifier/v5/cmd/tinifier@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

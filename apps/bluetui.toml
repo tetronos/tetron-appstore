@@ -1,0 +1,15 @@
+id = "bluetui"
+name = "bluetui"
+bin = "bluetui"
+category = "Miscellaneous"
+description = "A TUI for managing bluetooth devices."
+homepage = "https://github.com/pythops/bluetui"
+
+[install.recipe]
+install = "cargo install bluetui"
+method = "cargo"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

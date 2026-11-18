@@ -1,0 +1,12 @@
+id = "scli"
+name = "scli"
+bin = "scli"
+category = "Messaging"
+description = "A simple terminal user interface for signal messenger"
+homepage = "https://github.com/isamert/scli/"
+
+[install.pkg]
+apt = "scli"
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

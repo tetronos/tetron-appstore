@@ -1,0 +1,15 @@
+id = "motus"
+name = "motus"
+bin = "motus"
+category = "Productivity"
+description = "Dead simple password generator."
+homepage = "https://github.com/oleiade/motus"
+cli = true
+
+[install.recipe]
+install = "cargo install --locked motus"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

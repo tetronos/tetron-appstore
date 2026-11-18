@@ -1,0 +1,15 @@
+id = "kyanos"
+name = "Kyanos"
+bin = "kyanos"
+category = "Dashboards"
+description = "Linux network analysis tool based on eBPF"
+homepage = "https://github.com/hengyoush/kyanos"
+
+[install.recipe]
+install = "tar xvf kyanos_vx.x.x_linux_amd64.tar.gz && sudo mv kyanos /usr/local/bin/"
+method = "binary"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

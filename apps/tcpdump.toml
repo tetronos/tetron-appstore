@@ -1,0 +1,21 @@
+id = "tcpdump"
+name = "tcpdump"
+bin = "tcpdump"
+category = "Development"
+description = "A command-line network traffic analyzer."
+homepage = "https://github.com/the-tcpdump-group/tcpdump"
+cli = true
+
+[install.pkg]
+apt = "tcpdump"
+dnf = "tcpdump"
+pacman = "tcpdump"
+brew = ""
+
+[install.recipe]
+install = "brew install tcpdump"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

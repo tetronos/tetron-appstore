@@ -1,0 +1,14 @@
+id = "resto"
+name = "resto"
+bin = "resto"
+category = "Development"
+description = "Send pretty HTTP & API requests with TUI."
+homepage = "https://github.com/abdfnx/resto"
+
+[install.recipe]
+install = "go install github.com/abdfnx/resto@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

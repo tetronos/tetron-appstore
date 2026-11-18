@@ -1,0 +1,15 @@
+id = "ytdl-tui"
+name = "ytdl-tui"
+bin = "ytdl-tui"
+category = "Multimedia"
+description = "TUI for downloading Youtube videos"
+homepage = "https://github.com/darky/ytdl-tui"
+
+[install.recipe]
+install = "npm install -g ytdl-tui"
+method = "npm"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

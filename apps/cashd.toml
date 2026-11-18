@@ -1,0 +1,9 @@
+id = "cashd"
+name = "cashd"
+bin = "cashd"
+category = "Productivity"
+description = "A fast and cozy TUI for personal finance management."
+homepage = "https://github.com/hzqtc/cashd"
+
+[source]
+lists = ["terminaltrove"]

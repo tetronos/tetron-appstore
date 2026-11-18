@@ -1,0 +1,14 @@
+id = "kyma"
+name = "kyma"
+bin = "kyma"
+category = "Miscellaneous"
+description = "A terminal-based presentation tool with smooth animated transitions."
+homepage = "https://github.com/museslabs/kyma"
+
+[install.recipe]
+install = "go install github.com/museslabs/kyma@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

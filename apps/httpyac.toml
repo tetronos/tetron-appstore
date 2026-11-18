@@ -1,0 +1,10 @@
+id = "httpyac"
+name = "httpyac"
+bin = "httpyac"
+category = "Development"
+description = "A command line interface to execute *.http, *.rest files."
+homepage = "https://github.com/AnWeber/httpyac"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

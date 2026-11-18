@@ -1,0 +1,15 @@
+id = "gifski"
+name = "gifski"
+bin = "gifski"
+category = "Multimedia"
+description = "Convert images and videos into highly optimized GIFs"
+homepage = "https://github.com/ImageOptim/gifski"
+cli = true
+
+[install.recipe]
+install = "brew install gifski"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

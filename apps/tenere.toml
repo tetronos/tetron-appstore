@@ -1,0 +1,15 @@
+id = "tenere"
+name = "tenere"
+bin = "tenere"
+category = "Productivity"
+description = "A TUI for ChatGPT written in Rust."
+homepage = "https://github.com/pythops/tenere"
+
+[install.recipe]
+install = "brew install tenere"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

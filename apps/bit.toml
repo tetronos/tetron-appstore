@@ -1,0 +1,14 @@
+id = "bit"
+name = "bit"
+bin = "bit"
+category = "Miscellaneous"
+description = "Terminal ANSI Logo Designer & Font Library."
+homepage = "https://github.com/paulilaaso/bit"
+
+[install.recipe]
+install = "go install github.com/paulilaaso/bit/cmd/bit@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

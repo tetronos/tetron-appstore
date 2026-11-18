@@ -1,0 +1,15 @@
+id = "durdraw"
+name = "Durdraw"
+bin = "durdraw"
+category = "Editors"
+description = "An ASCII, Unicode and ANSI art editor"
+homepage = "https://github.com/cmang/durdraw"
+
+[install.recipe]
+install = "brew install durdraw"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

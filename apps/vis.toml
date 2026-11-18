@@ -1,0 +1,15 @@
+id = "vis"
+name = "vis"
+bin = "vis"
+category = "Editors"
+description = "A vi-like editor based on Plan 9's structural regular expressions"
+homepage = "https://github.com/martanne/vis"
+
+[install.recipe]
+install = "brew install vis"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

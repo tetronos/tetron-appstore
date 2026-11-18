@@ -1,0 +1,15 @@
+id = "hashcat"
+name = "hashcat"
+bin = "hashcat"
+category = "Development"
+description = "World's fastest and most advanced password recovery utility."
+homepage = "https://github.com/hashcat/hashcat"
+cli = true
+
+[install.recipe]
+install = "brew install hashcat"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

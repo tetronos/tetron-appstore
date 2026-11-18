@@ -1,0 +1,9 @@
+id = "bullmq-dash"
+name = "bullmq-dash"
+bin = "bullmq-dash"
+category = "Dashboards"
+description = "Dashboard for monitoring BullMQ queues, inspecting jobs, and retrying failures"
+homepage = "https://github.com/quanghuynt14/bullmq-dash"
+
+[source]
+lists = ["awesome-tuis", "terminaltrove"]

@@ -1,0 +1,15 @@
+id = "tetro-tui"
+name = "tetro-tui"
+bin = "tetro-tui"
+category = "Games"
+description = "A very configurable tetris-like, featuring ASCII particles, replays and more."
+homepage = "https://github.com/Strophox/tetro-tui"
+
+[install.recipe]
+install = "cargo install tetro-tui"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

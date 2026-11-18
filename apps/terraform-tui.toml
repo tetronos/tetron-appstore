@@ -1,0 +1,15 @@
+id = "terraform-tui"
+name = "terraform-tui"
+bin = "terraform-tui"
+category = "Development"
+description = "view and interact with Terraform state"
+homepage = "https://github.com/idoavrah/terraform-tui"
+
+[install.recipe]
+install = "brew install idoavrah/homebrew/tftui"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

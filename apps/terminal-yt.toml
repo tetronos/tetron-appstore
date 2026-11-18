@@ -1,0 +1,15 @@
+id = "terminal-yt"
+name = "terminal-yt"
+bin = "terminal-yt"
+category = "Multimedia"
+description = "A small newsboat-inspired terminal youtube manager"
+homepage = "https://github.com/jooooscha/terminal-yt"
+
+[install.recipe]
+install = "cargo install --git https://github.com/jooooscha/terminal-yt"
+method = "cargo"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

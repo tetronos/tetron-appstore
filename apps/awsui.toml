@@ -1,0 +1,15 @@
+id = "awsui"
+name = "awsui"
+bin = "awsui"
+category = "Productivity"
+description = "A powerful, user-friendly terminal interface for AWS Profile and SSO management."
+homepage = "https://github.com/junminhong/awsui"
+
+[install.recipe]
+install = "pip install awsui"
+method = "pip"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

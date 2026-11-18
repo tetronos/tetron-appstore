@@ -1,0 +1,15 @@
+id = "packemon"
+name = "packemon"
+bin = "packemon"
+category = "Miscellaneous"
+description = "Packet generator and monitor."
+homepage = "https://github.com/ddddddO/packemon"
+
+[install.recipe]
+install = "brew install ddddddO/tap/packemon"
+method = "brew"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "nostratui"
+name = "nostratui"
+bin = "nostratui"
+category = "Messaging"
+description = "A terminal user interface (TUI) for browsing Nostr posts, written in Rust."
+homepage = "https://github.com/adamm-xyz/nostratui"
+
+[install.recipe]
+install = "git clone https://github.com/adamm-xyz/nostratui.git && cd nostratui && cargo build"
+method = "source"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

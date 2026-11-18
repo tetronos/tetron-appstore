@@ -1,0 +1,9 @@
+id = "systeroid"
+name = "systeroid"
+bin = "systeroid"
+category = "Development"
+description = "A more powerful alternative to sysctl(8)."
+homepage = "https://github.com/orhun/systeroid"
+
+[source]
+lists = ["terminaltrove"]

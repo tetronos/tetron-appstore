@@ -1,0 +1,15 @@
+id = "termpicker"
+name = "termpicker"
+bin = "termpicker"
+category = "Miscellaneous"
+description = "A color picker for the terminal."
+homepage = "https://github.com/ChausseBenjamin/termpicker"
+cli = true
+
+[install.recipe]
+install = "go install github.com/ChausseBenjamin/termpicker@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

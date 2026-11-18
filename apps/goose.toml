@@ -1,0 +1,17 @@
+id = "goose"
+name = "Goose"
+bin = "goose"
+category = "AI"
+description = "Open-source AI agent that runs in your terminal to automate coding, research, and engineering tasks across 15+ LLM providers."
+homepage = "https://goose-docs.ai"
+cli = true
+requires_cwd = true
+
+[install.recipe]
+install = "brew install block-goose-cli"
+method = "brew"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

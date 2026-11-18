@@ -1,0 +1,15 @@
+id = "twterm"
+name = "twterm"
+bin = "twterm"
+category = "Web"
+description = "A full-featured TUI Twitter client"
+homepage = "https://github.com/ryota-ka/twterm"
+
+[install.recipe]
+install = "brew install ryota-ka/twterm/twterm"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

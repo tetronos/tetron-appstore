@@ -1,0 +1,14 @@
+id = "wizu"
+name = "wizu"
+bin = "wizu"
+category = "Dashboards"
+description = "A fast, minimalist directory tree viewer."
+homepage = "https://github.com/sh1zen/wisu"
+
+[install.recipe]
+install = "cargo install --locked wisu"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

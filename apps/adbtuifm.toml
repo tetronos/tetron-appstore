@@ -1,0 +1,15 @@
+id = "adbtuifm"
+name = "adbtuifm"
+bin = "adbtuifm"
+category = "File Managers"
+description = "A TUI file manager for Android, based on the Android Debug Bridge(ADB)."
+homepage = "https://github.com/darkhz/adbtuifm"
+
+[install.recipe]
+install = "go install github.com/darkhz/adbtuifm@latest"
+method = "go"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

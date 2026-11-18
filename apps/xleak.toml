@@ -1,0 +1,14 @@
+id = "xleak"
+name = "xleak"
+bin = "xleak"
+category = "Miscellaneous"
+description = "Expose Excel files in your terminal, no Microsoft Excel required."
+homepage = "https://github.com/bgreenwell/xleak"
+
+[install.recipe]
+install = "brew install xleak"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,9 @@
+id = "python3-venv"
+name = "python3-venv"
+store = false
+
+[install.pkg]
+apt = "python3-venv"
+dnf = ""
+pacman = ""
+brew = ""

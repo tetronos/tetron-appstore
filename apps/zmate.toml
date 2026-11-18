@@ -1,0 +1,15 @@
+id = "zmate"
+name = "zmate"
+bin = "zmate"
+category = "Development"
+description = "Instant terminal sharing using Zellij."
+homepage = "https://github.com/ziinaio/zmate"
+cli = true
+
+[install.recipe]
+install = "go install github.com/ziinaio/zmate@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

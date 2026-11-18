@@ -1,0 +1,15 @@
+id = "sqly"
+name = "sqly"
+bin = "sqly"
+category = "Development"
+description = "Easily execute SQL against CSV/TSV/LTSV/JSON and Excel with shell."
+homepage = "https://github.com/nao1215/sqly"
+cli = true
+
+[install.recipe]
+install = "go install github.com/nao1215/sqly@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

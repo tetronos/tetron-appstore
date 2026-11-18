@@ -1,0 +1,15 @@
+id = "try-rs"
+name = "try-rs"
+bin = "try-rs"
+category = "Miscellaneous"
+description = "A lightning-fast TUI to manage temporary projects. Create, explore, and clone repositories instantly without cluttering your system."
+homepage = "https://github.com/tassiovirginio/try-rs/"
+
+[install.recipe]
+install = "brew install try-rs"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

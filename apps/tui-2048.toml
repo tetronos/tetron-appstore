@@ -1,0 +1,15 @@
+id = "tui-2048"
+name = "tui-2048"
+bin = "tui-2048"
+category = "Games"
+description = "The game 2048 for your terminal"
+homepage = "https://github.com/ps06756/tui-2048"
+
+[install.recipe]
+install = "pip install tui-2048"
+method = "pip"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

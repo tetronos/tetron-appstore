@@ -1,0 +1,14 @@
+id = "mlbt"
+name = "mlbt"
+bin = "mlbt"
+category = "Web"
+description = "A TUI interface for the MLB Statcast API."
+homepage = "https://github.com/mlb-rs/mlbt"
+
+[install.recipe]
+install = "cargo install --locked mlbt"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

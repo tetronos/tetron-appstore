@@ -1,0 +1,15 @@
+id = "hexyl"
+name = "hexyl"
+bin = "hexyl"
+category = "Miscellaneous"
+description = "A rust based command-line hex viewer"
+homepage = "https://github.com/sharkdp/hexyl"
+cli = true
+
+[install.recipe]
+install = "brew install hexyl"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

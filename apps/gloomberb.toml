@@ -1,0 +1,9 @@
+id = "gloomberb"
+name = "Gloomberb"
+bin = "gloomberb"
+category = "Dashboards"
+description = "Open-source finance terminal for portfolios, watchlists, charts, news, research, and broker connections."
+homepage = "https://github.com/vincelwt/gloomberb"
+
+[source]
+lists = ["awesome-tuis", "terminaltrove"]

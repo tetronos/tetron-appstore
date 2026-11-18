@@ -1,0 +1,15 @@
+id = "weathr"
+name = "weathr"
+bin = "weathr"
+category = "Screensavers"
+description = "A terminal weather app with ASCII animations for weather visualization"
+homepage = "https://github.com/veirt/weathr"
+
+[install.recipe]
+install = "cargo install weathr"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

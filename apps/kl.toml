@@ -1,0 +1,14 @@
+id = "kl"
+name = "kl"
+bin = "kl"
+category = "Docker/LXC/K8s"
+description = "An interactive Kubernetes log viewer for your terminal."
+homepage = "https://github.com/robinovitch61/kl"
+
+[install.recipe]
+install = "go install github.com/robinovitch61/kl@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

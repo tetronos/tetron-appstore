@@ -1,0 +1,14 @@
+id = "pysentation"
+name = "pysentation"
+bin = "pysentation"
+category = "Miscellaneous"
+description = "TUI for displaying Python presentations"
+homepage = "https://github.com/mimseyedi/pysentation"
+
+[install.recipe]
+install = "pipx install pysentation"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,14 @@
+id = "qq"
+name = "qq"
+bin = "qq"
+category = "Development"
+description = "A jq inspired interoperable config format transcoder with interactive querying."
+homepage = "https://github.com/JFryy/qq"
+
+[install.recipe]
+install = "go install github.com/JFryy/qq@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "micro-tetris"
+name = "Micro Tetris"
+bin = "tetris"
+category = "Games"
+description = "One of the smallest Tetris implementations in the world, utilizing only ANSI escape sequences to draw the board."
+homepage = "https://github.com/troglobit/tetris"
+
+[install.recipe]
+install = "git clone https://github.com/troglobit/tetris && cd tetris && make && sudo install -m 755 tetris /usr/local/bin/tetris"
+method = "make"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,15 @@
+id = "curlie"
+name = "curlie"
+bin = "curlie"
+category = "Development"
+description = "The power of curl, the ease of use of httpie."
+homepage = "https://github.com/rs/curlie"
+cli = true
+
+[install.recipe]
+install = "brew install curlie"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

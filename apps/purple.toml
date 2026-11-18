@@ -1,0 +1,9 @@
+id = "purple"
+name = "purple"
+bin = "purple"
+category = "Development"
+description = "A terminal SSH config manager and cockpit for your servers."
+homepage = "https://github.com/erickochen/purple"
+
+[source]
+lists = ["terminaltrove"]

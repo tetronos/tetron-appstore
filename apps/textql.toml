@@ -1,0 +1,10 @@
+id = "textql"
+name = "textql"
+bin = "textql"
+category = "Development"
+description = "Execute SQL against structured text like CSV or TSV"
+homepage = "https://github.com/dinedal/textql"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

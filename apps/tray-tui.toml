@@ -1,0 +1,15 @@
+id = "tray-tui"
+name = "tray-tui"
+bin = "tray-tui"
+category = "Miscellaneous"
+description = "System tray in your terminal"
+homepage = "https://github.com/Levizor/tray-tui"
+
+[install.recipe]
+install = "cargo install tray-tui"
+method = "cargo"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

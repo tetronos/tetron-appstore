@@ -1,0 +1,22 @@
+id = "ripgrep"
+name = "ripgrep"
+bin = "ripgrep"
+check = "rg"
+category = "Development"
+description = "A recursive directory search tool using regex patterns."
+homepage = "https://github.com/BurntSushi/ripgrep"
+cli = true
+
+[install.pkg]
+apt = "ripgrep"
+dnf = "ripgrep"
+pacman = "ripgrep"
+brew = "ripgrep"
+
+[install.recipe]
+install = "brew install ripgrep"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

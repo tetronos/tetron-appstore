@@ -1,0 +1,15 @@
+id = "e1s"
+name = "e1s"
+bin = "e1s"
+category = "Docker/LXC/K8s"
+description = "TUI for managing AWS ECS resources"
+homepage = "https://github.com/keidarcy/e1s"
+
+[install.recipe]
+install = "brew install e1s"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

@@ -1,0 +1,14 @@
+id = "apisnip"
+name = "apisnip"
+bin = "apisnip"
+category = "Development"
+description = "A TUI tool for trimming OpenAPI specifications down to size."
+homepage = "https://github.com/Tuurlijk/apisnip"
+
+[install.recipe]
+install = "cargo install --locked apisnip"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

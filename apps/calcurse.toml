@@ -1,0 +1,15 @@
+id = "calcurse"
+name = "calcurse"
+bin = "calcurse"
+category = "Productivity"
+description = "calendar and scheduling application for the command line"
+homepage = "https://calcurse.org/"
+
+[install.recipe]
+install = "brew install calcurse"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

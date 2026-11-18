@@ -1,0 +1,15 @@
+id = "wocogo"
+name = "wocogo"
+bin = "wocogo"
+category = "Games"
+description = "Construct words from a list of given segments. A simple TUI game in Python, similar to the NY Times Combinations game."
+homepage = "https://codeberg.org/kedlubnowski/wocogo"
+
+[install.recipe]
+install = "git clone https://codeberg.org/kedlubnowski/wocogo.git && cd wocogo && pip install ."
+method = "source"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

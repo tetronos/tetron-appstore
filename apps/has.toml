@@ -1,0 +1,15 @@
+id = "has"
+name = "has"
+bin = "has"
+category = "Miscellaneous"
+description = "Checks presence of various CLI tools and their versions on the path."
+homepage = "https://github.com/kdabir/has"
+cli = true
+
+[install.recipe]
+install = "brew install has"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

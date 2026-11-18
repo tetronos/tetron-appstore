@@ -1,0 +1,15 @@
+id = "endcord"
+name = "endcord"
+bin = "endcord"
+category = "Messaging"
+description = "Feature rich Discord TUI client."
+homepage = "https://github.com/mzivic7/endcord"
+
+[install.recipe]
+install = "bash -c \"$(curl -fsSL https://raw.githubusercontent.com/mzivic7/endcord/main/tools/install.sh)\""
+method = "script"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

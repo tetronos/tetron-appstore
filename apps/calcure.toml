@@ -1,0 +1,15 @@
+id = "calcure"
+name = "calcure"
+bin = "calcure"
+category = "Productivity"
+description = "Modern TUI calendar and task manager with minimal and customizable UI."
+homepage = "https://github.com/anufrievroman/calcure"
+
+[install.recipe]
+install = "pipx install calcure"
+method = "pipx"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

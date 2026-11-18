@@ -1,0 +1,15 @@
+id = "rttt"
+name = "rttt"
+bin = "rttt"
+category = "Web"
+description = "A Hackernews, RSS and Reddit reader for the terminal written in C++."
+homepage = "https://gitlab.com/BlackEdder/rttt"
+
+[install.recipe]
+install = "git clone https://gitlab.com/BlackEdder/rttt.git && cd rttt && cmake . && make install"
+method = "source"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

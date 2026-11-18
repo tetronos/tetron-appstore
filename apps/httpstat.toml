@@ -1,0 +1,15 @@
+id = "httpstat"
+name = "httpstat"
+bin = "httpstat"
+category = "Development"
+description = "Visualizes curl(1) statistics in a way of beauty and clarity."
+homepage = "https://github.com/reorx/httpstat"
+cli = true
+
+[install.recipe]
+install = "brew install httpstat"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

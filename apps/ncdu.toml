@@ -1,0 +1,18 @@
+id = "ncdu"
+name = "ncdu"
+bin = "ncdu"
+category = "Miscellaneous"
+description = "disk usage analyzer with an ncurses interface"
+homepage = "https://dev.yorhel.nl/ncdu"
+
+[install.pkg]
+dnf = "ncdu"
+
+[install.recipe]
+install = "brew install ncdu"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

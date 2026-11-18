@@ -1,0 +1,14 @@
+id = "bt"
+name = "bt"
+bin = "bt"
+category = "File Managers"
+description = "Interactive tree-like terminal file manager."
+homepage = "https://github.com/LeperGnome/bt"
+
+[install.recipe]
+install = "go install github.com/LeperGnome/bt/cmd/bt@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "kubetui"
+name = "kubetui"
+bin = "kubetui"
+category = "Docker/LXC/K8s"
+description = "A TUI tool designed for monitoring Kubernetes resources."
+homepage = "https://github.com/sarub0b0/kubetui"
+
+[install.recipe]
+install = "brew install kubetui"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

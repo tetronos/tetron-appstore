@@ -1,0 +1,15 @@
+id = "dra"
+name = "dra"
+bin = "dra"
+category = "Miscellaneous"
+description = "A command line tool to download release assets from GitHub."
+homepage = "https://github.com/devmatteini/dra"
+cli = true
+
+[install.recipe]
+install = "brew install dra"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

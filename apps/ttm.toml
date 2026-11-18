@@ -1,0 +1,15 @@
+id = "ttm"
+name = "ttm"
+bin = "ttm"
+category = "Productivity"
+description = "SSH bookmark manager with Bubble Tea TUI — connect, manage and sync via Gist"
+homepage = "https://github.com/vst93/ttm"
+
+[install.recipe]
+install = "brew install vst93/tap/ttm"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

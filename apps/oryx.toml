@@ -1,0 +1,9 @@
+id = "oryx"
+name = "oryx"
+bin = "oryx"
+category = "Dashboards"
+description = "A TUI for sniffing network traffic using eBPF"
+homepage = "https://github.com/pythops/oryx"
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

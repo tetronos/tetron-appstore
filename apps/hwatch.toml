@@ -1,0 +1,15 @@
+id = "hwatch"
+name = "hwatch"
+bin = "hwatch"
+category = "Dashboards"
+description = "A modern alternative to watch that records command output history and provides interactive diff views, scrolling, filtering, JSON logging, and hooks."
+homepage = "https://github.com/blacknon/hwatch"
+
+[install.recipe]
+install = "brew install hwatch"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

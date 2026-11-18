@@ -1,0 +1,14 @@
+id = "sabiql"
+name = "sabiql"
+bin = "sabiql"
+category = "Development"
+description = "Fast, driverless, Vim-first database TUI with safe editing and ER diagrams."
+homepage = "https://github.com/riii111/sabiql"
+
+[install.recipe]
+install = "brew install sabiql"
+method = "brew"
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

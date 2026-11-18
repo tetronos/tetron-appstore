@@ -1,0 +1,9 @@
+id = "helpers"
+name = "helpers"
+store = false
+
+[notes]
+how = "tetron-wm-startpage from scripts/ and tetron-aimode from github.com/tetronos/tetron-aimode into ~/.local/bin, only when they are not already installed (the tetron-wm deb ships the start page; tetron-aimode is its own deb in the recommended set)"
+
+[install]
+script = "helpers"

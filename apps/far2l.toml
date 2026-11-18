@@ -1,0 +1,15 @@
+id = "far2l"
+name = "far2l"
+bin = "far2l"
+category = "File Managers"
+description = "Linux port of Far v2 file manager"
+homepage = "https://github.com/elfmz/far2l"
+
+[install.recipe]
+install = "brew install far2l-tty"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,15 @@
+id = "toutui"
+name = "Toutui"
+bin = "toutui"
+category = "Multimedia"
+description = "A TUI Audiobookshelf Client for Linux"
+homepage = "https://github.com/AlbanDAVID/Toutui"
+
+[install.recipe]
+install = "bash -c 'expected_sha256=\"b5c41bcd3c480fd2ca6ec0031ccecf2cf7cf4ae01f591cad64a320fa7d72331d\" export expected_sha256 tmpfile=$(mktemp) && curl -LsSf https://github.com/AlbanDAVID/Toutui/raw/stable/hello_toutui.sh -o \"$tmpfile\" && bash \"$tmpfile\" install && rm -f \"$tmpfile\"'"
+method = "script"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

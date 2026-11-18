@@ -1,0 +1,15 @@
+id = "tufw"
+name = "tufw"
+bin = "tufw"
+category = "Dashboards"
+description = "Terminal UI for ufw"
+homepage = "https://github.com/peltho/tufw"
+
+[install.recipe]
+install = "go install github.com/peltho/tufw@latest"
+method = "go"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

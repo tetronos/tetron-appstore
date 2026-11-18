@@ -1,0 +1,14 @@
+id = "perch"
+name = "perch"
+bin = "perch"
+category = "Messaging"
+description = "A beautiful terminal social client for Mastodon and Bluesky."
+homepage = "https://github.com/ricardodantas/perch"
+
+[install.recipe]
+install = "cargo install --locked perch"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

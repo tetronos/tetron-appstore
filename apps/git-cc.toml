@@ -1,0 +1,15 @@
+id = "git-cc"
+name = "git-cc"
+bin = "git-cc"
+category = "Development"
+description = "a git extension to help write conventional commits"
+homepage = "https://github.com/SKalt/git-cc"
+cli = true
+
+[install.recipe]
+install = "go install github.com/skalt/git-cc@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

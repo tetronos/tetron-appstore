@@ -1,0 +1,15 @@
+id = "qrtool"
+name = "qrtool"
+bin = "qrtool"
+category = "Miscellaneous"
+description = "A utility for encoding or decoding QR codes."
+homepage = "https://github.com/sorairolake/qrtool"
+cli = true
+
+[install.recipe]
+install = "brew install qrtool"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

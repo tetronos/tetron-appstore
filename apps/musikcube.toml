@@ -1,0 +1,14 @@
+id = "musikcube"
+name = "musikcube"
+bin = "musikcube"
+category = "Multimedia"
+description = "A cross-platform terminal-based music player"
+homepage = "https://github.com/clangen/musikcube"
+
+[install.recipe]
+install = "brew install musikcube"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

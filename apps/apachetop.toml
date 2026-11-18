@@ -1,0 +1,15 @@
+id = "apachetop"
+name = "apachetop"
+bin = "apachetop"
+category = "Dashboards"
+description = "display information from a running copy of Apache."
+homepage = "https://github.com/tessus/apachetop"
+
+[install.recipe]
+install = "brew install apachetop"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,15 @@
+id = "chronos"
+name = "Chronos"
+bin = "chronos"
+category = "Productivity"
+description = "A Vimlike Calendar TUI"
+homepage = "https://github.com/samuelstranges/chronos"
+
+[install.recipe]
+install = "go install github.com/samuelstranges/chronos@latest"
+method = "go"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

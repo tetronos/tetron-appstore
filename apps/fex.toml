@@ -1,0 +1,9 @@
+id = "fex"
+name = "fex"
+bin = "fex"
+category = "File Managers"
+description = "A command-line file explorer prioritizing quick navigation."
+homepage = "https://github.com/18alantom/fex"
+
+[source]
+lists = ["terminaltrove"]

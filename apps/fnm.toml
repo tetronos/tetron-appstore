@@ -1,0 +1,15 @@
+id = "fnm"
+name = "fnm"
+bin = "fnm"
+category = "Miscellaneous"
+description = "fast and simple node.js version manager in rust."
+homepage = "https://github.com/Schniz/fnm"
+cli = true
+
+[install.recipe]
+install = "brew install fnm"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

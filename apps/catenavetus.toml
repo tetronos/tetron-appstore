@@ -1,0 +1,15 @@
+id = "catenavetus"
+name = "CatenaVetus"
+bin = "catenavetus"
+category = "Web"
+description = "A TUI for reading the Church Fathers"
+homepage = "https://github.com/jimbob88/CatenaVetus"
+
+[install.recipe]
+install = "pip install -e ."
+method = "pip"
+os = ["linux", "macos", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

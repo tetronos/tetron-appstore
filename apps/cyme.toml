@@ -1,0 +1,15 @@
+id = "cyme"
+name = "cyme"
+bin = "cyme"
+category = "Dashboards"
+description = "List system USB buses and devices."
+homepage = "https://github.com/tuna-f1sh/cyme"
+cli = true
+
+[install.recipe]
+install = "brew install cyme"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

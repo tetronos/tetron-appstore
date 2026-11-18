@@ -1,0 +1,15 @@
+id = "hl"
+name = "hl"
+bin = "hl"
+category = "Dashboards"
+description = "A fast and powerful log viewer and processor."
+homepage = "https://github.com/pamburus/hl"
+cli = true
+
+[install.recipe]
+install = "brew install hl"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

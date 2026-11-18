@@ -1,0 +1,18 @@
+id = "ninvaders"
+name = "nInvaders"
+bin = "ninvaders"
+category = "Games"
+description = "Space Invaders"
+homepage = "http://ninvaders.sourceforge.net/"
+
+[install.pkg]
+apt = "ninvaders"
+
+[install.recipe]
+install = "brew install ninvaders"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

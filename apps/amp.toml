@@ -1,0 +1,15 @@
+id = "amp"
+name = "amp"
+bin = "amp"
+category = "Editors"
+description = "A complete text editor for your terminal"
+homepage = "https://github.com/jmacdonald/amp"
+
+[install.recipe]
+install = "brew install amp"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

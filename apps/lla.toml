@@ -1,0 +1,15 @@
+id = "lla"
+name = "lla"
+bin = "lla"
+category = "Dashboards"
+description = "A blazing fast ls replacement with superpowers."
+homepage = "https://github.com/chaqchase/lla"
+cli = true
+
+[install.recipe]
+install = "brew install lla"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

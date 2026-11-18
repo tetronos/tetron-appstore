@@ -1,0 +1,14 @@
+id = "mop"
+name = "mop"
+bin = "mop"
+category = "Productivity"
+description = "stock market tracker for hackers."
+homepage = "https://github.com/mop-tracker/mop"
+
+[install.recipe]
+install = "go install github.com/mop-tracker/mop/cmd/mop@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,9 @@
+id = "ereandel"
+name = "ereandel"
+bin = "ereandel"
+category = "Miscellaneous"
+description = "A Gemini web browser using shell script."
+homepage = "https://github.com/blmayer/ereandel"
+
+[source]
+lists = ["terminaltrove"]

@@ -1,0 +1,14 @@
+id = "typioca"
+name = "typioca"
+bin = "typioca"
+category = "Productivity"
+description = "Cozy typing speed tester in terminal."
+homepage = "https://github.com/bloznelis/typioca"
+
+[install.recipe]
+install = "brew install typioca"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

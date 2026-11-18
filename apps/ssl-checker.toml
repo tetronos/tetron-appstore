@@ -1,0 +1,14 @@
+id = "ssl-checker"
+name = "ssl-checker"
+bin = "ssl-checker"
+category = "Development"
+description = "Fast and beautiful program to check all your https endpoint."
+homepage = "https://github.com/fabio42/ssl-checker"
+
+[install.recipe]
+install = "go install github.com/fabio42/ssl-checker@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

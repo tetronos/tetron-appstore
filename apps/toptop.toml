@@ -1,0 +1,14 @@
+id = "toptop"
+name = "toptop"
+bin = "toptop"
+category = "Dashboards"
+description = "htop/btop-class system monitor with a local-LLM view: tokens/sec, VRAM-spill and memory-bandwidth verdicts, NVIDIA + Apple Silicon"
+homepage = "https://github.com/ur-grue/toptop"
+
+[install.recipe]
+install = "cargo install --locked toptop"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

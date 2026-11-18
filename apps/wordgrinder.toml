@@ -1,0 +1,20 @@
+id = "wordgrinder"
+name = "wordgrinder"
+bin = "wordgrinder"
+category = "Productivity"
+description = "Distraction-free Unicode word processor for the terminal."
+homepage = "https://github.com/davidgiven/wordgrinder"
+
+[install.pkg]
+apt = "wordgrinder"
+dnf = "wordgrinder"
+brew = "wordgrinder"
+
+[install.recipe]
+install = "brew install wordgrinder"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

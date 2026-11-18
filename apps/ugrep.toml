@@ -1,0 +1,14 @@
+id = "ugrep"
+name = "ugrep"
+bin = "ugrep"
+category = "Development"
+description = "A fast grep replacement for archives, documents and fuzzy search."
+homepage = "https://github.com/Genivia/ugrep"
+
+[install.recipe]
+install = "brew install ugrep"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "browsh"
+name = "browsh"
+bin = "browsh"
+category = "Web"
+description = "A fully-modern text-based browser, rendering to TTY and browsers"
+homepage = "https://github.com/browsh-org/browsh"
+
+[install.recipe]
+install = "go install github.com/browsh-org/browsh/interfacer/cmd/browsh@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

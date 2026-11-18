@@ -1,0 +1,15 @@
+id = "rhit"
+name = "rhit"
+bin = "rhit"
+category = "Dashboards"
+description = "A nginx log explorer."
+homepage = "https://github.com/Canop/rhit"
+cli = true
+
+[install.recipe]
+install = "brew install rhit"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,14 @@
+id = "tz"
+name = "tz"
+bin = "tz"
+category = "Productivity"
+description = "A terminal based timezone helper"
+homepage = "https://github.com/oz/tz"
+
+[install.recipe]
+install = "brew install tz"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

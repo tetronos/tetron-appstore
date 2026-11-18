@@ -1,0 +1,15 @@
+id = "qrc"
+name = "qrc"
+bin = "qrc"
+category = "Miscellaneous"
+description = "A QR code generator for text terminals."
+homepage = "https://github.com/fumiyas/qrc"
+cli = true
+
+[install.recipe]
+install = "go install github.com/fumiyas/qrc/cmd/qrc@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

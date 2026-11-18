@@ -1,0 +1,15 @@
+id = "pproftui"
+name = "pproftui"
+bin = "pproftui"
+category = "Development"
+description = "A terminal-based UI for Go's pprof that makes profiling interactive"
+homepage = "https://github.com/Oloruntobi1/pproftui"
+
+[install.recipe]
+install = "go install github.com/Oloruntobi1/pproftui@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "asmdiff"
+name = "asmdiff"
+bin = "asmdiff"
+category = "Development"
+description = "A tool to compare per-function C assembly across compilers and revisions."
+homepage = "https://github.com/rt-rtos/asmdiff"
+cli = true
+
+[install.recipe]
+install = "pipx install asmdiff"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

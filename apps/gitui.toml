@@ -1,0 +1,18 @@
+id = "gitui"
+name = "gitui"
+bin = "gitui"
+category = "Development"
+description = "blazing fast terminal-ui for git written in rust"
+homepage = "https://github.com/extrawurst/gitui"
+
+[install.pkg]
+brew = "gitui"
+
+[install.recipe]
+install = "brew install gitui"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

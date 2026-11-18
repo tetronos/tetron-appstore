@@ -1,0 +1,15 @@
+id = "tock"
+name = "Tock"
+bin = "tock"
+category = "Productivity"
+description = "The powerful time tracking tool for the command line with a beautiful interactive TUI."
+homepage = "https://github.com/kriuchkov/tock"
+
+[install.recipe]
+install = "brew install tock"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

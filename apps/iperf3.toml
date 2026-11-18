@@ -1,0 +1,10 @@
+id = "iperf3"
+name = "iperf3"
+check = "iperf3"
+store = false
+
+[install.pkg]
+apt = "iperf3"
+dnf = "iperf3"
+pacman = "iperf3"
+brew = "iperf3"

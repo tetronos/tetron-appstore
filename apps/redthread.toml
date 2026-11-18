@@ -1,0 +1,14 @@
+id = "redthread"
+name = "redthread"
+bin = "redthread"
+category = "Miscellaneous"
+description = "A sticky-note pinboard TUI inside of your terminal."
+homepage = "https://github.com/B33pBeeps/redthread"
+
+[install.recipe]
+install = "go install github.com/B33pBeeps/redthread/cmd/redthread@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

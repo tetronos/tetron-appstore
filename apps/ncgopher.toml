@@ -1,0 +1,14 @@
+id = "ncgopher"
+name = "ncgopher"
+bin = "ncgopher"
+category = "Web"
+description = "An ncurses Gopher and Gemini client for the modern internet."
+homepage = "https://github.com/jansc/ncgopher"
+
+[install.recipe]
+install = "cargo install --locked ncgopher"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

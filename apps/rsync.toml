@@ -1,0 +1,21 @@
+id = "rsync"
+name = "rsync"
+bin = "rsync"
+category = "Productivity"
+description = "A fast and extraordinarily versatile file copying tool for both remote and local files."
+homepage = "https://github.com/RsyncProject/rsync"
+cli = true
+
+[install.pkg]
+apt = "rsync"
+dnf = "rsync"
+pacman = "rsync"
+brew = "rsync"
+
+[install.recipe]
+install = "brew install rsync"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

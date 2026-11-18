@@ -1,0 +1,14 @@
+id = "az-tui"
+name = "az-tui"
+bin = "az-tui"
+category = "Development"
+description = "A TUI for managing Azure Container Apps."
+homepage = "https://github.com/IAL32/az-tui"
+
+[install.recipe]
+install = "go install github.com/IAL32/az-tui/cmd/az-tui@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

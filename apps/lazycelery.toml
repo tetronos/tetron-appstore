@@ -1,0 +1,14 @@
+id = "lazycelery"
+name = "lazycelery"
+bin = "lazycelery"
+category = "Dashboards"
+description = "A TUI for monitoring and managing Celery workers and tasks."
+homepage = "https://github.com/Fguedes90/lazycelery"
+
+[install.recipe]
+install = "cargo install --locked lazycelery"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,10 @@
+id = "uv"
+name = "uv"
+check = "uv"
+store = false
+
+[install.pkg]
+apt = ""
+dnf = "uv"
+pacman = "uv"
+brew = "uv"

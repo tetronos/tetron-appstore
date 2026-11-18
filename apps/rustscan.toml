@@ -1,0 +1,15 @@
+id = "rustscan"
+name = "rustscan"
+bin = "rustscan"
+category = "Development"
+description = "The Modern Port Scanner."
+homepage = "https://github.com/bee-san/RustScan"
+cli = true
+
+[install.recipe]
+install = "brew install rustscan"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

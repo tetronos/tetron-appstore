@@ -1,0 +1,22 @@
+id = "tealdeer"
+name = "tealdeer"
+bin = "tealdeer"
+check = "tldr"
+category = "Miscellaneous"
+description = "A very fast implementation of tldr in Rust."
+homepage = "https://github.com/tealdeer-rs/tealdeer"
+cli = true
+
+[install.pkg]
+apt = "tealdeer"
+dnf = "tealdeer"
+pacman = "tealdeer"
+brew = "tealdeer"
+
+[install.recipe]
+install = "brew install tealdeer"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

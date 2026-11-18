@@ -1,0 +1,15 @@
+id = "hnjobs"
+name = "hnjobs"
+bin = "hnjobs"
+category = "Productivity"
+description = "Find your next job on Who's Hiring"
+homepage = "https://github.com/mwinters0/hnjobs"
+
+[install.recipe]
+install = "go install github.com/mwinters0/hnjobs@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

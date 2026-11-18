@@ -1,0 +1,15 @@
+id = "tuisky"
+name = "tuisky"
+bin = "tuisky"
+category = "Messaging"
+description = "TUI client for BlueSky"
+homepage = "https://github.com/sugyan/tuisky"
+
+[install.recipe]
+install = "brew install tuisky"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

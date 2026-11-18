@@ -1,0 +1,15 @@
+id = "neo"
+name = "neo"
+bin = "neo"
+category = "Screensavers"
+description = "Simulates the digital rain from \"The Matrix\""
+homepage = "https://github.com/st3w/neo"
+
+[install.recipe]
+install = "./configure && make && sudo make install"
+method = "source"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

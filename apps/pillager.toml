@@ -1,0 +1,15 @@
+id = "pillager"
+name = "pillager"
+bin = "pillager"
+category = "Development"
+description = "Pillage filesystems for sensitive information."
+homepage = "https://github.com/brittonhayes/pillager"
+cli = true
+
+[install.recipe]
+install = "go install github.com/brittonhayes/pillager/cmd/pillager@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

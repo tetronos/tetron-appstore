@@ -1,0 +1,15 @@
+id = "fjira"
+name = "fjira"
+bin = "fjira"
+category = "Productivity"
+description = "TUI application for Atlassian Jira"
+homepage = "https://github.com/mk-5/fjira"
+
+[install.recipe]
+install = "brew install fjira"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

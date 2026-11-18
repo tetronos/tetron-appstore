@@ -1,0 +1,15 @@
+id = "tere"
+name = "tere"
+bin = "tere"
+category = "Dashboards"
+description = "A faster alternative to cd + ls."
+homepage = "https://github.com/mgunyho/tere"
+cli = true
+
+[install.recipe]
+install = "brew install tere"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

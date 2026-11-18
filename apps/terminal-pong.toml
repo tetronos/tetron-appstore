@@ -1,0 +1,15 @@
+id = "terminal-pong"
+name = "terminal-pong"
+bin = "terminal-pong"
+category = "Games"
+description = "A simple, fun ping pong game playable entirely in your terminal."
+homepage = "https://github.com/IshmamR/terminal.pong"
+
+[install.recipe]
+install = "cargo install --git https://github.com/IshmamR/terminal.pong"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

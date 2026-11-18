@@ -1,0 +1,14 @@
+id = "daylight"
+name = "daylight"
+bin = "daylight"
+category = "Miscellaneous"
+description = "Track sunrise and sunset times in the terminal."
+homepage = "https://github.com/jbreckmckye/daylight"
+
+[install.recipe]
+install = "go install github.com/jbreckmckye/daylight@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

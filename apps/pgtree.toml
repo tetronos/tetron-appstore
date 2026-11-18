@@ -1,0 +1,10 @@
+id = "pgtree"
+name = "pgtree"
+bin = "pgtree"
+category = "Miscellaneous"
+description = "Unix process hierarchy tree for specific processes."
+homepage = "https://github.com/joknarf/pgtree"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

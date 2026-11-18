@@ -1,0 +1,15 @@
+id = "kagan"
+name = "kagan"
+bin = "kagan"
+category = "Development"
+description = "AI-powered Kanban TUI for autonomous development workflows"
+homepage = "https://github.com/kagan-sh/kagan"
+
+[install.recipe]
+install = "pipx install kagan"
+method = "pipx"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

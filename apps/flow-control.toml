@@ -1,0 +1,18 @@
+id = "flow-control"
+name = "flow-control"
+bin = "flow"
+category = "Editors"
+description = "A lightning-fast, feature-rich text editor written in Zig"
+homepage = "https://github.com/neurocyte/flow"
+
+[install.pkg]
+brew = "flow-control"
+
+[install.recipe]
+install = "brew install flow-control"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

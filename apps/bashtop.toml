@@ -1,0 +1,15 @@
+id = "bashtop"
+name = "bashtop"
+bin = "bashtop"
+category = "Dashboards"
+description = "Resource manager written in bash"
+homepage = "https://github.com/aristocratos/bashtop"
+
+[install.recipe]
+install = "brew install bashtop"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

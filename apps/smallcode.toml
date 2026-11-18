@@ -1,0 +1,19 @@
+id = "smallcode"
+name = "smallcode"
+bin = "smallcode"
+category = "AI"
+description = "AI coding agent optimized for small local LLMs (8B-35B) via Ollama/LM Studio/llama.cpp, with optional escalation to cloud models."
+homepage = "https://github.com/Doorman11991/smallcode"
+requires_cwd = true
+
+[notes]
+tip = "Needs a local OpenAI-compatible server (Ollama, LM Studio, llama.cpp). Set SMALLCODE_MODEL and SMALLCODE_BASE_URL in a .env in your project, or run /provider inside smallcode. Node 18+."
+
+[install.recipe]
+install = "npm install -g smallcode"
+method = "npm"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["tetron"]

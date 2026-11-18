@@ -1,0 +1,15 @@
+id = "tdash"
+name = "tdash"
+bin = "tdash"
+category = "Dashboards"
+description = "A terminal dashboard with stats from Google Analytics, GitHub, Travis CI, and Jenkins. Very much built specific to me"
+homepage = "https://github.com/jessfraz/tdash"
+
+[install.recipe]
+install = "go install github.com/jessfraz/tdash@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

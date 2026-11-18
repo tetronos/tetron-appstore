@@ -1,0 +1,9 @@
+id = "marchat"
+name = "marchat"
+bin = "marchat"
+category = "Messaging"
+description = "Self-hosted terminal chat with WebSocket client/server, optional shared-key encryption, and plugins."
+homepage = "https://github.com/Cod-e-Codes/marchat"
+
+[source]
+lists = ["awesome-tuis", "terminaltrove"]

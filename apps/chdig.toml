@@ -1,0 +1,15 @@
+id = "chdig"
+name = "chdig"
+bin = "chdig"
+category = "Dashboards"
+description = "Dig into ClickHouse with TUI interface"
+homepage = "https://github.com/azat/chdig"
+
+[install.recipe]
+install = "brew install chdig"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

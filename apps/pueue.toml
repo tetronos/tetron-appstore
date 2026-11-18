@@ -1,0 +1,15 @@
+id = "pueue"
+name = "pueue"
+bin = "pueue"
+category = "Miscellaneous"
+description = "Manage your shell commands."
+homepage = "https://github.com/Nukesor/pueue"
+cli = true
+
+[install.recipe]
+install = "brew install pueue"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

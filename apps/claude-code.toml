@@ -1,0 +1,33 @@
+id = "claude-code"
+name = "Claude Code"
+bin = "claude"
+category = "AI"
+description = "Anthropic's official AI coding assistant that runs as a terminal/TUI CLI for agentic coding tasks."
+homepage = "https://code.claude.com"
+requires_cwd = true
+
+[notes]
+tip = "First run: `claude` walks you through logging in with your Anthropic account (or set ANTHROPIC_API_KEY)."
+
+[[variants]]
+suffix = "⚠️"
+args = ["--dangerously-skip-permissions"]
+warn = "Runs Claude Code with --dangerously-skip-permissions: it can edit files and run commands without asking. Launch anyway?"
+
+[agent]
+label = "Claude Code"
+
+[agent.briefing]
+args = ["--append-system-prompt-file", "{{BRIEFING}}"]
+
+[agent.mcp]
+args = ["--mcp-config", "{{MCP_JSON}}"]
+
+[install.recipe]
+install = "curl -fsSL https://claude.ai/install.sh | bash"
+method = "script"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["tetron"]

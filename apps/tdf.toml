@@ -1,0 +1,15 @@
+id = "tdf"
+name = "tdf"
+bin = "tdf"
+category = "Multimedia"
+description = "A tui-based PDF viewer"
+homepage = "https://github.com/itsjunetime/tdf"
+
+[install.recipe]
+install = "brew install tdf"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

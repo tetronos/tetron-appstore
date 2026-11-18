@@ -1,0 +1,10 @@
+id = "whois"
+name = "whois"
+check = "whois"
+store = false
+
+[install.pkg]
+apt = "whois"
+dnf = "whois"
+pacman = "whois"
+brew = "whois"

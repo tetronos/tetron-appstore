@@ -1,0 +1,15 @@
+id = "steam-friends-list-tui"
+name = "steam_friends_list_tui"
+bin = "steam_friends_list_tui"
+category = "Miscellaneous"
+description = "The steam friends list in the commandline"
+homepage = "https://github.com/AdamWHY2K/steam_friends_list_tui"
+
+[install.recipe]
+install = "Download from https://github.com/AdamWHY2K/steam_friends_list_tui/releases"
+method = "binary"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

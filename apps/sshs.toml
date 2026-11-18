@@ -1,0 +1,14 @@
+id = "sshs"
+name = "sshs"
+bin = "sshs"
+category = "Development"
+description = "Terminal user interface for SSH"
+homepage = "https://github.com/quantumsheep/sshs"
+
+[install.recipe]
+install = "brew install sshs"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,14 @@
+id = "moji"
+name = "moji"
+bin = "moji"
+category = "Miscellaneous"
+description = "Find, inspect and convert fonts from the terminal."
+homepage = "https://github.com/Microck/moji"
+
+[install.recipe]
+install = "go install github.com/microck/moji/cmd/moji@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

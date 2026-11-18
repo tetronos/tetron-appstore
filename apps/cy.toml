@@ -1,0 +1,9 @@
+id = "cy"
+name = "cy"
+bin = "cy"
+category = "Miscellaneous"
+description = "A time traveling terminal multiplexer."
+homepage = "https://github.com/cfoust/cy"
+
+[source]
+lists = ["terminaltrove"]

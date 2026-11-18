@@ -1,0 +1,15 @@
+id = "viu"
+name = "viu"
+bin = "viu"
+category = "Multimedia"
+description = "Your browser anime experience from the terminal"
+homepage = "https://github.com/viu-media/viu"
+
+[install.recipe]
+install = "brew install viu"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

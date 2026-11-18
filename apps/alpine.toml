@@ -1,0 +1,15 @@
+id = "alpine"
+name = "alpine"
+bin = "alpine"
+category = "Messaging"
+description = "Email client"
+homepage = "https://alpineapp.email/"
+
+[install.recipe]
+install = "brew install alpine"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

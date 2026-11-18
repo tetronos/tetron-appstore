@@ -1,0 +1,15 @@
+id = "lemmeknow"
+name = "lemmeknow"
+bin = "lemmeknow"
+category = "Development"
+description = "The fastest way to identify anything!"
+homepage = "https://github.com/swanandx/lemmeknow"
+cli = true
+
+[install.recipe]
+install = "brew install lemmeknow"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,9 @@
+id = "catt"
+name = "catt"
+store = false
+
+[notes]
+how = "uv tool install catt"
+
+[install]
+script = "catt"

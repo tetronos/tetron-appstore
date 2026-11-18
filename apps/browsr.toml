@@ -1,0 +1,14 @@
+id = "browsr"
+name = "browsr"
+bin = "browsr"
+category = "File Managers"
+description = "A pleasant file explorer in your terminal supporting all filesystems."
+homepage = "https://github.com/juftin/browsr"
+
+[install.recipe]
+install = "pipx install browsr"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

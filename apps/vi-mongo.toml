@@ -1,0 +1,14 @@
+id = "vi-mongo"
+name = "vi-mongo"
+bin = "vi-mongo"
+category = "Development"
+description = "A TUI for managing MongoDB databases."
+homepage = "https://github.com/kopecmaciej/vi-mongo"
+
+[install.recipe]
+install = "go install github.com/kopecmaciej/vi-mongo@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

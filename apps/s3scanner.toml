@@ -1,0 +1,15 @@
+id = "s3scanner"
+name = "s3scanner"
+bin = "s3scanner"
+category = "Development"
+description = "A tool to scan for misconfigured S3 buckets."
+homepage = "https://github.com/sa7mon/S3Scanner"
+cli = true
+
+[install.recipe]
+install = "brew install s3scanner"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "hexowl"
+name = "hexowl"
+bin = "hexowl"
+category = "Productivity"
+description = "Lightweight, flexible programmer's calculator with variables and functions."
+homepage = "https://github.com/DECE2183/hexowl"
+cli = true
+
+[install.recipe]
+install = "go install github.com/dece2183/hexowl@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

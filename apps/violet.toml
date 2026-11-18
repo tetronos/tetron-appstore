@@ -1,0 +1,15 @@
+id = "violet"
+name = "violet"
+bin = "violet"
+category = "Development"
+description = "Colorful TUI frontend to run Vagrant commands"
+homepage = "https://github.com/braheezy/violet"
+
+[install.recipe]
+install = "go install github.com/braheezy/violet/cmd/violet@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

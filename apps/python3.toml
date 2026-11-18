@@ -1,0 +1,10 @@
+id = "python3"
+name = "python3"
+check = "python3"
+store = false
+
+[install.pkg]
+apt = "python3"
+dnf = "python3"
+pacman = "python"
+brew = ""

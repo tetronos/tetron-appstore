@@ -1,0 +1,9 @@
+id = "envx"
+name = "envx"
+bin = "envx"
+category = "Miscellaneous"
+description = "A powerful and secure TUI environment variable manager."
+homepage = "https://github.com/mikeleppane/envx"
+
+[source]
+lists = ["terminaltrove"]

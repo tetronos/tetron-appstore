@@ -1,0 +1,9 @@
+id = "keep-alive"
+name = "keep-alive"
+bin = "keep-alive"
+category = "Miscellaneous"
+description = "A lightweight, cross-platform utility to prevent your system from sleeping."
+homepage = "https://github.com/stigoleg/keep-alive"
+
+[source]
+lists = ["terminaltrove"]

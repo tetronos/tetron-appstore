@@ -1,0 +1,10 @@
+id = "needs"
+name = "needs"
+bin = "needs"
+category = "Miscellaneous"
+description = "checks if bin(s) are installed, oh and the version too."
+homepage = "https://github.com/nmb4/needs"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

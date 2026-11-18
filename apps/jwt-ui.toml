@@ -1,0 +1,14 @@
+id = "jwt-ui"
+name = "jwt-ui"
+bin = "jwt-ui"
+category = "Development"
+description = "A CLI and TUI for decoding/encoding JSON Web Tokens."
+homepage = "https://github.com/jwt-rs/jwt-ui"
+
+[install.recipe]
+install = "brew install jwt-ui"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

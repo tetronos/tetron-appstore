@@ -1,0 +1,16 @@
+id = "id-spoofer"
+name = "ID-Spoofer"
+bin = "id-spoofer"
+category = "Dashboards"
+description = "A cross-platform cybersecurity toolkit for fingerprint and traffic obfuscation."
+homepage = "https://github.com/NubleX/ID-Spoofer"
+cli = true
+
+[install.recipe]
+install = "curl -sL https://github.com/NubleX/ID-Spoofer/releases/latest/download/idspoof_linux_amd64 -o idspoof && chmod +x idspoof && sudo mv idspoof /usr/local/bin/"
+method = "binary"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,15 @@
+id = "rebels-in-the-sky"
+name = "Rebels in the sky"
+bin = "rebelsinthesky"
+category = "Games"
+description = "P2P terminal game about spacepirates playing basketball across the galaxy."
+homepage = "https://github.com/ricott1/rebels-in-the-sky"
+
+[install.recipe]
+install = "cargo install rebels"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

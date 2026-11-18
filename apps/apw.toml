@@ -1,0 +1,10 @@
+id = "apw"
+name = "apw"
+bin = "apw"
+category = "Productivity"
+description = "A CLI for Apple Passwords (also known as iCloud Keychain)"
+homepage = "https://github.com/bendews/apw"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

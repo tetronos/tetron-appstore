@@ -1,0 +1,14 @@
+id = "e2c"
+name = "e2c"
+bin = "e2c"
+category = "Development"
+description = "A TUI application for managing AWS EC2 instances."
+homepage = "https://github.com/nlamirault/e2c"
+
+[install.recipe]
+install = "go install github.com/nlamirault/e2c/cmd/e2c@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

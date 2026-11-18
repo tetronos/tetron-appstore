@@ -1,0 +1,14 @@
+id = "nnd"
+name = "nnd"
+bin = "nnd"
+category = "Development"
+description = "A lightweight native debugger for Linux."
+homepage = "https://github.com/al13n321/nnd"
+
+[install.recipe]
+install = "cargo install --locked nnd"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

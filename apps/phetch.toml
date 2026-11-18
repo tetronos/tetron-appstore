@@ -1,0 +1,14 @@
+id = "phetch"
+name = "phetch"
+bin = "phetch"
+category = "Miscellaneous"
+description = "A terminal client designed to help you quickly navigate the gophersphere."
+homepage = "https://github.com/xvxx/phetch"
+
+[install.recipe]
+install = "cargo install --locked phetch"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

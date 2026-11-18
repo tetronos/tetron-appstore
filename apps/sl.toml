@@ -1,0 +1,15 @@
+id = "sl"
+name = "sl"
+bin = "sl"
+category = "Miscellaneous"
+description = "Cure your bad habit of mistyping."
+homepage = "https://github.com/mtoyoda/sl"
+cli = true
+
+[install.recipe]
+install = "brew install sl"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

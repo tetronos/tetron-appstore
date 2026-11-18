@@ -1,0 +1,15 @@
+id = "zellij"
+name = "zellij"
+bin = "zellij"
+category = "Productivity"
+description = "A terminal workspace with batteries included"
+homepage = "https://github.com/zellij-org/zellij"
+
+[install.recipe]
+install = "brew install zellij"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

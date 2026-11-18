@@ -1,0 +1,10 @@
+id = "parted"
+name = "parted"
+check = "parted"
+store = false
+
+[install.pkg]
+apt = "parted"
+dnf = "parted"
+pacman = "parted"
+brew = ""

@@ -1,0 +1,15 @@
+id = "twitch-tui"
+name = "twitch-tui"
+bin = "twitch-tui"
+category = "Messaging"
+description = "Twitch chat in the terminal"
+homepage = "https://github.com/Xithrius/twitch-tui"
+
+[install.recipe]
+install = "cargo install twitch-tui"
+method = "cargo"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

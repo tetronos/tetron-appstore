@@ -1,0 +1,10 @@
+id = "eddy"
+name = "eddy"
+bin = "eddy"
+category = "Development"
+description = "Simple, fast CLI file encryption tool."
+homepage = "https://github.com/70sh1/eddy"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

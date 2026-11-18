@@ -1,0 +1,15 @@
+id = "monolith"
+name = "monolith"
+bin = "monolith"
+category = "Web"
+description = "A CLI tool for saving complete web pages as a single HTML file."
+homepage = "https://github.com/Y2Z/monolith"
+cli = true
+
+[install.recipe]
+install = "brew install monolith"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "google-workspace-cli"
+name = "google-workspace-cli"
+bin = "google-workspace-cli"
+category = "Messaging"
+description = "One CLI for all of Google Workspace, Manage Gmail, Drive, Docs and Calendar from the Terminal."
+homepage = "https://github.com/googleworkspace/cli"
+cli = true
+
+[install.recipe]
+install = "cargo install --locked google-workspace-cli"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

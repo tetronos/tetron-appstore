@@ -1,0 +1,10 @@
+id = "ffmpeg"
+name = "ffmpeg"
+check = "ffmpeg"
+store = false
+
+[install.pkg]
+apt = "ffmpeg"
+dnf = "ffmpeg-free"
+pacman = "ffmpeg"
+brew = "ffmpeg"

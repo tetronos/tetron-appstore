@@ -1,0 +1,21 @@
+id = "fresh"
+name = "Fresh"
+bin = "fresh"
+category = "Editors"
+description = "An easy-to-use, powerful and fast terminal-based text editor."
+homepage = "https://github.com/sinelaw/fresh"
+
+[notes]
+how = "Homebrew fresh-editor on macOS; the project's own installer on Linux"
+
+[install]
+script = "fresh"
+
+[install.recipe]
+install = "brew install fresh-editor"
+method = "brew"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

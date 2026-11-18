@@ -1,0 +1,14 @@
+id = "toolong"
+name = "toolong"
+bin = "toolong"
+category = "Dashboards"
+description = "A terminal application to view, tail, merge, and search log files (plus JSONL)."
+homepage = "https://github.com/Textualize/toolong"
+
+[install.recipe]
+install = "pipx install toolong"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

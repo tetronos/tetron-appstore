@@ -1,0 +1,9 @@
+id = "bbcli"
+name = "bbcli"
+bin = "bbcli"
+category = "Web"
+description = "A TUI and CLI for accessing BBC News in the terminal."
+homepage = "https://github.com/hako/bbcli"
+
+[source]
+lists = ["terminaltrove"]

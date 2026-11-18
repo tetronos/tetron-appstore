@@ -1,0 +1,16 @@
+id = "vv"
+name = "vv"
+bin = "vv"
+category = "Multimedia"
+description = "A terminal image viewer, supporting an extensive range of modern image formats"
+homepage = "https://github.com/wolfpld/vv"
+cli = true
+
+[install.recipe]
+install = "cmake -B build -DCMAKE_BUILD_TYPE=Release && cmake --build build"
+method = "source"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

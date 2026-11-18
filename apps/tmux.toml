@@ -1,0 +1,15 @@
+id = "tmux"
+name = "tmux"
+bin = "tmux"
+category = "Productivity"
+description = "Terminal multiplexer"
+homepage = "https://github.com/tmux/tmux"
+
+[install.recipe]
+install = "brew install tmux"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

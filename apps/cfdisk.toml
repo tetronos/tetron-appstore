@@ -1,0 +1,21 @@
+id = "cfdisk"
+name = "cfdisk"
+bin = "cfdisk"
+category = "Miscellaneous"
+description = "TUI partition editor included in util-linux"
+homepage = "https://github.com/util-linux/util-linux"
+
+[install.pkg]
+apt = "fdisk"
+dnf = "util-linux"
+pacman = "util-linux"
+brew = ""
+
+[install.recipe]
+install = "brew install util-linux"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

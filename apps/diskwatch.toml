@@ -1,0 +1,14 @@
+id = "diskwatch"
+name = "diskwatch"
+bin = "diskwatch"
+category = "Dashboards"
+description = "Single host disk diagnostics in your terminal."
+homepage = "https://github.com/matthart1983/diskwatch"
+
+[install.recipe]
+install = "brew install diskwatch"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

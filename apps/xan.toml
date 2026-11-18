@@ -1,0 +1,15 @@
+id = "xan"
+name = "xan"
+bin = "xan"
+category = "Miscellaneous"
+description = "The CSV magician."
+homepage = "https://github.com/medialab/xan"
+cli = true
+
+[install.recipe]
+install = "brew install xan"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

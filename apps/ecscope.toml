@@ -1,0 +1,14 @@
+id = "ecscope"
+name = "ecscope"
+bin = "ecscope"
+category = "Dashboards"
+description = "monitor AWS ECS resources from the terminal."
+homepage = "https://github.com/dhth/ecscope"
+
+[install.recipe]
+install = "cargo install --locked ecscope"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

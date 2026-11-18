@@ -1,0 +1,14 @@
+id = "cpx"
+name = "cpx"
+bin = "cpx"
+category = "Miscellaneous"
+description = "A batteries-included Cargo-like CLI for C++."
+homepage = "https://github.com/ozacod/cpx"
+
+[install.recipe]
+install = "go install github.com/ozacod/cpx/cmd/cpx@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

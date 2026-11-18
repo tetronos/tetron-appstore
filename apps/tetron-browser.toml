@@ -1,0 +1,15 @@
+id = "tetron-browser"
+name = "tetron-browser"
+bin = "tetron-browser"
+category = "Web"
+description = "Chromium running inside your terminal: the maintained continuation of carbonyl (TetronOS package tetron-browser)"
+homepage = "https://github.com/tetronos/tetron-browser"
+
+[install.pkg]
+apt = "tetron-browser"
+dnf = ""
+pacman = ""
+brew = ""
+
+[source]
+lists = ["tetron"]

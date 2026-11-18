@@ -1,0 +1,14 @@
+id = "igrep"
+name = "igrep"
+bin = "igrep"
+category = "Development"
+description = "Interactive Grep."
+homepage = "https://github.com/konradsz/igrep"
+
+[install.recipe]
+install = "brew install igrep"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "gittype"
+name = "GitType"
+bin = "gittype"
+category = "Games"
+description = "A CLI code-typing game that turns your source code into typing challenges"
+homepage = "https://github.com/unhappychoice/gittype"
+
+[install.recipe]
+install = "brew install gittype"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

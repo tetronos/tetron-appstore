@@ -1,0 +1,15 @@
+id = "silicon"
+name = "silicon"
+bin = "silicon"
+category = "Miscellaneous"
+description = "create beautiful image of your source code."
+homepage = "https://github.com/Aloxaf/silicon"
+cli = true
+
+[install.recipe]
+install = "brew install silicon"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

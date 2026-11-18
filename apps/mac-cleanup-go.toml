@@ -1,0 +1,15 @@
+id = "mac-cleanup-go"
+name = "mac-cleanup-go"
+bin = "mac-cleanup-go"
+category = "Miscellaneous"
+description = "macOS disk cleanup TUI: scan cache/dev artifacts, preview, exclude, and move items to Trash."
+homepage = "https://github.com/2ykwang/mac-cleanup-go"
+
+[install.recipe]
+install = "brew install mac-cleanup-go"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "tui-slides"
+name = "tui-slides"
+bin = "tui-slides"
+category = "Productivity"
+description = "A terminal presentation tool capable of rendering images and many other widgets."
+homepage = "https://github.com/Chleba/tui-slides"
+
+[install.recipe]
+install = "cargo install tui-slides"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

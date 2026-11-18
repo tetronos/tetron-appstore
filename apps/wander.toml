@@ -1,0 +1,15 @@
+id = "wander"
+name = "wander"
+bin = "wander"
+category = "Dashboards"
+description = "HashiCorp Nomad terminal client"
+homepage = "https://github.com/robinovitch61/wander"
+
+[install.recipe]
+install = "brew install robinovitch61/tap/wander"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

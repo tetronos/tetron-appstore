@@ -1,0 +1,14 @@
+id = "sampler"
+name = "sampler"
+bin = "sampler"
+category = "Dashboards"
+description = "Visualization for any shell command."
+homepage = "https://github.com/sqshq/sampler"
+
+[install.recipe]
+install = "brew install sampler"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

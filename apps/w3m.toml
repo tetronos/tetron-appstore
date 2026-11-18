@@ -1,0 +1,22 @@
+id = "w3m"
+name = "w3m"
+bin = "w3m"
+category = "Web"
+description = "A text-mode WWW browser"
+homepage = "https://github.com/tats/w3m"
+needs_url = true
+
+[install.pkg]
+apt = "w3m"
+dnf = "w3m"
+pacman = "w3m"
+brew = "w3m"
+
+[install.recipe]
+install = "brew install w3m"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

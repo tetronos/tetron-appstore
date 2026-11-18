@@ -1,0 +1,14 @@
+id = "cull"
+name = "cull"
+bin = "cull"
+category = "Dashboards"
+description = "Interactive TUI disk space analyzer."
+homepage = "https://github.com/legostin/cull"
+
+[install.recipe]
+install = "go install github.com/legostin/cull@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

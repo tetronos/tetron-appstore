@@ -1,0 +1,15 @@
+id = "waves"
+name = "waves"
+bin = "waves"
+category = "Multimedia"
+description = "Terminal music player with vim-style navigation and radio mode that plays similar artists from your library"
+homepage = "https://github.com/llehouerou/waves"
+
+[install.recipe]
+install = "go install github.com/llehouerou/waves@latest"
+method = "go"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,15 @@
+id = "fnf"
+name = "fnf"
+bin = "fnf"
+category = "Miscellaneous"
+description = "An interactive fuzzy finder for the terminal"
+homepage = "https://github.com/leo-arch/fnf"
+
+[install.recipe]
+install = "git clone https://github.com/leo-arch/fnf && cd fnf && make && sudo make install"
+method = "source"
+os = ["linux", "macos"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

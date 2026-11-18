@@ -1,0 +1,15 @@
+id = "kondo"
+name = "kondo"
+bin = "kondo"
+category = "Dashboards"
+description = "Cleans node_modules, target, build, and friends from your projects."
+homepage = "https://github.com/tbillington/kondo"
+cli = true
+
+[install.recipe]
+install = "brew install kondo"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

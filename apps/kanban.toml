@@ -1,0 +1,15 @@
+id = "kanban"
+name = "kanban"
+bin = "kanban"
+category = "Productivity"
+description = "TUI kanban board for projects management with sprint tracking and task prioritization."
+homepage = "https://github.com/fulsomenko/kanban"
+
+[install.recipe]
+install = "brew install fulsomenko/tap/kanban"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

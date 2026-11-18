@@ -1,0 +1,9 @@
+id = "pwndbg"
+name = "pwndbg"
+bin = "pwndbg"
+category = "Development"
+description = "Exploit development and reverse engineering with gdb made easy."
+homepage = "https://github.com/pwndbg/pwndbg"
+
+[source]
+lists = ["terminaltrove"]

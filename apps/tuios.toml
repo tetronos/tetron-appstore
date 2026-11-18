@@ -1,0 +1,15 @@
+id = "tuios"
+name = "TUIOS"
+bin = "tuios"
+category = "Productivity"
+description = "A TUI window manager for managing multiple terminal sessions"
+homepage = "https://github.com/Gaurav-Gosain/tuios"
+
+[install.recipe]
+install = "brew install tuios"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

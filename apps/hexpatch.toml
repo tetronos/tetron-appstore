@@ -1,0 +1,9 @@
+id = "hexpatch"
+name = "hexpatch"
+bin = "hexpatch"
+category = "Miscellaneous"
+description = "A binary patcher and editor with a terminal user interface."
+homepage = "https://github.com/Etto48/HexPatch"
+
+[source]
+lists = ["terminaltrove"]

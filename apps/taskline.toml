@@ -1,0 +1,16 @@
+id = "taskline"
+name = "taskline"
+bin = "taskline"
+category = "Productivity"
+description = "Tasks, boards & notes for the command-line habitat"
+homepage = "https://github.com/perryrh0dan/taskline"
+cli = true
+
+[install.recipe]
+install = "brew install taskline"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

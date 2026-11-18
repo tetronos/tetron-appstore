@@ -1,0 +1,14 @@
+id = "tailspin"
+name = "tailspin"
+bin = "tailspin"
+category = "Dashboards"
+description = "A log file highlighter"
+homepage = "https://github.com/bensadeh/tailspin"
+
+[install.recipe]
+install = "brew install tailspin"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

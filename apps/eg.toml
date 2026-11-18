@@ -1,0 +1,15 @@
+id = "eg"
+name = "eg"
+bin = "eg"
+category = "Miscellaneous"
+description = "Useful examples at the command line."
+homepage = "https://github.com/srsudar/eg"
+cli = true
+
+[install.recipe]
+install = "pipx install eg"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

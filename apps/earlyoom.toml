@@ -1,0 +1,10 @@
+id = "earlyoom"
+name = "earlyoom"
+check = "earlyoom"
+store = false
+
+[install.pkg]
+apt = "earlyoom"
+dnf = "earlyoom"
+pacman = "earlyoom"
+brew = ""

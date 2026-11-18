@@ -1,0 +1,15 @@
+id = "ddgr"
+name = "ddgr"
+bin = "ddgr"
+category = "Web"
+description = "DuckDuckGo from the terminal."
+homepage = "https://github.com/jarun/ddgr"
+cli = true
+
+[install.recipe]
+install = "brew install ddgr"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,19 @@
+id = "jcode"
+name = "jcode"
+bin = "jcode"
+category = "AI"
+description = "RAM-efficient AI coding agent harness written in Rust, with an interactive TUI, non-interactive runs, and a persistent server/client mode across many LLM providers."
+homepage = "https://jcode.sh"
+requires_cwd = true
+
+[notes]
+tip = "First run: `jcode login --provider claude` (or openai/gemini/copilot) to sign in, then `jcode` opens the TUI. macOS with Homebrew can instead `brew tap 1jehuang/jcode && brew install jcode`."
+
+[install.recipe]
+install = "curl -fsSL https://jcode.sh/install | bash"
+method = "script"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["tetron"]

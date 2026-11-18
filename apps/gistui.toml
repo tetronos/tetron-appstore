@@ -1,0 +1,14 @@
+id = "gistui"
+name = "gistui"
+bin = "gistui"
+category = "Development"
+description = "A terminal UI for managing GitHub Gists."
+homepage = "https://github.com/akunzai/gistui"
+
+[install.recipe]
+install = "cargo install --locked gistui"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

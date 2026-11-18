@@ -1,0 +1,15 @@
+id = "neoss"
+name = "neoss"
+bin = "neoss"
+category = "Miscellaneous"
+description = "Socket statistics visualization and explanation tool for Unix systems."
+homepage = "https://github.com/PabloLec/neoss"
+
+[install.recipe]
+install = "npm install -g neoss"
+method = "npm"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

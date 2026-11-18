@@ -1,0 +1,9 @@
+id = "mistral-vibe-cli"
+name = "mistral-vibe-cli"
+bin = "mistral-vibe-cli"
+category = "AI"
+description = "A Minimal CLI coding agent by Mistral."
+homepage = "https://github.com/mistralai/mistral-vibe"
+
+[source]
+lists = ["terminaltrove"]

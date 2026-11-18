@@ -1,0 +1,9 @@
+id = "leaf"
+name = "leaf"
+bin = "leaf"
+category = "Productivity"
+description = "A terminal-based Markdown previewer with a GUI-like experience."
+homepage = "https://github.com/RivoLink/leaf"
+
+[source]
+lists = ["terminaltrove"]

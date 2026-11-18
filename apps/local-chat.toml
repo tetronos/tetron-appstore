@@ -1,0 +1,9 @@
+id = "local-chat"
+name = "local-chat"
+bin = "local-chat"
+category = "Messaging"
+description = "Terminal chat for everyone on the same WiFi, nothing to host, no accounts, no messages written to disk"
+homepage = "https://github.com/DongGunYoon/local-chat"
+
+[source]
+lists = ["awesome-tuis"]

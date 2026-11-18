@@ -1,0 +1,15 @@
+id = "trek"
+name = "trek"
+bin = "trek"
+category = "Dashboards"
+description = "ncurses explorer for Hashicorp Nomad clusters"
+homepage = "https://github.com/franckverrot/trek"
+
+[install.recipe]
+install = "go install github.com/franckverrot/trek@latest"
+method = "go"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

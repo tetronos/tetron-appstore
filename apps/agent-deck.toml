@@ -1,0 +1,15 @@
+id = "agent-deck"
+name = "agent-deck"
+bin = "agent-deck"
+category = "Productivity"
+description = "Terminal dashboard for managing multiple AI coding agent sessions"
+homepage = "https://github.com/asheshgoplani/agent-deck"
+
+[install.recipe]
+install = "go install github.com/asheshgoplani/agent-deck/cmd/agent-deck@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

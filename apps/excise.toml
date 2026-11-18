@@ -1,0 +1,14 @@
+id = "excise"
+name = "excise"
+bin = "excise"
+category = "Dashboards"
+description = "A surgical terminal storage navigator."
+homepage = "https://github.com/findyourexit/excise"
+
+[install.recipe]
+install = "cargo install --locked excise"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

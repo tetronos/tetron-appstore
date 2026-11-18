@@ -1,0 +1,15 @@
+id = "onx"
+name = "onx"
+bin = "onx"
+category = "Games"
+description = "Noughts & Crosses client-server game with your partner. Based on textual and python."
+homepage = "https://github.com/vyalovvldmr/onx"
+
+[install.recipe]
+install = "pipx install onx"
+method = "pipx"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

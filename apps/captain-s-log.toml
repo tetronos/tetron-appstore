@@ -1,0 +1,15 @@
+id = "captain-s-log"
+name = "Captain's log"
+bin = "caps-log"
+category = "Miscellaneous"
+description = "A small TUI journaling tool"
+homepage = "https://github.com/NikolaDucak/caps-log"
+
+[install.recipe]
+install = "mkdir -p build && cd build && cmake .. && make && sudo make install"
+method = "source"
+os = ["linux", "macos"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

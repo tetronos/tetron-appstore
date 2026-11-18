@@ -1,0 +1,14 @@
+id = "flowrs"
+name = "flowrs"
+bin = "flowrs"
+category = "Dashboards"
+description = "A TUI for monitoring, inspecting and managing Apache Airflow DAGs"
+homepage = "https://github.com/jvanbuel/flowrs"
+
+[install.recipe]
+install = "brew install flowrs"
+method = "brew"
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

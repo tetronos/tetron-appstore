@@ -1,0 +1,14 @@
+id = "dtflow"
+name = "dtflow"
+bin = "dtflow"
+category = "Miscellaneous"
+description = "Terminal browser for LLM training data (SFT/DPO/agent JSONL): samples rendered as conversations, full-file search, Python-expression filters, mouse support, windowed loading for large files."
+homepage = "https://github.com/KenyonY/dtflow"
+
+[install.recipe]
+install = "pipx install dtflow"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

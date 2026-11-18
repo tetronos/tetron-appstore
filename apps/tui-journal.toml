@@ -1,0 +1,9 @@
+id = "tui-journal"
+name = "tui-journal"
+bin = "tui-journal"
+category = "Miscellaneous"
+description = "Your journal app if you live in a terminal."
+homepage = "https://github.com/AmmarAbouZor/tui-journal"
+
+[source]
+lists = ["terminaltrove"]

@@ -1,0 +1,9 @@
+id = "rustlens"
+name = "rustlens"
+bin = "rustlens"
+category = "Miscellaneous"
+description = "A blazing-fast Rust code inspector for the terminal."
+homepage = "https://github.com/yashksaini-coder/Rustlens"
+
+[source]
+lists = ["terminaltrove"]

@@ -1,0 +1,15 @@
+id = "pnana"
+name = "PNANA"
+bin = "pnana"
+category = "Editors"
+description = "An FTXUI terminal text editor with modern (non-vim) keybindings, LSP support, tree-sitter syntax highlighting, and a Lua plugin system. Built from source."
+homepage = "https://github.com/Cyxuan0311/PNANA"
+
+[install.recipe]
+install = "git clone https://github.com/Cyxuan0311/PNANA && cd PNANA && ./build.sh && cd build && sudo make install"
+method = "source"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

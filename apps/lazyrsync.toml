@@ -1,0 +1,14 @@
+id = "lazyrsync"
+name = "lazyrsync"
+bin = "lazyrsync"
+category = "Miscellaneous"
+description = "A friendly TUI for rsync."
+homepage = "https://github.com/westpoint-io/lazyrsync"
+
+[install.recipe]
+install = "brew install lazyrsync"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

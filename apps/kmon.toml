@@ -1,0 +1,15 @@
+id = "kmon"
+name = "kmon"
+bin = "kmon"
+category = "Dashboards"
+description = "Linux Kernel Manager and Activity Monitor"
+homepage = "https://github.com/orhun/kmon"
+
+[install.recipe]
+install = "cargo install kmon"
+method = "cargo"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

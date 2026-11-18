@@ -1,0 +1,15 @@
+id = "pocker"
+name = "Pocker"
+bin = "pocker"
+category = "Docker/LXC/K8s"
+description = "TUI based application for docker related tasks."
+homepage = "https://github.com/pommee/Pocker"
+
+[install.recipe]
+install = "pipx install pocker-tui"
+method = "pipx"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

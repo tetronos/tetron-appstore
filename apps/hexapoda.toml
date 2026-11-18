@@ -1,0 +1,14 @@
+id = "hexapoda"
+name = "hexapoda"
+bin = "hexapoda"
+category = "Miscellaneous"
+description = "A colorful modal hex editor in the terminal."
+homepage = "https://github.com/simonomi/hexapoda"
+
+[install.recipe]
+install = "brew install hexapoda"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

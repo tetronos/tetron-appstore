@@ -1,0 +1,10 @@
+id = "workos-cli"
+name = "workos-cli"
+bin = "workos-cli"
+category = "Development"
+description = "The Official WorkOS CLI for installing AuthKit integrations and managing WorkOS resources."
+homepage = "https://github.com/workos/cli"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

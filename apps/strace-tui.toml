@@ -1,0 +1,14 @@
+id = "strace-tui"
+name = "strace-tui"
+bin = "strace-tui"
+category = "Development"
+description = "A terminal user interface (TUI) for visualizing and exploring strace output."
+homepage = "https://github.com/Rodrigodd/strace-tui"
+
+[install.recipe]
+install = "cargo install --locked strace-tui"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

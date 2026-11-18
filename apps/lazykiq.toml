@@ -1,0 +1,14 @@
+id = "lazykiq"
+name = "lazykiq"
+bin = "lazykiq"
+category = "Dashboards"
+description = "A rich terminal UI for Sidekiq."
+homepage = "https://github.com/kpumuk/lazykiq"
+
+[install.recipe]
+install = "go install github.com/kpumuk/lazykiq/cmd/lazykiq@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

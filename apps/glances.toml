@@ -1,0 +1,15 @@
+id = "glances"
+name = "Glances"
+bin = "glances"
+category = "Dashboards"
+description = "Glances an Eye on your system. A top/htop alternative."
+homepage = "https://github.com/nicolargo/glances"
+
+[install.recipe]
+install = "brew install glances"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

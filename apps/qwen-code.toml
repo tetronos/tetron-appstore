@@ -1,0 +1,16 @@
+id = "qwen-code"
+name = "Qwen Code"
+bin = "qwen"
+category = "AI"
+description = "Open-source AI coding agent that runs in your terminal, optimized for Qwen series models."
+homepage = "https://github.com/QwenLM/qwen-code"
+requires_cwd = true
+
+[install.recipe]
+install = "npm install -g @qwen-code/qwen-code@latest"
+method = "npm"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["tetron"]

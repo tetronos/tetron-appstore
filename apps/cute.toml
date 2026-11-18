@@ -1,0 +1,15 @@
+id = "cute"
+name = "CuTE"
+bin = "cute"
+category = "Development"
+description = "TUI to help build, execute and save curl commands, recursively download from remote sources, test your API endpoints, and mange your keys"
+homepage = "https://github.com/PThorpe92/CuTE"
+
+[install.recipe]
+install = "cargo install CuTE-tui"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

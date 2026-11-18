@@ -1,0 +1,14 @@
+id = "flameshow"
+name = "flameshow"
+bin = "flameshow"
+category = "Development"
+description = "A flamegraph viewer in the terminal."
+homepage = "https://github.com/laixintao/flameshow"
+
+[install.recipe]
+install = "pipx install flameshow"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

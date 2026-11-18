@@ -1,0 +1,15 @@
+id = "boomtypr"
+name = "boomtypr"
+bin = "boomtypr"
+category = "Productivity"
+description = "A sleek typing test experience in the terminal."
+homepage = "https://github.com/yagnikpt/boomtypr"
+cli = true
+
+[install.recipe]
+install = "go install github.com/yagnikpt/boomtypr@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

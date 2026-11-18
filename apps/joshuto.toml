@@ -1,0 +1,14 @@
+id = "joshuto"
+name = "joshuto"
+bin = "joshuto"
+category = "File Managers"
+description = "ranger-like terminal file manager written in Rust."
+homepage = "https://github.com/kamiyaa/joshuto"
+
+[install.recipe]
+install = "brew install joshuto"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

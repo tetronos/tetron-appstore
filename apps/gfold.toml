@@ -1,0 +1,15 @@
+id = "gfold"
+name = "gfold"
+bin = "gfold"
+category = "Development"
+description = "A CLI tool that helps you keep track of multiple Git repositories."
+homepage = "https://github.com/nickgerace/gfold"
+cli = true
+
+[install.recipe]
+install = "brew install gfold"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

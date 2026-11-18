@@ -1,0 +1,15 @@
+id = "uuinfo"
+name = "uuinfo"
+bin = "uuinfo"
+category = "Development"
+description = "A tool to debug unique identifiers. (UUID, ULID, Snowflake, etc)"
+homepage = "https://github.com/Racum/uuinfo"
+cli = true
+
+[install.recipe]
+install = "cargo install --locked uuinfo"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

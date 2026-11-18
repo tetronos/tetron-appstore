@@ -1,0 +1,14 @@
+id = "logmerger"
+name = "logmerger"
+bin = "logmerger"
+category = "Dashboards"
+description = "A utility to view multiple log files with merged timeline."
+homepage = "https://github.com/ptmcg/logmerger"
+
+[install.recipe]
+install = "pipx install logmerger"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

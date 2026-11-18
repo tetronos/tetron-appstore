@@ -1,0 +1,15 @@
+id = "tut"
+name = "tut"
+bin = "tut"
+category = "Messaging"
+description = "Mastodon TUI client"
+homepage = "https://github.com/RasmusLindroth/tut"
+
+[install.recipe]
+install = "brew install tut"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

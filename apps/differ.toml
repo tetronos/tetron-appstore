@@ -1,0 +1,15 @@
+id = "differ"
+name = "differ"
+bin = "differ"
+category = "Development"
+description = "A TUI git diff viewer"
+homepage = "https://github.com/JanSmrcka/differ"
+
+[install.recipe]
+install = "brew install jansmrcka/tap/differ"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

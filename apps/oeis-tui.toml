@@ -1,0 +1,14 @@
+id = "oeis-tui"
+name = "oeis-tui"
+bin = "oeis-tui"
+category = "Miscellaneous"
+description = "A TUI and CLI for browsing the On-Line Encyclopedia of Integer Sequences (OEIS) in the terminal."
+homepage = "https://github.com/hako/oeis-tui"
+
+[install.recipe]
+install = "cargo install --locked oeis-tui"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

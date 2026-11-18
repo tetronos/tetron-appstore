@@ -1,0 +1,14 @@
+id = "outside"
+name = "outside"
+bin = "outside"
+category = "Miscellaneous"
+description = "A multi-purpose weather client for your terminal."
+homepage = "https://github.com/BaconIsAVeg/outside"
+
+[install.recipe]
+install = "cargo install --locked outside"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

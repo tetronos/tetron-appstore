@@ -1,0 +1,9 @@
+id = "nv-monitor"
+name = "nv-monitor"
+bin = "nv-monitor"
+category = "Dashboards"
+description = "A low-level Nvidia GPU system monitor."
+homepage = "https://github.com/wentbackward/nv-monitor"
+
+[source]
+lists = ["terminaltrove"]

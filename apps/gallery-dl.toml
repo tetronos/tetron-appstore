@@ -1,0 +1,10 @@
+id = "gallery-dl"
+name = "gallery-dl"
+bin = "gallery-dl"
+category = "Miscellaneous"
+description = "Download image galleries and collections from image hosting sites."
+homepage = "https://github.com/mikf/gallery-dl"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

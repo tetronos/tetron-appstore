@@ -1,0 +1,14 @@
+id = "siggy"
+name = "siggy"
+bin = "siggy"
+category = "Messaging"
+description = "A terminal-based Signal messenger client with an IRC aesthetic."
+homepage = "https://github.com/johnsideserf/siggy"
+
+[install.recipe]
+install = "cargo install --locked siggy"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

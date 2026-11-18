@@ -1,0 +1,10 @@
+id = "moneyterm"
+name = "moneyterm"
+bin = "moneyterm"
+category = "Productivity"
+description = "TUI expense and budget tracker."
+homepage = "https://github.com/ChrisBuilds/moneyterm"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

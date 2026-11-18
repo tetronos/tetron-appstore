@@ -1,0 +1,9 @@
+id = "cloudeval"
+name = "Cloudeval"
+bin = "cloudeval"
+category = "Development"
+description = "Interactive cloud evaluations and reviews with project context, report views, and chat sessions. Supports Azure and static AWS CloudFormation (beta); requires a Cloudeval account."
+homepage = "https://github.com/ganakailabs/cloudeval-cli"
+
+[source]
+lists = ["awesome-tuis"]

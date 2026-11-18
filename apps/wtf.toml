@@ -1,0 +1,15 @@
+id = "wtf"
+name = "WTF"
+bin = "wtf"
+category = "Dashboards"
+description = "The personal information dashboard for your terminal."
+homepage = "https://github.com/senorprogrammer/wtf"
+
+[install.recipe]
+install = "brew install wtf"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

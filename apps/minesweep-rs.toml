@@ -1,0 +1,15 @@
+id = "minesweep-rs"
+name = "minesweep-rs"
+bin = "minesweep-rs"
+category = "Games"
+description = "A mine sweeping game written in Rust using tui-rs."
+homepage = "https://github.com/cpcloud/minesweep-rs"
+
+[install.recipe]
+install = "cargo install minesweep"
+method = "cargo"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

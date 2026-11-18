@@ -1,0 +1,10 @@
+id = "youtube-dl"
+name = "youtube-dl"
+bin = "youtube-dl"
+category = "Miscellaneous"
+description = "Download videos from YouTube and other video sites."
+homepage = "https://github.com/ytdl-org/youtube-dl"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

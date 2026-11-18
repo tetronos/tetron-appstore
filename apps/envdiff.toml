@@ -1,0 +1,14 @@
+id = "envdiff"
+name = "envdiff"
+bin = "envdiff"
+category = "Development"
+description = "A CLI tool to snapshot and diff environments."
+homepage = "https://github.com/GBerghoff/envdiff"
+
+[install.recipe]
+install = "go install github.com/GBerghoff/envdiff/cmd/envdiff@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

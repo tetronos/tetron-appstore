@@ -1,0 +1,15 @@
+id = "scope"
+name = "scope"
+bin = "scope"
+category = "Development"
+description = "A cross-platform serial monitor (RS-232 and RTT) with colored send/receive, tags, hex input, search and filter, session recording, and Lua plugins."
+homepage = "https://github.com/matheuswhite/scope-rs"
+
+[install.recipe]
+install = "cargo install scope-monitor"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

@@ -1,0 +1,14 @@
+id = "vi-sql"
+name = "vi-sql"
+bin = "vi-sql"
+category = "Development"
+description = "A terminal SQL client with Vim controls and schema tools."
+homepage = "https://github.com/kopecmaciej/vi-sql"
+
+[install.recipe]
+install = "brew install vi-sql"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

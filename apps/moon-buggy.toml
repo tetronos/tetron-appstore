@@ -1,0 +1,15 @@
+id = "moon-buggy"
+name = "moon-buggy"
+bin = "moon-buggy"
+category = "Games"
+description = "Drive some car across the moon"
+homepage = "https://github.com/seehuhn/moon-buggy"
+
+[install.recipe]
+install = "brew install moon-buggy"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

@@ -1,0 +1,15 @@
+id = "matcha"
+name = "matcha"
+bin = "matcha"
+category = "Messaging"
+description = "Email client"
+homepage = "https://github.com/floatpane/matcha"
+
+[install.recipe]
+install = "brew install matcha"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

@@ -1,0 +1,14 @@
+id = "pygitzen"
+name = "pygitzen"
+bin = "pygitzen"
+category = "Development"
+description = "A python native terminal based Git client."
+homepage = "https://github.com/SunnyTamang/pygitzen"
+
+[install.recipe]
+install = "pipx install pygitzen"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,10 @@
+id = "tracker"
+name = "tracker"
+bin = "tracker"
+category = "Miscellaneous"
+description = "A terminal-based real-time satellite tracking and orbit prediction application."
+homepage = "https://github.com/ShenMian/tracker"
+cli = true
+
+[source]
+lists = ["terminaltrove"]

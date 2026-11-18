@@ -1,0 +1,10 @@
+id = "testdisk"
+name = "testdisk"
+check = "testdisk"
+store = false
+
+[install.pkg]
+apt = "testdisk"
+dnf = "testdisk"
+pacman = "testdisk"
+brew = "testdisk"

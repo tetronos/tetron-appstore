@@ -1,0 +1,10 @@
+id = "strace"
+name = "strace"
+check = "strace"
+store = false
+
+[install.pkg]
+apt = "strace"
+dnf = "strace"
+pacman = "strace"
+brew = ""

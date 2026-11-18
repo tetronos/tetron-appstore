@@ -1,0 +1,14 @@
+id = "stormy"
+name = "stormy"
+bin = "stormy"
+category = "Miscellaneous"
+description = "Minimal, customizable, and neofetch-like weather CLI."
+homepage = "https://github.com/ashish0kumar/stormy"
+
+[install.recipe]
+install = "brew install stormy"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

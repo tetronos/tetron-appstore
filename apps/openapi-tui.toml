@@ -1,0 +1,14 @@
+id = "openapi-tui"
+name = "openapi-tui"
+bin = "openapi-tui"
+category = "Development"
+description = "Browse and run APIs defined with OpenAPI v3.0 in the TUI"
+homepage = "https://github.com/zaghaghi/openapi-tui"
+
+[install.recipe]
+install = "brew install openapi-tui"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

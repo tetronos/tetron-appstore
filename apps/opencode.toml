@@ -1,0 +1,36 @@
+id = "opencode"
+name = "opencode"
+bin = "opencode"
+category = "AI"
+description = "Open-source AI coding agent built for the terminal with a TUI and support for 75+ LLM providers."
+homepage = "https://github.com/anomalyco/opencode"
+requires_cwd = true
+
+[notes]
+tip = "The agent of ✦ AI (Settings > AI). First run: `opencode auth login` to pick a provider and add a key; local models via Ollama are supported. Settings > Updates keeps this copy current."
+how = "the agent of ✦ AI: its stable release tarball for this CPU, checked against GitHub's sha256 digest, into ~/.local/bin (Homebrew on macOS); Settings > Updates replaces it the same way"
+
+[agent]
+label = "opencode"
+
+[agent.briefing]
+file = "opencode.json"
+template = "opencode"
+env = { OPENCODE_CONFIG = "{{AI_DIR}}/opencode.json" }
+
+[agent.mcp]
+file = "opencode.json"
+template = "opencode"
+env = { OPENCODE_CONFIG = "{{AI_DIR}}/opencode.json" }
+
+[install]
+script = "opencode"
+
+[install.recipe]
+install = "case $(uname -m) in x86_64|amd64) a=x64; grep avx2 /proc/cpuinfo >/dev/null 2>&1 || a=x64-baseline;; aarch64|arm64) a=arm64;; *) echo 'no opencode build for this CPU'; exit 1;; esac; f=opencode-linux-$a.tar.gz; set -- $(curl -fsSL https://api.github.com/repos/anomalyco/opencode/releases/latest | python3 -c 'import json,sys; r=json.load(sys.stdin); a=[x for x in r[\"assets\"] if x[\"name\"]==sys.argv[1]][0]; print(a[\"browser_download_url\"], a[\"digest\"].split(\":\")[1])' $f) && d=$(mktemp -d) && curl -fsSL -o \"$d/$f\" \"$1\" && echo \"$2  $d/$f\" | sha256sum -c - && tar xzf \"$d/$f\" -C \"$d\" opencode && mkdir -p ~/.local/bin && install -m 755 \"$d/opencode\" ~/.local/bin/opencode && rm -rf \"$d\""
+method = "binary"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

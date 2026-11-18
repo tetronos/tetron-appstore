@@ -1,0 +1,14 @@
+id = "aria2tui"
+name = "aria2tui"
+bin = "aria2tui"
+category = "Miscellaneous"
+description = "A TUI client for the aria2 download utility."
+homepage = "https://github.com/grimandgreedy/aria2tui"
+
+[install.recipe]
+install = "pipx install aria2tui"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

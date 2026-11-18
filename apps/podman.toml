@@ -1,0 +1,10 @@
+id = "podman"
+name = "podman"
+check = "podman"
+store = false
+
+[install.pkg]
+apt = "podman"
+dnf = "podman"
+pacman = "podman"
+brew = "podman"

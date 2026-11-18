@@ -1,0 +1,15 @@
+id = "productivity-timer"
+name = "productivity-timer"
+bin = "productivity-timer"
+category = "Productivity"
+description = "A command line time tracker application with a sleek TUI."
+homepage = "https://github.com/h-sifat/productivity-timer"
+
+[install.recipe]
+install = "npm install -g productivity-timer"
+method = "npm"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

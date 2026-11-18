@@ -1,0 +1,15 @@
+id = "redu"
+name = "redu"
+bin = "redu"
+category = "Miscellaneous"
+description = "ncdu for your restic repository that manages exclusion lists to prune files from existing repos and skip new ones"
+homepage = "https://github.com/drdo/redu"
+
+[install.recipe]
+install = "brew install redu"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "dolphie"
+name = "dolphie"
+bin = "dolphie"
+category = "Dashboards"
+description = "Your single pane of glass for real-time analytics into MySQL/MariaDB & ProxySQL"
+homepage = "https://github.com/charles-001/dolphie"
+
+[install.recipe]
+install = "brew install dolphie"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

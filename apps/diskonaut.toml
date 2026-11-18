@@ -1,0 +1,15 @@
+id = "diskonaut"
+name = "diskonaut"
+bin = "diskonaut"
+category = "Miscellaneous"
+description = "Terminal disk space navigator"
+homepage = "https://github.com/imsnif/diskonaut"
+
+[install.recipe]
+install = "brew install diskonaut"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

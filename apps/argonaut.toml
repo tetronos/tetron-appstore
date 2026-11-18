@@ -1,0 +1,15 @@
+id = "argonaut"
+name = "Argonaut"
+bin = "argonaut"
+category = "Docker/LXC/K8s"
+description = "ArgoCD TUI"
+homepage = "https://github.com/darksworm/argonaut"
+
+[install.recipe]
+install = "brew tap darksworm/homebrew-tap && brew install darksworm/homebrew-tap/argonaut"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

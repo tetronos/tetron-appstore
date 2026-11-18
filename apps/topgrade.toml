@@ -1,0 +1,15 @@
+id = "topgrade"
+name = "topgrade"
+bin = "topgrade"
+category = "Miscellaneous"
+description = "Upgrade all the things"
+homepage = "https://github.com/topgrade-rs/topgrade"
+cli = true
+
+[install.recipe]
+install = "brew install topgrade"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

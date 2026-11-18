@@ -1,0 +1,15 @@
+id = "goaccess"
+name = "Goaccess"
+bin = "goaccess"
+category = "Dashboards"
+description = "GoAccess is a real-time web log analyzer and interactive viewer that runs in a terminal in nix systems or through your browser."
+homepage = "https://github.com/allinurl/goaccess"
+
+[install.recipe]
+install = "brew install goaccess"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

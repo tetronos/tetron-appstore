@@ -1,0 +1,15 @@
+id = "lnav"
+name = "lnav"
+bin = "lnav"
+category = "Miscellaneous"
+description = "An advanced log file viewer for the small-scale"
+homepage = "https://lnav.org/"
+
+[install.recipe]
+install = "brew install lnav"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

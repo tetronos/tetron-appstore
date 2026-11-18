@@ -1,0 +1,15 @@
+id = "smassh"
+name = "smassh"
+bin = "smassh"
+category = "Miscellaneous"
+description = "A TUI based typing test application inspired by MonkeyType."
+homepage = "https://github.com/kraanzu/smassh"
+
+[install.recipe]
+install = "pip install smassh"
+method = "pip"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

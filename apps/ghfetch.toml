@@ -1,0 +1,15 @@
+id = "ghfetch"
+name = "ghfetch"
+bin = "ghfetch"
+category = "Miscellaneous"
+description = "A CLI tool to fetch GitHub user information."
+homepage = "https://github.com/orangekame3/ghfetch"
+cli = true
+
+[install.recipe]
+install = "go install github.com/orangekame3/ghfetch@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "planor"
+name = "Planor"
+bin = "planor"
+category = "Dashboards"
+description = "The Cloud Aviator, dashboard for AWS, Vultr, Heroku, ..."
+homepage = "https://github.com/mrusme/planor"
+
+[install.recipe]
+install = "go install github.com/mrusme/planor@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

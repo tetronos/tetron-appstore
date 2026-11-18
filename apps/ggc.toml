@@ -1,0 +1,15 @@
+id = "ggc"
+name = "ggc"
+bin = "ggc"
+category = "Development"
+description = "A terminal-based Git CLI tool written in Go"
+homepage = "https://github.com/bmf-san/ggc"
+
+[install.recipe]
+install = "brew install ggc"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

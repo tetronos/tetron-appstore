@@ -1,0 +1,18 @@
+id = "yazi"
+name = "yazi"
+bin = "yazi"
+category = "File Managers"
+description = "Blazing fast terminal file manager written in Rust, based on async I/O."
+homepage = "https://github.com/sxyazi/yazi"
+
+[install.pkg]
+brew = "yazi"
+
+[install.recipe]
+install = "brew install yazi"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

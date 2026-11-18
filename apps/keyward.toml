@@ -1,0 +1,14 @@
+id = "keyward"
+name = "keyward"
+bin = "keyward"
+category = "Development"
+description = "A TUI to manage SSH keys and audit your SSH security."
+homepage = "https://github.com/gateway-of-last-resort/keyward"
+
+[install.recipe]
+install = "go install github.com/gateway-of-last-resort/keyward/cmd/keyward@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

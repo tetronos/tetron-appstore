@@ -1,0 +1,15 @@
+id = "wiremix"
+name = "wiremix"
+bin = "wiremix"
+category = "Multimedia"
+description = "TUI audio mixer for PipeWire similar to pavucontrol to adjust volumes, change input/output devices and their profiles"
+homepage = "https://github.com/tsowell/wiremix"
+
+[install.recipe]
+install = "cargo install wiremix"
+method = "cargo"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

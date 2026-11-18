@@ -1,0 +1,15 @@
+id = "toolui"
+name = "toolui"
+bin = "toolui"
+category = "Development"
+description = "Dotnet core application to manage installed nuget tools"
+homepage = "https://github.com/jinek/ToolUI"
+
+[install.recipe]
+install = "dotnet tool install ToolUI --global"
+method = "other"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

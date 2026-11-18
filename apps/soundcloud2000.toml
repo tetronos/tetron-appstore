@@ -1,0 +1,15 @@
+id = "soundcloud2000"
+name = "soundcloud2000"
+bin = "soundcloud2000"
+category = "Multimedia"
+description = "A terminal client for soundcloud"
+homepage = "https://github.com/grobie/soundcloud2000"
+
+[install.recipe]
+install = "gem install soundcloud2000"
+method = "pip"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

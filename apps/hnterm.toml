@@ -1,0 +1,9 @@
+id = "hnterm"
+name = "hnterm"
+bin = "hnterm"
+category = "Messaging"
+description = "Hacker News in the terminal."
+homepage = "https://github.com/ggerganov/hnterm"
+
+[source]
+lists = ["terminaltrove"]

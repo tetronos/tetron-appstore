@@ -1,0 +1,14 @@
+id = "theattyr"
+name = "theattyr"
+bin = "theattyr"
+category = "Multimedia"
+description = "A terminal theater for playing VT100 art and animations."
+homepage = "https://github.com/orhun/theattyr"
+
+[install.recipe]
+install = "cargo install --locked theattyr"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

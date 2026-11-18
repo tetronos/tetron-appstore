@@ -1,0 +1,14 @@
+id = "simtool"
+name = "simtool"
+bin = "simtool"
+category = "Docker/LXC/K8s"
+description = "A beautiful and powerful TUI for managing iOS simulators."
+homepage = "https://github.com/azizuysal/simtool"
+
+[install.recipe]
+install = "go install github.com/azizuysal/simtool/cmd/simtool@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

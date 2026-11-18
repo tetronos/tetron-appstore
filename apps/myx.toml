@@ -1,0 +1,14 @@
+id = "myx"
+name = "myx"
+bin = "myx"
+category = "Multimedia"
+description = "A lean, beautiful terminal Spotify player."
+homepage = "https://github.com/HaseebKhalid1507/Myx"
+
+[install.recipe]
+install = "cargo install --locked myx"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

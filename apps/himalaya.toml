@@ -1,0 +1,19 @@
+id = "himalaya"
+name = "himalaya"
+bin = "himalaya"
+category = "Messaging"
+description = "CLI/TUI to manage emails (IMAP/SMTP, multi-account)."
+homepage = "https://github.com/pimalaya/himalaya"
+cli = true
+
+[install.pkg]
+pacman = "himalaya"
+
+[install.recipe]
+install = "cargo install himalaya --locked"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

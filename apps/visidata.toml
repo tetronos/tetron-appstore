@@ -1,0 +1,15 @@
+id = "visidata"
+name = "Visidata"
+bin = "visidata"
+category = "Productivity"
+description = "A terminal spreadsheet multitool for discovering and arranging data"
+homepage = "https://github.com/saulpw/visidata"
+
+[install.recipe]
+install = "brew install visidata"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "ktop"
+name = "ktop"
+bin = "ktop"
+category = "Docker/LXC/K8s"
+description = "A top-like tool for your Kubernetes clusters"
+homepage = "https://github.com/vladimirvivien/ktop"
+
+[install.recipe]
+install = "brew install ktop"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

@@ -1,0 +1,14 @@
+id = "gobackup"
+name = "gobackup"
+bin = "gobackup"
+category = "Productivity"
+description = "A CLI tool to backup your databases, files to cloud storage."
+homepage = "https://github.com/gobackup/gobackup"
+
+[install.recipe]
+install = "brew install gobackup"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

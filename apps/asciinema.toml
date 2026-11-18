@@ -1,0 +1,15 @@
+id = "asciinema"
+name = "asciinema"
+bin = "asciinema"
+category = "Miscellaneous"
+description = "A terminal session recorder."
+homepage = "https://github.com/asciinema/asciinema"
+cli = true
+
+[install.recipe]
+install = "brew install asciinema"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

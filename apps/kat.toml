@@ -1,0 +1,14 @@
+id = "kat"
+name = "kat"
+bin = "kat"
+category = "Docker/LXC/K8s"
+description = "A TUI and rule-based rendering engine for Kubernetes manifests."
+homepage = "https://github.com/MacroPower/kat"
+
+[install.recipe]
+install = "go install github.com/macropower/kat/cmd/kat@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

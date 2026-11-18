@@ -1,0 +1,15 @@
+id = "dstask"
+name = "dstask"
+bin = "dstask"
+category = "Miscellaneous"
+description = "A CLI TODO manager with git-based sync + markdown notes."
+homepage = "https://github.com/naggie/dstask"
+cli = true
+
+[install.recipe]
+install = "brew install dstask"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,14 @@
+id = "chatuino"
+name = "chatuino"
+bin = "chatuino"
+category = "Messaging"
+description = "A feature rich TUI Twitch chat client."
+homepage = "https://github.com/julez-dev/chatuino"
+
+[install.recipe]
+install = "go install github.com/julez-dev/chatuino@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

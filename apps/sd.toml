@@ -1,0 +1,15 @@
+id = "sd"
+name = "sd"
+bin = "sd"
+category = "Development"
+description = "Intuitive find & replace CLI (sed alternative)"
+homepage = "https://github.com/chmln/sd"
+cli = true
+
+[install.recipe]
+install = "brew install sd"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

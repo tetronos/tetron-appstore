@@ -1,0 +1,9 @@
+id = "branchlet"
+name = "branchlet"
+bin = "branchlet"
+category = "Development"
+description = "Manage Git worktrees with automation from the terminal."
+homepage = "https://github.com/raghavpillai/branchlet"
+
+[source]
+lists = ["terminaltrove"]

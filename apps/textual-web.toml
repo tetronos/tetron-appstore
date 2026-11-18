@@ -1,0 +1,15 @@
+id = "textual-web"
+name = "textual-web"
+bin = "textual-web"
+category = "Web"
+description = "Run TUIs and terminals in your browser"
+homepage = "https://github.com/Textualize/textual-web"
+
+[install.recipe]
+install = "pipx install textual-web"
+method = "pipx"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

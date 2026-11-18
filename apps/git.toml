@@ -1,0 +1,10 @@
+id = "git"
+name = "git"
+check = "git"
+store = false
+
+[install.pkg]
+apt = "git"
+dnf = "git"
+pacman = "git"
+brew = "git"

@@ -1,0 +1,9 @@
+id = "noping"
+name = "noping"
+bin = "noping"
+category = "Development"
+description = "A C library to generate ICMP echo requests with a visualization"
+homepage = "https://github.com/octo/liboping"
+
+[source]
+lists = ["terminaltrove"]

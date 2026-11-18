@@ -1,0 +1,15 @@
+id = "typtea"
+name = "typtea"
+bin = "typtea"
+category = "Miscellaneous"
+description = "Minimal terminal-based typing speed tester with support for dozens of programming languages."
+homepage = "https://github.com/ashish0kumar/typtea"
+
+[install.recipe]
+install = "brew install typtea"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

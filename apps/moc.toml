@@ -1,0 +1,15 @@
+id = "moc"
+name = "moc"
+bin = "moc"
+category = "Miscellaneous"
+description = "console audio player"
+homepage = "https://moc.daper.net/download"
+
+[install.recipe]
+install = "brew install moc"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

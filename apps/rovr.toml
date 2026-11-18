@@ -1,0 +1,15 @@
+id = "rovr"
+name = "rovr"
+bin = "rovr"
+category = "File Managers"
+description = "A post-modern terminal file manager."
+homepage = "https://github.com/NSPC911/rovr"
+
+[install.recipe]
+install = "pipx install rovr"
+method = "pipx"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

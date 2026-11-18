@@ -1,0 +1,10 @@
+id = "smartmontools"
+name = "smartmontools"
+check = "smartctl"
+store = false
+
+[install.pkg]
+apt = "smartmontools"
+dnf = "smartmontools"
+pacman = "smartmontools"
+brew = "smartmontools"

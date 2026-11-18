@@ -1,0 +1,9 @@
+id = "hunspell-en-us"
+name = "hunspell-en-us"
+store = false
+
+[install.pkg]
+apt = "hunspell-en-us"
+dnf = "hunspell-en-US"
+pacman = "hunspell-en_us"
+brew = ""

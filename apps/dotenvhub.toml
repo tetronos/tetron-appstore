@@ -1,0 +1,14 @@
+id = "dotenvhub"
+name = "dotenvhub"
+bin = "dotenvhub"
+category = "Miscellaneous"
+description = "A TUI to manage your .env files in the terminal."
+homepage = "https://github.com/Zaloog/dotenvhub"
+
+[install.recipe]
+install = "pipx install dotenvhub"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

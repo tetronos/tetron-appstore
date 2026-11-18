@@ -1,0 +1,14 @@
+id = "ku"
+name = "ku"
+bin = "ku"
+category = "Docker/LXC/K8s"
+description = "A fast, keyboard-driven Kubernetes TUI."
+homepage = "https://github.com/bjarneo/ku"
+
+[install.recipe]
+install = "go install github.com/bjarneo/ku@latest"
+method = "go"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

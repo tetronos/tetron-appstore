@@ -1,0 +1,14 @@
+id = "glues"
+name = "glues"
+bin = "glues"
+category = "Miscellaneous"
+description = "A vim-inspired, privacy-first TUI note-taking app with multiple storage options."
+homepage = "https://github.com/gluesql/glues"
+
+[install.recipe]
+install = "cargo install --locked glues"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

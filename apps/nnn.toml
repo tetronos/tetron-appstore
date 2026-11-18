@@ -1,0 +1,15 @@
+id = "nnn"
+name = "nnn"
+bin = "nnn"
+category = "File Managers"
+description = "n³ The unorthodox terminal file manager."
+homepage = "https://github.com/jarun/nnn"
+
+[install.recipe]
+install = "brew install nnn"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

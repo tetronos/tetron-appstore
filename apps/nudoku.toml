@@ -1,0 +1,15 @@
+id = "nudoku"
+name = "nudoku"
+bin = "nudoku"
+category = "Games"
+description = "ncurses based sudoku game"
+homepage = "https://github.com/jubalh/nudoku"
+
+[install.recipe]
+install = "brew install nudoku"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

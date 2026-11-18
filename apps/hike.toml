@@ -1,0 +1,14 @@
+id = "hike"
+name = "hike"
+bin = "hike"
+category = "Productivity"
+description = "A Markdown browser for the terminal."
+homepage = "https://github.com/davep/hike"
+
+[install.recipe]
+install = "pipx install hike"
+method = "pipx"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "impala"
+name = "impala"
+bin = "impala"
+category = "Miscellaneous"
+description = "TUI for managing wifi"
+homepage = "https://github.com/pythops/impala"
+
+[install.recipe]
+install = "cargo install impala"
+method = "cargo"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

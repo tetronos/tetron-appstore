@@ -1,0 +1,14 @@
+id = "qmassa"
+name = "qmassa"
+bin = "qmassa"
+category = "Dashboards"
+description = "Terminal-based tool for displaying GPUs usage stats on Linux."
+homepage = "https://github.com/ulissesf/qmassa"
+
+[install.recipe]
+install = "cargo install --locked qmassa"
+method = "cargo"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

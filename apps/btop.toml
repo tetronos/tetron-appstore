@@ -1,0 +1,15 @@
+id = "btop"
+name = "btop++"
+bin = "btop"
+category = "Dashboards"
+description = "Resource monitor with extras"
+homepage = "https://github.com/aristocratos/btop"
+
+[install.recipe]
+install = "brew install btop"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

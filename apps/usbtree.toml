@@ -1,0 +1,14 @@
+id = "usbtree"
+name = "usbtree"
+bin = "usbtree"
+category = "Dashboards"
+description = "A live USB device tree TUI with Linux activity metrics."
+homepage = "https://github.com/gnomeria/usbtree"
+
+[install.recipe]
+install = "brew install usbtree"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

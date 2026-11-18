@@ -1,0 +1,14 @@
+id = "jira-cli"
+name = "jira-cli"
+bin = "jira-cli"
+category = "Miscellaneous"
+description = "Interact with Jira in the Terminal with Jira CLI."
+homepage = "https://github.com/ankitpokhrel/jira-cli"
+
+[install.recipe]
+install = "brew install jira-cli"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

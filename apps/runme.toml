@@ -1,0 +1,16 @@
+id = "runme"
+name = "runme"
+bin = "runme"
+category = "Development"
+description = "Discover and run code snippets directly from your README.md or other markdowns"
+homepage = "https://github.com/stateful/runme"
+cli = true
+
+[install.recipe]
+install = "brew install runme"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

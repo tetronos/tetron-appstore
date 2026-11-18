@@ -1,0 +1,9 @@
+id = "hzfind"
+name = "hzfind"
+bin = "hzfind"
+category = "Miscellaneous"
+description = "A CLI/TUI to find the best Hetzner Server Auction deals."
+homepage = "https://github.com/clouedoc/hzfind"
+
+[source]
+lists = ["terminaltrove"]

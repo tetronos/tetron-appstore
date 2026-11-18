@@ -1,0 +1,15 @@
+id = "dive"
+name = "dive"
+bin = "dive"
+category = "Docker/LXC/K8s"
+description = "A tool for exploring each layer in a docker image"
+homepage = "https://github.com/wagoodman/dive"
+
+[install.recipe]
+install = "brew install dive"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

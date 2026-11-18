@@ -1,0 +1,16 @@
+id = "portfolio-rs"
+name = "portfolio_rs"
+bin = "portfolio_rs"
+category = "Productivity"
+description = "A command line tool for managing financial investment portfolios."
+homepage = "https://github.com/MarkusZoppelt/portfolio_rs"
+cli = true
+
+[install.recipe]
+install = "cargo install portfolio_rs"
+method = "cargo"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "tetron"]

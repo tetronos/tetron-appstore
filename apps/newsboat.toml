@@ -1,0 +1,15 @@
+id = "newsboat"
+name = "newsboat"
+bin = "newsboat"
+category = "Web"
+description = "An RSS/Atom feed reader for the text console"
+homepage = "https://github.com/newsboat/newsboat"
+
+[install.recipe]
+install = "brew install newsboat"
+method = "brew"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]

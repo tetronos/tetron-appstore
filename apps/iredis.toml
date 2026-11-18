@@ -1,0 +1,15 @@
+id = "iredis"
+name = "iredis"
+bin = "iredis"
+category = "Development"
+description = "An interactive redis client with autocompletion and syntax highlighting."
+homepage = "https://github.com/laixintao/iredis"
+cli = true
+
+[install.recipe]
+install = "brew install iredis"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

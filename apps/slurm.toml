@@ -1,0 +1,14 @@
+id = "slurm"
+name = "slurm"
+bin = "slurm"
+category = "Dashboards"
+description = "Realtime traffic statistics for network interfaces"
+homepage = "https://github.com/mattthias/slurm"
+
+[install.recipe]
+install = "brew install slurm"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

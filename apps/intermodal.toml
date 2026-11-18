@@ -1,0 +1,15 @@
+id = "intermodal"
+name = "intermodal"
+bin = "intermodal"
+category = "Miscellaneous"
+description = "A 40' shipping container for the Internet."
+homepage = "https://github.com/casey/intermodal"
+cli = true
+
+[install.recipe]
+install = "brew install intermodal"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

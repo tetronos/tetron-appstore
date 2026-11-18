@@ -1,0 +1,14 @@
+id = "toktop"
+name = "toktop"
+bin = "toktop"
+category = "AI"
+description = "htop but for LLM tokens."
+homepage = "https://github.com/htin1/toktop"
+
+[install.recipe]
+install = "brew install toktop"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

@@ -1,0 +1,15 @@
+id = "gowall"
+name = "gowall"
+bin = "gowall"
+category = "Miscellaneous"
+description = "A CLI tool to convert an image to any color-scheme."
+homepage = "https://github.com/Achno/gowall"
+cli = true
+
+[install.recipe]
+install = "brew install gowall"
+method = "brew"
+verified = true
+
+[source]
+lists = ["terminaltrove", "tetron"]

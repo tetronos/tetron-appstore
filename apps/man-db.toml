@@ -1,0 +1,10 @@
+id = "man-db"
+name = "man-db"
+check = "man"
+store = false
+
+[install.pkg]
+apt = "man-db"
+dnf = "man-db"
+pacman = "man-db"
+brew = ""

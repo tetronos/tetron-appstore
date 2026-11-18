@@ -1,0 +1,16 @@
+id = "continue-cli"
+name = "Continue CLI"
+bin = "cn"
+category = "AI"
+description = "Terminal AI coding agent that runs interactive chat and headless automation against your codebase via the cn command."
+homepage = "https://continue.dev"
+requires_cwd = true
+
+[install.recipe]
+install = "curl -fsSL https://raw.githubusercontent.com/continuedev/continue/main/extensions/cli/scripts/install.sh | bash"
+method = "script"
+os = ["macos", "linux"]
+verified = true
+
+[source]
+lists = ["tetron"]

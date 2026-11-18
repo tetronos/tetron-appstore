@@ -1,0 +1,18 @@
+id = "bluetuith"
+name = "bluetuith"
+bin = "bluetuith"
+category = "Miscellaneous"
+description = "A TUI-based bluetooth connection manager, which can interact with bluetooth adapters and devices."
+homepage = "https://github.com/darkhz/bluetuith"
+
+[install.pkg]
+brew = "bluetuith"
+
+[install.recipe]
+install = "go install github.com/darkhz/bluetuith@latest"
+method = "go"
+os = ["macos", "linux", "windows"]
+verified = true
+
+[source]
+lists = ["awesome-tuis", "terminaltrove", "tetron"]
