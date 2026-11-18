@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/tetronos/tetron-appstore/schema/collection.schema.json",
+  "title": "tetron-appstore collection file (collections/<name>.toml, ASCAT-006 to ASCAT-008)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["name", "description", "apps"],
+  "properties": {
+    "name": {"enum": ["desktop", "essentials", "recommended", "extras"]},
+    "description": {"type": "string", "minLength": 1},
+    "includes": {"enum": ["desktop", "essentials", "recommended"]},
+    "apps": {"type": "array", "items": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"}}
+  }
+}

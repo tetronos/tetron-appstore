@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/tetronos/tetron-appstore/schema/app.schema.json",
+  "title": "tetron-appstore app file (apps/<id>.toml, ASCAT-001 to ASCAT-005)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+    "aliases": {"type": "array", "items": {"type": "string"}},
+    "name": {"type": "string", "minLength": 1},
+    "bin": {"type": "string", "minLength": 1},
+    "check": {"type": "string", "minLength": 1},
+    "category": {"type": "string", "minLength": 1},
+    "description": {"type": "string", "minLength": 1},
+    "homepage": {"type": "string", "minLength": 1},
+    "license": {"type": "string"},
+    "cli": {"type": "boolean"},
+    "requires_cwd": {"type": "boolean"},
+    "needs_url": {"type": "boolean"},
+    "group": {"enum": ["apps", "gui", "services"]},
+    "store": {"type": "boolean"},
+    "notes": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {"tip": {"type": "string"}, "how": {"type": "string"}}
+    },
+    "variants": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["suffix", "args"],
+        "properties": {
+          "suffix": {"type": "string"},
+          "args": {"type": "array", "items": {"type": "string"}},
+          "warn": {"type": "string"}
+        }
+      }
+    },
+    "agent": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "label": {"type": "string"},
+        "command": {"type": "string"},
+        "args": {"type": "array", "items": {"type": "string"}},
+        "context_files": {"type": "array", "items": {"type": "string", "pattern": "^[^/]+$"}},
+        "briefing": {"$ref": "#/$defs/wiring"},
+        "mcp": {"$ref": "#/$defs/wiring"}
+      }
+    },
+    "install": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "pkg": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "apt": {"type": "string"},
+            "dnf": {"type": "string"},
+            "pacman": {"type": "string"},
+            "brew": {"type": "string"}
+          }
+        },
+        "release": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["repo"],
+          "properties": {
+            "repo": {"type": "string", "pattern": "^[^/]+/[^/]+$"},
+            "amd64": {"type": "string"},
+            "arm64": {"type": "string"}
+          }
+        },
+        "recipe": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["install", "method"],
+          "properties": {
+            "install": {"type": "string"},
+            "method": {"type": "string"},
+            "os": {"type": "array", "items": {"enum": ["linux", "macos", "windows"]}},
+            "verified": {"type": "boolean"}
+          }
+        },
+        "deb": {"type": "string"},
+        "script": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"}
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "lists": {"type": "array", "items": {"type": "string"}},
+        "seen": {"type": "string"},
+        "gone": {"type": "boolean"}
+      }
+    }
+  },
+  "if": {"not": {"properties": {"store": {"const": false}}, "required": ["store"]}},
+  "then": {"required": ["bin", "category", "description", "homepage"]},
+  "$defs": {
+    "wiring": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "file": {"type": "string"},
+        "template": {"enum": ["json", "opencode"]},
+        "args": {"type": "array", "items": {"type": "string"}},
+        "env": {"type": "object", "additionalProperties": {"type": "string"}}
+      }
+    }
+  }
+}
