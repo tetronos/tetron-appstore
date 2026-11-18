@@ -231,8 +231,9 @@ impl Store {
             s.text(dx + 1, prebuilt_row(h), truncate(&format!("Prebuilt: {url}"), dw), p.dim, p.panel);
         }
         s.text(dx + 1, homepage_row(h), truncate(&app.homepage, dw), p.dim, p.panel);
-        if let Some(r) = catalog::recipe(&app.name).filter(|r| r.verified) {
-            s.text(dx + 1, h - 3, &format!("{} verified \u{00B7} {}", p.check, r.method), p.success, p.panel);
+        if let Some(line) = tested_line(app) {
+            let (mark, fg) = if line.starts_with("Install test failed") { ("!", p.accent) } else { (p.check.as_str(), p.success) };
+            s.text(dx + 1, h - 3, truncate(&format!("{mark} {line}"), dw), fg, p.panel);
         }
         let installed = catalog::is_installed(&app.bin);
         let action = if installed { "[ Enter: Launch ]  Alt+O: more" } else { "[ Enter: Install ]  Alt+O: more" };
@@ -363,6 +364,26 @@ fn wrap(s: &str, width: usize) -> Vec<String> {
     lines
 }
 
+/// The detail pane's tested line: the install test results when the
+/// catalog has them (ASCAT-016), else the recipe's hand-written verified.
+pub fn tested_line(app: &CatalogApp) -> Option<String> {
+    let method = app.recipe.as_ref().map(|r| r.method.as_str()).filter(|m| !m.is_empty());
+    let with = |s: String| match method {
+        Some(m) => format!("{s} \u{00B7} {m}"),
+        None => s,
+    };
+    if let Some(st) = &app.status {
+        let (ok, fail) = (st.passed(), st.failed());
+        if !fail.is_empty() {
+            return Some(format!("Install test failed on {}", fail.join(", ")));
+        }
+        if !ok.is_empty() {
+            return Some(with(format!("tested on {}", ok.join(", "))));
+        }
+    }
+    app.recipe.as_ref().filter(|r| r.verified).map(|_| with("verified".into()))
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -428,5 +449,15 @@ mod tests {
         assert!(both.iter().all(|a| (a.name.to_lowercase() + &a.description.to_lowercase()).contains("git")));
         st.set_query("from:tetron");
         assert!(st.filtered().iter().all(|a| catalog::listed_by(a) == ["tetron"]));
+    }
+
+    #[test]
+    fn tested_line_prefers_install_tests_over_verified() {
+        let app = |extra: &str| -> CatalogApp {
+            serde_json::from_str(&format!(r#"{{"name":"x","bin":"x","category":"c","description":"d","homepage":"h","recipe":{{"install":"cargo install x","method":"cargo","verified":true}}{extra}}}"#)).unwrap()
+        };
+        assert_eq!(tested_line(&app("")).as_deref(), Some("verified \u{00B7} cargo"));
+        assert_eq!(tested_line(&app(r#","status":{"debian-13":"ok","ubuntu-24.04":"ok"}"#)).as_deref(), Some("tested on debian-13, ubuntu-24.04 \u{00B7} cargo"));
+        assert_eq!(tested_line(&app(r#","status":{"debian-13":"ok","ubuntu-24.04":"fail"}"#)).as_deref(), Some("Install test failed on ubuntu-24.04"));
     }
 }

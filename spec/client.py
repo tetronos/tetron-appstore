@@ -21,10 +21,14 @@ class SafeUpdate(Requirement):
     """REQUIREMENT-ID: ASCLI-002
 
     An update downloads the latest catalog release over HTTPS from the
-    GitHub release, else from GitHub Pages (ASPUB-001), into a `.part`
-    file, checks it as ASCLI-001 does, keeps the current copy as `.good`,
-    then renames. A download that fails any check is dropped and the
-    current copy stays in use.
+    GitHub release (the newest `catalog-*` tag; catalog releases are not
+    marked latest, which stays the Store binary's), else from GitHub Pages
+    (ASPUB-001), else from the per-minor list of the tetronos apt
+    repository while it is published, into a `.part` file, reads it back
+    and checks it as ASCLI-001 does, keeps the current copy as `.good` when
+    that copy is usable, then renames. A download that fails any check is
+    dropped and the current copy stays in use. `TETRON_WM_LISTS_URL`
+    replaces every source with that per-minor list (tests).
     """
 
 
@@ -41,7 +45,9 @@ class UpdateSchedule(Requirement):
     """REQUIREMENT-ID: ASCLI-006
 
     Updates run on the manual Update (Store, Settings) and on their own at
-    most once a day.
+    most once a day (a `catalog.json.checked` stamp next to the download,
+    touched by every attempt, so a failing source is not retried at each
+    start).
     """
 
 

@@ -94,6 +94,9 @@ jobs:
         with:
           tag_name: ${{ github.ref_name }}
           name: Catalog ${{ steps.v.outputs.version }}
+          # install.sh takes the Store binary from releases/latest; clients
+          # find the newest catalog-* release by its tag (ASCLI-002).
+          make_latest: "false"
           files: |
             target/catalog-release/catalog.json
             target/catalog-release/suite-apps.txt

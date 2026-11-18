@@ -113,28 +113,12 @@ fn sh_quote(s: &str) -> String {
     format!("'{}'", s.replace('\'', "'\\''"))
 }
 
-/// The published lists, one directory per core minor (`<base>/0.15/`);
-/// `TETRON_WM_LISTS_URL` overrides it, as in tetron-wm.
-pub const LISTS_BASE: &str = "https://tetronos.github.io/apt/lists";
-
-/// The catalog URL for this version: `<base>/<major.minor>/catalog.json`.
-pub fn catalog_url(base: &str) -> String {
-    let minor: Vec<&str> = env!("CARGO_PKG_VERSION").split('.').take(2).collect();
-    format!("{}/{}/catalog.json", base.trim_end_matches('/'), minor.join("."))
-}
-
 /// Download, check and keep the catalog (the same file tetron-wm reads);
 /// returns the status line. Run on a worker thread.
 pub fn update_list() -> String {
-    let base = std::env::var("TETRON_WM_LISTS_URL").ok().filter(|v| !v.is_empty()).unwrap_or_else(|| LISTS_BASE.into());
-    let url = catalog_url(&base);
-    let out = Command::new("curl").args(["-fsSL", "--max-time", "25", "-H", "User-Agent: tetron-appstore", &url]).output();
-    match out {
-        Ok(o) if o.status.success() => match tetron_catalog::install(&String::from_utf8_lossy(&o.stdout)) {
-            Ok(n) => format!("List updated: {n} apps"),
-            Err(e) => format!("Update list: not used ({e}); the list in use stays"),
-        },
-        _ => "Update list: download failed; the list in use stays".into(),
+    match tetron_catalog::update::update() {
+        Ok(n) => format!("List updated: {n} apps"),
+        Err(e) => format!("Update list: not used ({e}); the list in use stays"),
     }
 }
 
@@ -164,9 +148,7 @@ mod tests {
     }
 
     #[test]
-    fn osc52_and_catalog_url() {
-        assert_eq!(osc52("hi"), "\x1b]52;c;aGk=\x07");
-        assert!(catalog_url("https://e.org/lists/").starts_with("https://e.org/lists/0."));
-        assert!(catalog_url(LISTS_BASE).ends_with("/catalog.json"));
+    fn osc52() {
+        assert_eq!(super::osc52("hi"), "\x1b]52;c;aGk=\x07");
     }
 }
