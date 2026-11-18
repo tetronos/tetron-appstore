@@ -1,7 +1,6 @@
 id = "ripgrep"
 name = "ripgrep"
-bin = "ripgrep"
-check = "rg"
+bin = "rg"
 category = "Development"
 description = "A recursive directory search tool using regex patterns."
 homepage = "https://github.com/BurntSushi/ripgrep"

@@ -7208,7 +7208,7 @@
   {
    "id": "github-cli",
    "name": "GitHub CLI",
-   "bin": "github-cli",
+   "bin": "gh",
    "category": "Development",
    "description": "GitHub's official command line tool.",
    "homepage": "https://github.com/cli/cli",
@@ -10190,7 +10190,7 @@
   {
    "id": "ripgrep",
    "name": "ripgrep",
-   "bin": "ripgrep",
+   "bin": "rg",
    "category": "Development",
    "description": "A recursive directory search tool using regex patterns.",
    "homepage": "https://github.com/BurntSushi/ripgrep",
@@ -17614,7 +17614,7 @@
   {
    "id": "aria2",
    "name": "aria2",
-   "bin": "aria2",
+   "bin": "aria2c",
    "category": "Miscellaneous",
    "description": "The ultra fast download utility.",
    "homepage": "https://github.com/aria2/aria2",
@@ -22615,7 +22615,7 @@
   {
    "id": "tealdeer",
    "name": "tealdeer",
-   "bin": "tealdeer",
+   "bin": "tldr",
    "category": "Miscellaneous",
    "description": "A very fast implementation of tldr in Rust.",
    "homepage": "https://github.com/tealdeer-rs/tealdeer",
