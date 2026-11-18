@@ -33,9 +33,9 @@ class CollectionPackages(Requirement):
     The collection metapackages `tetron-wm-essentials`,
     `tetron-wm-recommended` and `tetron-wm-extras` are built here, from
     `packaging/{essentials,recommended,extras}.toml`, whose recommends
-    `build_catalog.py` writes from the collections (an app's apt name, or
-    its `deb` relation; members without an apt package are left to the
-    suite installer). Each depends on the next smaller one and on
+    `build_catalog.py` writes from the collections in collection order (an
+    app's `deb` relation, or its apt name; service members, offered
+    separately, and members with their own suite method are left out). Each depends on the next smaller one and on
     `tetron-wm (>= MAJOR.MINOR)`. Version: tetron's MAJOR.MINOR with an
     independent patch number that rises with each catalog release that
     changes a collection and never goes down, so an upgrade from the
@@ -48,7 +48,7 @@ class DesktopCollectionOwnedHere(Requirement):
     """REQUIREMENT-ID: ASPUB-004
 
     `collections/desktop.toml` lists the tools tetron-wm's own features
-    call. tetron-wm builds `tetron-wm-desktop` itself, reading this file
-    from the catalog release at its own release time, so data flows one way:
-    from this repository to tetron-wm.
+    call. tetron-wm builds `tetron-wm-desktop` itself, reading the desktop
+    collection's `recommends` from the catalog release at its own release
+    time, so data flows one way: from this repository to tetron-wm.
     """

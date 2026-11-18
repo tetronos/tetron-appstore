@@ -125,6 +125,20 @@ class Build(Fixture):
                          "recommended:release:batcat|bat:sharkdp/bat:bat-*-x86_64.tar.gz:\n")
         self.assertEqual(self.doc()["suite_apps"], suite)
 
+    def test_recommends_deb_relation_else_apt_name_scripts_and_services_out(self):
+        af.write_app(dict(APPS["htop"], id="nm", name="nm", bin="nmcli", group="services"), self.root / "apps")
+        self.write_collections(dict(COLLECTIONS, desktop=["7zip", "htop", "nm"]))
+        cols = {c["name"]: c["recommends"] for c in self.doc()["collections"]}
+        self.assertEqual(cols, {"desktop": ["7zip | p7zip-full", "htop"], "essentials": [], "recommended": ["bat"],
+                                "extras": []})
+
+    def test_packaging_recommends_written(self):
+        (self.root / "packaging").mkdir()
+        (self.root / "packaging" / "recommended.toml").write_text('name = "x"\nrecommends = [\n  "old",\n]\nsection = "s"\n')
+        out = bc.build(self.root)
+        self.assertEqual(out["packaging/recommended.toml"], 'name = "x"\nrecommends = [\n  "bat",\n]\nsection = "s"\n')
+        self.assertNotIn("packaging/desktop.toml", out)
+
     def test_same_files_same_bytes(self):
         self.assertEqual(bc.build(self.root), bc.build(self.root))
 
