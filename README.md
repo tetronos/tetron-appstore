@@ -14,7 +14,7 @@ That puts the prebuilt binary for your system in `~/.local/bin`, checked against
 
 ## Use
 
-Type to search; `from:trove`, `from:awesome` or `from:tetron` shows one list. Arrows move, Left/Right change category, Enter installs or launches, Alt+O or a right click opens the app menu (open or copy the project and releases links), F5 updates the catalog, Esc quits. `tetron-appstore --help` lists it all.
+Type to search; `from:trove`, `from:awesome` or `from:tetron` shows one list. Arrows move, Left/Right change category, Enter installs or launches, Alt+O or a right click opens the app menu (open or copy the project and releases links), F5 updates the catalog (it also updates on its own once a day; a bad download never replaces the copy in use), Esc quits. `tetron-appstore --help` lists it all.
 
 ## Catalog
 

@@ -187,6 +187,12 @@ fn main() -> std::io::Result<()> {
     if !args.is_empty() {
         app.store.set_query(&args.join(" "));
     }
+    // The automatic update, at most once a day (ASCLI-006).
+    if tetron_catalog::update::due() {
+        app.start_update();
+    } else if tetron_catalog::update::newer_seen() {
+        app.store.set_status(tetron_catalog::update::NEWER_NOTE);
+    }
     let mut t = Term { out: std::io::stdout(), prev: None };
     t.enter();
     let mut last_poll = Instant::now();

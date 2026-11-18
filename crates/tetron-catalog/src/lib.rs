@@ -1,9 +1,10 @@
 //! The app catalog (WMCAT-001 to WMCAT-008), shared by tetron-wm and the
 //! standalone Store: `scripts/build_catalog.py` builds the app files in
 //! `apps/` and the collections in `collections/` into
-//! `assets/catalog.json`, which is compiled in. The Store's
-//! Update list can replace it with a newer copy ([`install`]), kept in
-//! [`cache_path`] and read at start while it passes the same checks.
+//! `assets/catalog.json`, which is compiled in. [`update`] says which copy
+//! is in use (a download, the last good one, the packaged one or the
+//! built-in one) and replaces the download safely; [`collections`] and
+//! [`collection_of`] read the catalog's collections.
 //!
 //! It powers two things: detecting which catalogued apps are already installed
 //! on the user's `$PATH`, and browsing/installing apps ([`install`] module for
@@ -13,6 +14,7 @@
 
 pub mod install;
 pub mod toolchain;
+pub mod update;
 
 use serde::Deserialize;
 use std::collections::HashSet;
@@ -68,6 +70,54 @@ pub struct CatalogApp {
     /// Set when this app is an agent CLI the ✦ Assistant can run (WMAST-001).
     #[serde(default)]
     pub agent: Option<AgentSpec>,
+    /// The app file's id (`apps/<id>.toml`); empty in older catalogs.
+    #[serde(default)]
+    pub id: String,
+    /// The collection that lists it, if any (ASCLI-003).
+    #[serde(default)]
+    pub collection: Option<String>,
+    /// The install test results and upstream health (ASCAT-016, ASCAT-017).
+    #[serde(default)]
+    pub status: Option<Status>,
+}
+
+/// An app's tested status: the install test result per platform
+/// (`"debian-13": "ok"`) and the upstream health flags.
+#[derive(Clone, Debug, Default, Deserialize, PartialEq)]
+pub struct Status {
+    /// Upstream health flags (`archived`, `no_release_18_months`, `gone`).
+    #[serde(default)]
+    pub health: Vec<String>,
+    /// Result per platform: `ok`, `fail` or `skipped`.
+    #[serde(flatten)]
+    pub results: std::collections::BTreeMap<String, String>,
+}
+
+impl Status {
+    /// The platforms its install test passed on.
+    pub fn passed(&self) -> Vec<&str> {
+        self.results.iter().filter(|(_, r)| *r == "ok").map(|(p, _)| p.as_str()).collect()
+    }
+
+    /// The platforms its install test failed on.
+    pub fn failed(&self) -> Vec<&str> {
+        self.results.iter().filter(|(_, r)| *r == "fail").map(|(p, _)| p.as_str()).collect()
+    }
+}
+
+/// A collection (ASCLI-003): its apps in order, the collection it
+/// includes, and the Debian Recommends of its metapackage.
+#[derive(Clone, Debug, Default, Deserialize, PartialEq)]
+pub struct Collection {
+    pub name: String,
+    #[serde(default)]
+    pub description: String,
+    #[serde(default)]
+    pub includes: Option<String>,
+    #[serde(default)]
+    pub apps: Vec<String>,
+    #[serde(default)]
+    pub recommends: Vec<String>,
 }
 
 /// How the ✦ Assistant runs a catalogued agent CLI (the entry's `agent`
@@ -154,7 +204,8 @@ pub struct Variant {
 
 const CATALOG_JSON: &str = include_str!("../../../assets/catalog.json");
 
-/// The catalog document layout this binary reads (`schema` in the file).
+/// The catalog schema major this binary reads (`schema` in the file: the
+/// integer major, or `"major.minor"`). A newer minor only adds fields.
 pub const SCHEMA: u32 = 1;
 
 /// A curated install recipe for a catalogued app (its `recipe` field).
@@ -185,24 +236,36 @@ pub struct Recipe {
 /// A parsed, checked catalog document.
 #[derive(Debug, Deserialize)]
 pub struct Catalog {
+    /// The schema major ([`SCHEMA`]).
+    #[serde(skip)]
     pub schema: u32,
+    /// The release (`YYYY.MM.DD.N`); absent in the built-in copy.
+    #[serde(default)]
+    pub version: Option<String>,
     pub apps: Vec<CatalogApp>,
+    /// The collections in order; empty in older catalogs.
+    #[serde(default)]
+    pub collections: Vec<Collection>,
     /// The suite installer's app list (assets/suite-apps.txt), carried whole.
     pub suite_apps: String,
 }
 
-/// Parse and check a catalog document: it parses, its schema is [`SCHEMA`],
-/// it has apps, and its suite list has rows. `Err` says why not.
+/// The schema major of a catalog document, if it has one.
+pub fn schema_major(text: &str) -> Option<u64> {
+    let v = serde_json::from_str::<serde_json::Value>(text).ok()?.get("schema")?.clone();
+    v.as_u64().or_else(|| v.as_str()?.split('.').next()?.parse().ok())
+}
+
+/// Parse and check a catalog document: it parses, its schema major is
+/// [`SCHEMA`], it has apps, and its suite list has rows. `Err` says why not.
 pub fn parse(text: &str) -> Result<Catalog, String> {
-    let schema = serde_json::from_str::<serde_json::Value>(text)
-        .map_err(|e| format!("not a catalog ({e})"))?
-        .get("schema")
-        .and_then(|v| v.as_u64())
-        .ok_or("no schema number")?;
+    serde_json::from_str::<serde_json::Value>(text).map_err(|e| format!("not a catalog ({e})"))?;
+    let schema = schema_major(text).ok_or("no schema number")?;
     if schema != SCHEMA as u64 {
         return Err(format!("schema {schema}, this tetron-wm reads {SCHEMA}"));
     }
-    let c: Catalog = serde_json::from_str(text).map_err(|e| format!("bad catalog ({e})"))?;
+    let mut c: Catalog = serde_json::from_str(text).map_err(|e| format!("bad catalog ({e})"))?;
+    c.schema = SCHEMA;
     if c.apps.is_empty() {
         return Err("no apps".into());
     }
@@ -217,13 +280,13 @@ pub fn parse_count(text: &str) -> Result<usize, String> {
     parse(text).map(|c| c.apps.len())
 }
 
-/// Where the last good Update list download is kept.
+/// Where the downloaded copy is kept ([`update::download_path`]).
 pub fn cache_path() -> Option<std::path::PathBuf> {
-    data_home_dir().map(|d| d.join("tetron-wm/catalog.json"))
+    update::download_path()
 }
 
 /// `$XDG_DATA_HOME` when it is an absolute path, else `~/.local/share`.
-fn data_home_dir() -> Option<std::path::PathBuf> {
+pub(crate) fn data_home_dir() -> Option<std::path::PathBuf> {
     let xdg = std::env::var_os("XDG_DATA_HOME").filter(|v| !v.is_empty()).map(std::path::PathBuf::from);
     xdg.filter(|p| p.is_absolute()).or_else(|| dirs::home_dir().map(|h| h.join(".local/share")))
 }
@@ -243,8 +306,8 @@ fn log(msg: &str) {
     }
 }
 
-/// The catalog in use: the cached download while it passes [`parse`], else the
-/// built-in one. Replaced by [`install`]; each replacement leaks the old one
+/// The catalog in use: the first usable copy in [`update::load_order`], else
+/// the built-in one. Replaced by [`update::update`]; each replacement leaks the old one
 /// (a few hundred KB per Update list press) so `&'static` borrows stay valid.
 static ACTIVE: std::sync::RwLock<Option<&'static Catalog>> = std::sync::RwLock::new(None);
 
@@ -274,18 +337,10 @@ pub fn reload_if_changed() -> bool {
     }
     seen.0 = now;
     drop(seen);
-    match cache_path().and_then(|p| std::fs::read_to_string(p).ok()).map(|t| parse(&t)) {
-        Some(Ok(c)) => {
-            log(&format!("catalog: reloaded {} apps from the shared copy", c.apps.len()));
-            *ACTIVE.write().unwrap() = Some(Box::leak(Box::new(c)));
-            true
-        }
-        Some(Err(e)) => {
-            log(&format!("catalog: changed shared copy not used ({e})"));
-            false
-        }
-        None => false,
-    }
+    let (c, origin) = update::load(&update::load_order(), log);
+    log(&format!("catalog: reloaded {} apps ({origin:?})", c.apps.len()));
+    *ACTIVE.write().unwrap() = Some(Box::leak(Box::new(c)));
+    true
 }
 
 fn builtin() -> Catalog {
@@ -298,40 +353,55 @@ fn active() -> &'static Catalog {
     }
     // Tests read only the built-in copy (the builtin-only feature is on for
     // tetron-wm's tests), never a catalog the user downloaded.
-    let cached = if cfg!(any(test, feature = "builtin-only")) { None } else { cache_path().and_then(|p| std::fs::read_to_string(p).ok()) };
-    let c = match cached.map(|t| parse(&t)) {
-        Some(Ok(c)) => c,
-        Some(Err(e)) => {
-            log(&format!("catalog: cached list not used ({e}); using the built-in one"));
-            builtin()
-        }
-        None => builtin(),
-    };
+    let files = if cfg!(any(test, feature = "builtin-only")) { Vec::new() } else { update::load_order() };
+    let (c, origin) = update::load(&files, log);
+    if origin != update::Origin::Builtin {
+        log(&format!("catalog: {} apps ({origin:?})", c.apps.len()));
+    }
     let c: &'static Catalog = Box::leak(Box::new(c));
     *ACTIVE.write().unwrap() = Some(c);
     SEEN.lock().unwrap().0 = cache_mtime();
     c
 }
 
-/// Check a downloaded catalog and, when it passes, keep it in [`cache_path`]
-/// and use it from now on. Returns the number of apps.
-pub fn install(text: &str) -> Result<usize, String> {
-    let c = parse(text)?;
-    let path = cache_path().ok_or("no data directory")?;
-    if let Some(d) = path.parent() {
-        std::fs::create_dir_all(d).map_err(|e| format!("could not create {}: {e}", d.display()))?;
-    }
-    let part = path.with_extension("json.part");
-    std::fs::write(&part, text).and_then(|_| std::fs::rename(&part, &path)).map_err(|e| format!("could not save {}: {e}", path.display()))?;
+/// Make `c` the catalog in use (after [`update::save`]); its number of apps.
+fn use_catalog(c: Catalog) -> usize {
     let n = c.apps.len();
     *ACTIVE.write().unwrap() = Some(Box::leak(Box::new(c)));
     SEEN.lock().unwrap().0 = cache_mtime();
-    Ok(n)
+    n
 }
 
 /// The suite installer's app list of the catalog in use (WMCAT-003).
 pub fn suite_apps() -> &'static str {
     &active().suite_apps
+}
+
+/// The release of the catalog in use (`YYYY.MM.DD.N`), if it has one.
+pub fn version() -> Option<&'static str> {
+    active().version.as_deref()
+}
+
+/// The collections of the catalog in use, in order, each with the one it
+/// includes (ASCLI-003).
+pub fn collections() -> &'static [Collection] {
+    &active().collections
+}
+
+/// The collection that lists app `id` (ASCLI-003).
+pub fn collection_of(id: &str) -> Option<&'static Collection> {
+    collections().iter().find(|c| c.apps.iter().any(|a| a == id))
+}
+
+/// A collection with the ones it includes: their apps, innermost first.
+pub fn collection_apps(name: &str) -> Vec<&'static str> {
+    let mut chain = Vec::new();
+    let mut at = collections().iter().find(|c| c.name == name);
+    while let Some(c) = at.filter(|c| !chain.iter().any(|x: &&Collection| x.name == c.name)) {
+        chain.push(c);
+        at = c.includes.as_deref().and_then(|i| collections().iter().find(|x| x.name == i));
+    }
+    chain.iter().rev().flat_map(|c| c.apps.iter().map(String::as_str)).collect()
 }
 
 /// The current operating system as a recipe `os` token ("macos", "linux", …).
@@ -596,6 +666,32 @@ mod tests {
         assert!(parse(r#"[{"name":"old bare list"}]"#).unwrap_err().contains("schema"));
         let c = parse(&doc(SCHEMA, app, suite)).unwrap();
         assert_eq!((c.apps[0].tier.as_str(), c.apps[0].set.is_none()), ("optional", true));
+        assert!(c.collections.is_empty() && c.apps[0].status.is_none(), "older catalogs");
+        let minor = doc(SCHEMA, app, suite).replacen("\"schema\":1", "\"schema\":\"1.3\"", 1);
+        assert_eq!(parse(&minor).unwrap().schema, SCHEMA);
+        assert_eq!(schema_major(&minor.replace("1.3", "2.0")), Some(2));
+    }
+
+    /// ASCLI-003: the collections in order with what each includes, and an
+    /// app's collection by id.
+    #[test]
+    fn collections_and_collection_of() {
+        let names: Vec<&str> = collections().iter().map(|c| c.name.as_str()).collect();
+        assert_eq!(names, ["desktop", "essentials", "recommended", "extras"]);
+        assert_eq!(collections()[1].includes.as_deref(), Some("desktop"));
+        assert_eq!(collection_of("lazygit").map(|c| c.name.as_str()), Some("recommended"));
+        assert_eq!(collection_of("zed"), None);
+        let lazygit = catalog().iter().find(|a| a.id == "lazygit").unwrap();
+        assert_eq!(lazygit.collection.as_deref(), Some("recommended"));
+        let all = collection_apps("recommended");
+        assert!(all.contains(&"lazygit") && all.contains(&"git") && all.iter().position(|a| *a == "git") < all.iter().position(|a| *a == "lazygit"));
+        assert!(collection_apps("nope").is_empty());
+    }
+
+    #[test]
+    fn status_results_and_health() {
+        let s: Status = serde_json::from_str(r#"{"debian-13":"ok","ubuntu-24.04":"fail","health":["archived"]}"#).unwrap();
+        assert_eq!((s.passed(), s.failed(), s.health.clone()), (vec!["debian-13"], vec!["ubuntu-24.04"], vec!["archived".to_string()]));
     }
 
     /// WMCAT-010: imported lists by display name, deduplicated, in merge
