@@ -31,6 +31,8 @@ Every app is one file, `apps/<id>.toml` (format: `schema/app.schema.json`), impo
 
 `sources/awesome-tuis.json` (`scripts/import_awesome_tuis.py`) and `sources/terminaltrove.json` (`scripts/import_terminaltrove.py`, from https://carcaradotdev.github.io/terminaltrove-stars/data.json) are the imported lists, never edited by hand; `scripts/new_apps_report.py` lists their apps that have no app file yet, apart from `sources/excluded.toml`. Install recipes come from `scripts/match_brew.py` and `scripts/match_lang_recipes.py`, written into the app files.
 
+A weekly workflow (`.github/workflows/install-tests.yml`) installs every collection member and a rotating sample of other Store apps in Debian 13 and Ubuntu 24.04 containers through tetron-wm's suite installer (`scripts/install_test.py`), and checks upstream health (`scripts/upstream_health.py`: archived, no release for 18 months, gone). `status/<id>.json` changes only when a result flips (`scripts/update_status.py`), by a pull request a maintainer merges; the catalog carries each app's `status`. A failing or flagged collection member opens an issue. A pull request that adds a collection member or changes an app file must install it on both.
+
 CI checks that the generated files are current (`python3 scripts/build_catalog.py --check`). `python3 reconcile.py` runs the spec's constraints (`spec/`, libspec). A weekly workflow opens an issue when either imported list has new apps. The library in `crates/tetron-catalog` is shared with tetron-wm, which uses it from this repository.
 
 ## License

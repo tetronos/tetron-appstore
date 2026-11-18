@@ -17,7 +17,7 @@ import build_catalog  # noqa: E402
 
 ROOT = build_catalog.ROOT
 BEFORE = "2e4072d"
-ADDED = {"id", "collection"}
+ADDED = {"id", "collection", "status"}
 # Named changes, each with its reason.
 # A collection member's package names are the ones its suite line used,
 # checked in containers (they were two lists before, now one).
