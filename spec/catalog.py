@@ -138,7 +138,8 @@ class CatalogDocument(Requirement):
     `version` (the catalog release, ASPUB-001), `apps` (one entry per app
     file shown in the Store, with `id`, its `collection` when it is in one,
     and its `status` from ASCAT-016), `collections` (name, description,
-    includes, app ids in order) and `suite_apps` (ASCAT-014), so one fetch
+    includes, app ids in order, and the Debian Recommends of its
+    metapackage, ASPUB-003) and `suite_apps` (ASCAT-014), so one fetch
     updates the Store and the collections together. Until the client of
     ASCLI-001 is released, `schema` stays the integer 1 the released clients
     parse, and the entries keep the fields they read (`tier` and `set` from
