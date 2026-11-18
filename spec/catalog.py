@@ -60,9 +60,12 @@ class AppInstallTable(Requirement):
 class SourceTableForImporters(Requirement):
     """REQUIREMENT-ID: ASCAT-005
 
-    An app file's `[source]` table records which upstream lists carry the
-    app and when an importer last saw it there. Only importers write it
-    (ASCAT-018); every other field is written by people.
+    An app file's `[source]` table records which lists carry the app:
+    `lists` names the imported lists (`awesome-tuis`, `terminaltrove`) and
+    `tetron` (ours), and `gone = true` marks an app that left every imported
+    list it was on (ASCAT-019). Only importers change it (ASCAT-018), apart
+    from `tetron-app new`, which starts it as `lists = ["tetron"]`
+    (ASCAT-026); every other field is written by people.
     """
 
 
@@ -216,10 +219,14 @@ class ImportersProposeOnly(Requirement):
     """REQUIREMENT-ID: ASCAT-018
 
     The import scripts (awesome-tuis, Terminal Trove, Repology, GitHub
-    releases) refresh `sources/*.json`, write new app files and update only
-    the `[source]` table of existing ones, on a branch, and open or update
-    one pull request. They never commit to main and never change a field
-    outside `[source]`.
+    releases) refresh `sources/*.json`; `scripts/import_sync.py` then writes
+    new app files and updates only the `[source]` table of existing ones.
+    A list is added to an app by the same GitHub repository or an entry
+    named as its id or an alias, never by a shared name alone (different
+    apps share names). A listed app whose command another app installs is
+    named in the pull request, not written. The weekly workflow does this on
+    one branch and opens or updates one pull request. Nothing is committed
+    to main and no field outside `[source]` of an existing app changes.
     """
 
 
@@ -297,8 +304,11 @@ class NewAppHelper(Requirement):
 
     `scripts/tetron-app new <github-url>` writes `apps/<id>.toml` from the
     repository's metadata (name, description, license, homepage) and its
-    latest release assets (amd64 and arm64 patterns), leaving `category` and
-    `tip` for the contributor to fill in.
+    latest release assets (amd64 and arm64 patterns: a Linux `.tar.gz`, a
+    static build first, else a `.deb`, the formats the suite installer
+    unpacks; the version becomes `*`), leaving `category` and `tip` for the
+    contributor to fill in. It refuses a repository that already has an app
+    file and an id already used as an id or alias.
     """
 
 
@@ -306,8 +316,21 @@ class AddToCollectionHelper(Requirement):
     """REQUIREMENT-ID: ASCAT-027
 
     `scripts/tetron-app add-to <collection> <id>` appends the id to the
-    collection file; `scripts/tetron-app check` runs the ASCAT-020 to
-    ASCAT-025 checks locally.
+    collection file, keeping its comments, and refuses an unknown
+    collection, a missing app file and an app already in a collection;
+    `scripts/tetron-app check` runs the ASCAT-020 to ASCAT-025 checks
+    locally, against `origin/main` when it exists.
+"""
+
+
+class ContributingGuide(Requirement):
+    """REQUIREMENT-ID: ASCAT-030
+
+    `CONTRIBUTING.md` says how to add an app (one file, `tetron-app new`)
+    and how to propose a collection change (one line, `tetron-app add-to`,
+    with the reason in the pull request). Collections are curated:
+    `.github/CODEOWNERS` makes the maintainers review every change under
+    `collections/`.
     """
 
 

@@ -95,7 +95,6 @@
       "additionalProperties": false,
       "properties": {
         "lists": {"type": "array", "items": {"type": "string"}},
-        "seen": {"type": "string"},
         "gone": {"type": "boolean"}
       }
     }

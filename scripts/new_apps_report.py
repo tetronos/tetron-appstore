@@ -22,6 +22,7 @@ LISTS = {"awesome-tuis": "awesome-tuis", "terminaltrove": "Terminal Trove"}
 def new_apps(root=af.ROOT):
     apps = af.load_apps(root / "apps").values()
     known = {a["name"].lower() for a in apps} | {a["bin"] for a in apps if "bin" in a}
+    ids = {x for a in apps for x in (a["id"], *a.get("aliases", []))}
     repos = {af.gh_repo(a.get("homepage")) for a in apps} - {None}
     ex = root / "sources" / "excluded.toml"
     known |= {n.lower() for n in tomllib.loads(ex.read_text(encoding="utf-8"))["exclude"]} if ex.exists() else set()
@@ -30,7 +31,7 @@ def new_apps(root=af.ROOT):
         p = root / "sources" / f"{src}.json"
         for a in json.loads(p.read_text(encoding="utf-8")) if p.exists() else []:
             if a["name"].lower() in known or a.get("bin") in known or a["name"].lower() in seen \
-                    or af.gh_repo(a.get("homepage")) in repos:
+                    or af.slug(a["name"]) in ids or af.gh_repo(a.get("homepage")) in repos:
                 continue
             seen.add(a["name"].lower())
             out.append(dict(a, source=src))

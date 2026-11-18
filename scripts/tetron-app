@@ -1,0 +1,164 @@
+#!/usr/bin/env python3
+"""Contributor helper for the catalog files (ASCAT-026, ASCAT-027).
+
+    scripts/tetron-app new <github-url> [--id ID]
+        write apps/<id>.toml from the repository (name, description, license,
+        homepage) and its latest release (amd64 and arm64 asset patterns);
+        category and notes.tip are left for you
+    scripts/tetron-app add-to <collection> <id>
+        append the id to collections/<collection>.toml
+    scripts/tetron-app check [--base REF] [--labels a,b]
+        the pull request checks (ASCAT-020 to ASCAT-025); --base defaults to
+        origin/main when it exists
+
+GH_TOKEN or GITHUB_TOKEN, when set, raises the GitHub API limit. Stdlib only
+(Python 3.11+).
+"""
+import json
+import os
+import re
+import subprocess
+import sys
+import urllib.error
+import urllib.request
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import appfiles as af  # noqa: E402
+import check_catalog as cc  # noqa: E402
+
+# Asset words per architecture, and the formats the suite installer unpacks
+# (tetron-wm install_from_release: .tar.gz, or .deb on Debian and Ubuntu).
+ARCH = {"amd64": ("x86_64", "amd64", "x64"), "arm64": ("aarch64", "arm64")}
+FORMATS = (".tar.gz", ".deb")
+
+
+def api(path, fetch=None):
+    """The JSON of a GitHub API path, or None on 404."""
+    if fetch:
+        return fetch(path)
+    h = {"Accept": "application/vnd.github+json", "User-Agent": "tetron-appstore"}
+    tok = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN")
+    if tok:
+        h["Authorization"] = f"Bearer {tok}"
+    try:
+        with urllib.request.urlopen(urllib.request.Request(f"https://api.github.com/{path}", headers=h), timeout=30) as r:
+            return json.load(r)
+    except urllib.error.HTTPError as e:
+        if e.code == 404:
+            return None
+        raise
+
+
+def asset_pattern(names, arch, tag):
+    """The best Linux asset of one architecture as a pattern with the version
+    as *: a .tar.gz before a .deb, a static (musl) build before others."""
+    words = ARCH[arch]
+
+    def score(n):
+        low = n.lower()
+        if not any(low.endswith(f) for f in FORMATS) or not any(w in low for w in words):
+            return None
+        if "linux" not in low and not low.endswith(".deb"):
+            return None
+        return (FORMATS.index(next(f for f in FORMATS if low.endswith(f))), "musl" not in low, len(n))
+    ok = sorted((s, n) for n in names if (s := score(n)) is not None)
+    if not ok:
+        return None
+    name = ok[0][1]
+    for v in sorted({tag, tag.lstrip("vV")} - {""}, key=len, reverse=True):
+        if v in name:
+            return name.replace(v, "*")
+    return name
+
+
+def new_app(url, fetch=None, apps=None, want_id=None):
+    """(app, notes) for a GitHub repository URL; FileError when it can not be added."""
+    repo = af.gh_repo(url)
+    if not repo:
+        raise af.FileError(f"{url}: not a github.com repository URL (https://github.com/OWNER/REPO)")
+    apps = af.load_apps() if apps is None else apps
+    for i, a in apps.items():
+        if af.gh_repo(a.get("homepage")) == repo:
+            raise af.FileError(f"{repo} is already apps/{i}.toml")
+    meta = api(f"repos/{repo}", fetch)
+    if meta is None:
+        raise af.FileError(f"{repo}: no such repository")
+    name = meta.get("name") or repo.split("/")[1]
+    i = want_id or af.slug(name)
+    taken = set(apps) | {x for a in apps.values() for x in a.get("aliases", [])}
+    if i in taken:
+        raise af.FileError(f"id {i!r} is taken; choose one with --id")
+    app = {"id": i, "name": name, "bin": name.lower(), "category": "",
+           "description": (meta.get("description") or "").strip() or name,
+           "homepage": f"https://github.com/{meta.get('full_name') or repo}"}
+    lic = (meta.get("license") or {}).get("spdx_id")
+    if lic and lic != "NOASSERTION":
+        app["license"] = lic
+    notes = [f"apps/{i}.toml: fill in category (one of: {', '.join(categories(apps))})",
+             "check bin (the command it installs) and add notes.tip if it needs one"]
+    rel = api(f"repos/{meta.get('full_name') or repo}/releases/latest", fetch)
+    if rel:
+        names = [a["name"] for a in rel.get("assets", [])]
+        pats = {k: p for k in ARCH if (p := asset_pattern(names, k, rel.get("tag_name", "")))}
+        if pats:
+            app["install"] = {"release": {"repo": meta.get("full_name") or repo, **pats}}
+            notes += [f"release {k}: {p}" for k, p in pats.items()]
+            notes += [f"no {k} asset found in the latest release" for k in ARCH if k not in pats]
+    if "install" not in app:
+        notes.append("no Linux release asset found; the Store uses distribution packages (sources/repology.json)")
+    app["source"] = {"lists": ["tetron"]}
+    return app, notes
+
+
+def categories(apps):
+    return sorted({a["category"] for a in apps.values() if a.get("category")}, key=str.lower)
+
+
+def add_to(coll, i, root=af.ROOT):
+    """Append id i to collections/<coll>.toml, keeping the file's comments."""
+    if coll not in af.COLLECTION_NAMES:
+        raise af.FileError(f"no collection {coll!r} (one of: {', '.join(af.COLLECTION_NAMES)})")
+    if not (root / "apps" / f"{i}.toml").exists():
+        raise af.FileError(f"apps/{i}.toml does not exist")
+    for c in af.load_collections(root / "collections"):
+        if i in c["apps"]:
+            raise af.FileError(f"{i} is already in collections/{c['name']}.toml (an app is in one collection)")
+    p = root / "collections" / f"{coll}.toml"
+    text = p.read_text(encoding="utf-8")
+    end = text.rstrip().rfind("]")
+    p.write_text(text[:end] + f"  {json.dumps(i)},\n" + text[end:], encoding="utf-8")
+
+
+def git_has(ref):
+    return subprocess.run(["git", "rev-parse", "--verify", "-q", ref], cwd=af.ROOT, capture_output=True).returncode == 0
+
+
+def main(argv):
+    cmd, args = (argv[0], argv[1:]) if argv else ("", [])
+    try:
+        if cmd == "new" and args:
+            want = args[args.index("--id") + 1] if "--id" in args else None
+            app, notes = new_app(args[0], want_id=want)
+            af.write_app(app)
+            print(f"wrote apps/{app['id']}.toml", *notes, sep="\n  ")
+            return 0
+        if cmd == "add-to" and len(args) == 2:
+            add_to(*args)
+            print(f"added {args[1]} to collections/{args[0]}.toml; run python3 scripts/build_catalog.py")
+            return 0
+        if cmd == "check":
+            if "--base" not in args and git_has("origin/main"):
+                args = ["--base", "origin/main", *args]
+            rc = cc.main(args)
+            print("check: ok" if rc == 0 else "check: failed (see above)")
+            return rc
+    except af.FileError as e:
+        print(f"tetron-app: {e}", file=sys.stderr)
+        return 1
+    print(__doc__, file=sys.stderr)
+    return 2
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv[1:]))

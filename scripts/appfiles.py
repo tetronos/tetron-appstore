@@ -26,7 +26,7 @@ SUB = {
     "notes": ("tip", "how"),
     "agent": ("label", "command", "args", "context_files", "briefing", "mcp"),
     "install": ("pkg", "release", "recipe", "deb", "script"),
-    "source": ("lists", "seen", "gone"),
+    "source": ("lists", "gone"),
     "pkg": MANAGERS,
     "release": ("repo", "amd64", "arm64"),
     "recipe": ("install", "method", "os", "verified"),
