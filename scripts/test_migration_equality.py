@@ -29,6 +29,9 @@ TIER_FROM_COLLECTION = {"AI Mode", "torrentTUI"}
 # bin is the command the app runs: these named the package, so the Store
 # never found them installed and the launcher never listed them.
 BIN_FIXED = {"ripgrep": "rg", "tealdeer": "tldr", "aria2": "aria2c", "GitHub CLI": "gh"}
+# Terminal Trove copies of these, with a command that does not exist, were
+# merged into them (the copy's id is an alias; the app is also from trove).
+MERGED = {"claude-code": "Claude Code", "gemini-cli": "Gemini CLI"}
 
 
 def before():
@@ -52,7 +55,8 @@ class MigrationKeepsTheCatalog(unittest.TestCase):
         cls.new = json.loads(build_catalog.build()["assets/catalog.json"])
 
     def test_same_apps(self):
-        self.assertEqual(sorted(a["name"] for a in self.old["apps"]), sorted(a["name"] for a in self.new["apps"]))
+        old = [a["name"] for a in self.old["apps"] if a["name"] not in MERGED]
+        self.assertEqual(sorted(old), sorted(a["name"] for a in self.new["apps"]))
 
     def test_same_fields_apart_from_the_named_changes(self):
         old = {a["name"]: a for a in self.old["apps"]}
@@ -65,6 +69,9 @@ class MigrationKeepsTheCatalog(unittest.TestCase):
                 o.pop("pkg", None), n.pop("pkg", None)
             if n["name"] in TIER_FROM_COLLECTION:
                 o.pop("tier"), n.pop("tier")
+            if n["name"] in MERGED.values():
+                self.assertEqual(n["sources"], ["terminaltrove", "tetron"])
+                o.pop("sources"), n.pop("sources")
             if n["name"] in BIN_FIXED:
                 self.assertEqual(n["bin"], BIN_FIXED[n["name"]])
                 o.pop("bin"), n.pop("bin")
