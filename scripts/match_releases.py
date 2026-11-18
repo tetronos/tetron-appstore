@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Find which catalog apps publish prebuilt binaries on GitHub (WMCAT-006) and
-write lists/releases.json; then merge the catalog again.
+write sources/releases.json; then build the catalog again.
 
 Usage:
     python3 scripts/match_releases.py            # query (cached), write, merge
@@ -20,10 +20,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
-import merge_catalog as mc  # noqa: E402
+import appfiles as af  # noqa: E402
+import build_catalog  # noqa: E402
 
 CACHE = ROOT / "target" / "release-cache"
-OUT = ROOT / "lists" / "releases.json"
+OUT = ROOT / "sources" / "releases.json"
 
 
 def latest_assets(repo, offline):
@@ -42,8 +43,8 @@ def latest_assets(repo, offline):
 
 def main() -> int:
     offline = "--offline" in sys.argv[1:]
-    apps = json.loads(mc.OUT.read_text(encoding="utf-8"))["apps"]
-    repos = sorted({r for r in (mc.gh_repo(a["homepage"]) for a in apps) if r})
+    apps = json.loads(af.CATALOG.read_text(encoding="utf-8"))["apps"]
+    repos = sorted({r for r in (af.gh_repo(a["homepage"]) for a in apps) if r})
     have = []
     for i, repo in enumerate(repos, 1):
         assets = latest_assets(repo, offline)
@@ -53,8 +54,8 @@ def main() -> int:
             print(f"  {i}/{len(repos)} checked, {len(have)} with release assets", flush=True)
     OUT.write_text(json.dumps({"repos": have}, indent=1) + "\n", encoding="utf-8")
     print(f"wrote {len(have)} of {len(repos)} repositories -> {OUT.relative_to(ROOT)}")
-    mc.OUT.write_text(mc.merge(), encoding="utf-8")
-    print(f"wrote {mc.OUT.relative_to(ROOT)}")
+    build_catalog.write()
+    print("built the catalog")
     return 0
 
 

@@ -28,11 +28,10 @@ jobs:
 
       - name: Fetch the Terminal Trove list (terminaltrove-stars data.json; the site refuses scripted fetches)
         run: curl -fsSL https://carcaradotdev.github.io/terminaltrove-stars/data.json -o /tmp/terminaltrove.json
-      - name: Import and merge the catalog (working copy only — not committed)
+      - name: Import the lists into sources/ (working copy only — not committed)
         run: |
           python3 scripts/import_awesome_tuis.py /tmp/awesome-tuis.md
           python3 scripts/import_terminaltrove.py /tmp/terminaltrove.json
-          python3 scripts/merge_catalog.py
 
       - name: Detect new apps and alert via issue
         env:

@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-"""Import the awesome-tuis README into lists/awesome-tuis.json (WMCAT-001).
+"""Import the awesome-tuis README into sources/awesome-tuis.json (WMCAT-001).
 
 Usage:
     curl -fsSL https://raw.githubusercontent.com/rothgar/awesome-tuis/master/README.md -o README-awesome-tuis.md
     python3 scripts/import_awesome_tuis.py README-awesome-tuis.md
-    python3 scripts/merge_catalog.py
+    python3 scripts/new_apps_report.py report.md
 
-Writes only lists/awesome-tuis.json: every app's name, category,
+Writes only sources/awesome-tuis.json: every app's name, category,
 description, homepage and a best-effort command name. Our corrections
-(command names, CLI flags, recipes, dropped entries) live in
-lists/tetron.toml, which the merge applies, so this import never overwrites
-them. Never edit lists/awesome-tuis.json by hand.
+(command names, CLI flags, recipes) live in the app files (apps/<id>.toml),
+dropped entries in sources/excluded.toml, so this import never overwrites
+them. Never edit sources/awesome-tuis.json by hand.
 """
 import json
 import re
@@ -51,7 +51,7 @@ def main() -> int:
         print(__doc__, file=sys.stderr)
         return 2
     apps = parse(Path(sys.argv[1]).read_text(encoding="utf-8"))
-    out = Path(__file__).resolve().parent.parent / "lists" / "awesome-tuis.json"
+    out = Path(__file__).resolve().parent.parent / "sources" / "awesome-tuis.json"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(apps, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"wrote {len(apps)} apps across {len({a['category'] for a in apps})} categories -> {out}")

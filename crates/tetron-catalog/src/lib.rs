@@ -1,6 +1,7 @@
 //! The app catalog (WMCAT-001 to WMCAT-008), shared by tetron-wm and the
-//! standalone Store: `scripts/merge_catalog.py` merges the source lists in
-//! `lists/` into `assets/catalog.json`, which is compiled in. The Store's
+//! standalone Store: `scripts/build_catalog.py` builds the app files in
+//! `apps/` and the collections in `collections/` into
+//! `assets/catalog.json`, which is compiled in. The Store's
 //! Update list can replace it with a newer copy ([`install`]), kept in
 //! [`cache_path`] and read at start while it passes the same checks.
 //!
@@ -57,11 +58,11 @@ pub struct CatalogApp {
     #[serde(default)]
     pub sources: Vec<String>,
     /// The GitHub repository's latest release has downloadable assets
-    /// (WMCAT-006, from lists/releases.json); the Store links its page.
+    /// (WMCAT-006, from sources/releases.json); the Store links its page.
     #[serde(default)]
     pub releases: bool,
     /// Package names per package manager (WMCAT-005), from Repology
-    /// (lists/repology.json) and lists/tetron.toml. Empty: no package known.
+    /// (sources/repology.json) and the app file's `[install.pkg]`. Empty: no package known.
     #[serde(default)]
     pub pkg: Packages,
     /// Set when this app is an agent CLI the ✦ Assistant can run (WMAST-001).

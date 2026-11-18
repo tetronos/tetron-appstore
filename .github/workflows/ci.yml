@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # scripts/test_migration_equality.py reads the catalog before the move.
+          fetch-depth: 0
       - uses: dtolnay/rust-toolchain@stable
         with:
           components: clippy
@@ -18,7 +21,9 @@ jobs:
       - run: cargo test --locked
       - run: cargo clippy --locked --all-targets -- -D warnings
       - run: sh -n install.sh
-      # The catalog (WMCAT-001): assets/catalog.json is what the merge makes
-      # from lists/ and assets/suite-apps.txt, and the scripts' tests pass.
-      - run: python3 scripts/merge_catalog.py --check
-      - run: python3 -m unittest scripts/test_merge_catalog.py scripts/test_import_terminaltrove.py scripts/test_match_repology.py
+      # The catalog (ASCAT-009 to ASCAT-014, ASCAT-024): the generated files are
+      # what the build makes from apps/ and collections/; the scripts' tests
+      # pass; the spec's constraints hold.
+      - run: python3 scripts/build_catalog.py --check
+      - run: python3 -m unittest discover -s scripts -p 'test_*.py'
+      - run: python3 reconcile.py

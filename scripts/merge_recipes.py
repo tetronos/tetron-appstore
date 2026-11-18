@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Merge a derive-install-recipes workflow output file into the catalog: changed
-recipes are appended to lists/tetron.toml and assets/catalog.json is merged again.
+recipes are written into the app files (apps/<id>.toml) and assets/catalog.json is built again.
 
 Usage: python3 scripts/merge_recipes.py <workflow-output.json>
 
@@ -13,7 +13,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
-from merge_catalog import catalog_recipes, save_recipes  # noqa: E402
+from appfiles import catalog_recipes, save_recipes  # noqa: E402
 
 
 def main() -> int:

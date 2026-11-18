@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""Mark brew-installable catalog apps as verified (recipe blocks appended to
-lists/tetron.toml, then merged into assets/catalog.json).
+"""Mark brew-installable catalog apps as verified (recipes written into
+the app files (apps/<id>.toml), then built into assets/catalog.json).
 
 Fetches the Homebrew formula index and matches it against the catalog by binary
 name / app name, writing a verified `brew install <formula>` recipe for each hit
 whose formula points at the app's own GitHub repository (homepage, source or
 head URL), so a different program with the same name is never installed. An
 app whose homepage is not a GitHub repository root matches by name alone.
-Existing verified recipes are left untouched. Run after scripts/import_awesome_tuis.py and scripts/merge_catalog.py.
+Existing verified recipes are left untouched. Run after scripts/import_awesome_tuis.py and scripts/build_catalog.py.
 """
 import json
 import re
@@ -17,7 +17,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
-from merge_catalog import gh_repo, catalog_recipes, save_recipes  # noqa: E402
+from appfiles import gh_repo, catalog_recipes, save_recipes  # noqa: E402
 FORMULA_API = "https://formulae.brew.sh/api/formula.json"
 
 

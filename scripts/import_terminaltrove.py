@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
-"""Import the terminaltrove.com tool list into lists/terminaltrove.json (WMCAT-001).
+"""Import the terminaltrove.com tool list into sources/terminaltrove.json (WMCAT-001).
 
 Usage:
     curl -fsSL https://carcaradotdev.github.io/terminaltrove-stars/data.json -o terminaltrove.json
     python3 scripts/import_terminaltrove.py terminaltrove.json
-    python3 scripts/merge_catalog.py
+    python3 scripts/new_apps_report.py report.md
 
 terminaltrove.com answers scripted fetches with a browser challenge, so the
 input is the data.json of terminaltrove-stars, which rebuilds the whole site
 list every two days. Keeps every tool that runs on Linux or macOS and is not
 archived, whatever its age; a tool without the "tui" tag is cli = true. The
 category comes from the first of its tags in CATEGORY, else Miscellaneous.
-Writes only lists/terminaltrove.json; our corrections live in
-lists/tetron.toml. Never edit lists/terminaltrove.json by hand.
+Writes only sources/terminaltrove.json; our corrections live in
+the app files (apps/<id>.toml). Never edit sources/terminaltrove.json by hand.
 """
 import json
 import re
@@ -75,7 +75,7 @@ def main() -> int:
         print(__doc__, file=sys.stderr)
         return 2
     apps = parse(json.loads(Path(sys.argv[1]).read_text(encoding="utf-8")))
-    out = Path(__file__).resolve().parent.parent / "lists" / "terminaltrove.json"
+    out = Path(__file__).resolve().parent.parent / "sources" / "terminaltrove.json"
     out.write_text(json.dumps(apps, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"wrote {len(apps)} apps ({sum('cli' in a for a in apps)} cli) -> {out}")
     return 0
