@@ -106,43 +106,60 @@ class ChangedFiles(unittest.TestCase):
             self.assertEqual((got["a"][0], got["a"][1]["cli"], got["c"][0]), (app("a"), True, None))
 
 
-class MetapackageVersion(unittest.TestCase):
-    def repo(self, d, recs, version):
-        root = Path(d)
-        (root / "packaging").mkdir(exist_ok=True)
-        (root / "packaging" / "recommended.toml").write_text(f"recommends = {recs}\n")
-        (root / "packaging" / "VERSION").write_text(version + "\n")
-        return root
-
-    def test_changed_recommends_need_a_higher_version(self):
-        with tempfile.TemporaryDirectory() as d:
-            run = lambda *a: subprocess.run(a, cwd=d, check=True, capture_output=True)
-            run("git", "init", "-q", "-b", "main")
-            run("git", "config", "user.email", "t@t"), run("git", "config", "user.name", "t")
-            root = self.repo(d, '["a"]', "0.15.30")
-            run("git", "add", "."), run("git", "commit", "-qm", "base")
-            self.assertEqual(cc.metapackage_version("HEAD", root), [])
-            self.repo(d, '["a", "b"]', "0.15.30")
-            self.assertEqual(len(cc.metapackage_version("HEAD", root)), 1)
-            self.repo(d, '["a", "b"]', "0.15.31")
-            self.assertEqual(cc.metapackage_version("HEAD", root), [])
-
+class VersionTuple(unittest.TestCase):
     def test_version_tuple(self):
         self.assertEqual(cc.version_tuple("0.15.3-1\n"), (0, 15, 3))
         self.assertLess(cc.version_tuple("0.15.9"), cc.version_tuple("0.15.10"))
 
 
 class Plan(unittest.TestCase):
-    INDEX = "".join(f"Package: tetron-wm-{s}\nVersion: {v}-1\n\n" for s in ("essentials", "recommended", "extras")
-                    for v in ("0.15.16", "0.15.17")) + "Package: tetron-wm-desktop\nVersion: 0.15.40-1\n\n"
+    """ASPUB-003: build when Depends or Recommends differ, at the next patch."""
+    WANT = {f"tetron-wm-{s}": {"Depends": [f"d-{s}"], "Recommends": ["a", "b"]}
+            for s in ("essentials", "recommended", "extras")}
 
-    def test_newer_builds_published_skips_older_refuses(self):
+    def index(self, recs="a, b", versions=("0.15.16", "0.15.17")):
+        return "".join(f"Package: tetron-wm-{s}\nVersion: {v}-1\nDepends: d-{s}\nRecommends: {recs}\n\n"
+                       for s in ("essentials", "recommended", "extras") for v in versions) + \
+            "Package: tetron-wm-desktop\nVersion: 0.15.40-1\n\n"
+
+    def test_same_skips(self):
         import metapackage_plan as mp
-        self.assertEqual(mp.plan("0.15.30", self.INDEX), ("build", None))
-        self.assertEqual(mp.plan("0.15.17", self.INDEX), ("skip", None))
-        self.assertIsNone(mp.plan("0.15.0", self.INDEX)[0])
-        self.assertIsNone(mp.plan("0.15.16", self.INDEX)[0])
-        self.assertEqual(mp.plan("0.15.1", ""), ("build", None))
+        self.assertEqual(mp.plan("0.15.0", self.index(), want=self.WANT), ("skip", None))
+        self.assertEqual(mp.plan("0.15.0", self.index("b,  a"), want=self.WANT), ("skip", None))
+
+    def test_changed_builds_the_next_patch_or_the_floor(self):
+        import metapackage_plan as mp
+        self.assertEqual(mp.plan("0.15.0", self.index("a"), want=self.WANT), ("build", "0.15.18"))
+        self.assertEqual(mp.plan("0.15.19", self.index("a"), want=self.WANT), ("build", "0.15.19"))
+        self.assertEqual(mp.plan("0.15.0", "", want=self.WANT), ("build", "0.15.0"))
+
+    def test_older_index_matches_only_the_newest(self):
+        import metapackage_plan as mp
+        idx = self.index("a", ("0.15.16",)) + self.index("a, b", ("0.15.17",))
+        self.assertEqual(mp.plan("0.15.0", idx, want=self.WANT), ("skip", None))
+
+    def test_own_releases_not_yet_in_apt_count(self):
+        import metapackage_plan as mp
+        rel = [{"assets": [{"name": "tetron-wm-extras_0.15.21-1_all.deb"}, {"name": "catalog.json"}]}]
+        self.assertEqual(mp.plan("0.15.0", self.index("a"), rel, want=self.WANT), ("build", "0.15.22"))
+
+    def test_other_minor_ignored(self):
+        import metapackage_plan as mp
+        self.assertEqual(mp.plan("0.16.0", self.index("a"), want=self.WANT), ("build", "0.16.0"))
+
+    def test_real_packaging_matches_its_own_index(self):
+        import metapackage_plan as mp
+        want = mp.wanted("0.15.19")
+        idx = "".join(f"Package: {p}\nVersion: 0.15.17-1\nDepends: {', '.join(w['Depends'])}\n"
+                      f"Recommends: {', '.join(w['Recommends'])}\n\n" for p, w in want.items())
+        self.assertEqual(mp.plan("0.15.19", idx), ("skip", None))
+
+
+class ScriptCarried(unittest.TestCase):
+    def test_only_command_and_method_count_and_carried_is_not_new(self):
+        rec = lambda c, **kw: {"install": {"recipe": dict({"install": c, "method": "script"}, **kw)}}  # noqa: E731
+        ch = {"same": (rec("x"), rec("x", os=["linux"])), "carried": (None, rec("y")), "new": (None, rec("z"))}
+        self.assertEqual([p.split(":")[0] for p in cc.script_review(ch, set(), {("y", "script")})], ["apps/new.toml"])
 
 
 class Offline(unittest.TestCase):

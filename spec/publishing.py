@@ -36,15 +36,20 @@ class CollectionPackages(Requirement):
     `build_catalog.py` writes from the collections in collection order (an
     app's `deb` relation, or its apt name; service members, offered
     separately, and members with their own suite method are left out). Each depends on the next smaller one and on
-    `tetron-wm (>= MAJOR.MINOR)`. Version: tetron's MAJOR.MINOR with an
-    independent patch number that rises with each catalog release that
-    changes a collection and never goes down, so an upgrade from the
-    packages tetron-wm built before never sees a downgrade. The version is
-    `packaging/VERSION`; CI fails when a pull request changes a
-    metapackage's recommends without raising it, and the release builds the
-    metapackages only when it is newer than every one in the tetronos apt
-    repository (the same version is skipped, an older one fails the
-    release). They are attached to the catalog release for tetronos/apt to
+    `tetron-wm (>= MAJOR.MINOR)`. Nobody sets their version by hand: a
+    collection change is only a change to `collections/`. The catalog
+    release compares each metapackage's Depends and Recommends with the
+    newest one published (the tetronos apt repository and this repository's
+    catalog releases, which the apt repository may not have picked up yet).
+    When all three are the same it builds none. When one differs it builds
+    all three at one version: the newest published patch plus one, or
+    `packaging/VERSION` when that is higher. `packaging/VERSION` is the
+    floor: tetron's MAJOR.MINOR and the lowest patch allowed, raised only
+    for a new minor or to stay above versions built elsewhere (tetron-wm
+    built these packages up to 0.15.18). So the version never goes down
+    and an upgrade from the packages tetron-wm built never sees a
+    downgrade.
+    They are attached to the catalog release for tetronos/apt to
     pick up, after an install test with their Recommends.
     """
 

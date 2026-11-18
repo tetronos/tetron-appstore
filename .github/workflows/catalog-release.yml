@@ -4,8 +4,9 @@ name: Catalog release
 # catalog: the checks run, then catalog.json (with "version" set to the tag
 # without its prefix) and suite-apps.txt go to the GitHub release and to
 # GitHub Pages, with tetron-catalog-data (the catalog as a deb). The
-# collection metapackages are built when packaging/VERSION is newer than the
-# ones in the tetronos apt repository (scripts/metapackage_plan.py); the apt
+# collection metapackages are built when their Depends or Recommends differ
+# from the newest published ones, at the next patch version
+# (scripts/metapackage_plan.py; nobody raises a version by hand); the apt
 # repository picks the debs up from the release. Store binary releases keep
 # their own v* tags (release.yml).
 on:
@@ -47,18 +48,22 @@ jobs:
           version: ${{ steps.v.outputs.version }}
           maintainer: ${{ vars.DEB_MAINTAINER }}
           out: deb-data-out
-      - name: Metapackages or not
+      - name: Metapackages or not, and their version
         id: plan
-        run: echo "decision=$(python3 scripts/metapackage_plan.py)" >> "$GITHUB_OUTPUT"
-      - id: mv
-        run: echo "version=$(cat packaging/VERSION)" >> "$GITHUB_OUTPUT"
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          out="$(python3 scripts/metapackage_plan.py)"
+          echo "$out"
+          echo "decision=${out%% *}" >> "$GITHUB_OUTPUT"
+          [ "$out" = skip ] || echo "version=${out#build }" >> "$GITHUB_OUTPUT"
       - name: Build tetron-wm-essentials .deb
         id: essentials
         if: steps.plan.outputs.decision == 'build'
         uses: tetronos/tetron-packaging@87d8405791a0e679af6deb720fe932410f38feb5
         with:
           deb-toml: packaging/essentials.toml
-          version: ${{ steps.mv.outputs.version }}
+          version: ${{ steps.plan.outputs.version }}
           maintainer: ${{ vars.DEB_MAINTAINER }}
           out: deb-essentials-out
           test: "false"
@@ -68,7 +73,7 @@ jobs:
         uses: tetronos/tetron-packaging@87d8405791a0e679af6deb720fe932410f38feb5
         with:
           deb-toml: packaging/recommended.toml
-          version: ${{ steps.mv.outputs.version }}
+          version: ${{ steps.plan.outputs.version }}
           maintainer: ${{ vars.DEB_MAINTAINER }}
           out: deb-recommended-out
           test: "false"
@@ -78,7 +83,7 @@ jobs:
         uses: tetronos/tetron-packaging@87d8405791a0e679af6deb720fe932410f38feb5
         with:
           deb-toml: packaging/extras.toml
-          version: ${{ steps.mv.outputs.version }}
+          version: ${{ steps.plan.outputs.version }}
           maintainer: ${{ vars.DEB_MAINTAINER }}
           out: deb-extras-out
           test: "false"

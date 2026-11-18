@@ -179,7 +179,11 @@ class ScheduledInstallTests(Requirement):
     the other apps, in Debian 13 and Ubuntu 24.04 containers with the code
     path of the suite installer, then runs its check command. Each result
     per app and platform is `ok`, `fail` or `skipped`, with the date, the
-    method used and the last lines of output on failure. The full result of
+    method used and the last lines of output on failure. `skipped` carries
+    its reason: an app the platform can not install by the suite's own
+    rules (a desktop app, a service, no apt package there and no release or
+    script to fall back on) is skipped, not failed, so the status shows the
+    gap per platform without blocking unrelated pull requests. The full result of
     each run is attached to the run as an artifact.
     """
 
@@ -278,7 +282,10 @@ class ScriptRecipesNeedReview(Requirement):
 
     A recipe with `method = "script"` (a downloaded script run by a shell)
     runs code no checksum covers. CI fails when a pull request adds or
-    changes one without the `reviewed-script` label.
+    changes one without the `reviewed-script` label. A change means a
+    different command or method; other recipe fields (os, notes) do not need
+    the label. A recipe the catalog already carried before the one-file-per-app
+    migration, unchanged, is not new.
     """
 
 

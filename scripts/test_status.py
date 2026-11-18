@@ -41,6 +41,14 @@ class InstallTest(unittest.TestCase):
         self.assertIsNone(it.skip_reason({"install": {"script": "fresh"}}, NONE))
         self.assertIsNone(it.skip_reason({"install": {"release": {"repo": "a/b"}}}, NONE))
 
+    def test_no_candidate_on_this_platform(self):
+        none, some = (lambda n: False), (lambda n: True)
+        apt = dict(NONE, apt="newsboat")
+        self.assertEqual(it.no_candidate({}, apt, none), "no apt package on this platform, and no release or script")
+        self.assertIsNone(it.no_candidate({}, apt, some))
+        self.assertIsNone(it.no_candidate({"install": {"release": {"repo": "a/b"}}}, apt, none))
+        self.assertIsNone(it.no_candidate({"install": {"script": "x"}}, apt, none))
+
     def test_sample_rotates_by_week_over_store_apps_with_apt(self):
         apps = {f"a{n}": {"name": f"a{n}", "install": {"pkg": {"apt": f"a{n}"}}} for n in range(5)}
         apps["hidden"] = {"name": "hidden", "store": False, "install": {"pkg": {"apt": "h"}}}
