@@ -1,6 +1,7 @@
 id = "kilo"
 name = "kilo"
 bin = "kilo"
+shares_bin = ["kilo-code"]
 category = "Editors"
 description = "A minimal but complete editor in ~1000 lines of C code."
 homepage = "https://github.com/antirez/kilo"

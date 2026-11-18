@@ -1,6 +1,7 @@
 id = "micro-snake"
 name = "Micro Snake"
 bin = "snake"
+shares_bin = ["snake"]
 category = "Games"
 description = "A small snake game, utilizing ANSI escape sequences to draw the board."
 homepage = "https://github.com/troglobit/snake"

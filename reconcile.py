@@ -18,14 +18,9 @@ def check_build() -> dict:
 
 
 def check_files() -> dict:
-    """CON-AS02: every app and collection file matches its schema and the collections name real apps."""
-    import appfiles as af
-    import build_catalog as bc
-    try:
-        bc.membership(af.load_apps(), af.load_collections())
-        return {"problems": []}
-    except (af.FileError, bc.BuildError) as e:
-        return {"problems": str(e).splitlines()}
+    """CON-AS02: the offline catalog checks (schemas, uniqueness, collection references, generated files)."""
+    import check_catalog
+    return {"problems": check_catalog.offline()}
 
 
 # CON-AS03. Files where these words are expected: the changelog (dates), lock

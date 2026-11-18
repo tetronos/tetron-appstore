@@ -1,6 +1,7 @@
-id = "amp-amp"
+id = "ampcode"
 name = "Amp"
 bin = "amp"
+shares_bin = ["amp"]
 category = "AI"
 description = "An AI coding agent that runs in your terminal and lets you start, monitor, and drive agents from CLI, web, and mobile."
 homepage = "https://ampcode.com"

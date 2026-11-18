@@ -1,6 +1,7 @@
 id = "flow-control"
 name = "flow-control"
 bin = "flow"
+shares_bin = ["flow"]
 category = "Editors"
 description = "A lightning-fast, feature-rich text editor written in Zig"
 homepage = "https://github.com/neurocyte/flow"

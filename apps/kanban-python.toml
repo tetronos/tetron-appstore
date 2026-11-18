@@ -1,6 +1,7 @@
 id = "kanban-python"
 name = "kanban-python"
 bin = "kanban"
+shares_bin = ["kanban"]
 category = "Productivity"
 description = "Kanban Terminal App written in Python"
 homepage = "https://github.com/Zaloog/kanban-python"

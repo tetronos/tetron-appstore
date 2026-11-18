@@ -1,6 +1,7 @@
 id = "kilo-code"
 name = "Kilo Code"
 bin = "kilo"
+shares_bin = ["kilo"]
 category = "AI"
 description = "Agentic AI coding assistant with a keyboard-driven TUI that orchestrates code generation, editing, and terminal commands from the command line."
 homepage = "https://kilo.ai"
