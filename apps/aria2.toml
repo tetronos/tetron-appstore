@@ -1,7 +1,6 @@
 id = "aria2"
 name = "aria2"
-bin = "aria2"
-check = "aria2c"
+bin = "aria2c"
 category = "Miscellaneous"
 description = "The ultra fast download utility."
 homepage = "https://github.com/aria2/aria2"

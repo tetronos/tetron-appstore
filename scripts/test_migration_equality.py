@@ -26,6 +26,9 @@ PKG_FROM_SUITE = {"AI Mode", "bat", "curl", "delta", "fd", "mtr", "pandoc", "tcp
 # tier follows the collection: these carried a hand-written tier that
 # disagreed with their set (or had none).
 TIER_FROM_COLLECTION = {"AI Mode", "torrentTUI"}
+# bin is the command the app runs: these named the package, so the Store
+# never found them installed and the launcher never listed them.
+BIN_FIXED = {"ripgrep": "rg", "tealdeer": "tldr", "aria2": "aria2c", "GitHub CLI": "gh"}
 
 
 def before():
@@ -62,6 +65,9 @@ class MigrationKeepsTheCatalog(unittest.TestCase):
                 o.pop("pkg", None), n.pop("pkg", None)
             if n["name"] in TIER_FROM_COLLECTION:
                 o.pop("tier"), n.pop("tier")
+            if n["name"] in BIN_FIXED:
+                self.assertEqual(n["bin"], BIN_FIXED[n["name"]])
+                o.pop("bin"), n.pop("bin")
             for k in sorted(set(o) | set(n)):
                 if o.get(k) != n.get(k):
                     diffs.append(f"{n['name']}.{k}: {o.get(k)!r} -> {n.get(k)!r}")

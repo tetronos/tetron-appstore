@@ -1,7 +1,6 @@
 id = "github-cli"
 name = "GitHub CLI"
-bin = "github-cli"
-check = "gh"
+bin = "gh"
 category = "Development"
 description = "GitHub's official command line tool."
 homepage = "https://github.com/cli/cli"
