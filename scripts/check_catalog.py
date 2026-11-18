@@ -4,7 +4,8 @@
     python3 scripts/check_catalog.py                      # the offline checks
     python3 scripts/check_catalog.py --base REF [--labels a,b]
         # also, for the app files changed since REF: release assets on
-        # GitHub (ASCAT-023) and the reviewed-script label (ASCAT-025)
+        # GitHub (ASCAT-023) and the reviewed-script label (ASCAT-025); and
+        # packaging/VERSION rises when a metapackage's recommends changed (ASPUB-003)
 
 Offline: every app and collection file matches its schema (ASCAT-020); no
 id or alias is used twice and no command is used by two apps unless both
@@ -167,13 +168,38 @@ def release_assets(changes, fetch=None):
     return out
 
 
+def version_tuple(v):
+    """(0, 15, 3) from "0.15.3" or "0.15.3-1"."""
+    return tuple(int(x) for x in v.strip().split("-")[0].split("."))
+
+
+def metapackage_version(base, root=ROOT):
+    """ASPUB-003: packaging/VERSION rises when a metapackage's recommends change."""
+    def at_base(f):
+        try:
+            return git("show", f"{base}:{f}", root=root)
+        except subprocess.CalledProcessError:
+            return None
+    changed = [s for s in bc.PACKAGES if at_base(f"packaging/{s}.toml") is not None and
+               tomllib.loads(at_base(f"packaging/{s}.toml")).get("recommends")
+               != tomllib.loads((root / "packaging" / f"{s}.toml").read_text(encoding="utf-8")).get("recommends")]
+    old = at_base("packaging/VERSION")
+    if not changed or old is None:
+        return []
+    new = (root / "packaging" / "VERSION").read_text(encoding="utf-8")
+    if version_tuple(new) <= version_tuple(old):
+        return [f"packaging/VERSION: the recommends of {', '.join(changed)} changed, so it must rise "
+                f"above {old.strip()}"]
+    return []
+
+
 def main(argv):
     problems = offline()
     if "--base" in argv:
         base = argv[argv.index("--base") + 1]
         labels = set(argv[argv.index("--labels") + 1].split(",")) if "--labels" in argv else set()
         changes = changed(base)
-        problems += script_review(changes, labels) + release_assets(changes)
+        problems += script_review(changes, labels) + release_assets(changes) + metapackage_version(base)
     for p in problems:
         print(f"check_catalog: {p}", file=sys.stderr)
     return 1 if problems else 0

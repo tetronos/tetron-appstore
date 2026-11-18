@@ -5,6 +5,9 @@ to ASCAT-014).
 Usage:
     python3 scripts/build_catalog.py           # write the generated files
     python3 scripts/build_catalog.py --check   # write nothing; exit 1 naming each stale file
+    python3 scripts/build_catalog.py --release VERSION DIR
+        # the published copies (ASPUB-001): catalog.json with "version" set,
+        # and suite-apps.txt, in DIR
 
 Reads only apps/, collections/, status/, sources/repology.json (package
 names per manager by app name, used where an app file names none) and
@@ -165,7 +168,7 @@ def with_recommends(text, recs, name):
     return RECOMMENDS.sub(lambda _: new, text, count=1)
 
 
-def build(root=ROOT):
+def build(root=ROOT, version=None):
     """{relative path: text} of every generated file."""
     apps = af.load_apps(root / "apps")
     collections = af.load_collections(root / "collections")
@@ -187,6 +190,7 @@ def build(root=ROOT):
     suite = suite_lines(apps, collections, repology)
     doc = {
         "schema": SCHEMA,
+        **({"version": version} if version else {}),
         "apps": entries,
         "collections": [dict({k: c[k] for k in ("name", "description", "includes", "apps") if k in c},
                              recommends=recommends(apps, c, repology)) for c in collections],
@@ -222,6 +226,14 @@ def write(root=ROOT):
 
 def main(argv):
     try:
+        if "--release" in argv:
+            version, d = argv[argv.index("--release") + 1:argv.index("--release") + 3]
+            out = build(version=version)
+            Path(d).mkdir(parents=True, exist_ok=True)
+            for p in ("assets/catalog.json", "assets/suite-apps.txt"):
+                (Path(d) / Path(p).name).write_text(out[p], encoding="utf-8")
+            print(f"wrote catalog {version} to {d}")
+            return 0
         if "--check" in argv:
             bad, _ = stale()
             for p in bad:
