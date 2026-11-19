@@ -13,6 +13,8 @@
     "check": {"type": "string", "minLength": 1},
     "shares_bin": {"type": "array", "items": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"}},
     "category": {"type": "string", "minLength": 1},
+    "also_in": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "only_on": {"enum": ["tetronos"]},
     "description": {"type": "string", "minLength": 1},
     "homepage": {"type": "string", "minLength": 1},
     "license": {"type": "string"},

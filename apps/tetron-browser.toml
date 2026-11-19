@@ -1,7 +1,8 @@
 id = "tetron-browser"
 name = "tetron-browser"
 bin = "tetron-browser"
-category = "Web"
+category = "TetronOS"
+also_in = ["Web"]
 description = "Chromium running inside your terminal: the maintained continuation of carbonyl (TetronOS package tetron-browser)"
 homepage = "https://github.com/tetronos/tetron-browser"
 
@@ -10,6 +11,12 @@ apt = "tetron-browser"
 dnf = ""
 pacman = ""
 brew = ""
+
+[install.recipe]
+install = "if command -v apt-get >/dev/null 2>&1; then $S curl -fsSLo /usr/share/keyrings/tetronos-archive-keyring.gpg https://tetronos.github.io/apt/tetronos-archive-keyring.gpg && $S curl -fsSLo /etc/apt/sources.list.d/tetronos.sources https://tetronos.github.io/apt/tetronos.sources && $S apt-get update && $S apt-get install -y tetron-browser; else { command -v unzip >/dev/null 2>&1 || { echo 'tetron-browser needs unzip (install it with your package manager)'; false; }; } && { [ \"$(uname -m)\" = x86_64 ] || { echo 'tetron-browser has no build for this CPU yet'; false; }; } && { f=tetron-browser.linux-amd64.zip; u=https://github.com/tetronos/tetron-browser/releases/latest/download; d=$(mktemp -d) && cd \"$d\" && curl -fsSLO $u/$f && curl -fsSLO $u/$f.sha256 && sha256sum -c $f.sha256 && mkdir -p ~/.local/bin && mkdir -p ~/.local/share/tetron-browser && unzip -oq $f -d ~/.local/share/tetron-browser && b=$(find ~/.local/share/tetron-browser -name tetron-browser -type f | head -1) && ln -sf \"$b\" ~/.local/bin/tetron-browser && cd / && rm -rf \"$d\"; }; fi"
+method = "binary"
+os = ["linux"]
+verified = true
 
 [source]
 lists = ["tetron"]

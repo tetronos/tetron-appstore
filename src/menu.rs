@@ -40,7 +40,7 @@ pub enum Links {
 /// The menu items for `app`; Open entries only when a `browser` is installed.
 pub fn actions(app: &CatalogApp, links: Links, installed: bool, browser: bool) -> Vec<Action> {
     let mut v = Vec::new();
-    if links == Links::App {
+    if links == Links::App && !(installed && !app.launchable()) {
         v.push(Action::Install(installed));
     }
     let mut add = |what: &str, url: String| {

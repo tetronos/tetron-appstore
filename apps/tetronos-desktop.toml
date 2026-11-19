@@ -1,0 +1,17 @@
+id = "tetronos-desktop"
+name = "tetronos-desktop"
+bin = "tetronos-desktop"
+check = "deb:tetronos-desktop"
+category = "TetronOS"
+only_on = "tetronos"
+description = "TetronOS Desktop: the tetron-wm desktop, web browser, App Store, speech to text, sound, bluetooth and all firmware"
+homepage = "https://github.com/tetronos/tetron-os"
+
+[install.pkg]
+apt = "tetronos-desktop"
+dnf = ""
+pacman = ""
+brew = ""
+
+[source]
+lists = ["tetron"]

@@ -1,0 +1,21 @@
+id = "tetron-tui"
+name = "tetron-tui"
+bin = "tetron-tui"
+category = "TetronOS"
+description = "Terminal dashboard for the tetron mesh: peers, connections and invites"
+homepage = "https://github.com/tetronos/tetron-tui"
+
+[install.pkg]
+apt = "tetron-tui"
+dnf = ""
+pacman = ""
+brew = ""
+
+[install.recipe]
+install = "if command -v apt-get >/dev/null 2>&1; then $S curl -fsSLo /usr/share/keyrings/tetronos-archive-keyring.gpg https://tetronos.github.io/apt/tetronos-archive-keyring.gpg && $S curl -fsSLo /etc/apt/sources.list.d/tetronos.sources https://tetronos.github.io/apt/tetronos.sources && $S apt-get update && $S apt-get install -y tetron-tui; else { f=tetron-tui-linux-$(uname -m); u=https://github.com/tetronos/tetron-tui/releases/latest/download; d=$(mktemp -d) && cd \"$d\" && curl -fsSLO $u/$f && curl -fsSLO $u/$f.sha256 && sha256sum -c $f.sha256 && mkdir -p ~/.local/bin && install -m 755 $f ~/.local/bin/tetron-tui && cd / && rm -rf \"$d\"; }; fi"
+method = "binary"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["tetron"]

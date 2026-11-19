@@ -1,9 +1,27 @@
 id = "casttui"
 name = "casttui"
-store = false
+bin = "casttui"
+category = "TetronOS"
+description = "Cast videos and music from the terminal to a Chromecast"
+homepage = "https://github.com/tetronos/casttui"
 
 [notes]
 how = "uv tool install from github.com/tetronos/casttui"
 
 [install]
 script = "casttui"
+
+[install.pkg]
+apt = "casttui"
+dnf = ""
+pacman = ""
+brew = ""
+
+[install.recipe]
+install = "if command -v apt-get >/dev/null 2>&1; then $S curl -fsSLo /usr/share/keyrings/tetronos-archive-keyring.gpg https://tetronos.github.io/apt/tetronos-archive-keyring.gpg && $S curl -fsSLo /etc/apt/sources.list.d/tetronos.sources https://tetronos.github.io/apt/tetronos.sources && $S apt-get update && $S apt-get install -y casttui; else { command -v uv >/dev/null 2>&1 || { echo 'casttui needs uv: https://docs.astral.sh/uv/'; false; }; } && uv tool install git+https://github.com/tetronos/casttui; fi"
+method = "binary"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["tetron"]
