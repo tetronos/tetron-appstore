@@ -32,6 +32,12 @@ BIN_FIXED = {"ripgrep": "rg", "tealdeer": "tldr", "aria2": "aria2c", "GitHub CLI
 # Terminal Trove copies of these, with a command that does not exist, were
 # merged into them (the copy's id is an alias; the app is also from trove).
 MERGED = {"claude-code": "Claude Code", "gemini-cli": "Gemini CLI"}
+# ASCAT-031: the TetronOS category. These suite apps were not Store apps
+# before (no file, or store = false); tetron-browser moved to TetronOS (also
+# listed in Web) and gained an install recipe for systems without TetronOS.
+SUITE_NEW = {"casttui", "tetron", "tetron-tui", "tetron-stt", "tetron-appstore", "tetronos-firmware",
+             "tetronos-desktop"}
+SUITE_MOVED = {"tetron-browser": ("category", "also_in", "recipe")}
 
 
 def before():
@@ -56,13 +62,17 @@ class MigrationKeepsTheCatalog(unittest.TestCase):
 
     def test_same_apps(self):
         old = [a["name"] for a in self.old["apps"] if a["name"] not in MERGED]
-        self.assertEqual(sorted(old), sorted(a["name"] for a in self.new["apps"]))
+        self.assertEqual(sorted(old), sorted(a["name"] for a in self.new["apps"] if a["name"] not in SUITE_NEW))
 
     def test_same_fields_apart_from_the_named_changes(self):
         old = {a["name"]: a for a in self.old["apps"]}
         diffs = []
         for n in self.new["apps"]:
+            if n["name"] in SUITE_NEW:
+                continue
             o = dict(old[n["name"]])
+            for k in SUITE_MOVED.get(n["name"], ()):
+                o.pop(k, None), n.pop(k, None)
             n = {k: v for k, v in n.items() if k not in ADDED}
             o["sources"] = list(dict.fromkeys(o["sources"]))
             if n["name"] in PKG_FROM_SUITE:

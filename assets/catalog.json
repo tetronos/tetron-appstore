@@ -29120,6 +29120,190 @@
    ]
   },
   {
+   "id": "casttui",
+   "name": "casttui",
+   "bin": "casttui",
+   "category": "TetronOS",
+   "description": "Cast videos and music from the terminal to a Chromecast",
+   "homepage": "https://github.com/tetronos/casttui",
+   "recipe": {
+    "install": "if command -v apt-get >/dev/null 2>&1; then $S curl -fsSLo /usr/share/keyrings/tetronos-archive-keyring.gpg https://tetronos.github.io/apt/tetronos-archive-keyring.gpg && $S curl -fsSLo /etc/apt/sources.list.d/tetronos.sources https://tetronos.github.io/apt/tetronos.sources && $S apt-get update && $S apt-get install -y casttui; else { command -v uv >/dev/null 2>&1 || { echo 'casttui needs uv: https://docs.astral.sh/uv/'; false; }; } && uv tool install git+https://github.com/tetronos/casttui; fi",
+    "method": "binary",
+    "verified": true,
+    "os": [
+     "linux"
+    ]
+   },
+   "pkg": {
+    "apt": "casttui"
+   },
+   "tier": "default",
+   "set": "essentials",
+   "collection": "essentials",
+   "sources": [
+    "tetron"
+   ]
+  },
+  {
+   "id": "tetron",
+   "name": "tetron",
+   "bin": "tetron",
+   "category": "TetronOS",
+   "description": "The tetron mesh VPN: the daemon and command line that join your machines into one private network",
+   "homepage": "https://github.com/tetronos/tetron",
+   "cli": true,
+   "recipe": {
+    "install": "if command -v apt-get >/dev/null 2>&1; then $S curl -fsSLo /usr/share/keyrings/tetronos-archive-keyring.gpg https://tetronos.github.io/apt/tetronos-archive-keyring.gpg && $S curl -fsSLo /etc/apt/sources.list.d/tetronos.sources https://tetronos.github.io/apt/tetronos.sources && $S apt-get update && $S apt-get install -y tetron; else { f=tetron-linux-$(uname -m); u=https://github.com/tetronos/tetron/releases/latest/download; d=$(mktemp -d) && cd \"$d\" && curl -fsSLO $u/$f && curl -fsSLO $u/$f.sha256 && sha256sum -c $f.sha256 && mkdir -p ~/.local/bin && install -m 755 $f ~/.local/bin/tetron && cd / && rm -rf \"$d\"; }; fi",
+    "method": "binary",
+    "verified": true,
+    "os": [
+     "linux"
+    ]
+   },
+   "pkg": {
+    "apt": "tetron"
+   },
+   "tier": "optional",
+   "sources": [
+    "tetron"
+   ]
+  },
+  {
+   "id": "tetron-appstore",
+   "name": "tetron-appstore",
+   "bin": "tetron-appstore",
+   "category": "TetronOS",
+   "description": "The tetron App Store: browse, install and launch terminal apps",
+   "homepage": "https://github.com/tetronos/tetron-appstore",
+   "recipe": {
+    "install": "if command -v apt-get >/dev/null 2>&1; then $S curl -fsSLo /usr/share/keyrings/tetronos-archive-keyring.gpg https://tetronos.github.io/apt/tetronos-archive-keyring.gpg && $S curl -fsSLo /etc/apt/sources.list.d/tetronos.sources https://tetronos.github.io/apt/tetronos.sources && $S apt-get update && $S apt-get install -y tetron-appstore; else curl -fsSL https://raw.githubusercontent.com/tetronos/tetron-appstore/main/install.sh | sh; fi",
+    "method": "binary",
+    "verified": true,
+    "os": [
+     "linux"
+    ]
+   },
+   "pkg": {
+    "apt": "tetron-appstore"
+   },
+   "tier": "default",
+   "set": "essentials",
+   "collection": "desktop",
+   "sources": [
+    "tetron"
+   ]
+  },
+  {
+   "id": "tetron-browser",
+   "name": "tetron-browser",
+   "bin": "tetron-browser",
+   "category": "TetronOS",
+   "also_in": [
+    "Web"
+   ],
+   "description": "Chromium running inside your terminal: the maintained continuation of carbonyl (TetronOS package tetron-browser)",
+   "homepage": "https://github.com/tetronos/tetron-browser",
+   "releases": true,
+   "recipe": {
+    "install": "if command -v apt-get >/dev/null 2>&1; then $S curl -fsSLo /usr/share/keyrings/tetronos-archive-keyring.gpg https://tetronos.github.io/apt/tetronos-archive-keyring.gpg && $S curl -fsSLo /etc/apt/sources.list.d/tetronos.sources https://tetronos.github.io/apt/tetronos.sources && $S apt-get update && $S apt-get install -y tetron-browser; else { command -v unzip >/dev/null 2>&1 || { echo 'tetron-browser needs unzip (install it with your package manager)'; false; }; } && { [ \"$(uname -m)\" = x86_64 ] || { echo 'tetron-browser has no build for this CPU yet'; false; }; } && { f=tetron-browser.linux-amd64.zip; u=https://github.com/tetronos/tetron-browser/releases/latest/download; d=$(mktemp -d) && cd \"$d\" && curl -fsSLO $u/$f && curl -fsSLO $u/$f.sha256 && sha256sum -c $f.sha256 && mkdir -p ~/.local/bin && mkdir -p ~/.local/share/tetron-browser && unzip -oq $f -d ~/.local/share/tetron-browser && b=$(find ~/.local/share/tetron-browser -name tetron-browser -type f | head -1) && ln -sf \"$b\" ~/.local/bin/tetron-browser && cd / && rm -rf \"$d\"; }; fi",
+    "method": "binary",
+    "verified": true,
+    "os": [
+     "linux"
+    ]
+   },
+   "pkg": {
+    "apt": "tetron-browser"
+   },
+   "tier": "default",
+   "set": "essentials",
+   "collection": "desktop",
+   "sources": [
+    "tetron"
+   ]
+  },
+  {
+   "id": "tetron-stt",
+   "name": "tetron-stt",
+   "bin": "tetron-stt",
+   "category": "TetronOS",
+   "description": "Speech to text in the terminal with local models: the dictation of tetron-wm",
+   "homepage": "https://github.com/tetronos/tetron-stt",
+   "cli": true,
+   "recipe": {
+    "install": "if command -v apt-get >/dev/null 2>&1; then $S curl -fsSLo /usr/share/keyrings/tetronos-archive-keyring.gpg https://tetronos.github.io/apt/tetronos-archive-keyring.gpg && $S curl -fsSLo /etc/apt/sources.list.d/tetronos.sources https://tetronos.github.io/apt/tetronos.sources && $S apt-get update && $S apt-get install -y tetron-stt; else { f=tetron-stt-$(uname -m)-unknown-linux-gnu.tar.gz; u=https://github.com/tetronos/tetron-stt/releases/latest/download; d=$(mktemp -d) && cd \"$d\" && curl -fsSLO $u/$f && curl -fsSLO $u/$f.sha256 && sha256sum -c $f.sha256 && mkdir -p ~/.local/bin && tar xzf $f && install -m 755 tetron-stt ~/.local/bin/tetron-stt && cd / && rm -rf \"$d\"; }; fi",
+    "method": "binary",
+    "verified": true,
+    "os": [
+     "linux"
+    ]
+   },
+   "pkg": {
+    "apt": "tetron-stt"
+   },
+   "tier": "optional",
+   "sources": [
+    "tetron"
+   ]
+  },
+  {
+   "id": "tetron-tui",
+   "name": "tetron-tui",
+   "bin": "tetron-tui",
+   "category": "TetronOS",
+   "description": "Terminal dashboard for the tetron mesh: peers, connections and invites",
+   "homepage": "https://github.com/tetronos/tetron-tui",
+   "recipe": {
+    "install": "if command -v apt-get >/dev/null 2>&1; then $S curl -fsSLo /usr/share/keyrings/tetronos-archive-keyring.gpg https://tetronos.github.io/apt/tetronos-archive-keyring.gpg && $S curl -fsSLo /etc/apt/sources.list.d/tetronos.sources https://tetronos.github.io/apt/tetronos.sources && $S apt-get update && $S apt-get install -y tetron-tui; else { f=tetron-tui-linux-$(uname -m); u=https://github.com/tetronos/tetron-tui/releases/latest/download; d=$(mktemp -d) && cd \"$d\" && curl -fsSLO $u/$f && curl -fsSLO $u/$f.sha256 && sha256sum -c $f.sha256 && mkdir -p ~/.local/bin && install -m 755 $f ~/.local/bin/tetron-tui && cd / && rm -rf \"$d\"; }; fi",
+    "method": "binary",
+    "verified": true,
+    "os": [
+     "linux"
+    ]
+   },
+   "pkg": {
+    "apt": "tetron-tui"
+   },
+   "tier": "optional",
+   "sources": [
+    "tetron"
+   ]
+  },
+  {
+   "id": "tetronos-desktop",
+   "name": "tetronos-desktop",
+   "bin": "tetronos-desktop",
+   "category": "TetronOS",
+   "only_on": "tetronos",
+   "check": "deb:tetronos-desktop",
+   "description": "TetronOS Desktop: the tetron-wm desktop, web browser, App Store, speech to text, sound, bluetooth and all firmware",
+   "homepage": "https://github.com/tetronos/tetron-os",
+   "pkg": {
+    "apt": "tetronos-desktop"
+   },
+   "tier": "optional",
+   "sources": [
+    "tetron"
+   ]
+  },
+  {
+   "id": "tetronos-firmware",
+   "name": "tetronos-firmware",
+   "bin": "tetronos-firmware",
+   "category": "TetronOS",
+   "only_on": "tetronos",
+   "check": "deb:tetronos-firmware",
+   "description": "TetronOS hardware support: all firmware (graphics, network cards, sound) and PipeWire sound; turns a Server into a Server with firmware",
+   "homepage": "https://github.com/tetronos/tetron-os",
+   "pkg": {
+    "apt": "tetronos-firmware"
+   },
+   "tier": "optional",
+   "sources": [
+    "tetron"
+   ]
+  },
+  {
    "id": "ali",
    "name": "ali",
    "bin": "ali",
@@ -30185,24 +30369,6 @@
    "tier": "optional",
    "sources": [
     "awesome-tuis",
-    "tetron"
-   ]
-  },
-  {
-   "id": "tetron-browser",
-   "name": "tetron-browser",
-   "bin": "tetron-browser",
-   "category": "Web",
-   "description": "Chromium running inside your terminal: the maintained continuation of carbonyl (TetronOS package tetron-browser)",
-   "homepage": "https://github.com/tetronos/tetron-browser",
-   "releases": true,
-   "pkg": {
-    "apt": "tetron-browser"
-   },
-   "tier": "default",
-   "set": "essentials",
-   "collection": "desktop",
-   "sources": [
     "tetron"
    ]
   },

@@ -31,8 +31,8 @@ SCHEMA = 1
 # of essentials. The catalog tier of each size.
 SIZE = {"desktop": "essentials", "essentials": "essentials", "recommended": "recommended", "extras": "extras"}
 TIER = {"essentials": "default", "recommended": "recommended", "extras": "optional"}
-ORDER = ["id", "name", "bin", "variants", "category", "description", "homepage", "releases", "cli", "needs_url",
-         "recipe", "agent", "pkg", "tier", "set", "collection", "sources", "status"]
+ORDER = ["id", "name", "bin", "variants", "category", "also_in", "only_on", "check", "description", "homepage",
+         "releases", "cli", "needs_url", "recipe", "agent", "pkg", "tier", "set", "collection", "sources", "status"]
 RECIPE = ["install", "method", "verified", "os", "requires_cwd", "tip"]
 PACKAGES = ("essentials", "recommended", "extras")
 RECOMMENDS = re.compile(r"^recommends = \[[^\n]*\]\n|^recommends = \[\n.*?^\]\n", re.S | re.M)
@@ -89,6 +89,12 @@ def catalog_entry(app, coll, repology, released, status=None):
     for k in ("cli", "needs_url"):
         if app.get(k):
             e[k] = True
+    # ASCAT-031: optional fields old clients ignore (schema stays 1).
+    for k in ("also_in", "only_on"):
+        if app.get(k):
+            e[k] = app[k]
+    if app.get("check", "").startswith("deb:"):
+        e["check"] = app["check"]
     if af.gh_repo(app.get("homepage")) in released:
         e["releases"] = True
     r = app.get("install", {}).get("recipe")

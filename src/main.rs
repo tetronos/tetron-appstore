@@ -67,7 +67,7 @@ struct App {
 impl App {
     fn open_menu(&mut self, links: Links, at: (i32, i32)) {
         let Some(app) = self.store.selected_app() else { return };
-        let items = menu::actions(app, links, tetron_catalog::is_installed(&app.bin), actions::browser().is_some());
+        let items = menu::actions(app, links, tetron_catalog::app_installed(app), actions::browser().is_some());
         if !items.is_empty() {
             self.menu = Some(Menu::new(at, items));
         }

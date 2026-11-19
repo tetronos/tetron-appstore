@@ -360,3 +360,24 @@ class MigrationKeepsTheCatalog(Requirement):
     `sources` names each list once, and the order and header of the suite
     lines.
     """
+
+
+class TetronosCategory(Requirement):
+    """REQUIREMENT-ID: ASCAT-031
+
+    The Store lists the TetronOS suite in the category `TetronOS`, right
+    after "All": casttui, tetron, tetron-tui, tetron-appstore,
+    tetron-browser, tetron-stt, tetronos-firmware and tetronos-desktop.
+    An app file may name more categories in `also_in` (tetron-browser is
+    also in Web). `only_on = "tetronos"` shows an app only on TetronOS
+    (tetronos-core installed): the two metapackages. `check = "deb:NAME"`
+    makes an app installed when the Debian package NAME is installed, for a
+    package with no command; such an app has nothing to launch. The other
+    suite apps install with apt from the tetronos apt repository on TetronOS
+    (it is in the apt sources); elsewhere their recipe adds that repository
+    on a system with apt (Debian, Ubuntu) and installs with apt, so apt
+    upgrade keeps them current, and on any other Linux downloads the release
+    asset, checks its .sha256 and installs into ~/.local/bin (tetron-appstore
+    through its install.sh; casttui through uv). The fields are optional
+    (ASCAT-013): the schema stays 1 and older clients ignore them.
+    """

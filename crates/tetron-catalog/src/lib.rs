@@ -79,6 +79,34 @@ pub struct CatalogApp {
     /// The install test results and upstream health (ASCAT-016, ASCAT-017).
     #[serde(default)]
     pub status: Option<Status>,
+    /// More Store categories the app is also listed in (ASCAT-031), besides `category`.
+    #[serde(default)]
+    pub also_in: Vec<String>,
+    /// `"tetronos"`: shown only on TetronOS (ASCAT-031); empty: everywhere.
+    #[serde(default)]
+    pub only_on: String,
+    /// `deb:NAME`: installed when the Debian package NAME is installed, for a
+    /// package with no command of its own such as a metapackage (ASCAT-031).
+    /// Empty: installed when `bin` is on `$PATH`.
+    #[serde(default)]
+    pub check: String,
+}
+
+impl CatalogApp {
+    /// The Debian package whose install state stands for the app (`check = "deb:NAME"`).
+    pub fn deb_check(&self) -> Option<&str> {
+        self.check.strip_prefix("deb:").filter(|n| !n.is_empty())
+    }
+
+    /// Whether the app has a command to open (a metapackage has none).
+    pub fn launchable(&self) -> bool {
+        self.deb_check().is_none()
+    }
+
+    /// Whether the app is listed under `category` (its own or one of `also_in`).
+    pub fn in_category(&self, category: &str) -> bool {
+        self.category == category || self.also_in.iter().any(|c| c == category)
+    }
 }
 
 /// An app's tested status: the install test result per platform
@@ -404,6 +432,36 @@ pub fn collection_apps(name: &str) -> Vec<&'static str> {
     chain.iter().rev().flat_map(|c| c.apps.iter().map(String::as_str)).collect()
 }
 
+/// The Store category of the TetronOS suite, listed right after "All" (ASCAT-031).
+pub const TETRONOS_CATEGORY: &str = "TetronOS";
+
+/// Whether this system is TetronOS: the tetronos-core package is installed
+/// (ASCAT-031). `TETRON_CATALOG_TETRONOS=1` or `0` overrides it, for tests.
+pub fn on_tetronos() -> bool {
+    match std::env::var("TETRON_CATALOG_TETRONOS").as_deref() {
+        Ok("1") => true,
+        Ok("0") => false,
+        _ => deb_installed("tetronos-core"),
+    }
+}
+
+/// Whether the Debian package `name` is installed (dpkg keeps a file list per
+/// installed package; `:arch` names are tried for multi-arch packages).
+pub fn deb_installed(name: &str) -> bool {
+    let info = std::path::Path::new("/var/lib/dpkg/info");
+    info.join(format!("{name}.list")).exists()
+        || ["amd64", "arm64"].iter().any(|a| info.join(format!("{name}:{a}.list")).exists())
+}
+
+/// Whether the app is installed: its Debian package for `check = "deb:NAME"`,
+/// else its command on `$PATH` ([`is_installed`]).
+pub fn app_installed(app: &CatalogApp) -> bool {
+    match app.deb_check() {
+        Some(n) => deb_installed(n),
+        None => is_installed(&app.bin),
+    }
+}
+
 /// The current operating system as a recipe `os` token ("macos", "linux", …).
 pub fn current_os() -> &'static str {
     std::env::consts::OS
@@ -451,8 +509,14 @@ pub fn releases_url(app: &CatalogApp) -> Option<String> {
     (plain(owner) && plain(repo)).then(|| format!("https://github.com/{owner}/{repo}/releases/latest"))
 }
 
+/// Whether an app is shown on this system: not when it is for TetronOS only
+/// and this is not TetronOS (ASCAT-031), and not when its recipe lists
+/// operating systems that exclude this one and no package for this OS exists.
 pub fn runs_on_current_os(name: &str) -> bool {
     let Some(a) = catalog().iter().find(|a| a.name == name) else { return true };
+    if a.only_on == "tetronos" && !on_tetronos() {
+        return false;
+    }
     match &a.recipe {
         Some(r) if !r.os.is_empty() => {
             r.os.iter().any(|o| o == current_os()) || has_package_for(&a.pkg, current_os())
@@ -611,6 +675,27 @@ pub fn add_user_bin_to_path() {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    /// ASCAT-031: the TetronOS suite apps, the metapackages' dpkg check and
+    /// TetronOS-only flag, and tetron-browser listed in Web too.
+    #[test]
+    fn tetronos_suite_fields() {
+        let by = |n: &str| catalog().iter().find(|a| a.name == n).unwrap_or_else(|| panic!("{n} in the catalog"));
+        for n in ["casttui", "tetron", "tetron-tui", "tetron-appstore", "tetron-browser", "tetron-stt"] {
+            let a = by(n);
+            assert_eq!(a.category, TETRONOS_CATEGORY, "{n}");
+            assert!(a.launchable() && a.only_on.is_empty(), "{n}");
+            assert!(a.recipe.as_ref().is_some_and(|r| r.verified), "{n} installs off TetronOS");
+        }
+        for n in ["tetronos-firmware", "tetronos-desktop"] {
+            let a = by(n);
+            assert_eq!((a.deb_check(), a.only_on.as_str()), (Some(n), "tetronos"));
+            assert!(!a.launchable());
+        }
+        let b = by("tetron-browser");
+        assert!(b.in_category("TetronOS") && b.in_category("Web") && !b.in_category("Games"));
+        assert_eq!(by("tetron").deb_check(), None);
+    }
 
     #[test]
     fn user_bin_is_appended_once() {

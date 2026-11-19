@@ -39,7 +39,7 @@ def commands(app):
     """The commands an app puts on PATH: bin and each check alternative."""
     out = {app["bin"]} if app.get("bin") else set()
     for alt in app.get("check", "").split("|"):
-        if alt and not alt.startswith("font=") and alt != "consolefonts":
+        if alt and not alt.startswith(("font=", "deb:")) and alt != "consolefonts":
             out.add(alt)
     return out
 

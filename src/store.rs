@@ -72,7 +72,7 @@ impl Store {
             .iter()
             .filter(|c| {
                 catalog::runs_on_current_os(&c.name)
-                    && (cat == "All" || &c.category == cat)
+                    && (cat == "All" || c.in_category(cat))
                     && (text.is_empty() || c.name.to_lowercase().contains(text) || c.description.to_lowercase().contains(text))
                     && from.iter().all(|f| catalog::listed_by(c).iter().any(|l| l.to_lowercase().replace(' ', "").contains(f)))
             })
@@ -181,7 +181,7 @@ impl Store {
             let sel = scroll + row == self.selected;
             let bg = if sel { p.sel } else { p.bg };
             s.fill(list_x, y, LIST_W, 1, p.fg, bg);
-            if catalog::is_installed(&app.bin) {
+            if catalog::app_installed(app) {
                 s.text(list_x, y, &p.check, p.success, bg);
             }
             let badge = if app.cli { CLI_BADGE.len() as i32 + 1 } else { 0 };
@@ -235,8 +235,12 @@ impl Store {
             let (mark, fg) = if line.starts_with("Install test failed") { ("!", p.accent) } else { (p.check.as_str(), p.success) };
             s.text(dx + 1, h - 3, truncate(&format!("{mark} {line}"), dw), fg, p.panel);
         }
-        let installed = catalog::is_installed(&app.bin);
-        let action = if installed { "[ Enter: Launch ]  Alt+O: more" } else { "[ Enter: Install ]  Alt+O: more" };
+        let installed = catalog::app_installed(app);
+        let action = match (installed, app.launchable()) {
+            (true, true) => "[ Enter: Launch ]  Alt+O: more",
+            (true, false) => "Installed  Alt+O: more",
+            (false, _) => "[ Enter: Install ]  Alt+O: more",
+        };
         s.text(dx + 1, h - 2, action, if installed { p.success } else { p.accent }, p.panel);
     }
 
@@ -301,14 +305,22 @@ impl Store {
     }
 }
 
+/// "All", then the TetronOS suite when it has apps here (ASCAT-031), then the
+/// other categories A to Z. An app's `also_in` categories count too.
 fn category_list() -> Vec<String> {
     let mut cats: Vec<String> = Vec::new();
-    for c in catalog::catalog() {
-        if !cats.contains(&c.category) {
-            cats.push(c.category.clone());
+    for c in catalog::catalog().iter().filter(|c| catalog::runs_on_current_os(&c.name)) {
+        for cat in std::iter::once(&c.category).chain(&c.also_in) {
+            if !cats.contains(cat) {
+                cats.push(cat.clone());
+            }
         }
     }
     cats.sort();
+    if let Some(i) = cats.iter().position(|c| c == catalog::TETRONOS_CATEGORY) {
+        let t = cats.remove(i);
+        cats.insert(0, t);
+    }
     cats.insert(0, "All".to_string());
     cats
 }
@@ -387,6 +399,30 @@ pub fn tested_line(app: &CatalogApp) -> Option<String> {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    /// ASCAT-031: TetronOS follows All; the metapackages show only on TetronOS;
+    /// tetron-browser is in TetronOS and Web.
+    #[test]
+    fn tetronos_category_follows_all() {
+        let in_cat = |st: &mut Store, cat: &str| -> Vec<String> {
+            st.cat_index = st.categories.iter().position(|c| c == cat).expect(cat);
+            st.filtered().iter().map(|a| a.name.clone()).collect()
+        };
+        std::env::set_var("TETRON_CATALOG_TETRONOS", "1");
+        let mut st = Store::new();
+        assert_eq!(&st.categories[..2], ["All", "TetronOS"]);
+        let suite = in_cat(&mut st, "TetronOS");
+        for n in ["casttui", "tetron", "tetron-tui", "tetron-appstore", "tetron-browser", "tetron-stt", "tetronos-firmware",
+                  "tetronos-desktop"] {
+            assert!(suite.iter().any(|x| x == n), "{n} in TetronOS");
+        }
+        assert!(in_cat(&mut st, "Web").iter().any(|x| x == "tetron-browser"));
+        std::env::set_var("TETRON_CATALOG_TETRONOS", "0");
+        let mut st = Store::new();
+        let suite = in_cat(&mut st, "TetronOS");
+        assert!(suite.iter().any(|x| x == "tetron") && !suite.iter().any(|x| x.starts_with("tetronos-")), "{suite:?}");
+        std::env::remove_var("TETRON_CATALOG_TETRONOS");
+    }
 
     fn with_releases() -> &'static CatalogApp {
         catalog::catalog().iter().find(|a| catalog::releases_url(a).is_some() && a.name.len() > 5).unwrap()

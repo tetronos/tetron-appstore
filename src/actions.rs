@@ -60,7 +60,10 @@ fn run_here(t: &mut impl Suspend, command: &str, args: &[String]) -> Result<(), 
 
 /// Install `app` (or launch it when installed). Returns the status line.
 pub fn activate(t: &mut impl Suspend, app: &CatalogApp) -> String {
-    let installed = tetron_catalog::is_installed(&app.bin);
+    let installed = tetron_catalog::app_installed(app);
+    if installed && !app.launchable() {
+        return format!("{} is installed", app.name);
+    }
     let inside = in_tetron_wm();
     let r = match (installed, inside) {
         (false, true) => {
@@ -87,7 +90,7 @@ pub fn activate(t: &mut impl Suspend, app: &CatalogApp) -> String {
     };
     match (r, installed) {
         (Ok(()), false) if inside => format!("Installing {} in a new window", app.name),
-        (Ok(()), false) if tetron_catalog::is_installed(&app.bin) => format!("{} installed", app.name),
+        (Ok(()), false) if tetron_catalog::app_installed(app) => format!("{} installed", app.name),
         (Ok(()), false) => format!("{} is not installed yet", app.name),
         (Ok(()), true) => String::new(),
         (Err(e), _) => e,

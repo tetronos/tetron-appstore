@@ -1,0 +1,17 @@
+id = "tetronos-firmware"
+name = "tetronos-firmware"
+bin = "tetronos-firmware"
+check = "deb:tetronos-firmware"
+category = "TetronOS"
+only_on = "tetronos"
+description = "TetronOS hardware support: all firmware (graphics, network cards, sound) and PipeWire sound; turns a Server into a Server with firmware"
+homepage = "https://github.com/tetronos/tetron-os"
+
+[install.pkg]
+apt = "tetronos-firmware"
+dnf = ""
+pacman = ""
+brew = ""
+
+[source]
+lists = ["tetron"]

@@ -1,7 +1,10 @@
 id = "tetron-appstore"
 name = "tetron-appstore"
+bin = "tetron-appstore"
 check = "tetron-appstore"
-store = false
+category = "TetronOS"
+description = "The tetron App Store: browse, install and launch terminal apps"
+homepage = "https://github.com/tetronos/tetron-appstore"
 
 [install.pkg]
 apt = "tetron-appstore"
@@ -13,3 +16,12 @@ brew = ""
 repo = "tetronos/tetron-appstore"
 amd64 = "tetron-appstore-x86_64-unknown-linux-gnu.tar.gz"
 arm64 = "tetron-appstore-aarch64-unknown-linux-gnu.tar.gz"
+
+[install.recipe]
+install = "if command -v apt-get >/dev/null 2>&1; then $S curl -fsSLo /usr/share/keyrings/tetronos-archive-keyring.gpg https://tetronos.github.io/apt/tetronos-archive-keyring.gpg && $S curl -fsSLo /etc/apt/sources.list.d/tetronos.sources https://tetronos.github.io/apt/tetronos.sources && $S apt-get update && $S apt-get install -y tetron-appstore; else curl -fsSL https://raw.githubusercontent.com/tetronos/tetron-appstore/main/install.sh | sh; fi"
+method = "binary"
+os = ["linux"]
+verified = true
+
+[source]
+lists = ["tetron"]
