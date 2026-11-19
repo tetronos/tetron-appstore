@@ -1,6 +1,6 @@
 [package]
 name = "tetron-appstore"
-version = "0.15.1"
+version = "0.15.2"
 edition = "2021"
 rust-version = "1.95"
 description = "A store for terminal apps (TUIs and command line tools): browse, install, launch"

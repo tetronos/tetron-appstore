@@ -2,7 +2,7 @@
 
 All notable changes to tetron-appstore. The version follows the tetron core minor (0.15.x).
 
-## [Unreleased]
+## [0.15.2] — 2026-11-18
 
 ### Added
 - A `TetronOS` category, right after All, with casttui, tetron, tetron-tui, tetron-appstore, tetron-browser, tetron-stt, tetronos-firmware and tetronos-desktop (ASCAT-031). tetron-browser is also in Web (`also_in`). tetronos-firmware and tetronos-desktop show only on TetronOS (`only_on`) and count as installed by their Debian package (`check = "deb:NAME"`), with nothing to launch. Off TetronOS the suite apps install through the tetronos apt repository on Debian and Ubuntu, else from their release downloads into `~/.local/bin`. The new catalog fields are optional; the schema stays 1.
