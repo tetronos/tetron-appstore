@@ -1,0 +1,18 @@
+{
+ "health": {
+  "no_release_18_months": true,
+  "since": "2026-11-23"
+ },
+ "platforms": {
+  "debian-13": {
+   "method": "suite",
+   "result": "ok",
+   "since": "2026-11-23"
+  },
+  "ubuntu-24.04": {
+   "method": "suite",
+   "result": "ok",
+   "since": "2026-11-23"
+  }
+ }
+}

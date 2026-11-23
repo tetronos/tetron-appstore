@@ -1,0 +1,14 @@
+{
+ "platforms": {
+  "debian-13": {
+   "method": "script",
+   "result": "ok",
+   "since": "2026-11-23"
+  },
+  "ubuntu-24.04": {
+   "method": "script",
+   "result": "ok",
+   "since": "2026-11-23"
+  }
+ }
+}

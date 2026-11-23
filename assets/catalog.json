@@ -45,7 +45,11 @@
    "collection": "recommended",
    "sources": [
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "skipped",
+    "ubuntu-24.04": "skipped"
+   }
   },
   {
    "id": "aic",
@@ -629,7 +633,11 @@
    "collection": "recommended",
    "sources": [
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "llmfit",
@@ -859,7 +867,11 @@
    "sources": [
     "awesome-tuis",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "openhands",
@@ -1581,7 +1593,11 @@
     "awesome-tuis",
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "bullmq-dash",
@@ -2334,7 +2350,11 @@
    "sources": [
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "fli",
@@ -2895,7 +2915,11 @@
     "awesome-tuis",
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "httm",
@@ -3531,7 +3555,11 @@
     "awesome-tuis",
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "netop",
@@ -3698,7 +3726,11 @@
     "awesome-tuis",
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "oryx",
@@ -4100,7 +4132,11 @@
    "sources": [
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "rdmatop",
@@ -4288,7 +4324,11 @@
     "awesome-tuis",
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "sacha",
@@ -4549,7 +4589,11 @@
    "sources": [
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "fail",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "talos-linux",
@@ -4692,7 +4736,11 @@
    "sources": [
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "tiptop",
@@ -5724,7 +5772,11 @@
    "collection": "recommended",
    "sources": [
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "cronboard",
@@ -5795,7 +5847,11 @@
    "sources": [
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "curlie",
@@ -6038,7 +6094,11 @@
     "awesome-tuis",
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "depsguard",
@@ -7198,7 +7258,11 @@
    "collection": "recommended",
    "sources": [
     "terminaltrove"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "gitid",
@@ -8327,7 +8391,11 @@
    "sources": [
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "jwt-ui",
@@ -8505,7 +8573,11 @@
     "awesome-tuis",
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "lazyjj",
@@ -9005,7 +9077,11 @@
    "sources": [
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "mult",
@@ -9676,7 +9752,11 @@
    "sources": [
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "pudb",
@@ -9702,7 +9782,11 @@
    "sources": [
     "awesome-tuis",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "purple",
@@ -10186,7 +10270,11 @@
    "sources": [
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "rizin",
@@ -10989,7 +11077,11 @@
    "sources": [
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "tcping",
@@ -11062,7 +11154,11 @@
    "tier": "optional",
    "sources": [
     "terminaltrove"
-   ]
+   ],
+   "status": {
+    "debian-13": "fail",
+    "ubuntu-24.04": "fail"
+   }
   },
   {
    "id": "terraform-tui",
@@ -11102,7 +11198,11 @@
    "tier": "optional",
    "sources": [
     "terminaltrove"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "tfjournal",
@@ -11154,7 +11254,11 @@
     "awesome-tuis",
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "tldx",
@@ -11200,7 +11304,11 @@
    "sources": [
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "toad",
@@ -11883,7 +11991,11 @@
    "sources": [
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "y509",
@@ -13027,7 +13139,11 @@
     "awesome-tuis",
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "simtool",
@@ -13328,7 +13444,11 @@
     "awesome-tuis",
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "edit",
@@ -13425,7 +13545,11 @@
     "awesome-tuis",
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "frogmouth",
@@ -13660,7 +13784,11 @@
     "awesome-tuis",
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "microneo",
@@ -13720,7 +13848,11 @@
    "collection": "essentials",
    "sources": [
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "neovim",
@@ -13746,7 +13878,11 @@
    "sources": [
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "nino",
@@ -13916,7 +14052,11 @@
    "sources": [
     "awesome-tuis",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "fail",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "toast",
@@ -14033,7 +14173,11 @@
    "sources": [
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "vis",
@@ -14448,7 +14592,11 @@
     "awesome-tuis",
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "nnn",
@@ -14569,7 +14717,11 @@
     "awesome-tuis",
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "rovr",
@@ -16122,7 +16274,11 @@
    "sources": [
     "awesome-tuis",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "alpine",
@@ -17035,7 +17191,11 @@
    "sources": [
     "awesome-tuis",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "reddix",
@@ -17111,7 +17271,11 @@
     "awesome-tuis",
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "fail",
+    "ubuntu-24.04": "fail"
+   }
   },
   {
    "id": "servitor",
@@ -17481,7 +17645,11 @@
     "awesome-tuis",
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "zulip-terminal",
@@ -17610,7 +17778,14 @@
    "sources": [
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok",
+    "health": [
+     "no_release_18_months"
+    ]
+   }
   },
   {
    "id": "aria2tui",
@@ -17818,7 +17993,11 @@
    "sources": [
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "bbrew",
@@ -18185,7 +18364,11 @@
     "awesome-tuis",
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "cfdisk",
@@ -18974,7 +19157,11 @@
    "sources": [
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "dupster",
@@ -19188,7 +19375,11 @@
    "sources": [
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "ffsend",
@@ -19373,7 +19564,11 @@
     "awesome-tuis",
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "fzf-make",
@@ -19443,7 +19638,11 @@
     "awesome-tuis",
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "ghfetch",
@@ -20000,7 +20199,11 @@
    "sources": [
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "hzfind",
@@ -20480,7 +20683,11 @@
     "awesome-tuis",
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "lnko",
@@ -20946,7 +21153,11 @@
    "sources": [
     "awesome-tuis",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "needs",
@@ -21673,7 +21884,11 @@
    "sources": [
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "fail"
+   }
   },
   {
    "id": "pueue",
@@ -22135,7 +22350,11 @@
    "sources": [
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "sigye",
@@ -22197,7 +22416,11 @@
    "sources": [
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "fail",
+    "ubuntu-24.04": "fail"
+   }
   },
   {
    "id": "smassh",
@@ -22611,7 +22834,11 @@
    "sources": [
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "tempy",
@@ -22739,7 +22966,14 @@
     "awesome-tuis",
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok",
+    "health": [
+     "no_release_18_months"
+    ]
+   }
   },
   {
    "id": "tewi",
@@ -23264,7 +23498,11 @@
    "sources": [
     "awesome-tuis",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "wb",
@@ -23647,7 +23885,11 @@
    "sources": [
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "ytunnel",
@@ -23883,7 +24125,11 @@
    "sources": [
     "awesome-tuis",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "cliamp",
@@ -23973,7 +24219,11 @@
     "awesome-tuis",
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "ctune",
@@ -24501,7 +24751,11 @@
    "sources": [
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "mpv-music",
@@ -24747,7 +25001,11 @@
    "sources": [
     "awesome-tuis",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "radiogogo",
@@ -25250,7 +25508,11 @@
    "sources": [
     "awesome-tuis",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "tizonia-openmax-il",
@@ -26022,7 +26284,11 @@
    "sources": [
     "awesome-tuis",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "cashd",
@@ -26416,7 +26682,11 @@
     "awesome-tuis",
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "gobackup",
@@ -27578,7 +27848,11 @@
    "sources": [
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "passepartui",
@@ -27843,7 +28117,11 @@
    "sources": [
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "rsync",
@@ -27871,7 +28149,11 @@
    "sources": [
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "sc-im",
@@ -27901,7 +28183,14 @@
     "awesome-tuis",
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok",
+    "health": [
+     "no_release_18_months"
+    ]
+   }
   },
   {
    "id": "seednaut",
@@ -28295,7 +28584,11 @@
     "awesome-tuis",
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "tock",
@@ -28855,7 +29148,11 @@
     "awesome-tuis",
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "wordgrinder",
@@ -29142,7 +29439,11 @@
    "collection": "essentials",
    "sources": [
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "tetron",
@@ -29166,7 +29467,11 @@
    "tier": "optional",
    "sources": [
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "fail",
+    "ubuntu-24.04": "fail"
+   }
   },
   {
    "id": "tetron-appstore",
@@ -29191,7 +29496,11 @@
    "collection": "desktop",
    "sources": [
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "tetron-browser",
@@ -29220,7 +29529,11 @@
    "collection": "desktop",
    "sources": [
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "skipped",
+    "ubuntu-24.04": "skipped"
+   }
   },
   {
    "id": "tetron-stt",
@@ -29244,7 +29557,11 @@
    "tier": "optional",
    "sources": [
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "fail",
+    "ubuntu-24.04": "fail"
+   }
   },
   {
    "id": "tetron-tui",
@@ -29267,7 +29584,11 @@
    "tier": "optional",
    "sources": [
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "fail",
+    "ubuntu-24.04": "fail"
+   }
   },
   {
    "id": "tetronos-desktop",
@@ -29284,7 +29605,11 @@
    "tier": "optional",
    "sources": [
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "fail",
+    "ubuntu-24.04": "fail"
+   }
   },
   {
    "id": "tetronos-firmware",
@@ -29301,7 +29626,11 @@
    "tier": "optional",
    "sources": [
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "fail",
+    "ubuntu-24.04": "fail"
+   }
   },
   {
    "id": "ali",
@@ -29918,7 +30247,11 @@
     "awesome-tuis",
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "mlbt",
@@ -30010,7 +30343,11 @@
     "awesome-tuis",
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "skipped"
+   }
   },
   {
    "id": "nyaa",
@@ -30181,7 +30518,11 @@
    "sources": [
     "awesome-tuis",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   },
   {
    "id": "rttt",
@@ -30511,7 +30852,11 @@
     "awesome-tuis",
     "terminaltrove",
     "tetron"
-   ]
+   ],
+   "status": {
+    "debian-13": "ok",
+    "ubuntu-24.04": "ok"
+   }
   }
  ],
  "collections": [

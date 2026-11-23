@@ -1,0 +1,16 @@
+{
+ "platforms": {
+  "debian-13": {
+   "method": "suite",
+   "result": "skipped",
+   "since": "2026-11-23",
+   "why": "no apt package, release or script"
+  },
+  "ubuntu-24.04": {
+   "method": "suite",
+   "result": "skipped",
+   "since": "2026-11-23",
+   "why": "no apt package, release or script"
+  }
+ }
+}

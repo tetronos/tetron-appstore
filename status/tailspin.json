@@ -1,0 +1,17 @@
+{
+ "platforms": {
+  "debian-13": {
+   "method": "apt",
+   "result": "fail",
+   "since": "2026-11-23",
+   "tail": [
+    "apt installed tailspin, but 'tailspin' is not on PATH"
+   ]
+  },
+  "ubuntu-24.04": {
+   "method": "apt",
+   "result": "ok",
+   "since": "2026-11-23"
+  }
+ }
+}

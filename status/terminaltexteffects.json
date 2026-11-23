@@ -1,0 +1,23 @@
+{
+ "platforms": {
+  "debian-13": {
+   "method": "apt",
+   "result": "fail",
+   "since": "2026-11-23",
+   "tail": [
+    "apt installed python3-terminaltexteffects, but 'terminaltexteffects' is not on PATH"
+   ]
+  },
+  "ubuntu-24.04": {
+   "method": "apt",
+   "result": "fail",
+   "since": "2026-11-23",
+   "tail": [
+    "Reading package lists...",
+    "Building dependency tree...",
+    "Reading state information...",
+    "E: Unable to locate package python3-terminaltexteffects"
+   ]
+  }
+ }
+}
