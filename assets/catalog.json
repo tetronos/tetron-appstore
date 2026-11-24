@@ -29229,7 +29229,6 @@
    "category": "TetronOS",
    "description": "Speech to text in the terminal with local models: the dictation of tetron-wm",
    "homepage": "https://github.com/tetronos/tetron-stt",
-   "cli": true,
    "recipe": {
     "install": "if command -v apt-get >/dev/null 2>&1; then $S curl -fsSLo /usr/share/keyrings/tetronos-archive-keyring.gpg https://tetronos.github.io/apt/tetronos-archive-keyring.gpg && $S curl -fsSLo /etc/apt/sources.list.d/tetronos.sources https://tetronos.github.io/apt/tetronos.sources && $S apt-get update && $S apt-get install -y tetron-stt; else { f=tetron-stt-$(uname -m)-unknown-linux-gnu.tar.gz; u=https://github.com/tetronos/tetron-stt/releases/latest/download; d=$(mktemp -d) && cd \"$d\" && curl -fsSLO $u/$f && curl -fsSLO $u/$f.sha256 && sha256sum -c $f.sha256 && mkdir -p ~/.local/bin && tar xzf $f && install -m 755 tetron-stt ~/.local/bin/tetron-stt && cd / && rm -rf \"$d\"; }; fi",
     "method": "binary",

@@ -2,6 +2,11 @@
 
 All notable changes to tetron-appstore. The version follows the tetron core minor (0.15.x).
 
+## [Unreleased]
+
+### Fixed
+- tetron-stt is no longer flagged `cli`: the menu opens its TUI (`tetron-stt` with no arguments) instead of the help-then-shell wrapper.
+
 ## [0.15.2] — 2026-11-18
 
 ### Added

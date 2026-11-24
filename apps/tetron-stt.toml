@@ -4,7 +4,6 @@ bin = "tetron-stt"
 category = "TetronOS"
 description = "Speech to text in the terminal with local models: the dictation of tetron-wm"
 homepage = "https://github.com/tetronos/tetron-stt"
-cli = true
 
 [install.pkg]
 apt = "tetron-stt"
