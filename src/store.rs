@@ -412,7 +412,7 @@ mod tests {
         let mut st = Store::new();
         assert_eq!(&st.categories[..2], ["All", "TetronOS"]);
         let suite = in_cat(&mut st, "TetronOS");
-        for n in ["casttui", "tetron", "tetron-tui", "tetron-appstore", "tetron-browser", "tetron-stt", "tetronos-firmware",
+        for n in ["casttui", "tetron", "tetron-tui", "tetron-bmctui", "tetron-appstore", "tetron-browser", "tetron-stt", "tetronos-firmware",
                   "tetronos-desktop"] {
             assert!(suite.iter().any(|x| x == n), "{n} in TetronOS");
         }

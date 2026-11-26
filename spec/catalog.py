@@ -367,7 +367,9 @@ class TetronosCategory(Requirement):
 
     The Store lists the TetronOS suite in the category `TetronOS`, right
     after "All": casttui, tetron, tetron-tui, tetron-appstore,
-    tetron-browser, tetron-stt, tetronos-firmware and tetronos-desktop.
+    tetron-bmctui, tetron-browser, tetron-stt, tetronos-firmware and
+    tetronos-desktop. Off apt systems, the tetron-bmctui recipe installs
+    ipmitool first when it is missing (the apt package depends on it).
     An app file may name more categories in `also_in` (tetron-browser is
     also in Web). `only_on = "tetronos"` shows an app only on TetronOS
     (tetronos-core installed): the two metapackages. `check = "deb:NAME"`
