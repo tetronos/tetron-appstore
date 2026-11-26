@@ -681,7 +681,7 @@ mod tests {
     #[test]
     fn tetronos_suite_fields() {
         let by = |n: &str| catalog().iter().find(|a| a.name == n).unwrap_or_else(|| panic!("{n} in the catalog"));
-        for n in ["casttui", "tetron", "tetron-tui", "tetron-appstore", "tetron-browser", "tetron-stt"] {
+        for n in ["casttui", "tetron", "tetron-tui", "tetron-bmctui", "tetron-appstore", "tetron-browser", "tetron-stt"] {
             let a = by(n);
             assert_eq!(a.category, TETRONOS_CATEGORY, "{n}");
             assert!(a.launchable() && a.only_on.is_empty(), "{n}");

@@ -29194,6 +29194,29 @@
    ]
   },
   {
+   "id": "tetron-bmctui",
+   "name": "tetron-bmctui",
+   "bin": "tetron-bmctui",
+   "category": "TetronOS",
+   "description": "Terminal UI for server BMCs over IPMI: serial console, power control, sensors and event log",
+   "homepage": "https://github.com/tetronos/tetron-bmctui",
+   "recipe": {
+    "install": "if command -v apt-get >/dev/null 2>&1; then $S curl -fsSLo /usr/share/keyrings/tetronos-archive-keyring.gpg https://tetronos.github.io/apt/tetronos-archive-keyring.gpg && $S curl -fsSLo /etc/apt/sources.list.d/tetronos.sources https://tetronos.github.io/apt/tetronos.sources && $S apt-get update && $S apt-get install -y tetron-bmctui; else { command -v ipmitool >/dev/null 2>&1 || { echo 'Installing ipmitool, which tetron-bmctui needs'; if command -v dnf >/dev/null 2>&1; then $S dnf install -y ipmitool; elif command -v pacman >/dev/null 2>&1; then $S pacman -S --needed --noconfirm ipmitool; elif command -v zypper >/dev/null 2>&1; then $S zypper -n install ipmitool; elif command -v apk >/dev/null 2>&1; then $S apk add ipmitool; fi; command -v ipmitool >/dev/null 2>&1 || { echo 'ipmitool could not be installed; install it and try again'; false; }; }; } && { f=tetron-bmctui-linux-$(uname -m); u=https://github.com/tetronos/tetron-bmctui/releases/latest/download; d=$(mktemp -d) && cd \"$d\" && curl -fsSLO $u/$f && curl -fsSLO $u/$f.sha256 && sha256sum -c $f.sha256 && mkdir -p ~/.local/bin && install -m 755 $f ~/.local/bin/tetron-bmctui && cd / && rm -rf \"$d\"; }; fi",
+    "method": "binary",
+    "verified": true,
+    "os": [
+     "linux"
+    ]
+   },
+   "pkg": {
+    "apt": "tetron-bmctui"
+   },
+   "tier": "optional",
+   "sources": [
+    "tetron"
+   ]
+  },
+  {
    "id": "tetron-browser",
    "name": "tetron-browser",
    "bin": "tetron-browser",

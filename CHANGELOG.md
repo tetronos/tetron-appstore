@@ -4,6 +4,9 @@ All notable changes to tetron-appstore. The version follows the tetron core mino
 
 ## [Unreleased]
 
+### Added
+- tetron-bmctui (terminal UI for server BMCs) in the TetronOS category. It installs with apt from the tetronos repository; on other Linux from its latest release into `~/.local/bin`, installing ipmitool first if it is missing.
+
 ### Fixed
 - tetron-stt is no longer flagged `cli`: the menu opens its TUI (`tetron-stt` with no arguments) instead of the help-then-shell wrapper.
 

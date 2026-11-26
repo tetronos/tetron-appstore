@@ -35,7 +35,7 @@ MERGED = {"claude-code": "Claude Code", "gemini-cli": "Gemini CLI"}
 # ASCAT-031: the TetronOS category. These suite apps were not Store apps
 # before (no file, or store = false); tetron-browser moved to TetronOS (also
 # listed in Web) and gained an install recipe for systems without TetronOS.
-SUITE_NEW = {"casttui", "tetron", "tetron-tui", "tetron-stt", "tetron-appstore", "tetronos-firmware",
+SUITE_NEW = {"casttui", "tetron", "tetron-bmctui", "tetron-tui", "tetron-stt", "tetron-appstore", "tetronos-firmware",
              "tetronos-desktop"}
 SUITE_MOVED = {"tetron-browser": ("category", "also_in", "recipe")}
 
